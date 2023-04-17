@@ -9,6 +9,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -91,6 +92,101 @@ public class CommitteeMethod {
 				test.log(LogStatus.FAIL, "Message Dispalyed =" +msg1);
 			}
 			Locator.CloseBtn(driver).click();
+			
+			 Thread.sleep(2000);
+			    Locator.NewCommittee(driver).click();
+			    
+			    Thread.sleep(2000);
+			    Locator.CommitteeName(driver).sendKeys("ABCDE");
+			    
+			    Thread.sleep(2000);
+				 Locator.SaveBtn(driver).click();
+				   Thread.sleep(3000);
+					 String MSG1 = Locator.ValidationMsg(driver).getText();
+						if(MSG1.contains("Saved Successfully."))
+						{
+							test.log(LogStatus.PASS, "Accept Alpha Characters =" +MSG1);
+						}
+						else
+						{
+							test.log(LogStatus.FAIL, "Accept Alpha Characters =" +MSG1);
+						}
+						Locator.CloseBtn(driver).click();
+						
+						 Thread.sleep(2000);
+						    Locator.NewCommittee(driver).click();
+						    
+						
+						Thread.sleep(4000);
+						WebElement text=driver.findElement(By.xpath("//*[@id='btnclose1']"));
+						 
+						 
+						 if(text.isEnabled())
+							{
+							     Locator.CloseBtn(driver).click();
+								
+								test.log(LogStatus.PASS, "Close button is clickable");
+								
+							}
+						
+						/* Thread.sleep(2000);
+						    Locator.NewCommittee(driver).click();
+						    
+						    Thread.sleep(2000);
+						    Locator.CommitteeName(driver).sendKeys("ABCDEF");
+						
+						  Locator.Description(driver).sendKeys("test567$");
+						  Thread.sleep(2000);
+							 Locator.SaveBtn(driver).click();
+							   Thread.sleep(3000);
+								 String MSG2 = Locator.ValidationMsg(driver).getText();
+									if(MSG2.contains("Saved Successfully."))
+									{
+										test.log(LogStatus.PASS, "Message Dispalyed = Accept  Alpha numeric and special characters of description " +MSG2);
+									}
+									else
+									{
+										test.log(LogStatus.FAIL, "Message Dispalyed =Accept Alpha numeric and special characters description " +MSG2);
+									}
+									Locator.CloseBtn(driver).click();*/
+						 Thread.sleep(2000);
+						    Locator.NewCommittee(driver).click();		
+						    Thread.sleep(2000);
+							 Locator.SaveBtn(driver).click();
+							 
+							 Thread.sleep(3000);
+							 String MSG3 = Locator.ValidationMsg1(driver).getText();
+								if(MSG3.contains("Please enter name"))
+								{
+									test.log(LogStatus.PASS, "Without Entering Data = " +MSG3);
+								}
+								else
+								{
+									test.log(LogStatus.FAIL, "Without Entering Data = " +MSG3);
+								}
+								Locator.CloseBtn(driver).click();
+			
+								 Thread.sleep(2000);
+								    Locator.NewCommittee(driver).click();
+								    
+								    Thread.sleep(2000);
+								    Locator.CommitteeName(driver).sendKeys("bdgfh#234");
+								    
+								    Thread.sleep(2000);
+									 Locator.SaveBtn(driver).click();
+								   
+								    Thread.sleep(3000);
+									 String MSG4 = Locator.ValidationMsg2(driver).getText();
+										if(MSG4.contains("Please Enter valid name"))
+										{
+											test.log(LogStatus.PASS, "Committee Name is Wrong = " +MSG4);
+										}
+										else
+										{
+											test.log(LogStatus.FAIL, "Committee Name is Wrong = " +MSG4);
+										}
+										 Locator.CloseBtn(driver).click();
+								
 		
 			Thread.sleep(2000);
 			Locator.EditIcon(driver).click();
@@ -111,11 +207,11 @@ public class CommitteeMethod {
 				 String msg2 = Locator.ValidationMsg(driver).getText();
 					if(msg2.contains("Updated Successfully."))
 					{
-						test.log(LogStatus.PASS, "Message Dispalyed =" +msg2);
+						test.log(LogStatus.PASS, "Message Dispalyed = " +msg2);
 					}
 					else
 					{
-						test.log(LogStatus.FAIL, "Message Dispalyed =" +msg2);
+						test.log(LogStatus.FAIL, "Message Dispalyed = " +msg2);
 					}
 					Locator.CloseBtn(driver).click();
 					
@@ -142,11 +238,11 @@ public class CommitteeMethod {
 					 String msg3 = Locator.RuleValidationMsg(driver).getText();
 						if(msg3.contains("Saved Successfully."))
 						{
-							test.log(LogStatus.PASS, "Message Dispalyed =" +msg3);
+							test.log(LogStatus.PASS, "Message Dispalyed =Member " +msg3);
 						}
 						else
 						{
-							test.log(LogStatus.FAIL, "Message Dispalyed =" +msg3);
+							test.log(LogStatus.FAIL, "Message Dispalyed = Member " +msg3);
 						}
 						
 						
@@ -169,11 +265,11 @@ public class CommitteeMethod {
 						 String msg7 = Locator.clickValidationMemberRule(driver).getText();
 							if(msg7.contains("Updated Successfully."))
 							{
-								test.log(LogStatus.PASS, "Message Dispalyed =" +msg7);
+								test.log(LogStatus.PASS, "Message Dispalyed =Member " +msg7);
 							}
 							else
 							{
-								test.log(LogStatus.FAIL, "Message Dispalyed =" +msg7);
+								test.log(LogStatus.FAIL, "Message Dispalyed =Member " +msg7);
 							}
 						
 						Thread.sleep(2000);
@@ -198,11 +294,11 @@ public class CommitteeMethod {
 						 String msg4 = Locator.ValidationQuram(driver).getText();
 							if(msg4.contains("Saved Successfully."))
 							{
-								test.log(LogStatus.PASS, "Message Dispalyed =" +msg4);
+								test.log(LogStatus.PASS, "Message Dispalyed =Quoram " +msg4);
 							}
 							else
 							{
-								test.log(LogStatus.FAIL, "Message Dispalyed =" +msg4);
+								test.log(LogStatus.FAIL, "Message Dispalyed =Quoram " +msg4);
 							}
 						
 							Thread.sleep(2000);
@@ -224,11 +320,11 @@ public class CommitteeMethod {
 							 String msg8 = Locator.clickValidationQuramRule(driver).getText();
 								if(msg8.contains("Updated Successfully."))
 								{
-									test.log(LogStatus.PASS, "Message Dispalyed =" +msg8);
+									test.log(LogStatus.PASS, "Message Dispalyed = Quoram " +msg8);
 								}
 								else
 								{
-									test.log(LogStatus.FAIL, "Message Dispalyed =" +msg8);
+									test.log(LogStatus.FAIL, "Message Dispalyed =Quoram " +msg8);
 								}
 								
 								Thread.sleep(2000);
@@ -251,11 +347,11 @@ public class CommitteeMethod {
 						 String msg5 = Locator.ValidationMeeting(driver).getText();
 							if(msg5.contains("Save Successfully."))
 							{
-								test.log(LogStatus.PASS, "Message Dispalyed =" +msg5);
+								test.log(LogStatus.PASS, "Message Dispalyed = Meeting " +msg5);
 							}
 							else
 							{
-								test.log(LogStatus.FAIL, "Message Dispalyed =" +msg5);
+								test.log(LogStatus.FAIL, "Message Dispalyed = Meeting " +msg5);
 							}
 						Thread.sleep(2000);
 						Locator.ClickClose(driver).click();
@@ -303,6 +399,60 @@ public class CommitteeMethod {
 						        
 						     // Accepting alert		
 						        alert1.accept();	
+							
+							Thread.sleep(2000);
+							Locator.UploadDocument(driver).click();
+											
+							Thread.sleep(2000);
+							Locator.SelectFiles(driver).sendKeys("C:\\Users\\Admin\\Documents\\Secreaterial test cases.xlsx");
+											
+							Thread.sleep(2000);
+							Locator.ClickUploadBtn(driver).click();
+											
+
+						    Thread.sleep(3000);
+						    String msg9 = Locator.UploadFileValidation1(driver).getText();
+							if(msg9.contains("Please select file to upload"))
+							{
+								test.log(LogStatus.PASS, "Message Dispalyed =" +msg9);
+							}
+							else
+							{
+							 	test.log(LogStatus.FAIL, "Message Dispalyed =" +msg9);
+							}
+												
+							Thread.sleep(2000);
+							Locator.CloseBtn1(driver).click();
+							
+							
+							Thread.sleep(2000);
+							Locator.ClickRule(driver).click();
+							Thread.sleep(2000);
+							Locator.ClickComapnayName(driver).click();
+							Thread.sleep(2000);
+							Locator.SelectComapnayName1(driver).click();
+							Thread.sleep(2000);
+							Locator.TotalStrength(driver).sendKeys("2");
+							Thread.sleep(2000);
+							Locator.TotalStrengthNo(driver).sendKeys("1");
+							Thread.sleep(2000);
+							Locator.TotalStrengthDenomirator(driver).sendKeys("2");
+							Thread.sleep(2000);
+							Locator.ClickAdd(driver).click();
+							
+							 Thread.sleep(3000);
+							 String MSG5 = Locator.RuleValidationMsg(driver).getText();
+								if(MSG5.contains("Saved Successfully."))
+								{
+									test.log(LogStatus.PASS, "Accept Total Strength Numeric Font =" +MSG5);
+								}
+								else
+								{
+									test.log(LogStatus.FAIL, "Accept Total Strength Numeric Font =" +MSG5);
+								}
+								Thread.sleep(2000);
+								Locator.ClickClose(driver).click();
+										 
 	}
 
 }

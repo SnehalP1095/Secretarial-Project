@@ -1,61 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-10T10:06:46 IST" name="Default suite" finished-at="2023-04-10T10:07:17 IST" duration-ms="30292">
+  <suite started-at="2023-04-17T18:40:29 IST" name="Default suite" finished-at="2023-04-17T18:42:50 IST" duration-ms="140694">
     <groups>
     </groups>
-    <test started-at="2023-04-10T10:06:46 IST" name="Default test" finished-at="2023-04-10T10:07:17 IST" duration-ms="30292">
+    <test started-at="2023-04-17T18:40:29 IST" name="Default test" finished-at="2023-04-17T18:42:50 IST" duration-ms="140694">
       <class name="CompanySecretoryTest.MasterTestCases">
-        <test-method is-config="true" signature="setBrowser()[pri:0, instance:CompanySecretoryTest.MasterTestCases@201a4587]" started-at="2023-04-10T10:06:46 IST" name="setBrowser" finished-at="2023-04-10T10:06:52 IST" duration-ms="5084" status="PASS">
+        <test-method is-config="true" signature="setBrowser()[pri:0, instance:CompanySecretoryTest.MasterTestCases@201a4587]" started-at="2023-04-17T18:40:29 IST" name="setBrowser" finished-at="2023-04-17T18:40:33 IST" duration-ms="3960" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBrowser -->
-        <test-method signature="Login()[pri:1, instance:CompanySecretoryTest.MasterTestCases@201a4587]" started-at="2023-04-10T10:06:52 IST" name="Login" finished-at="2023-04-10T10:07:01 IST" duration-ms="9833" status="PASS">
+        <test-method signature="Login()[pri:1, instance:CompanySecretoryTest.MasterTestCases@201a4587]" started-at="2023-04-17T18:40:33 IST" name="Login" finished-at="2023-04-17T18:40:43 IST" duration-ms="9868" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="AuditorMaster()[pri:4, instance:CompanySecretoryTest.MasterTestCases@201a4587]" started-at="2023-04-10T10:07:01 IST" name="AuditorMaster" finished-at="2023-04-10T10:07:17 IST" duration-ms="15318" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="AuditorMaster()[pri:4, instance:CompanySecretoryTest.MasterTestCases@201a4587]" started-at="2023-04-17T18:40:43 IST" name="AuditorMaster" finished-at="2023-04-17T18:42:18 IST" duration-ms="94433" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AuditorMaster -->
+        <test-method signature="UserMaster()[pri:6, instance:CompanySecretoryTest.MasterTestCases@201a4587]" started-at="2023-04-17T18:42:18 IST" name="UserMaster" finished-at="2023-04-17T18:42:50 IST" duration-ms="32352" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='panelbar_AuditorDetails']/li/div/div[1]/div/div[2]/span/span/span[1]"}
-  (Session info: chrome=111.0.5563.147)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id='Mastermenu']/a/img (tried for 30 second(s) with 500 milliseconds interval)
 Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
-System info: host: 'DESKTOP-6RDAJ8O', ip: '192.168.0.102', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
+System info: host: 'DESKTOP-6RDAJ8O', ip: '192.168.0.103', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.147, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61151}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6bd8e5c83612e78c8fbc0d0a89696ff6
-*** Element info: {Using=xpath, value=//*[@id='panelbar_AuditorDetails']/li/div/div[1]/div/div[2]/span/span/span[1]}]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.86, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53468}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1cdc45fb147fb7e7cbcf32d8ea38dea2]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='panelbar_AuditorDetails']/li/div/div[1]/div/div[2]/span/span/span[1]"}
-  (Session info: chrome=111.0.5563.147)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id='Mastermenu']/a/img (tried for 30 second(s) with 500 milliseconds interval)
 Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
-System info: host: 'DESKTOP-6RDAJ8O', ip: '192.168.0.102', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
+System info: host: 'DESKTOP-6RDAJ8O', ip: '192.168.0.103', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.147, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61151}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6bd8e5c83612e78c8fbc0d0a89696ff6
-*** Element info: {Using=xpath, value=//*[@id='panelbar_AuditorDetails']/li/div/div[1]/div/div[2]/span/span/span[1]}
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at CompnaySecretory.Locator.clickCategoryOfAuditor(Locator.java:767)
-at CompnaySecretory.AuditorMasterMethod.AuditorPage(AuditorMasterMethod.java:304)
-at CompanySecretoryTest.MasterTestCases.AuditorMaster(MasterTestCases.java:122)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.86, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53468}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1cdc45fb147fb7e7cbcf32d8ea38dea2
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at CompnaySecretory.Locator.selectImg(Locator.java:22)
+at CompnaySecretory.UserMasterMethod.User(UserMasterMethod.java:44)
+at CompanySecretoryTest.MasterTestCases.UserMaster(MasterTestCases.java:144)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -86,10 +71,10 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AuditorMaster -->
+        </test-method> <!-- UserMaster -->
       </class> <!-- CompanySecretoryTest.MasterTestCases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

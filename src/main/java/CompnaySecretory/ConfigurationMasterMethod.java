@@ -73,7 +73,7 @@ private static List<WebElement> elementsList = null;
 		    Locator.Clickpreviouscirculardate(driver).sendKeys("04-04-2023");
 		    Thread.sleep(2000);
 		    Locator.clickcircularNumberingpattern(driver).click();
-		    Thread.sleep(2000);
+		    Thread.sleep(3000);
 		    Locator.clickcircularNumberingpatternDP(driver).click();
 		    Thread.sleep(2000);
 		    Locator.clickcircularNumber(driver).sendKeys("4");
@@ -89,7 +89,7 @@ private static List<WebElement> elementsList = null;
 		    
 		    Thread.sleep(2000);
 		    Locator.clickClose(driver).click();
-		/*  Thread.sleep(3000);
+		   /* Thread.sleep(3000);
 			 String msg6 = Locator.ValidMsg(driver).getText();
 				if(msg6.contains("Saved Successfully."))
 				{
@@ -113,14 +113,14 @@ private static List<WebElement> elementsList = null;
 				    Thread.sleep(2000);
 				    Locator.clickUpdate(driver).click();
 				    Thread.sleep(3000);
-					 String msg6 = Locator.clickUpdateBtn(driver).getText();
-						if(msg6.contains("Updated Successfully."))
+					 String msg7 = Locator.clickUpdateBtn(driver).getText();
+						if(msg7.contains("Updated Successfully."))
 						{
-							test.log(LogStatus.PASS, "Message Dispalyed =" +msg6);
+							test.log(LogStatus.PASS, "Message Dispalyed =" +msg7);
 						}
 						else
 						{
-							test.log(LogStatus.FAIL, "Message Dispalyed =" +msg6);
+							test.log(LogStatus.FAIL, "Message Dispalyed =" +msg7);
 						}
 						Thread.sleep(2000);
 					    Locator.clickClose(driver).click();

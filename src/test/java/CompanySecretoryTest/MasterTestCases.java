@@ -105,14 +105,13 @@ public class MasterTestCases {
 
 void CommitteComposition() throws InterruptedException, IOException
 {
-	test = extent.startTest(" User Master  Verification");
+	test = extent.startTest(" Committe Composition Verification");
 	
 	CommitteeCompositionMethod.CommitteeComposition(driver, test,workbook);
 	
 	extent.endTest(test);
 	extent.flush();
 }
-
 @Test(priority = 4)
 
 void AuditorMaster() throws InterruptedException, IOException
@@ -136,7 +135,7 @@ void ConfigurationMaster() throws InterruptedException, IOException
 	extent.flush();
 }
 
-//@Test(priority = 6)
+@Test(priority = 6)
 
 void UserMaster() throws InterruptedException, IOException
 {

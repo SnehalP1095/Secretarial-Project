@@ -49,7 +49,7 @@ public class Locator {
 	public static WebElement Description(WebDriver driver)
 	{
 		
-		Secreterial =driver.findElement(By.xpath("//*[@id='Description']"));
+		Secreterial =driver.findElement(By.xpath("//textarea[@class='form-control k-textbox k-valid']"));
 		return Secreterial;
 	}
 	public static WebElement SaveBtn(WebDriver driver)
@@ -62,6 +62,18 @@ public class Locator {
 	{
 		WebDriverWait wait= new WebDriverWait(driver,30);
 		Secreterial =wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='divDetailsNew']/div/div/div/div/lable")));
+		return Secreterial;
+	}
+	public static WebElement ValidationMsg1(WebDriver driver)
+	{
+		WebDriverWait wait= new WebDriverWait(driver,30);
+		Secreterial =wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='divDetailsNew']/div/fieldset/div/div[1]/span[2]")));
+		return Secreterial;
+	}
+	public static WebElement ValidationMsg2(WebDriver driver)
+	{
+		WebDriverWait wait= new WebDriverWait(driver,30);
+		Secreterial =wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='divDetailsNew']/div/fieldset/div/div[1]/span[2]")));
 		return Secreterial;
 	}
 	public static WebElement CloseBtn(WebDriver driver)
@@ -93,6 +105,12 @@ public class Locator {
 	{
 		
 		Secreterial =driver.findElement(By.xpath("//*[@id='ddlEntityId_listbox']/li[1]"));
+		return Secreterial;
+	}
+	public static WebElement SelectComapnayName1(WebDriver driver)
+	{
+		
+		Secreterial =driver.findElement(By.xpath("(//*[@id='ddlEntityId_listbox']/li[2])[1]"));
 		return Secreterial;
 	}
 	public static WebElement ClickDesignation(WebDriver driver)
@@ -225,7 +243,8 @@ public class Locator {
 	public static WebElement UploadDocument(WebDriver driver)
 	{
 		
-		Secreterial =driver.findElement(By.xpath("//*[@id='gridKendo_active_cell']/a[4]/span/img"));
+		//Secreterial =driver.findElement(By.xpath("//*[@id='gridKendo_active_cell']/a[4]/span/img"));
+		Secreterial =driver.findElement(By.xpath("//a[@class='k-grid-Upload k-grid-upload hoverCircle k-grid-button']"));
 		return Secreterial;
 	}
 	public static WebElement SelectFiles(WebDriver driver)
@@ -240,10 +259,17 @@ public class Locator {
 		Secreterial =driver.findElement(By.xpath("//*[@id='frmAgendaDocumentUpload']/div/div/div[2]/p[2]/button"));
 		return Secreterial;
 	}
+	
 	public static WebElement UploadFileValidation(WebDriver driver)
 	{
 		
 		Secreterial =driver.findElement(By.xpath("//*[@id='frmAgendaDocumentUpload']/div[1]/div/div/label"));
+		return Secreterial;
+	}
+	public static WebElement UploadFileValidation1(WebDriver driver)
+	{
+		
+		Secreterial =driver.findElement(By.xpath("//*[@id='frmAgendaDocumentUpload']/div[1]/div/div/lable"));
 		return Secreterial;
 	}
 	public static WebElement CloseBtn1(WebDriver driver)
@@ -492,6 +518,12 @@ public class Locator {
 		Secreterial =driver.findElement(By.xpath("//*[@id='lblsuccess']"));
 		return Secreterial;
 	}
+	public static WebElement ValidationMsgCommittee1(WebDriver driver)
+	{
+		
+		Secreterial =driver.findElement(By.xpath("//*[@id='lblerrormsg']"));
+		return Secreterial;
+	}
 	public static WebElement clickdropdown(WebDriver driver)
 	{
 		
@@ -634,7 +666,7 @@ public class Locator {
 	public static WebElement clickcircularNumberingpatternDP(WebDriver driver)
 	{
 		
-		Secreterial =driver.findElement(By.xpath("(//li[@class='k-item'])[84]"));
+		Secreterial =driver.findElement(By.xpath("(//li[@data-offset-index='2'])[6]"));
 		return Secreterial;
 	}
 	public static WebElement clickcircularNumber(WebDriver driver)
@@ -746,7 +778,7 @@ public class Locator {
 		//WebDriverWait wait = new WebDriverWait(driver, 10);
 		
 		
-		Secreterial =driver.findElement(By.xpath("//*[@id='ddlAuditor_Type_listbox']/li"));
+		Secreterial =driver.findElement(By.xpath("(//li[@class='k-item'])[59]"));
 		return Secreterial;
 	}
 	public static WebElement SelectSecretarialAuditorDropDown(WebDriver driver)
@@ -813,6 +845,42 @@ public class Locator {
 	{
 		
 		Secreterial =driver.findElement(By.xpath("//*[@id='frmUpdateAuditor']/div[1]/div/div/lable"));
+		return Secreterial;
+	}
+	public static WebElement clickValidMsg1(WebDriver driver)
+	{
+		
+		Secreterial =driver.findElement(By.xpath("//*[@id='Audit_FirmName_FullName_validationMessage']"));
+		return Secreterial;
+	}
+	public static WebElement clickValidMsg2(WebDriver driver)
+	{
+		
+		Secreterial =driver.findElement(By.xpath("//*[@id='Audit_CategoryId_validationMessage']"));
+		return Secreterial;
+	}
+	public static WebElement clickValidMsg3(WebDriver driver)
+	{
+		
+		Secreterial =driver.findElement(By.xpath("//*[@id='Auditor_Type_validationMessage']"));
+		return Secreterial;
+	}
+	public static WebElement clickValidMsg4(WebDriver driver)
+	{
+		
+		Secreterial =driver.findElement(By.xpath("//*[@id='Email_Id_validationMessage']"));
+		return Secreterial;
+	}
+	public static WebElement clickValidMsg5(WebDriver driver)
+	{
+		
+		Secreterial =driver.findElement(By.xpath("//*[@id='AuditorFirmRegistration_Number_validationMessage']"));
+		return Secreterial;
+	}
+	public static WebElement clickValidMsg6(WebDriver driver)
+	{
+		
+		Secreterial =driver.findElement(By.xpath("//*[@id='AddressLine1_validationMessage']"));
 		return Secreterial;
 	}
 	public static WebElement clickAuditorCreateFromExisting(WebDriver driver)

@@ -10,6 +10,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -58,13 +59,13 @@ private static List<WebElement> elementsList = null;
 		 Thread.sleep(2000);
 		 Locator.ClickCommittee(driver).click();
 		 Thread.sleep(2000);
-		 Locator.SelectCommittee(driver).get(3).click();
+		 Locator.SelectCommittee(driver).get(8).click();
 		 Thread.sleep(2000);
 		 Locator.ClickCommittee(driver).click();
 		 Thread.sleep(2000);
 		 Locator.ClickDirector(driver).click();
 		 Thread.sleep(4000);
-		 Locator.SelectDirector(driver).get(6).click();
+		 Locator.SelectDirector(driver).get(3).click();
 		 Thread.sleep(3000);
 		 Locator.ClickPostion(driver).click();
 		 Thread.sleep(3000);
@@ -90,12 +91,93 @@ private static List<WebElement> elementsList = null;
 			 Thread.sleep(3000);
 			 Locator.CloseBtn(driver).click();
 			 
-
+			 
+			 //Without Entering Data
+			 
+			 Thread.sleep(2000);
+			 Locator.ClickNewBtn(driver).click();
+			 
 			 Thread.sleep(3000);
+			 Locator.SaveBtn1(driver).click();
+			 
+			 Thread.sleep(3000);
+			 String msg1 = Locator.ValidationMsgCommittee1(driver).getText();
+				if(msg1.contains("Please Select Committee."))
+				{
+					test.log(LogStatus.PASS, "Message Dispalyed =" +msg1);
+				}
+				else
+				{
+					test.log(LogStatus.FAIL, "Message Dispalyed =" +msg1);
+				}
+			 
+				 Thread.sleep(3000);
+				 Locator.CloseBtn(driver).click();
+			//Close Button working or not
+				 
+				 Thread.sleep(2000);
+				 Locator.ClickNewBtn(driver).click();
+				 
+					Thread.sleep(4000);
+					WebElement text=driver.findElement(By.xpath("//*[@id='btnclose1']"));
+					 
+					 
+					 if(text.isEnabled())
+						{
+						     Locator.CloseBtn(driver).click();
+							
+							test.log(LogStatus.PASS, "Close button is clickable");
+							
+						}
+			 //Date format dd/mm/yyyy accept or not
+					 
+					 Thread.sleep(2000);
+					 Locator.ClickNewBtn(driver).click();
+					 Thread.sleep(2000);
+					 Locator.ClickEntity(driver).click();
+					 Thread.sleep(2000);
+					 Locator.SelectEntity(driver).click();
+					 Thread.sleep(2000);
+					 Locator.ClickCommittee(driver).click();
+					 Thread.sleep(2000);
+					 Locator.SelectCommittee(driver).get(3).click();
+					 Thread.sleep(2000);
+					 Locator.ClickCommittee(driver).click();
+					 Thread.sleep(2000);
+					 Locator.ClickDirector(driver).click();
+					 Thread.sleep(4000);
+					 Locator.SelectDirector(driver).get(2).click();
+					 Thread.sleep(3000);
+					 Locator.ClickPostion(driver).click();
+					 Thread.sleep(3000);
+					 Locator.SelectPostion(driver).click();
+					 Thread.sleep(3000);
+					 Locator.DateOfAppoinment(driver).sendKeys("05/03/2023");
+					 Thread.sleep(3000);
+					 Locator.DateofCessation(driver).sendKeys("06/04/2023");
+					 Thread.sleep(3000);
+					 Locator.SaveBtn1(driver).click();
+					 
+					 Thread.sleep(3000);
+					 String msg3 = Locator.ValidationMsgCommittee(driver).getText();
+						if(msg3.contains("Saved Successfully"))
+						{
+							test.log(LogStatus.PASS, "Accept DD/MM/YYYY date Format =" +msg3);
+						}
+						else
+						{
+							test.log(LogStatus.FAIL, "Accept DD/MM/YYYY date Format =" +msg3);
+						}
+						
+						 Thread.sleep(3000);
+						 Locator.CloseBtn(driver).click();
+						
+
+		 Thread.sleep(3000);
 			 Locator.clickdropdown(driver).click();
 			 Thread.sleep(3000);
 			 Locator.selectdropdown(driver).click();
-			/* Thread.sleep(3000);
+		     Thread.sleep(3000);
 			 Locator.clickediticon(driver).click();
 			 Thread.sleep(3000);
 			 Locator.ClickPostion(driver).click();
@@ -105,19 +187,23 @@ private static List<WebElement> elementsList = null;
 			 Locator.SaveBtn1(driver).click();
 			 
 			 Thread.sleep(3000);
-			 String msg1 = Locator.ValidationMsgCommittee(driver).getText();
-				if(msg1.contains("Update Successfully"))
+			 String msg2 = Locator.ValidationMsgCommittee(driver).getText();
+				if(msg2.contains("Update Successfully"))
 				{
-					test.log(LogStatus.PASS, "Message Dispalyed =" +msg1);
+					test.log(LogStatus.PASS, "Message Dispalyed =" +msg2);
 				}
 				else
 				{
-					test.log(LogStatus.FAIL, "Message Dispalyed =" +msg1);
+					test.log(LogStatus.FAIL, "Message Dispalyed =" +msg2);
 				} 
 				
 				Thread.sleep(3000);
-				 Locator.CloseBtn(driver).click(); */
+				 Locator.CloseBtn(driver).click(); 
 				 
+				 
+				 Locator.clickdropdown(driver).click();
+				 Thread.sleep(3000);
+				 Locator.selectdropdown(driver).click();
 				 
 				 Thread.sleep(3000);
 				 Locator.clickdeleteicon(driver).click();
@@ -157,6 +243,8 @@ private static List<WebElement> elementsList = null;
 						{
 							test.log(LogStatus.FAIL, "File doesn't downloaded successfully.");
 						}
+						
+					
 	 }
 
 }

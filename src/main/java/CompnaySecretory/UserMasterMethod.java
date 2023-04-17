@@ -39,6 +39,9 @@ private static List<WebElement> elementsList = null;
 	public static void User(WebDriver driver,ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
 	{
 		sheet = workbook.getSheetAt(0);	
+		
+		Thread.sleep(2000);
+	    Locator.selectImg(driver).click();
 		Thread.sleep(2000);
 	 Locator.ClickMaster(driver).click();
 	    
