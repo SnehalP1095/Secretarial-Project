@@ -5,8 +5,11 @@
     <classes>
       <class name="CompanySecretoryTest.MasterTestCases">
         <methods>
-          <include name="UserMaster"/>
+          <include name="AuditorMaster"/>
           <include name="setBrowser"/>
+          <include name="AuditorMaster3"/>
+          <include name="AuditorMaster1"/>
+          <include name="AuditorMaster2"/>
         </methods>
       </class> <!-- CompanySecretoryTest.MasterTestCases -->
     </classes>

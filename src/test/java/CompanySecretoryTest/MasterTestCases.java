@@ -116,9 +116,42 @@ void CommitteComposition() throws InterruptedException, IOException
 
 void AuditorMaster() throws InterruptedException, IOException
 {
-	test = extent.startTest(" Configuration Master  Verification");
+	test = extent.startTest(" Auditor Master  Verification");
 	
 	AuditorMasterMethod.AuditorPage(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 5)
+
+void AuditorMaster1() throws InterruptedException, IOException
+{
+	test = extent.startTest(" Auditor Master  Verification");
+	
+	AuditorMasterMethod.CreateNewTab(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 6)
+
+void AuditorMaster2() throws InterruptedException, IOException
+{
+	test = extent.startTest(" Auditor Master  Verification");
+	
+	AuditorMasterMethod.CreateFromExisting(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 7)
+
+void AuditorMaster3() throws InterruptedException, IOException
+{
+	test = extent.startTest(" Auditor Master  Verification");
+	
+	AuditorMasterMethod.CreateFromExistingTab(driver, test,workbook);
 	
 	extent.endTest(test);
 	extent.flush();
@@ -135,7 +168,7 @@ void ConfigurationMaster() throws InterruptedException, IOException
 	extent.flush();
 }
 
-@Test(priority = 6)
+//@Test(priority = 6)
 
 void UserMaster() throws InterruptedException, IOException
 {

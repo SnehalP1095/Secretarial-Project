@@ -773,6 +773,30 @@ public class Locator {
 		Secreterial =driver.findElement(By.xpath("//*[@id='ddlAuditor_Type_listbox']/li[1]"));
 		return Secreterial;
 	}
+	public static WebElement SelectAuditorTypeDropDown3(WebDriver driver)
+	{
+		
+		Secreterial =driver.findElement(By.xpath("(//*[@id='ddlAuditor_Type_listbox']/li[1])[2]"));
+		return Secreterial;
+	}
+	public static WebElement SelectAuditorTypeDropDown1(WebDriver driver)
+	{
+		
+		Secreterial =driver.findElement(By.xpath("(//*[@id='ddlAuditor_Type_listbox']/li[1])[6]"));
+		return Secreterial;
+	}
+	public static WebElement SelectAuditorTypeDropDownInternal(WebDriver driver)
+	{
+		
+		Secreterial =driver.findElement(By.xpath("(//*[@id='ddlAuditor_Type_listbox']/li[2])[8]"));
+		return Secreterial;
+	}
+	public static WebElement SelectAuditorTypeDropDownSecreterial(WebDriver driver)
+	{
+		
+		Secreterial =driver.findElement(By.xpath("(//*[@id='ddlAuditor_Type_listbox']/li[3])[3]"));
+		return Secreterial;
+	}
 	public static WebElement SelectInternalAuditorDropDown(WebDriver driver)
 	{
 		//WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -799,11 +823,24 @@ public class Locator {
 		Secreterial =driver.findElement(By.xpath("//*[@id='panelbar_AuditorDetails']/li/div/div[1]/div/div[2]/span/span/span[1]"));
 		return Secreterial;
 	}
-	public static List<WebElement> SelectCategoryOfAuditor(WebDriver driver)
+	public static WebElement SelectCategoryOfAuditor(WebDriver driver)
 	{
 		
-		elementsList =driver.findElements(By.xpath("//*[@id='ddlAuditor_Category_listbox']/li"));
-		return elementsList;
+		Secreterial =driver.findElement(By.xpath("//*[@id='ddlAuditor_Category_listbox']/li[2]"));
+		//Secreterial =driver.findElement(By.linkText("Individual"));
+		return Secreterial;
+	}
+	public static WebElement SelectCategoryOfAuditor1(WebDriver driver)
+	{
+		
+		Secreterial =driver.findElement(By.xpath("(//*[@id='ddlAuditor_Category_listbox']/li[3])[6]"));
+		return Secreterial;
+	}
+	public static WebElement SelectCategoryOfAuditor2(WebDriver driver)
+	{
+		
+		Secreterial =driver.findElement(By.xpath("(//*[@id='ddlAuditor_Category_listbox']/li[2])[8]"));
+		return Secreterial;
 	}
 	public static WebElement clickAuditorName(WebDriver driver)
 	{
@@ -827,6 +864,18 @@ public class Locator {
 	{
 		
 		Secreterial =driver.findElement(By.xpath("//*[@id='txtName_of_Auditor_or_AuditorFirm']"));
+		return Secreterial;
+	}
+	public static WebElement clickMobileNo(WebDriver driver)
+	{
+		
+		Secreterial =driver.findElement(By.xpath("//input[@data-val-number='The field MobileNo must be a number.']"));
+		return Secreterial;
+	}
+	public static WebElement clickPANno(WebDriver driver)
+	{
+		
+		Secreterial =driver.findElement(By.xpath("//input[@data-val-regex='Please Enter valid PAN Number']"));
 		return Secreterial;
 	}
 	public static WebElement clickAddressLine(WebDriver driver)
@@ -881,6 +930,18 @@ public class Locator {
 	{
 		
 		Secreterial =driver.findElement(By.xpath("//*[@id='AddressLine1_validationMessage']"));
+		return Secreterial;
+	}
+	public static WebElement clickValidMsg7(WebDriver driver)
+	{
+		
+		Secreterial =driver.findElement(By.xpath("//*[@id='MobileNo_validationMessage']"));
+		return Secreterial;
+	}
+	public static WebElement clickValidMsg8(WebDriver driver)
+	{
+		
+		Secreterial =driver.findElement(By.xpath("//*[@id='Pan_Number_validationMessage']"));
 		return Secreterial;
 	}
 	public static WebElement clickAuditorCreateFromExisting(WebDriver driver)
@@ -953,6 +1014,42 @@ public class Locator {
 	{
 		
 		Secreterial =driver.findElement(By.xpath("/html/body/div[9]/div[1]/div/a"));
+		return Secreterial;
+	}
+	public static WebElement clickCounrty(WebDriver driver)
+	{
+		
+		Secreterial =driver.findElement(By.xpath("//*[@id='step1Content']/div[2]/div/div[1]/span[2]/span/span[1]"));
+		return Secreterial;
+	}
+	public static WebElement clickAuditorDropdown(WebDriver driver)
+	{
+		
+		Secreterial =driver.findElement(By.xpath("//*[@id='divAuditorList']/span/span/span[1]"));
+		return Secreterial;
+	}
+	public static WebElement selectAuditorDropdown(WebDriver driver)
+	{
+		
+		Secreterial =driver.findElement(By.xpath("//*[@id='ddlAuditor_listbox']/li[3]"));
+		return Secreterial;
+	}
+	public static WebElement selectAuditorDropdown1(WebDriver driver)
+	{
+		
+		Secreterial =driver.findElement(By.xpath("(//*[@id='ddlAuditor_listbox']/li[4])[3]"));
+		return Secreterial;
+	}
+	public static WebElement selectAuditorDropdown2(WebDriver driver)
+	{
+		
+		Secreterial =driver.findElement(By.xpath("(//*[@id='ddlAuditor_listbox']/li[5])[5]"));
+		return Secreterial;
+	}
+	public static WebElement selectAuditorDropdown3(WebDriver driver)
+	{
+		
+		Secreterial =driver.findElement(By.xpath("(//*[@id='ddlAuditor_listbox']/li[2])[7]"));
 		return Secreterial;
 	}
 }
