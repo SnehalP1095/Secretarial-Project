@@ -8,6 +8,7 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -39,15 +40,16 @@ private static List<WebElement> elementsList = null;
 	public static void User(WebDriver driver,ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
 	{
 		sheet = workbook.getSheetAt(0);	
-		
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
 		Thread.sleep(2000);
 	    Locator.selectImg(driver).click();
 		Thread.sleep(2000);
 	 Locator.ClickMaster(driver).click();
 	    
+		//js.executeScript("window.scrollBy(0,500)");
+		//js.executeScript("document.querySelector("div[id='ascrail2001'] div").scrollLeft=5000");
 	  
-	  
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 	    Locator.clickUser(driver).click();
 	   
 		Thread.sleep(2000);
@@ -89,7 +91,7 @@ private static List<WebElement> elementsList = null;
 		Thread.sleep(2000);
 		Locator.ClickSaveBtn(driver).click();
 		
-		 Thread.sleep(3000);
+		
 		 Thread.sleep(3000);
 		 String msg1 = Locator.ValidationUserMsg1(driver).getText();
 			if(msg1.contains("Saved Successfully"))
@@ -132,7 +134,7 @@ private static List<WebElement> elementsList = null;
 				Locator.CloseUserPopup(driver).click();
 				
 				//Invalid FirstName and LastName
-				Thread.sleep(2000);
+				/*Thread.sleep(2000);
 			    Locator.clickNewUser(driver).click();
 				Thread.sleep(2000);
 				Locator.clickFirstName(driver).sendKeys("DF$");
@@ -162,7 +164,7 @@ private static List<WebElement> elementsList = null;
 				String msg10 = Locator.ValidationContactNo(driver).getText();
 				test.log(LogStatus.PASS, "Message Dispalyed =" +msg10);
 			    Thread.sleep(2000);
-				Locator.CloseUserPopup(driver).click();
+				Locator.CloseUserPopup(driver).click();*/
 				
 			
 				Thread.sleep(2000);
@@ -171,6 +173,89 @@ private static List<WebElement> elementsList = null;
 				test.log(LogStatus.PASS, "Filter Work Successfully");
 				
 				
+				//Without Entering data 
+				
+				Thread.sleep(2000);
+			    Locator.clickNewUser(driver).click();
+			    
+			    Thread.sleep(2000);
+				Locator.ClickSaveBtn(driver).click();
+				
+				String msg3=Locator.FNValidMsg(driver).getText();
+				String msg4=Locator.LNValidMsg(driver).getText();
+				String msg5=Locator.EmailValidMsg(driver).getText();
+				String msg6=Locator.ContactNoValidMsg(driver).getText();
+				
+				 test.log(LogStatus.PASS, "Without entering data = " +msg3 +"," +msg4 +"," +msg5 +"," +msg6);
+				 
+				 Thread.sleep(4000);
+					Locator.CloseUserPopup(driver).click();
+					
+					
+					//Enter invalid data
+					
+					Thread.sleep(2000);
+				    Locator.clickNewUser(driver).click();
+				    Thread.sleep(2000);
+					Locator.clickFirstName(driver).sendKeys("GFD5$455");
+					Thread.sleep(2000);
+					Locator.clickLastName(driver).sendKeys("jgfgty$3");
+					Thread.sleep(2000);
+					Locator.clickEmail(driver).sendKeys("gag@bam");
+					Thread.sleep(2000);
+					Locator.clickContactNo(driver).sendKeys("231234");
+					Thread.sleep(2000);
+					Locator.clickAddress(driver).sendKeys("Pu#ne");
+					
+					Thread.sleep(2000);
+					Locator.ClickSaveBtn(driver).click();
+					
+					
+					String msg7=Locator.FNValidMsg(driver).getText();
+					String msg8=Locator.LNValidMsg(driver).getText();
+					String msg11=Locator.EmailValidMsg(driver).getText();
+					String msg12=Locator.ContactNoValidMsg(driver).getText();
+					
+					 test.log(LogStatus.PASS, "Enter Invalid Data = " +msg7 +"," +msg8 +"," +msg11 +"," +msg12);
+					
+					
+					 Thread.sleep(4000);
+						Locator.CloseUserPopup(driver).click();
+						
+						
+						// valid Data Accept 
+						
+						Thread.sleep(2000);
+					    Locator.clickNewUser(driver).click();
+					    Thread.sleep(2000);
+						Locator.clickFirstName(driver).sendKeys("Sneha");
+						Thread.sleep(2000);
+						Locator.clickLastName(driver).sendKeys("Patil");
+						Thread.sleep(2000);
+						Locator.clickEmail(driver).sendKeys("sneha@gmail.com");
+						Thread.sleep(2000);
+						Locator.clickContactNo(driver).sendKeys("2313454234");
+						Thread.sleep(2000);
+						Locator.clickAddress(driver).sendKeys("Pune");
+						
+						Thread.sleep(2000);
+						Locator.ClickSaveBtn(driver).click();
+						
+						
+						 Thread.sleep(3000);
+						 String msg13 = Locator.ValidationUserMsg1(driver).getText();
+							if(msg13.contains("Saved Successfully"))
+							{
+								test.log(LogStatus.PASS, "Enter Valid Data= User " +msg13);
+							}
+							else
+							{
+								test.log(LogStatus.FAIL, "Enter Valid Data =" +msg13);
+							}
+						
+						
+						
+						
 		
 	}
 	

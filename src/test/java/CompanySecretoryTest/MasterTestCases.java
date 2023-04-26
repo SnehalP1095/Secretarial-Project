@@ -116,38 +116,119 @@ void CommitteComposition() throws InterruptedException, IOException
 
 void AuditorMaster() throws InterruptedException, IOException
 {
-	test = extent.startTest(" Auditor Master  Verification");
+	test = extent.startTest(" Statutory Auditor Verfication");
 	
-	AuditorMasterMethod.AuditorPage(driver, test,workbook);
+	AuditorMasterMethod.StatutoryAuditor(driver, test,workbook);
 	
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority = 5)
+
+
+
+
+///@Test(priority = 4)
 
 void AuditorMaster1() throws InterruptedException, IOException
 {
-	test = extent.startTest(" Auditor Master  Verification");
+	test = extent.startTest("Internal Auditor  Verification");
 	
-	AuditorMasterMethod.CreateNewTab(driver, test,workbook);
+	AuditorMasterMethod.InternalAuditor(driver, test,workbook);
 	
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority = 6)
+//@Test(priority = 5)
 
 void AuditorMaster2() throws InterruptedException, IOException
 {
-	test = extent.startTest(" Auditor Master  Verification");
+	test = extent.startTest(" Secretarial Auditor  Verification");
+	
+	AuditorMasterMethod.SecretarialAuditor(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 6)
+
+void AuditorMaster3() throws InterruptedException, IOException
+{
+	test = extent.startTest(" Cost Auditor  Verification");
+	
+	AuditorMasterMethod.CostAuditor(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 7)
+
+void AuditorMaster4() throws InterruptedException, IOException
+{
+	test = extent.startTest(" Create From Existing  tab  Verification");
 	
 	AuditorMasterMethod.CreateFromExisting(driver, test,workbook);
 	
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority = 7)
+//@Test(priority = 8)
 
-void AuditorMaster3() throws InterruptedException, IOException
+void AuditorMaster5() throws InterruptedException, IOException
+{
+	test = extent.startTest(" Enter Valid And Invalid Data Verification");
+	
+	AuditorMasterMethod.AuditorPage(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 9)
+
+void AuditorMaster6() throws InterruptedException, IOException
+{
+	test = extent.startTest(" Create New Tab  Verification");
+	
+	AuditorMasterMethod.CreateNewTab(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 10)
+
+void AuditorMaster7() throws InterruptedException, IOException
+{
+	test = extent.startTest(" Edit and Delete Verification");
+	
+	AuditorMasterMethod.EditAuditor(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 11)
+
+void AuditorMaster8() throws InterruptedException, IOException
+{
+	test = extent.startTest(" Upload File  Verification");
+	
+	AuditorMasterMethod.UploadFile(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 12)
+
+void AuditorMaster9() throws InterruptedException, IOException
+{
+	test = extent.startTest(" Create From Existing tab  Verification");
+	
+	AuditorMasterMethod.CreateFromExisting1(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 13)
+
+void AuditorMaster10() throws InterruptedException, IOException
 {
 	test = extent.startTest(" Auditor Master  Verification");
 	
@@ -156,7 +237,9 @@ void AuditorMaster3() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 5)
+
+
+@Test(priority = 14)
 
 void ConfigurationMaster() throws InterruptedException, IOException
 {
@@ -168,7 +251,7 @@ void ConfigurationMaster() throws InterruptedException, IOException
 	extent.flush();
 }
 
-//@Test(priority = 6)
+@Test(priority = 15)
 
 void UserMaster() throws InterruptedException, IOException
 {

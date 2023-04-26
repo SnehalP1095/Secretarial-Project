@@ -129,7 +129,7 @@ public class CommitteeMethod {
 								
 							}
 						
-						/* Thread.sleep(2000);
+						/*Thread.sleep(2000);
 						    Locator.NewCommittee(driver).click();
 						    
 						    Thread.sleep(2000);
@@ -300,6 +300,9 @@ public class CommitteeMethod {
 							{
 								test.log(LogStatus.FAIL, "Message Dispalyed =Quoram " +msg4);
 							}
+							
+							
+							
 						
 							Thread.sleep(2000);
 							Locator.clickeditQuramRule(driver).click();
@@ -345,7 +348,7 @@ public class CommitteeMethod {
 						
 						 Thread.sleep(3000);
 						 String msg5 = Locator.ValidationMeeting(driver).getText();
-							if(msg5.contains("Save Successfully."))
+							if(msg5.contains("Update Successfully."))
 							{
 								test.log(LogStatus.PASS, "Message Dispalyed = Meeting " +msg5);
 							}

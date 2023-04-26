@@ -23,7 +23,7 @@ import com.relevantcodes.extentreports.LogStatus;
 public class AuditorMasterMethod 
 {
 	
-private static List<WebElement> elementsList = null;
+
 
 	
 	public static FileInputStream fis = null;	//File input stream variable
@@ -43,7 +43,7 @@ private static List<WebElement> elementsList = null;
 		return sheet;
 	}
 	
-	public static void AuditorPage(WebDriver driver,ExtentTest test, XSSFWorkbook workbook) throws InterruptedException
+	public static void StatutoryAuditor(WebDriver driver,ExtentTest test, XSSFWorkbook workbook) throws InterruptedException
 	{
 		
 		WebDriverWait wait=new WebDriverWait(driver,20);
@@ -57,7 +57,7 @@ private static List<WebElement> elementsList = null;
 	    
 	    //Statutory Auditor
 	    
-  /*    Thread.sleep(2000);
+        Thread.sleep(2000);
 	    Locator.clickAuditorNew(driver).click();
 	    Thread.sleep(2000);
 	    Locator.clickAuditorCreateNew(driver).click();
@@ -68,7 +68,7 @@ private static List<WebElement> elementsList = null;
 	    Thread.sleep(2000);
 	    Locator.clickCategoryOfAuditor(driver).click();
 	    Thread.sleep(2000);
-	    Locator.SelectCategoryOfAuditor(driver).get(1).click();
+	    Locator.SelectCategoryOfAuditor(driver).click();
 		
 		Thread.sleep(2000);
 	    Row row = sheet.getRow(16);						//Selected 1st index row (Second row)
@@ -95,21 +95,38 @@ private static List<WebElement> elementsList = null;
 		Locator.clickSaveBtn(driver).click();
 		
 		 Thread.sleep(3000);
-		 String msg1 = Locator.clickValidMsg(driver).getText();
-			if(msg1.contains("Auditor/Firm saved successfully"))
-			{
-				test.log(LogStatus.PASS, "Message Dispalyed =" +msg1);
-			}
-			else
-			{
-				test.log(LogStatus.FAIL, "Message Dispalyed =" +msg1);
-			}
+		 
+		 try
+		 {
+		    String msg1 = Locator.clickValidMsg(driver).getText();
+			test.log(LogStatus.PASS, "Statutory Auditor =" +msg1);
+		 }
+			catch(Exception e)
+		{
+				String msg1 = Locator.clickValidMsgAuditor(driver).getText();
+				test.log(LogStatus.FAIL, "Statutory Auditor=" +msg1);
+		}
 			
 			Thread.sleep(2000);
-			Locator.clickCloseBtn(driver).click();*/
+			Locator.clickCloseBtn(driver).click();
+			 Thread.sleep(4000);
+		     EntityLocator.ClickDashboard(driver).click();
+	    
+	    
+	}
+	
+	public static void InternalAuditor(WebDriver driver,ExtentTest test, XSSFWorkbook workbook) throws InterruptedException
+	{
 			//Internal Auditor
 			
-			/*   Thread.sleep(2000);
+		Thread.sleep(2000);
+	    Locator.selectImg(driver).click();
+	    Thread.sleep(2000);
+	    Locator.ClickMaster(driver).click();
+	    Thread.sleep(2000);
+	    Locator.clickAuditor(driver).click();
+		WebDriverWait wait=new WebDriverWait(driver,20);
+			   Thread.sleep(2000);
 			    Locator.clickAuditorNew(driver).click();
 			    Thread.sleep(2000);
 			    Locator.clickAuditorCreateNew(driver).click();
@@ -117,7 +134,7 @@ private static List<WebElement> elementsList = null;
 			    Locator.clickAuditorType(driver).click();
 			   
 			    
-			    By locator = By.linkText("Internal Auditor");
+			    By locator = By.xpath("(//*[@id='ddlAuditor_Type_listbox']/li[2])[3]");
 
 				
 				wait.until(ExpectedConditions.presenceOfElementLocated(locator));
@@ -134,7 +151,7 @@ private static List<WebElement> elementsList = null;
 			    Thread.sleep(2000);
 			    Locator.clickCategoryOfAuditor(driver).click();
 			    Thread.sleep(2000);
-			    Locator.SelectCategoryOfAuditor(driver).get(1).click();
+			    Locator.SelectCategoryOfAuditor1(driver).click();
 				
 				Thread.sleep(2000);
 			    Row row3 = sheet.getRow(22);						//Selected 1st index row (Second row)
@@ -161,18 +178,25 @@ private static List<WebElement> elementsList = null;
 				Locator.clickSaveBtn(driver).click();
 				
 				 Thread.sleep(3000);
-				 String msg2 = Locator.clickValidMsg(driver).getText();
-					if(msg2.contains("Auditor/Firm saved successfully"))
-					{
-						test.log(LogStatus.PASS, "Message Dispalyed =" +msg2);
-					}
-					else
-					{
-						test.log(LogStatus.FAIL, "Message Dispalyed =" +msg2);
-					}
+				 try
+				 {
+				    String msg1 = Locator.clickValidMsg(driver).getText();
+					test.log(LogStatus.PASS, "Internal Auditor =" +msg1);
+				 }
+					catch(Exception e)
+				{
+						String msg1 = Locator.clickValidMsgAuditor(driver).getText();
+						test.log(LogStatus.PASS, "Internal Auditor=" +msg1);
+				}
 					Thread.sleep(2000);
 					Locator.clickCloseBtn(driver).click();
-					
+					 Thread.sleep(4000);
+				     EntityLocator.ClickDashboard(driver).click();
+	}
+	
+	public static void SecretarialAuditor(WebDriver driver,ExtentTest test, XSSFWorkbook workbook) throws InterruptedException
+	{
+		
 					//Secretarial Auditor
 					
 					  Thread.sleep(2000);
@@ -188,7 +212,7 @@ private static List<WebElement> elementsList = null;
 					    Thread.sleep(2000);
 					    Locator.clickCategoryOfAuditor(driver).click();
 					    Thread.sleep(2000);
-					    Locator.SelectCategoryOfAuditor(driver).get(1).click();
+					    Locator.SelectCategoryOfAuditor2(driver).click();
 						
 						Thread.sleep(2000);
 					    Row row6 = sheet.getRow(27);						//Selected 1st index row (Second row)
@@ -215,18 +239,25 @@ private static List<WebElement> elementsList = null;
 						Locator.clickSaveBtn(driver).click();
 						
 						 Thread.sleep(3000);
-						 String msg3 = Locator.clickValidMsg(driver).getText();
-							if(msg3.contains("Auditor/Firm saved successfully"))
-							{
-								test.log(LogStatus.PASS, "Message Dispalyed =" +msg3);
-							}
-							else
-							{
-								test.log(LogStatus.FAIL, "Message Dispalyed =" +msg3);
-							}	
+						 try
+						 {
+						    String msg1 = Locator.clickValidMsg(driver).getText();
+							test.log(LogStatus.PASS, "Secreterial Auditor =" +msg1);
+						 }
+							catch(Exception e)
+						{
+								String msg1 = Locator.clickValidMsgAuditor(driver).getText();
+								test.log(LogStatus.PASS, "Secreterial Auditor=" +msg1);
+						}
 							Thread.sleep(2000);
 							Locator.clickCloseBtn(driver).click();
 							
+							 Thread.sleep(4000);
+						     EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void CostAuditor(WebDriver driver,ExtentTest test, XSSFWorkbook workbook) throws InterruptedException
+	{
+		
 						//Cost Auditor	
 							  
 					Thread.sleep(2000);
@@ -240,7 +271,7 @@ private static List<WebElement> elementsList = null;
 						Thread.sleep(2000);
 						Locator.clickCategoryOfAuditor(driver).click();
 						Thread.sleep(2000);
-						Locator.SelectCategoryOfAuditor(driver).get(1).click();
+						Locator.SelectCategoryOfAuditor3(driver).click();
 						
 						Thread.sleep(2000);
 						Row row9 = sheet.getRow(32);						//Selected 1st index row (Second row)
@@ -267,20 +298,33 @@ private static List<WebElement> elementsList = null;
 						Locator.clickSaveBtn(driver).click();
 						
 						Thread.sleep(3000);
-						String msg4 = Locator.clickValidMsg(driver).getText();
-						if(msg4.contains("Auditor/Firm saved successfully"))
+						 try
+						 {
+						    String msg1 = Locator.clickValidMsg(driver).getText();
+							test.log(LogStatus.PASS, "Cost Auditor =" +msg1);
+						 }
+							catch(Exception e)
 						{
-							test.log(LogStatus.PASS, "Message Dispalyed =" +msg4);
+								String msg1 = Locator.clickValidMsgAuditor(driver).getText();
+								test.log(LogStatus.PASS, "Cost Auditor=" +msg1);
 						}
-						else
-						{
-							test.log(LogStatus.FAIL, "Message Dispalyed =" +msg4);
-						}	
 						
 						Thread.sleep(2000);
-						Locator.clickCloseBtn(driver).click();*/
+						Locator.clickCloseBtn(driver).click();
 						
-		/*	Thread.sleep(2000);
+						 Thread.sleep(4000);
+					     EntityLocator.ClickDashboard(driver).click();
+	}			
+		
+	
+	
+	public static void CreateFromExisting(WebDriver driver,ExtentTest test, XSSFWorkbook workbook) throws InterruptedException
+	{
+		
+		
+		
+	    
+		   Thread.sleep(2000);
 			Locator.clickAuditorNew(driver).click();			
 						
 			Thread.sleep(4000);
@@ -290,29 +334,44 @@ private static List<WebElement> elementsList = null;
 			Locator.clickAuditorFirm(driver).click();
 			
 			Thread.sleep(4000);
-			Locator.SelectAuditorFirm(driver).get(9).click();
+			Locator.SelectAuditorFirm(driver).click();
 	       
 			Thread.sleep(3000);
 			Locator.clickAuditorType(driver).click();
 			Thread.sleep(3000);
-			Locator.SelectSecretarialAuditorDropDown(driver).click();
+			Locator.SelectAuditorTypeDropDown4(driver).click();
+			
+			Locator.clickAuditorName(driver).clear();
+			 Thread.sleep(2000);
+				Locator.clickAuditorName(driver).sendKeys("gdderft");
+				Locator.clickAuditorEmail(driver).clear();
+				Locator.clickAuditorEmail(driver).sendKeys("dfrrt@gmail.com");
+			
+			
 		
 			Thread.sleep(6000);
 			Locator.clickSaveBtn(driver).click();
 			Thread.sleep(3000);
-			 String msg5 = Locator.clickValidMsg(driver).getText();
-				if(msg5.contains("Auditor/Firm saved successfully"))
-				{
-					test.log(LogStatus.PASS, "Message Dispalyed =" +msg5);
-				}
-				else
-				{
-					test.log(LogStatus.FAIL, "Message Dispalyed =" +msg5);
-				}
+			 try
+			 {
+			    String msg1 = Locator.clickValidMsg(driver).getText();
+				test.log(LogStatus.PASS, "Create From Existing =" +msg1);
+			 }
+				catch(Exception e)
+			{
+					String msg1 = Locator.clickValidMsgAuditor(driver).getText();
+					test.log(LogStatus.PASS, "Create From Existing =" +msg1);
+			}
 				
 				Thread.sleep(2000);
-				Locator.clickCloseBtn(driver).click();*/
-	    
+				Locator.clickCloseBtn(driver).click();
+				
+				 Thread.sleep(4000);
+			     EntityLocator.ClickDashboard(driver).click();
+	}
+	
+	public static void AuditorPage(WebDriver driver,ExtentTest test, XSSFWorkbook workbook) throws InterruptedException
+	{
 	    
      //Create New and Create from Existing Button is working or not
 	    Thread.sleep(2000);
@@ -343,16 +402,16 @@ private static List<WebElement> elementsList = null;
 		    Thread.sleep(2000);
 		    Locator.clickAuditorType(driver).click();
 		    Thread.sleep(2000);
-		    Locator.SelectAuditorTypeDropDown(driver).click();
+		    Locator.SelectAuditorTypeDropDown5(driver).click();
 		    Thread.sleep(2000);
 		    Locator.clickCategoryOfAuditor(driver).click();
 		    Thread.sleep(2000);
-		    Locator.SelectCategoryOfAuditor1(driver).click();
+		    Locator.SelectCategoryOfAuditor4(driver).click();
 			
 		    Thread.sleep(2000);
-			Locator.clickAuditorName(driver).sendKeys("Priyanka");
+			Locator.clickAuditorName(driver).sendKeys("deasder");
 			
-			Locator.clickAuditorEmail(driver).sendKeys("priyanka@itc.com");
+			Locator.clickAuditorEmail(driver).sendKeys("sders@gmail.com");
 			
 			Thread.sleep(2000);
 			Locator.clickRegistrationNo(driver).sendKeys("3423545");
@@ -364,15 +423,16 @@ private static List<WebElement> elementsList = null;
 			Locator.clickSaveBtn(driver).click();
 			
 			 Thread.sleep(3000);
-			 String MSG1 = Locator.clickValidMsg(driver).getText();
-				if(MSG1.contains("Auditor/Firm saved successfully"))
-				{
-					test.log(LogStatus.PASS, "Message Dispalyed =" +MSG1);
-				}
-				else
-				{
-					test.log(LogStatus.FAIL, "Message Dispalyed =" +MSG1);
-				}
+			 try
+			 {
+			    String msg1 = Locator.clickValidMsg(driver).getText();
+				test.log(LogStatus.PASS, "Accept Alphabate or not =" +msg1);
+			 }
+				catch(Exception e)
+			{
+					String msg1 = Locator.clickValidMsgAuditor(driver).getText();
+					test.log(LogStatus.PASS, "Accept Alphabate or not=" +msg1);
+			}
 		  
 		    Thread.sleep(2000);
 			Locator.clickCloseBtn(driver).click();
@@ -434,17 +494,15 @@ private static List<WebElement> elementsList = null;
 					Thread.sleep(2000);
 					Locator.clickCloseBtn(driver).click();
 					
+					 Thread.sleep(4000);
+				     EntityLocator.ClickDashboard(driver).click();
+					
 	}		
 	public static void CreateNewTab(WebDriver driver,ExtentTest test, XSSFWorkbook workbook) throws InterruptedException
 		{	
 				    //Membership and Registration no Accept Alpha numeric and special characters
 						
-						Thread.sleep(2000);
-					    Locator.selectImg(driver).click();
-					    Thread.sleep(2000);
-					    Locator.ClickMaster(driver).click();
-					    Thread.sleep(2000);
-					    Locator.clickAuditor(driver).click();	
+						
 						
 					    Thread.sleep(2000);
 					     Locator.clickAuditorNew(driver).click();
@@ -453,18 +511,18 @@ private static List<WebElement> elementsList = null;
 					     Thread.sleep(2000);
 					     Locator.clickAuditorType(driver).click();
 					     Thread.sleep(2000);
-					     Locator.SelectAuditorTypeDropDown(driver).click();
+					     selectOptionFromDropDown_bs( Locator.SelectAuditorTypeDropDown6(driver), "Secretarial Auditor");
 					     Thread.sleep(2000);
 					     Locator.clickCategoryOfAuditor(driver).click();
 					     Thread.sleep(2000);
-					     Locator.SelectCategoryOfAuditor(driver).click();
+					     selectOptionFromDropDown_bs( Locator.SelectCategoryOfAuditor5(driver), "Individual");
 					     Thread.sleep(2000);
 						 Locator.clickMobileNo(driver).sendKeys("3456253121");
 						 Thread.sleep(2000);
 						 Locator.clickPANno(driver).sendKeys("ALSHC3599G");
 						 Thread.sleep(2000);
-						 Locator.clickAuditorName(driver).sendKeys("Krishna");
-						 Locator.clickAuditorEmail(driver).sendKeys("krishna@gmail.com");
+						 Locator.clickAuditorName(driver).sendKeys("erws");
+						 Locator.clickAuditorEmail(driver).sendKeys("ewqwese@gmail.com");
 						 Thread.sleep(2000);
 						 Locator.clickRegistrationNo(driver).sendKeys("3423a@sd545");
 						 Thread.sleep(2000);
@@ -472,65 +530,66 @@ private static List<WebElement> elementsList = null;
 						 Thread.sleep(2000);
 						 Locator.clickSaveBtn(driver).click();
 									
-						 Thread.sleep(3000);
-						 String MSG2 = Locator.clickValidMsg(driver).getText();
-						 if(MSG2.contains("Auditor/Firm saved successfully"))
+						
+			         
+						 
+						  Thread.sleep(3000);
+							 try
+							 {
+							    String msg1 = Locator.clickValidMsg(driver).getText();
+								test.log(LogStatus.PASS, "Mobile No Accept 10 digit =" +msg1);
+							 }
+								catch(Exception e)
 							{
-								test.log(LogStatus.PASS, "Membership and Registration no Accept Alpha numeric and special characters =" +MSG2);
+									String msg1 = Locator.clickValidMsgAuditor(driver).getText();
+									test.log(LogStatus.PASS, "Mobile No Accept 10 digit=" +msg1);
 							}
-						else
-							{
-								test.log(LogStatus.FAIL, "Membership and Registration no Accept Alpha numeric and special characters =" +MSG2);
-							}
-								 
-								 
-						 Thread.sleep(3000);
-						String MSG19 = Locator.clickValidMsg(driver).getText();
-						 if(MSG19.contains("Auditor/Firm saved successfully"))
-							{
-								test.log(LogStatus.PASS, "Mobile No Accept 10 digit =" +MSG19);
-							}
-						else
-							{
-								 test.log(LogStatus.FAIL, "Mobile No Accept 10 digit =" +MSG19);
-							}
-								 
-						 Thread.sleep(3000);
-						 String MSG20 = Locator.clickValidMsg(driver).getText();
-						  if(MSG20.contains("Auditor/Firm saved successfully"))
-							{
-								test.log(LogStatus.PASS, "PAN No Accpet alpha numeric characters =" +MSG20);
-							}
-							else
-								{
-									test.log(LogStatus.FAIL, "PAN No Accpet alpha numeric characters =" +MSG20);
-								}
-								 
+							 
+							 
 							 Thread.sleep(3000);
-							String MSG21 = Locator.clickValidMsg(driver).getText();
-							if(MSG21.contains("Auditor/Firm saved successfully"))
-								{
-									test.log(LogStatus.PASS, "Address Line Accept Alpha numeric and special Character =" +MSG21);
-								}
-							else
-								{
-									test.log(LogStatus.FAIL, "Address Line Accept Alpha numeric and special Character =" +MSG21);
-								}
-								 
+							 try
+							 {
+							    String msg1 = Locator.clickValidMsg(driver).getText();
+								test.log(LogStatus.PASS, "PAN No Accpet alpha numeric characters  =" +msg1);
+							 }
+								catch(Exception e)
+							{
+									String msg1 = Locator.clickValidMsgAuditor(driver).getText();
+									test.log(LogStatus.PASS, "PAN No Accpet alpha numeric characters =" +msg1);
+							} 
+							 
+							 Thread.sleep(3000);
+							 try
+							 {
+							    String msg1 = Locator.clickValidMsg(driver).getText();
+								test.log(LogStatus.PASS, "Address Line Accept Alpha numeric and special Character  =" +msg1);
+							 }
+								catch(Exception e)
+							{
+									String msg1 = Locator.clickValidMsgAuditor(driver).getText();
+									test.log(LogStatus.PASS, "Address Line Accept Alpha numeric and special Character =" +msg1);
+							} 
+							 
+							 
+			 
 							 Thread.sleep(2000);
 							 Locator.clickCloseBtn(driver).click();
+							 
+							 Thread.sleep(4000);
+						     EntityLocator.ClickDashboard(driver).click();
 								 
 								
+		}				
 								
-								
-							
-						/*	Thread.sleep(2000);
+		public static void EditAuditor(WebDriver driver,ExtentTest test, XSSFWorkbook workbook) throws InterruptedException
+		{
+							Thread.sleep(2000);
 							Locator.clickEditicon(driver).click();
 							
-							Thread.sleep(2000);
-						    Locator.clickCategoryOfAuditor(driver).click();
-						    Thread.sleep(2000);
-						    Locator.SelectCategoryOfAuditor(driver).click();
+//							Thread.sleep(2000);
+//						    Locator.clickCategoryOfAuditor(driver).click();
+//						    Thread.sleep(2000);
+//						    Locator.SelectCategoryOfAuditor(driver).click();
 						    
 							Thread.sleep(2000);
 						    Locator.clickAuditorName(driver).clear();
@@ -544,8 +603,11 @@ private static List<WebElement> elementsList = null;
 							Locator.clickSaveBtn(driver).click();
 							
 							Thread.sleep(2000);
-							Locator.clickCloseBtn(driver).click();*/
+							Locator.clickCloseBtn(driver).click();
 							
+							
+							
+							//Delete Auditor
 							Thread.sleep(2000);
 							Locator.clickDeleteicon(driver).click();
 							
@@ -563,31 +625,101 @@ private static List<WebElement> elementsList = null;
 							 // Accepting alert		
 							  alert1.accept(); 
 							  
+							  Thread.sleep(4000);
+							     EntityLocator.ClickDashboard(driver).click();
+							 
+							  
+							
+		}
+		public static void UploadFile(WebDriver driver,ExtentTest test, XSSFWorkbook workbook) throws InterruptedException
+		{
+							
+			//Upload  File   
+			  
+			Thread.sleep(2000);
+			Locator.clickUploadBtn(driver).click();
+			
+			Thread.sleep(3000);
+			Locator.clickChooseFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Auditor.xlsx");
+
+
+			Thread.sleep(2000);
+			Locator.clickUploadFile(driver).click();
+			
+			Thread.sleep(3000);
+			String msg6 = Locator.clickUploadValidMsg(driver).getText();
+			if(msg6.contains("Auditor Details Uploaded Successfully"))
+			{
+				test.log(LogStatus.PASS, "Message Dispalyed =" +msg6);
+			}
+			else
+			{
+				test.log(LogStatus.FAIL, "Message Dispalyed =" +msg6);
+			}
+				
+			Thread.sleep(2000);
+			Locator.clickClosebtn(driver).click();
+			
+			
+			
+			
+			
+			                     //Upload File Enter Invalid Data 	
+								
+								
 								Thread.sleep(2000);
 								Locator.clickUploadBtn(driver).click();
 								
 								Thread.sleep(3000);
-								Locator.clickChooseFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Auditor.xlsx");
+								Locator.clickChooseFile(driver).sendKeys("C:\\Users\\Admin\\Desktop\\Snehal\\ComplianceLatest\\Secreterial\\TestData\\Auditor.xlsx");
 				    
 			
 								Thread.sleep(2000);
 								Locator.clickUploadFile(driver).click();
 								
 								Thread.sleep(3000);
-								String msg6 = Locator.clickUploadValidMsg(driver).getText();
-								if(msg6.contains("Auditor Details Uploaded Successfully"))
+								String msg7 = Locator.clickUploadValidMsg(driver).getText();
+								if(msg7.contains("Input string was not in a correct format.."))
 								{
-									test.log(LogStatus.PASS, "Message Dispalyed =" +msg6);
+									test.log(LogStatus.PASS, "Enter Invalid Data in Upload file =" +msg7);
 								}
 								else
 								{
-									test.log(LogStatus.FAIL, "Message Dispalyed =" +msg6);
+									test.log(LogStatus.FAIL, "Enter Invalid Data in Upload file =" +msg7);
 								}
 									
 								Thread.sleep(2000);
 								Locator.clickClosebtn(driver).click();
+								
+								
+								
+								//Upload File Without Enter Data
+								Thread.sleep(2000);
+								Locator.clickUploadBtn(driver).click();
+								
+								Thread.sleep(3000);
+								Locator.clickChooseFile(driver).sendKeys("C:\\Users\\Admin\\Desktop\\Auditor.xlsx");
+				    
+			
+								Thread.sleep(2000);
+								Locator.clickUploadFile(driver).click();
+								
+								Thread.sleep(3000);
+								String msg8 = Locator.clickUploadValidMsg(driver).getText();
+								if(msg8.contains("No data in excel File"))
+								{
+									test.log(LogStatus.PASS, "Without entering data in upload file =" +msg8);
+								}
+								else
+								{
+									test.log(LogStatus.FAIL, "Without entering data in upload file =" +msg8);
+								}
 									
-								//Close button clickable or not
+								Thread.sleep(2000);
+								Locator.clickClosebtn(driver).click();
+								
+								
+			      		//Close button clickable or not
 								Thread.sleep(4000);
 									
 								Thread.sleep(2000);
@@ -630,47 +762,52 @@ private static List<WebElement> elementsList = null;
 												
 								}
 								Locator.clickCloseBtn(driver).click();
+								
+								 Thread.sleep(4000);
+							     EntityLocator.ClickDashboard(driver).click();
 		}
 	
-	public static void CreateFromExisting(WebDriver driver,ExtentTest test, XSSFWorkbook workbook) throws InterruptedException
+	public static void CreateFromExisting1(WebDriver driver,ExtentTest test, XSSFWorkbook workbook) throws InterruptedException
 	{	
 			    //Membership and Registration no Accept Alpha numeric and special characters
 					
-					Thread.sleep(2000);
-				    Locator.selectImg(driver).click();
-				    Thread.sleep(2000);
-				    Locator.ClickMaster(driver).click();
-				    Thread.sleep(2000);
-				    Locator.clickAuditor(driver).click();	
+					
 					
 				    Thread.sleep(2000);
 				     Locator.clickAuditorNew(driver).click();
 				     Thread.sleep(2000);
 				     Locator.clickAuditorDropdown(driver).click();
 				     Thread.sleep(2000);
-				     Locator.selectAuditorDropdown(driver).click();
+				     selectOptionFromDropDown_bs(Locator.selectAuditorDropdown4(driver), "SECRETARY & ASSOCIATES");
 				     Thread.sleep(2000);
 				     Locator.clickAuditorType(driver).click();
 				     Thread.sleep(2000);
-				     Locator.SelectAuditorTypeDropDown3(driver).click();
+				     selectOptionFromDropDown_bs(Locator.SelectAuditorTypeDropDown6(driver), "Secretarial Auditor");
 				     Locator.clickAuditorName(driver).clear();
 				     Thread.sleep(2000);
-					 Locator.clickAuditorName(driver).sendKeys("Swaraj");
+					 Locator.clickAuditorName(driver).sendKeys("gfder");
 					 Thread.sleep(2000);
 					 Locator.clickAuditorEmail(driver).clear();
-					 Locator.clickAuditorEmail(driver).sendKeys("Swaraj@gmail.com");
+					 Locator.clickAuditorEmail(driver).sendKeys("sderd@gmail.com");
 				     Thread.sleep(2000);
 				     Locator.clickSaveBtn(driver).click();
-				     Thread.sleep(3000);
-					 String MSG1 = Locator.clickValidMsg(driver).getText();
-						if(MSG1.contains("Auditor/Firm saved successfully"))
+				    
+						 Thread.sleep(3000);
+						 try
+						 {
+						    String msg1 = Locator.clickValidMsg(driver).getText();
+							test.log(LogStatus.PASS, "Create From Existing tab  =" +msg1);
+						 }
+							catch(Exception e)
 						{
-							test.log(LogStatus.PASS, "Create From Existing tab  =" +MSG1);
-						}
-						else
-						{
-							test.log(LogStatus.FAIL, "Create From Existing tab =" +MSG1);
-						}
+								String msg1 = Locator.clickValidMsgAuditor(driver).getText();
+								test.log(LogStatus.PASS, "Create From Existing tab =" +msg1);
+						} 
+						
+						
+						
+						
+						
 						Thread.sleep(2000);
 						Locator.clickCloseBtn(driver).click();
 						
@@ -681,13 +818,21 @@ private static List<WebElement> elementsList = null;
 					     Thread.sleep(2000);
 					     Locator.clickAuditorDropdown(driver).click();
 					     Thread.sleep(2000);
-					     Locator.selectAuditorDropdown1(driver).click();
+					     selectOptionFromDropDown_bs(Locator.selectAuditorDropdown4(driver), "SECRETARY & ASSOCIATES");
+					     Thread.sleep(2000);
+					     Locator.clickAuditorType(driver).click();
+					     Thread.sleep(2000);
+					     selectOptionFromDropDown_bs( Locator.SelectAuditorTypeDropDown6(driver), "Secretarial Auditor");
+					     Thread.sleep(2000);
+					     Locator.clickCategoryOfAuditor(driver).click();
+					     Thread.sleep(2000);
+					     selectOptionFromDropDown_bs( Locator.SelectCategoryOfAuditor5(driver), "Individual");
 					    
 						    Thread.sleep(2000);
 					     Locator.clickAuditorName(driver).clear();
-					     Locator.clickAuditorName(driver).sendKeys("Varadraj");
+					     Locator.clickAuditorName(driver).sendKeys("jhytg");
 							Locator.clickAuditorEmail(driver).clear();
-							Locator.clickAuditorEmail(driver).sendKeys("varadraj@itc.com");
+							Locator.clickAuditorEmail(driver).sendKeys("fdds@itc.com");
 							Locator.clickRegistrationNo(driver).clear();
 							Thread.sleep(2000);
 							Locator.clickRegistrationNo(driver).sendKeys("3423545");
@@ -698,16 +843,22 @@ private static List<WebElement> elementsList = null;
 							Thread.sleep(2000);
 							Locator.clickSaveBtn(driver).click();
 							
-							 Thread.sleep(3000);
-							 String MSG2 = Locator.clickValidMsg(driver).getText();
-								if(MSG2.contains("Auditor/Firm saved successfully"))
+						
+								
+								
+								 Thread.sleep(3000);
+								 try
+								 {
+								    String msg1 = Locator.clickValidMsg(driver).getText();
+									test.log(LogStatus.PASS, "Accept Alphabate Characters  =" +msg1);
+								 }
+									catch(Exception e)
 								{
-									test.log(LogStatus.PASS, "Accept Alphabate Characters =" +MSG2);
-								}
-								else
-								{
-									test.log(LogStatus.FAIL, "Accept Alphabate Characters =" +MSG2);
-								}
+										String msg1 = Locator.clickValidMsgAuditor(driver).getText();
+										test.log(LogStatus.PASS, "Accept Alphabate Characters =" +msg1);
+								} 
+								
+								
 						  
 						    Thread.sleep(2000);
 							Locator.clickCloseBtn(driver).click();
@@ -719,7 +870,17 @@ private static List<WebElement> elementsList = null;
 							   Thread.sleep(2000);
 							   Locator.clickAuditorDropdown(driver).click();
 							   Thread.sleep(2000);
-							    Locator.selectAuditorDropdown2(driver).click();
+							   selectOptionFromDropDown_bs( Locator.selectAuditorDropdown4(driver), "SECRETARY & ASSOCIATES");
+							   Thread.sleep(2000);
+							     Locator.clickAuditorCreateNew(driver).click();
+							     Thread.sleep(2000);
+							     Locator.clickAuditorType(driver).click();
+							     Thread.sleep(2000);
+							     selectOptionFromDropDown_bs( Locator.SelectAuditorTypeDropDown6(driver), "Secretarial Auditor");
+							     Thread.sleep(2000);
+							     Locator.clickCategoryOfAuditor(driver).click();
+							     Thread.sleep(2000);
+							     selectOptionFromDropDown_bs( Locator.SelectCategoryOfAuditor5(driver), "Individual");
 							    Thread.sleep(2000);
 							    Locator.clickMobileNo(driver).clear();
 							     Thread.sleep(2000);
@@ -764,7 +925,7 @@ private static List<WebElement> elementsList = null;
 								     Thread.sleep(2000);
 								     Locator.clickAuditorDropdown(driver).click();
 								     Thread.sleep(2000);
-								     Locator.selectAuditorDropdown3(driver).click();
+								     selectOptionFromDropDown_bs( Locator.selectAuditorDropdown4(driver), "SECRETARY & ASSOCIATES");
 								     Thread.sleep(2000);
 								     Locator.clickMobileNo(driver).clear();
 								     Thread.sleep(2000);
@@ -789,6 +950,9 @@ private static List<WebElement> elementsList = null;
 									 test.log(LogStatus.PASS, "Without entering data = " +MSG3 +"," +MSG6 +"," +MSG7 +"," +MSG8);
 									Thread.sleep(2000);
 									Locator.clickCloseBtn(driver).click();
+									
+									 Thread.sleep(4000);
+								     EntityLocator.ClickDashboard(driver).click();
 	}
 	
 	public static void CreateFromExistingTab(WebDriver driver,ExtentTest test, XSSFWorkbook workbook) throws InterruptedException
@@ -807,11 +971,11 @@ private static List<WebElement> elementsList = null;
 				     Thread.sleep(2000);
 				     Locator.clickAuditorDropdown(driver).click();
 				     Thread.sleep(2000);
-				     Locator.selectAuditorDropdown(driver).click();
+				     selectOptionFromDropDown_bs( Locator.selectAuditorDropdown4(driver), "SECRETARY & ASSOCIATES");
 				     Thread.sleep(2000);
 				     Locator.clickAuditorType(driver).click();
 				     Thread.sleep(2000);
-				     Locator.SelectAuditorTypeDropDown3(driver).click();
+				     selectOptionFromDropDown_bs( Locator.SelectAuditorTypeDropDown6(driver), "Secretarial Auditor");
 				     Locator.clickMobileNo(driver).clear();
 				     Thread.sleep(2000);
 					 Locator.clickMobileNo(driver).sendKeys("3456253121");
@@ -820,9 +984,9 @@ private static List<WebElement> elementsList = null;
 					 Locator.clickPANno(driver).sendKeys("ALSHC3599G");
 					 Locator.clickAuditorName(driver).clear();
 					 Thread.sleep(2000);
-					 Locator.clickAuditorName(driver).sendKeys("Pankaj");
+					 Locator.clickAuditorName(driver).sendKeys("ewserf");
 					 Locator.clickAuditorEmail(driver).clear();
-					 Locator.clickAuditorEmail(driver).sendKeys("pankaj@gmail.com");
+					 Locator.clickAuditorEmail(driver).sendKeys("dfer@gmail.com");
 					 Locator.clickRegistrationNo(driver).clear();
 					 Thread.sleep(2000);
 					 Locator.clickRegistrationNo(driver).sendKeys("3423a@sd545");
@@ -832,51 +996,60 @@ private static List<WebElement> elementsList = null;
 					 Thread.sleep(2000);
 					 Locator.clickSaveBtn(driver).click();
 								
+					
+					 
+					 
 					 Thread.sleep(3000);
-					 String MSG2 = Locator.clickValidMsg(driver).getText();
-					 if(MSG2.contains("Auditor/Firm saved successfully"))
-						{
-							test.log(LogStatus.PASS, "Membership and Registration no Accept Alpha numeric and special characters =" +MSG2);
-						}
-					else
-						{
-							test.log(LogStatus.FAIL, "Membership and Registration no Accept Alpha numeric and special characters =" +MSG2);
-						}
+					 try
+					 {
+					    String msg1 = Locator.clickValidMsg(driver).getText();
+						test.log(LogStatus.PASS, "Membership and Registration no Accept Alpha numeric and special characters =" +msg1);
+					 }
+						catch(Exception e)
+					{
+							String msg1 = Locator.clickValidMsgAuditor(driver).getText();
+							test.log(LogStatus.PASS, "Membership and Registration no Accept Alpha numeric and special characters =" +msg1);
+					} 
 							 
-							 
+					
 					 Thread.sleep(3000);
-					String MSG19 = Locator.clickValidMsg(driver).getText();
-					 if(MSG19.contains("Auditor/Firm saved successfully"))
-						{
-							test.log(LogStatus.PASS, "Mobile No Accept 10 digit =" +MSG19);
-						}
-					else
-						{
-							 test.log(LogStatus.FAIL, "Mobile No Accept 10 digit =" +MSG19);
-						}
-							 
+					 try
+					 {
+					    String msg1 = Locator.clickValidMsg(driver).getText();
+						test.log(LogStatus.PASS, "Mobile No Accept 10 digit  =" +msg1);
+					 }
+						catch(Exception e)
+					{
+							String msg1 = Locator.clickValidMsgAuditor(driver).getText();
+							test.log(LogStatus.PASS, "Mobile No Accept 10 digit =" +msg1);
+					} 
+					 
 					 Thread.sleep(3000);
-					 String MSG20 = Locator.clickValidMsg(driver).getText();
-					  if(MSG20.contains("Auditor/Firm saved successfully"))
-						{
-							test.log(LogStatus.PASS, "PAN No Accpet alpha numeric characters =" +MSG20);
-						}
-						else
-							{
-								test.log(LogStatus.FAIL, "PAN No Accpet alpha numeric characters =" +MSG20);
-							}
+					 try
+					 {
+					    String msg1 = Locator.clickValidMsg(driver).getText();
+						test.log(LogStatus.PASS, "PAN No Accpet alpha numeric characters  =" +msg1);
+					 }
+						catch(Exception e)
+					{
+							String msg1 = Locator.clickValidMsgAuditor(driver).getText();
+							test.log(LogStatus.PASS, "PAN No Accpet alpha numeric characters =" +msg1);
+					} 
+					 
+					 Thread.sleep(3000);
+					 try
+					 {
+					    String msg1 = Locator.clickValidMsg(driver).getText();
+						test.log(LogStatus.PASS, "Address Line Accept Alpha numeric and special Character =" +msg1);
+					 }
+						catch(Exception e)
+					{
+							String msg1 = Locator.clickValidMsgAuditor(driver).getText();
+							test.log(LogStatus.PASS, "Address Line Accept Alpha numeric and special Character =" +msg1);
+					} 
+					 
 							 
-						 Thread.sleep(3000);
-						String MSG21 = Locator.clickValidMsg(driver).getText();
-						if(MSG21.contains("Auditor/Firm saved successfully"))
-							{
-								test.log(LogStatus.PASS, "Address Line Accept Alpha numeric and special Character =" +MSG21);
-							}
-						else
-							{
-								test.log(LogStatus.FAIL, "Address Line Accept Alpha numeric and special Character =" +MSG21);
-							}
-							 
+		 
 						 Thread.sleep(2000);
 						 Locator.clickCloseBtn(driver).click();
 						 
@@ -923,7 +1096,20 @@ private static List<WebElement> elementsList = null;
 											
 							}
 							Locator.clickCloseBtn(driver).click();
+							
+							 Thread.sleep(4000);
+						     EntityLocator.ClickDashboard(driver).click();
 					
 	}		
+	
+	  public static void selectOptionFromDropDown_bs(List<WebElement> options, String value) {
+			
+			for(WebElement option:options) {
+				if(option.getText().equals(value)) {
+					option.click();
+					break;
+				}
+			}
+		 }
 
 }

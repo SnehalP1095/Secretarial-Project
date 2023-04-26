@@ -104,11 +104,11 @@ private static List<WebElement> elementsList = null;
 			 String msg1 = Locator.ValidationMsgCommittee1(driver).getText();
 				if(msg1.contains("Please Select Committee."))
 				{
-					test.log(LogStatus.PASS, "Message Dispalyed =" +msg1);
+					test.log(LogStatus.PASS, "Without entering data =" +msg1);
 				}
 				else
 				{
-					test.log(LogStatus.FAIL, "Message Dispalyed =" +msg1);
+					test.log(LogStatus.FAIL, "Without entering data =" +msg1);
 				}
 			 
 				 Thread.sleep(3000);

@@ -3,15 +3,20 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="CompanySecretoryTest.MasterTestCases">
+      <class name="CompanySecretoryTest.EntityTestCases">
         <methods>
-          <include name="AuditorMaster"/>
+          <include name="InvalidIFSC"/>
+          <include name="InvalidBankName"/>
+          <include name="DeleteBankDetailes1"/>
+          <include name="WithoutEnterBankDetailes"/>
           <include name="setBrowser"/>
-          <include name="AuditorMaster3"/>
-          <include name="AuditorMaster1"/>
-          <include name="AuditorMaster2"/>
+          <include name="DeleteBankDetailes"/>
+          <include name="DateBankDetailes"/>
+          <include name="InvalidAccountNo"/>
+          <include name="UpdateBankDetailes"/>
+          <include name="InvalidUpdateBankDetailes"/>
         </methods>
-      </class> <!-- CompanySecretoryTest.MasterTestCases -->
+      </class> <!-- CompanySecretoryTest.EntityTestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
