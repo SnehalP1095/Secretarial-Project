@@ -1,64 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-26T18:22:19 IST" name="Default suite" finished-at="2023-04-26T18:28:15 IST" duration-ms="355403">
+  <suite started-at="2023-05-02T18:16:56 IST" name="Default suite" finished-at="2023-05-02T18:20:29 IST" duration-ms="213441">
     <groups>
     </groups>
-    <test started-at="2023-04-26T18:22:19 IST" name="Default test" finished-at="2023-04-26T18:28:15 IST" duration-ms="355403">
+    <test started-at="2023-05-02T18:16:56 IST" name="Default test" finished-at="2023-05-02T18:20:29 IST" duration-ms="213441">
       <class name="CompanySecretoryTest.EntityTestCases">
-        <test-method is-config="true" signature="setBrowser()[pri:0, instance:CompanySecretoryTest.EntityTestCases@201a4587]" started-at="2023-04-26T18:22:19 IST" name="setBrowser" finished-at="2023-04-26T18:22:24 IST" duration-ms="4443" status="PASS">
+        <test-method is-config="true" signature="setBrowser()[pri:0, instance:CompanySecretoryTest.EntityTestCases@201a4587]" started-at="2023-05-02T18:16:56 IST" name="setBrowser" finished-at="2023-05-02T18:17:09 IST" duration-ms="12917" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBrowser -->
-        <test-method signature="Login()[pri:1, instance:CompanySecretoryTest.EntityTestCases@201a4587]" started-at="2023-04-26T18:22:24 IST" name="Login" finished-at="2023-04-26T18:22:35 IST" duration-ms="11113" status="PASS">
+        <test-method signature="Login()[pri:1, instance:CompanySecretoryTest.EntityTestCases@201a4587]" started-at="2023-05-02T18:17:09 IST" name="Login" finished-at="2023-05-02T18:17:51 IST" duration-ms="41683" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="BankDetailes()[pri:57, instance:CompanySecretoryTest.EntityTestCases@201a4587]" started-at="2023-04-26T18:22:35 IST" name="BankDetailes" finished-at="2023-04-26T18:22:53 IST" duration-ms="18141" status="PASS">
+        <test-method signature="EnterInvalidDataLLP()[pri:71, instance:CompanySecretoryTest.EntityTestCases@201a4587]" started-at="2023-05-02T18:17:51 IST" name="EnterInvalidDataLLP" finished-at="2023-05-02T18:18:48 IST" duration-ms="57323" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BankDetailes -->
-        <test-method signature="AddBankDetailes()[pri:58, instance:CompanySecretoryTest.EntityTestCases@201a4587]" started-at="2023-04-26T18:22:53 IST" name="AddBankDetailes" finished-at="2023-04-26T18:23:30 IST" duration-ms="36986" status="PASS">
+        </test-method> <!-- EnterInvalidDataLLP -->
+        <test-method signature="WithoutEnteringDocLLP()[pri:89, instance:CompanySecretoryTest.EntityTestCases@201a4587]" started-at="2023-05-02T18:18:48 IST" name="WithoutEnteringDocLLP" finished-at="2023-05-02T18:19:15 IST" duration-ms="27228" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AddBankDetailes -->
-        <test-method signature="InvalidAccountNo()[pri:60, instance:CompanySecretoryTest.EntityTestCases@201a4587]" started-at="2023-04-26T18:23:30 IST" name="InvalidAccountNo" finished-at="2023-04-26T18:24:05 IST" duration-ms="35070" status="PASS">
+        </test-method> <!-- WithoutEnteringDocLLP -->
+        <test-method signature="ViewDocumentLLP()[pri:90, instance:CompanySecretoryTest.EntityTestCases@201a4587]" started-at="2023-05-02T18:19:15 IST" name="ViewDocumentLLP" finished-at="2023-05-02T18:19:38 IST" duration-ms="22909" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- InvalidAccountNo -->
-        <test-method signature="InvalidBankName()[pri:61, instance:CompanySecretoryTest.EntityTestCases@201a4587]" started-at="2023-04-26T18:24:05 IST" name="InvalidBankName" finished-at="2023-04-26T18:24:34 IST" duration-ms="28681" status="PASS">
+        </test-method> <!-- ViewDocumentLLP -->
+        <test-method signature="DownloadDocumentLLP()[pri:91, instance:CompanySecretoryTest.EntityTestCases@201a4587]" started-at="2023-05-02T18:19:38 IST" name="DownloadDocumentLLP" finished-at="2023-05-02T18:20:03 IST" duration-ms="24907" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- InvalidBankName -->
-        <test-method signature="InvalidIFSC()[pri:62, instance:CompanySecretoryTest.EntityTestCases@201a4587]" started-at="2023-04-26T18:24:34 IST" name="InvalidIFSC" finished-at="2023-04-26T18:25:07 IST" duration-ms="32836" status="PASS">
+        </test-method> <!-- DownloadDocumentLLP -->
+        <test-method signature="DeleteDocumentLLP()[pri:92, instance:CompanySecretoryTest.EntityTestCases@201a4587]" started-at="2023-05-02T18:20:03 IST" name="DeleteDocumentLLP" finished-at="2023-05-02T18:20:29 IST" duration-ms="26362" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- InvalidIFSC -->
-        <test-method signature="DateBankDetailes()[pri:63, instance:CompanySecretoryTest.EntityTestCases@201a4587]" started-at="2023-04-26T18:25:07 IST" name="DateBankDetailes" finished-at="2023-04-26T18:25:46 IST" duration-ms="39224" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DateBankDetailes -->
-        <test-method signature="WithoutEnterBankDetailes()[pri:64, instance:CompanySecretoryTest.EntityTestCases@201a4587]" started-at="2023-04-26T18:25:46 IST" name="WithoutEnterBankDetailes" finished-at="2023-04-26T18:26:16 IST" duration-ms="30554" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- WithoutEnterBankDetailes -->
-        <test-method signature="UpdateBankDetailes()[pri:65, instance:CompanySecretoryTest.EntityTestCases@201a4587]" started-at="2023-04-26T18:26:16 IST" name="UpdateBankDetailes" finished-at="2023-04-26T18:26:48 IST" duration-ms="31781" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- UpdateBankDetailes -->
-        <test-method signature="InvalidUpdateBankDetailes()[pri:66, instance:CompanySecretoryTest.EntityTestCases@201a4587]" started-at="2023-04-26T18:26:48 IST" name="InvalidUpdateBankDetailes" finished-at="2023-04-26T18:27:30 IST" duration-ms="41356" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- InvalidUpdateBankDetailes -->
-        <test-method signature="DeleteBankDetailes()[pri:67, instance:CompanySecretoryTest.EntityTestCases@201a4587]" started-at="2023-04-26T18:27:30 IST" name="DeleteBankDetailes" finished-at="2023-04-26T18:27:55 IST" duration-ms="25103" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DeleteBankDetailes -->
-        <test-method signature="DeleteBankDetailes1()[pri:68, instance:CompanySecretoryTest.EntityTestCases@201a4587]" started-at="2023-04-26T18:27:55 IST" name="DeleteBankDetailes1" finished-at="2023-04-26T18:28:15 IST" duration-ms="20044" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DeleteBankDetailes1 -->
+        </test-method> <!-- DeleteDocumentLLP -->
       </class> <!-- CompanySecretoryTest.EntityTestCases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

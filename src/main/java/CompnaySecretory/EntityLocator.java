@@ -72,7 +72,7 @@ public class EntityLocator
 	
 	public static WebElement Date(WebDriver driver)		//Method for closing Message Popup
 	{
-		Secreterial = driver.findElement(By.linkText("5"));
+		Secreterial = driver.findElement(By.linkText("1"));
 		return Secreterial;
 	}
 	
@@ -373,6 +373,11 @@ public class EntityLocator
 	public static WebElement ClickSaveBtn(WebDriver driver)
 	{
 		Secreterial=driver.findElement(By.xpath("(//*[@id='saveppcom'])[2]"));
+		return Secreterial;
+	}
+	public static WebElement ClickSaveBtnLLPDOC(WebDriver driver)
+	{
+		Secreterial=driver.findElement(By.xpath("(//*[@id='saveppcom'])"));
 		return Secreterial;
 	}
 	public static WebElement ClickValidMsg(WebDriver driver)
@@ -759,6 +764,140 @@ public class EntityLocator
 	public static WebElement DeleteBankDetailes1(WebDriver driver)
 	{
 		Secreterial=driver.findElement(By.xpath("//*[@id='no']"));
+		return Secreterial;
+	}
+	public static WebElement LimitedLiabilityPartnership(WebDriver driver)
+	{
+		Secreterial=driver.findElement(By.xpath("//*[@id='ddlEntityType_listbox']/li[6]"));
+		return Secreterial;
+	}public static WebElement LLPEntityName(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*//*[@id='txtllpEntityName']"));
+		return Secreterial;
+	}
+	public static WebElement LLPPin(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='txtCINllp']"));
+		return Secreterial;
+	}
+	public static WebElement GSTIN(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='txtGstnllp']"));
+		return Secreterial;
+	}
+	public static WebElement ClickCalenderIcon(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*//span[@class='k-icon k-i-calendar']"));
+		return Secreterial;
+	}
+	public static WebElement ClickRoc(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='llpRocJurisdiction']"));
+		return Secreterial;
+	}
+	public static WebElement ClickEmailLLP(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='txtEmailIdllp']"));
+		return Secreterial;
+	}
+	public static WebElement LLPFinancialYear(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='panelbar_LLPDetails']/li/div/div[1]/div/div[3]/span[2]/span/span[1]"));
+		return Secreterial;
+	}
+	public static WebElement LLPAddressE(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='txtRegAddressllp1']"));
+		return Secreterial;
+	}
+	public static WebElement LLPStateE(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='step1Content']/div[1]/div/div[3]/span[2]/span/span[1]"));
+		return Secreterial;
+	}
+	public static WebElement LLPCityE(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='step1Content']/div[1]/div/div[4]/span[2]/span/span[1]"));
+		return Secreterial;
+	}
+	public static WebElement LLPPan(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='txtPANllp']"));
+		return Secreterial;
+	}
+	public static WebElement LLPSaveE(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='btnllp']"));
+		return Secreterial;
+	}
+	public static WebElement LLPAddress2(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='txtRegAddress2llp']"));
+		return Secreterial;
+	}
+	public static WebElement LLPSaveMsg(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='frmUpdateEntityLLP']/div[1]/div/div/lable"));
+		return Secreterial;
+	}
+	public static WebElement LLPSaveMsg2(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='frmUpdateEntityLLP']/div[2]/div/div/lable"));
+		return Secreterial;
+	}
+	public static WebElement FYValidMsg(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='llpFY_validationMessage']"));
+		return Secreterial;
+	}
+	public static WebElement DateValidMsg(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='llpIncorporationDate_validationMessage']"));
+		return Secreterial;
+	}
+	public static WebElement RocValidMsg(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='llpROC_Code_validationMessage']"));
+		return Secreterial;
+	}
+	public static WebElement EmailValidMsg(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='llpEmail_Id_validationMessage']"));
+		return Secreterial;
+	}
+	public static WebElement PANValidMsg(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='llpPAN_validationMessage']"));
+		return Secreterial;
+	}
+	public static WebElement AddressValidMsg(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='llpRegi_Address_Line1_validationMessage']"));
+		return Secreterial;
+	}
+	public static WebElement Address2ValidMsg(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='llpRegi_Address_Line2_validationMessage']"));
+		return Secreterial;
+	}
+	public static WebElement CompnayNameValidMsg(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='EntityName_validationMessage']"));
+		return Secreterial;
+	}
+	public static WebElement LLPINValidMsg(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='LLPIN_validationMessage']"));
+		return Secreterial;
+	}
+	public static WebElement UpdateLLPValidMsg(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='frmUpdateEntityLLP']/div[1]/div/div/lable"));
+		return Secreterial;
+	}
+	public static WebElement EditBALLP(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("(//a[@class='k-grid-Edit k-grid-edit hoverCircle k-grid-button'])[2]"));
 		return Secreterial;
 	}
 }

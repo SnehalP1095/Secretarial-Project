@@ -5,16 +5,12 @@
     <classes>
       <class name="CompanySecretoryTest.EntityTestCases">
         <methods>
-          <include name="InvalidIFSC"/>
-          <include name="InvalidBankName"/>
-          <include name="DeleteBankDetailes1"/>
-          <include name="WithoutEnterBankDetailes"/>
+          <include name="DownloadDocumentLLP"/>
+          <include name="WithoutEnteringDocLLP"/>
+          <include name="DeleteDocumentLLP"/>
+          <include name="ViewDocumentLLP"/>
           <include name="setBrowser"/>
-          <include name="DeleteBankDetailes"/>
-          <include name="DateBankDetailes"/>
-          <include name="InvalidAccountNo"/>
-          <include name="UpdateBankDetailes"/>
-          <include name="InvalidUpdateBankDetailes"/>
+          <include name="EnterInvalidDataLLP"/>
         </methods>
       </class> <!-- CompanySecretoryTest.EntityTestCases -->
     </classes>

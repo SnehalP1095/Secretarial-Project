@@ -89,7 +89,7 @@ public class MasterTestCases {
 		extent.endTest(test);
 		extent.flush();
 	}
-//@Test(priority = 2)
+@Test(priority = 2)
 	
 	void CommitteeMaster() throws InterruptedException, IOException
 	{
