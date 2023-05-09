@@ -1845,13 +1845,13 @@ public class EntityMasterMethod
 	    EntityLocator.ClickLicenseRegistration(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator. ClickLicenseRegistrationNo(driver).sendKeys("53467");
+	    EntityLocator. ClickLicenseRegistrationNo(driver).sendKeys("@18");
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.ClickLastRenewDate(driver).sendKeys("13-04-2023");
+	    EntityLocator.ClickLastRenewDate(driver).sendKeys("16/04/2023");
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.ClickUpcomingRenewDate(driver).sendKeys("29-04-2023");
+	    EntityLocator.ClickUpcomingRenewDate(driver).sendKeys("16/05/2023");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator. ClickDescrition(driver).sendKeys("Test");
@@ -1879,12 +1879,378 @@ public class EntityMasterMethod
 	     Thread.sleep(2000);
 	    EntityLocator.ClickCloseIcon(driver).click();
 	    
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    
 	    Thread.sleep(4000);
 	     EntityLocator.ClickDashboard(driver).click();
 		
 	}
+	public static void EnterInvalidDataLicenseRegistration(WebDriver driver,ExtentTest test) throws InterruptedException 
+	{
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickNewBtn(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocType(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickLicenseRegistration(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator. ClickLicenseRegistrationNo(driver).sendKeys("@19");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickLastRenewDate(driver).sendKeys("16/05/2023");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickUpcomingRenewDate(driver).sendKeys("16/04/2023");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator. ClickDescrition(driver).sendKeys("Test");
+	    
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Act and Section Column Test Cases.xlsx");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickSaveBtn(driver).click();
+	    
+	    
+	    Thread.sleep(3000);   
+	    try
+		 {
+		    String msg = EntityLocator.ClickValidMsg(driver).getText();
+			test.log(LogStatus.FAIL, "Error Message Should be displayed that the last renewal date should not exceed the next renewal date = " +msg);
+		 }
+		catch(Exception e)
+		{
+				String msg1 = EntityLocator.ClickInValidMsg(driver).getText();
+				test.log(LogStatus.PASS, "Error Message Should be displayed that the last renewal date should not exceed the next renewal date = " +msg1);
+		}
+	    
+	     Thread.sleep(2000);
+	    EntityLocator.ClickCloseIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+		
+	}
+	public static void WithoutEnteringLicenseRegistrationDocument(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickNewBtn(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocType(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickLicenseRegistration(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator. ClickLicenseRegistrationNo(driver).sendKeys("@19");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickLastRenewDate(driver).sendKeys("16/05/2023");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickUpcomingRenewDate(driver).sendKeys("16/04/2023");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator. ClickDescrition(driver).sendKeys("Test");
+	    
+	    
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickSaveBtn(driver).click();
+	    
+	    Thread.sleep(2000);
+	    String msg=EntityLocator.ClickValidMsgFile(driver).getText();
+	     if(msg.equalsIgnoreCase("Please select File"))
+	     {
+	    	 test.log(LogStatus.PASS,"Message Displayed =" +msg);
+	     }
+	     else
+		    {
+		    	 test.log(LogStatus.FAIL, "Message Displayed =" +msg);
+		    }
+	     
+	     Thread.sleep(2000);
+		    EntityLocator.ClickCloseIcon(driver).click();
+		    
+		    Thread.sleep(2000);
+		    EntityLocator.clickcloseIcon(driver).click();
+		    
+		    Thread.sleep(4000);
+		     EntityLocator.ClickDashboard(driver).click();
+	     
+	}
+	
+	public static void AddExistingLicenseRegistration(WebDriver driver,ExtentTest test) throws InterruptedException 
+	{
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickNewBtn(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocType(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickLicenseRegistration(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator. ClickLicenseRegistrationNo(driver).sendKeys("@18");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickLastRenewDate(driver).sendKeys("16/04/2023");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickUpcomingRenewDate(driver).sendKeys("16/05/2023");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator. ClickDescrition(driver).sendKeys("Test");
+	    
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Act and Section Column Test Cases.xlsx");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickSaveBtn(driver).click();
+	    
+	    
+	    Thread.sleep(3000);   
+	    try
+		 {
+		    String msg = EntityLocator.ClickValidMsg(driver).getText();
+			test.log(LogStatus.FAIL, "Message Displayed = " +msg);
+		 }
+		catch(Exception e)
+		{
+				String msg1 = EntityLocator.ClickInValidMsg(driver).getText();
+				test.log(LogStatus.PASS, "Message Displayed = " +msg1);
+		}
+	    
+	     Thread.sleep(2000);
+	    EntityLocator.ClickCloseIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+		
+	}
+	public static void ViewLicenseRegistrationDocument(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.LicenseRegistrationLLP(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ViewLicenseRegistrationLLP(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.ClickClose(driver).click();
+	    
+	    test.log(LogStatus.PASS,"View Popup Open Successfully");
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	    
+	}
+	
+	public static void DownloadLicenseRegistrationDocument(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	 
+	    Thread.sleep(2000);
+	    EntityLocator.LicenseRegistrationLLP(driver).click();
+	    
+	    File dir = new File("C://Users//Admin//Downloads");
+		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
+		
+		 Thread.sleep(2000);
+		 EntityLocator.DownloadLicenseRegistrationLLP(driver).click();		//Exporting (Downloading) file
+		
+		Thread.sleep(3000);
+		File dir1 = new File("C://Users//Admin//Downloads");
+		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
+		
+		
+		if (dirContents.length < allFilesNew.length) {
+			test.log(LogStatus.PASS,  "  Document downloaded successfully.");
+		} else {
+			test.log(LogStatus.FAIL, "  Document does not downloaded.");
+		}
+		 Thread.sleep(2000);
+		    EntityLocator.clickcloseIcon(driver).click();
+	    
+		 Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	    
+	    
+	    
+	    
+	}   
+	
+	public static void DeleteLicenseRegistrationDocument(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.LicenseRegistrationLLP(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.DeleteLicenseRegistrationLLP(driver).click();
+	   
+	    Thread.sleep(2000);
+	    String msg=EntityLocator.ClickDeleteValidMsg(driver).getText();
+	    Thread.sleep(2000);
+	    if(msg.equalsIgnoreCase("Are you sure you want to delete this data?"))
+	     {
+	    	
+	    	 test.log(LogStatus.PASS,"The item should get deleted from the list and success message will displayed =" +msg);
+	     }
+	     else
+		    {
+		    	 test.log(LogStatus.FAIL, "The item should get deleted from the list and success message will displayed  =" +msg);
+		    }
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickYes(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	    
+	}
+	
 	
 	public static void AddAnnualReport(WebDriver driver,ExtentTest test) throws InterruptedException 
+	{
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickNewBtn(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocType(driver).click();
+	    
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickAnnualReport(driver).click();
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.ClickSerialNoOfAGM(driver).sendKeys("65");
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.ClickLastRenewDate(driver).sendKeys("13/04/2023");
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.ClickFY(driver).click();
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.SelectFY(driver).click();
+	    
+	    Thread.sleep(3000);
+	    EntityLocator. ClickDescrition(driver).sendKeys("ABCD");
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Act and Section Column Test Cases.xlsx");
+	    
+	    Thread.sleep(4000);
+	    EntityLocator.ClickSaveBtn(driver).click();
+	    
+	    
+	    Thread.sleep(3000);   
+	    try
+		 {
+		    String msg = EntityLocator.ClickValidMsg(driver).getText();
+			test.log(LogStatus.PASS, "Message Displayed = " +msg);
+		 }
+		catch(Exception e)
+		{
+				String msg1 = EntityLocator.ClickInValidMsg(driver).getText();
+				test.log(LogStatus.FAIL, "Message Displayed = " +msg1);
+		}
+	    
+	     Thread.sleep(2000);
+	    EntityLocator.ClickCloseIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	
+	}
+	public static void AddExistingDataAnnualReport(WebDriver driver,ExtentTest test) throws InterruptedException 
 	{
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
@@ -1910,7 +2276,7 @@ public class EntityMasterMethod
 	    EntityLocator.ClickSerialNoOfAGM(driver).sendKeys("7365");
 	    
 	    Thread.sleep(3000);
-	    EntityLocator.ClickLastRenewDate(driver).sendKeys("13-04-2023");
+	    EntityLocator.ClickLastRenewDate(driver).sendKeys("13/04/2023");
 	    
 	    Thread.sleep(3000);
 	    EntityLocator.ClickFY(driver).click();
@@ -1922,7 +2288,7 @@ public class EntityMasterMethod
 	    EntityLocator. ClickDescrition(driver).sendKeys("Test");
 	    
 	    Thread.sleep(3000);
-	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Downloads\\4_25_2023 11_02_26 AM.zip");
+	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Act and Section Column Test Cases.xlsx");
 	    
 	    Thread.sleep(4000);
 	    EntityLocator.ClickSaveBtn(driver).click();
@@ -1932,20 +2298,193 @@ public class EntityMasterMethod
 	    try
 		 {
 		    String msg = EntityLocator.ClickValidMsg(driver).getText();
-			test.log(LogStatus.PASS, "Message Displayed = " +msg);
+			test.log(LogStatus.FAIL, "Message Displayed = " +msg);
 		 }
 		catch(Exception e)
 		{
 				String msg1 = EntityLocator.ClickInValidMsg(driver).getText();
-				test.log(LogStatus.FAIL, "Message Displayed = " +msg1);
+				test.log(LogStatus.PASS, "Message Displayed = " +msg1);
 		}
 	    
 	     Thread.sleep(2000);
 	    EntityLocator.ClickCloseIcon(driver).click();
 	    
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    
 	    Thread.sleep(4000);
 	     EntityLocator.ClickDashboard(driver).click();
 	
+	}
+	
+	public static void WithoutUploadFileAnnualReport(WebDriver driver,ExtentTest test) throws InterruptedException 
+	{
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickNewBtn(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocType(driver).click();
+	    
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickAnnualReport(driver).click();
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.ClickSerialNoOfAGM(driver).sendKeys("65");
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.ClickLastRenewDate(driver).sendKeys("13/04/2023");
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.ClickFY(driver).click();
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.SelectFY(driver).click();
+	    
+	    Thread.sleep(3000);
+	    EntityLocator. ClickDescrition(driver).sendKeys("ABCD");
+	    
+	    Thread.sleep(4000);
+	    EntityLocator.ClickSaveBtn(driver).click();
+	    
+	    
+	    Thread.sleep(2000);
+	    String msg=EntityLocator.ClickValidMsgFile(driver).getText();
+	     if(msg.equalsIgnoreCase("Please select File"))
+	     {
+	    	 test.log(LogStatus.PASS,"Message Displayed =" +msg);
+	     }
+	     else
+		    {
+		    	 test.log(LogStatus.FAIL, "Message Displayed =" +msg);
+		    }
+	    
+	    
+	     Thread.sleep(2000);
+	    EntityLocator.ClickCloseIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void ViewAnnualReportDocument(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.AnnualReportLLP(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ViewAnnualReport(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.ClickClose(driver).click();
+	    
+	    test.log(LogStatus.PASS,"View Popup Open Successfully");
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	    
+	}
+	
+	public static void DownloadAnnualReportDocument(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	 
+	    Thread.sleep(2000);
+	    EntityLocator.AnnualReportLLP(driver).click();
+	    
+	    File dir = new File("C://Users//Admin//Downloads");
+		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
+		
+		 Thread.sleep(2000);
+		 EntityLocator.DownloadAnnualReport(driver).click();		//Exporting (Downloading) file
+		
+		Thread.sleep(3000);
+		File dir1 = new File("C://Users//Admin//Downloads");
+		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
+		
+		
+		if (dirContents.length < allFilesNew.length) {
+			test.log(LogStatus.PASS,  "  Document downloaded successfully.");
+		} else {
+			test.log(LogStatus.FAIL, "  Document does not downloaded.");
+		}
+		 Thread.sleep(2000);
+		    EntityLocator.clickcloseIcon(driver).click();
+	    
+		 Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	    
+	  }   
+	
+	public static void DeleteAnnualReportDocument(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.AnnualReportLLP(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.DeleteAnnualReport(driver).click();
+	   
+	    Thread.sleep(2000);
+	    String msg=EntityLocator.ClickDeleteValidMsg(driver).getText();
+	    Thread.sleep(2000);
+	    if(msg.equalsIgnoreCase("Are you sure you want to delete this data?"))
+	     {
+	    	
+	    	 test.log(LogStatus.PASS,"The item should get deleted from the list and success message will displayed =" +msg);
+	     }
+	     else
+		    {
+		    	 test.log(LogStatus.FAIL, "The item should get deleted from the list and success message will displayed  =" +msg);
+		    }
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickYes(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	    
 	}
 	
 	
@@ -4385,6 +4924,2986 @@ public class EntityMasterMethod
 	     EntityLocator.ClickDashboard(driver).click();
 	}
 	
+	
+	public static void AddNewDocumentLLPDEED(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickNewBtn(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocType(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocTypeDropDownDEED(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator. ClickDescrition(driver).sendKeys("ABCDEF");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickSaveBtnLLPDOC(driver).click();
+	    Thread.sleep(2000);   
+	    try
+		 {
+		    String msg = EntityLocator.ClickValidMsg(driver).getText();
+			test.log(LogStatus.PASS, "Message Displayed = " +msg);
+		 }
+		catch(Exception e)
+		{
+				String msg1 = EntityLocator.ClickInValidMsg(driver).getText();
+				test.log(LogStatus.FAIL, "Message Displayed = " +msg1);
+		}
+	    
+	     Thread.sleep(2000);
+	    EntityLocator.ClickCloseIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+		    
+	}
+	public static void WithoutEnteringDocumentLLPDEED(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickNewBtn(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocType(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocTypeDropDownDEED(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator. ClickDescrition(driver).sendKeys("ABCDEF");
+	    
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickSaveBtnLLPDOC(driver).click();
+	    
+	    Thread.sleep(2000);
+	    String msg=EntityLocator.ClickValidMsgFile1(driver).getText();
+	     if(msg.equalsIgnoreCase("Please select File"))
+	     {
+	    	 test.log(LogStatus.PASS,"Message Displayed =" +msg);
+	     }
+	     else
+		    {
+		    	 test.log(LogStatus.FAIL, "Message Displayed =" +msg);
+		    }
+	     
+	     Thread.sleep(2000);
+		    EntityLocator.ClickCloseIcon(driver).click();
+		    
+		    Thread.sleep(2000);
+		    EntityLocator.clickcloseIcon(driver).click();
+		    
+		    Thread.sleep(4000);
+		     EntityLocator.ClickDashboard(driver).click();
+	     
+	}
+	public static void AddExistingDocumentLLPDEED(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickNewBtn(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocType(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocTypeDropDownDEED(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator. ClickDescrition(driver).sendKeys("ABCDEF");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickSaveBtnLLPDOC(driver).click();
+	    Thread.sleep(2000);   
+	    try
+		 {
+		    String msg = EntityLocator.ClickValidMsg(driver).getText();
+			test.log(LogStatus.PASS, "Message Displayed = " +msg);
+		 }
+		catch(Exception e)
+		{
+				String msg1 = EntityLocator.ClickInValidMsg(driver).getText();
+				test.log(LogStatus.FAIL, "Message Displayed = " +msg1);
+		}
+	    
+	     Thread.sleep(2000);
+	    EntityLocator.ClickCloseIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+		    
+	}
+	public static void ViewDocumentLLPDEED(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.PolicyLLP(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.ViewDocLLPDEED(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.ClickClose(driver).click();
+	    
+	    test.log(LogStatus.PASS,"View Popup Open Successfully");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	    
+	}
+	public static void DownloadDocumentLLPDEED(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	
+	    Thread.sleep(2000);
+	    EntityLocator.PolicyLLP(driver).click();
+	    
+	    
+	    File dir = new File("C://Users//Admin//Downloads");
+	  	File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
+	  		
+	  	Thread.sleep(2000);
+	 	EntityLocator.DownloadDocLLPDEED(driver).click();		//Exporting (Downloading) file
+	  		
+	    Thread.sleep(3000);
+	    File dir1 = new File("C://Users//Admin//Downloads");
+	    File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
+	  		
+	  		
+	  	if (dirContents.length < allFilesNew.length) 
+	  	{
+	  		test.log(LogStatus.PASS,  "  Document downloaded successfully.");
+	  	} 
+	  	else 
+	  	{
+	  		test.log(LogStatus.FAIL, "  Document does not downloaded.");
+	  	}
+	   
+	  	 Thread.sleep(2000);
+		    EntityLocator.clickcloseIcon(driver).click();
+	  	
+	  	 Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	  
+	    
+	}
+	
+	public static void DeleteDocumentLLPDEED(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.PolicyLLP(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.DeleteDocLLPDEED(driver).click();
+	   
+	    Thread.sleep(2000);
+	    String msg=EntityLocator.ClickDeleteValidMsg(driver).getText();
+	    Thread.sleep(2000);
+	    if(msg.equalsIgnoreCase("Are you sure you want to delete this data?"))
+	     {
+	    	
+	    	 test.log(LogStatus.PASS,"The item should get deleted from the list and success message will displayed  =" +msg);
+	     }
+	     else
+		    {
+		    	 test.log(LogStatus.FAIL, "The item should get deleted from the list and success message will displayed  =" +msg);
+		    }
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickYes(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void AddPolicyDocLLP(WebDriver driver,ExtentTest test) throws InterruptedException 
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickNewBtn(driver).click();
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.ClickDocType(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickAOA(driver).click();
+	    
+      
+	    
+	    
+	    Thread.sleep(2000);
+	    EntityLocator. ClickDescrition(driver).sendKeys("ABCDE");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickSaveBtnLLPDOC(driver).click();
+	    Thread.sleep(2000);   
+	    try
+		 {
+		    String msg = EntityLocator.ClickValidMsg(driver).getText();
+			test.log(LogStatus.PASS, "Message Displayed = " +msg);
+		 }
+		catch(Exception e)
+		{
+				String msg1 = EntityLocator.ClickInValidMsg(driver).getText();
+				test.log(LogStatus.FAIL, "Message Displayed = " +msg1);
+		}
+	    
+	     Thread.sleep(2000);
+	    EntityLocator.ClickCloseIcon(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+		
+	}
+	public static void WithoutEnteringDocumentPolicyLLP(WebDriver driver,ExtentTest test) throws InterruptedException 
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickNewBtn(driver).click();
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.ClickDocType(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickAOA(driver).click();
+	    
+        EntityLocator. ClickLicenseRegistrationNo(driver).sendKeys("53467");
+	   
+	    
+	    
+	    Thread.sleep(2000);
+	    EntityLocator. ClickDescrition(driver).sendKeys("ABCDE");
+	    
+
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickSaveBtnLLPDOC(driver).click();
+	    Thread.sleep(2000);   
+	    try
+		 {
+		    String msg = EntityLocator.ClickValidMsg(driver).getText();
+			test.log(LogStatus.PASS, "Message Displayed = " +msg);
+		 }
+		catch(Exception e)
+		{
+				String msg1 = EntityLocator.ClickInValidMsg(driver).getText();
+				test.log(LogStatus.FAIL, "Message Displayed = " +msg1);
+		}
+	    
+	     Thread.sleep(2000);
+	    EntityLocator.ClickCloseIcon(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+		
+	}
+	public static void AddExistingDocumentPolicyLLP(WebDriver driver,ExtentTest test) throws InterruptedException 
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickNewBtn(driver).click();
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.ClickDocType(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickAOA(driver).click();
+	    
+       
+	    
+	    
+	    Thread.sleep(2000);
+	    EntityLocator. ClickDescrition(driver).sendKeys("ABCDE");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickSaveBtnLLPDOC(driver).click();
+	    Thread.sleep(2000);   
+	    try
+		 {
+		    String msg = EntityLocator.ClickInValidMsg(driver).getText();
+			test.log(LogStatus.PASS, "Message Displayed = " +msg);
+		 }
+		catch(Exception e)
+		{
+				String msg1 = EntityLocator.ClickValidMsg(driver).getText();
+				test.log(LogStatus.FAIL, "Message Displayed = " +msg1);
+		}
+	    
+	     Thread.sleep(2000);
+	    EntityLocator.ClickCloseIcon(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+		
+	}
+	public static void ViewDocumentPolicyLLP(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.ViewDocLLPDEED(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.ClickClose(driver).click();
+	    
+	    test.log(LogStatus.PASS,"View Popup Open Successfully");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	    
+	}
+	public static void DownloadDocumentPolicyLLP(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	
+	    
+	    
+	    
+	    File dir = new File("C://Users//Admin//Downloads");
+	  	File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
+	  		
+	  	Thread.sleep(2000);
+	 	EntityLocator.DownloadDocLLPDEED(driver).click();		//Exporting (Downloading) file
+	  		
+	    Thread.sleep(3000);
+	    File dir1 = new File("C://Users//Admin//Downloads");
+	    File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
+	  		
+	  		
+	  	if (dirContents.length < allFilesNew.length) 
+	  	{
+	  		test.log(LogStatus.PASS,  "  Document downloaded successfully.");
+	  	} 
+	  	else 
+	  	{
+	  		test.log(LogStatus.FAIL, "  Document does not downloaded.");
+	  	}
+	   
+	  	 Thread.sleep(2000);
+		    EntityLocator.clickcloseIcon(driver).click();
+	  	
+	  	 Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	  
+	    
+	}
+	public static void DeleteDocumentPolicyLLP(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDeleteIcon1(driver).click();
+	   
+	    Thread.sleep(2000);
+	    String msg=EntityLocator.ClickDeleteValidMsg(driver).getText();
+	    Thread.sleep(2000);
+	    if(msg.equalsIgnoreCase("Are you sure you want to delete this data?"))
+	     {
+	    	
+	    	 test.log(LogStatus.PASS,"The item should get deleted from the list and success message will displayed  =" +msg);
+	     }
+	     else
+		    {
+		    	 test.log(LogStatus.FAIL, "The item should get deleted from the list and success message will displayed  =" +msg);
+		    }
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickYes(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	}
+	
+	public static void AddLicenseRegistrationDocLLP(WebDriver driver,ExtentTest test) throws InterruptedException 
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickNewBtn(driver).click();
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.ClickDocType(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickCOI(driver).click();
+	    
+//        EntityLocator. ClickLicenseRegistrationNo(driver).sendKeys("53467");
+//	    
+//	    Thread.sleep(2000);
+//	    EntityLocator.ClickLastRenewDate(driver).sendKeys("13-04-2023");
+//	    
+//	    Thread.sleep(2000);
+//	    EntityLocator.ClickUpcomingRenewDate(driver).sendKeys("29-04-2023");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator. ClickDescrition(driver).sendKeys("ABCDE");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickSaveBtnLLPDOC(driver).click();
+	    Thread.sleep(2000);   
+	    try
+		 {
+		    String msg = EntityLocator.ClickValidMsg(driver).getText();
+			test.log(LogStatus.PASS, "Message Displayed = " +msg);
+		 }
+		catch(Exception e)
+		{
+				String msg1 = EntityLocator.ClickInValidMsg(driver).getText();
+				test.log(LogStatus.FAIL, "Message Displayed = " +msg1);
+		}
+	    
+	     Thread.sleep(2000);
+	    EntityLocator.ClickCloseIcon(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+		
+	}
+	public static void WithoutEnteringDocumentLicenseRegistrationLLP(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickNewBtn(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocType(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickCOI(driver).click();
+	    
+//         EntityLocator. ClickLicenseRegistrationNo(driver).sendKeys("53467");
+//	    
+//	    Thread.sleep(2000);
+//	    EntityLocator.ClickLastRenewDate(driver).sendKeys("13-04-2023");
+//	    
+//	    Thread.sleep(2000);
+//	    EntityLocator.ClickUpcomingRenewDate(driver).sendKeys("29-04-2023");
+    
+	    Thread.sleep(2000);
+	    EntityLocator. ClickDescrition(driver).sendKeys("ABCDEF");
+	    
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickSaveBtnLLPDOC(driver).click();
+	    
+	    Thread.sleep(2000);
+	    String msg=EntityLocator.ClickValidMsgFile1(driver).getText();
+	     if(msg.equalsIgnoreCase("Please select File"))
+	     {
+	    	 test.log(LogStatus.PASS,"Message Displayed =" +msg);
+	     }
+	     else
+		    {
+		    	 test.log(LogStatus.FAIL, "Message Displayed =" +msg);
+		    }
+	     
+	     Thread.sleep(2000);
+		    EntityLocator.ClickCloseIcon(driver).click();
+		    
+		    Thread.sleep(2000);
+		    EntityLocator.clickcloseIcon(driver).click();
+		    
+		    Thread.sleep(4000);
+		     EntityLocator.ClickDashboard(driver).click();
+	     
+	}
+	public static void AddExistingLicenseRegistrationDocLLP(WebDriver driver,ExtentTest test) throws InterruptedException 
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickNewBtn(driver).click();
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.ClickDocType(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickCOI(driver).click();
+	    
+//        EntityLocator. ClickLicenseRegistrationNo(driver).sendKeys("53467");
+//	    
+//	    Thread.sleep(2000);
+//	    EntityLocator.ClickLastRenewDate(driver).sendKeys("13-04-2023");
+//	    
+//	    Thread.sleep(2000);
+//	    EntityLocator.ClickUpcomingRenewDate(driver).sendKeys("29-04-2023");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator. ClickDescrition(driver).sendKeys("ABCDE");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickSaveBtnLLPDOC(driver).click();
+	    Thread.sleep(2000);   
+	    try
+		 {
+		    String msg = EntityLocator.ClickInValidMsg(driver).getText();
+			test.log(LogStatus.PASS, "Message Displayed = " +msg);
+		 }
+		catch(Exception e)
+		{
+				String msg1 = EntityLocator.ClickValidMsg(driver).getText();
+				test.log(LogStatus.FAIL, "Message Displayed = " +msg1);
+		}
+	    
+	     Thread.sleep(2000);
+	    EntityLocator.ClickCloseIcon(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+		
+	}
+	public static void ViewDocumentLicenseRegistrationLLP(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.LicenseRegistrationLLP(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ViewLicenseRegistrationLLP(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickClose(driver).click();
+	    
+	    test.log(LogStatus.PASS,"View Popup Open Successfully");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	    
+	}
+	public static void DownloadDocumentLicenseRegistraionLLP(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	
+	    Thread.sleep(2000);
+	    EntityLocator.LicenseRegistrationLLP(driver).click();
+	    
+	    
+	    File dir = new File("C://Users//Admin//Downloads");
+	  	File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
+	  		
+	  	Thread.sleep(2000);
+	 	EntityLocator.DownloadLicenseRegistrationLLP(driver).click();		//Exporting (Downloading) file
+	  		
+	    Thread.sleep(3000);
+	    File dir1 = new File("C://Users//Admin//Downloads");
+	    File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
+	  		
+	  		
+	  	if (dirContents.length < allFilesNew.length) 
+	  	{
+	  		test.log(LogStatus.PASS,  "  Document downloaded successfully.");
+	  	} 
+	  	else 
+	  	{
+	  		test.log(LogStatus.FAIL, "  Document does not downloaded.");
+	  	}
+	   
+	  	 Thread.sleep(2000);
+		    EntityLocator.clickcloseIcon(driver).click();
+	  	
+	  	 Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	  
+	    
+	}
+	public static void DeleteDocumentLicenseRegistrationLLP(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.LicenseRegistrationLLP(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.DeleteLicenseRegistrationLLP(driver).click();
+	   
+	    Thread.sleep(2000);
+	    String msg=EntityLocator.ClickDeleteValidMsg(driver).getText();
+	    Thread.sleep(2000);
+	    if(msg.equalsIgnoreCase("Are you sure you want to delete this data?"))
+	     {
+	    	
+	    	 test.log(LogStatus.PASS,"The item should get deleted from the list and success message will displayed  =" +msg);
+	     }
+	     else
+		    {
+		    	 test.log(LogStatus.FAIL, "The item should get deleted from the list and success message will displayed  =" +msg);
+		    }
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickYes(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	}
+	
+	public static void AddAnnualReportLLP(WebDriver driver,ExtentTest test) throws InterruptedException 
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickNewBtn(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocType(driver).click();
+	    
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickPolicy(driver).click();
+	    
+//	    Thread.sleep(3000);
+//	    EntityLocator.ClickSerialNoOfAGM(driver).sendKeys("7365");
+//	    
+//	    Thread.sleep(3000);
+//	    EntityLocator.ClickLastRenewDate(driver).sendKeys("13-04-2023");
+//	    
+	    Thread.sleep(3000);
+	    EntityLocator.ClickFY(driver).click();
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.SelectFY(driver).click();
+	    
+	    Thread.sleep(3000);
+	    EntityLocator. ClickDescrition(driver).sendKeys("TestTest");
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
+	    
+	    Thread.sleep(4000);
+	    EntityLocator.ClickSaveBtnLLPDOC(driver).click();
+	    
+	    
+	    Thread.sleep(3000);   
+	    try
+		 {
+		    String msg = EntityLocator.ClickValidMsg(driver).getText();
+			test.log(LogStatus.PASS, "Message Displayed = " +msg);
+		 }
+		catch(Exception e)
+		{
+				String msg1 = EntityLocator.ClickInValidMsg(driver).getText();
+				test.log(LogStatus.FAIL, "Message Displayed = " +msg1);
+		}
+	    
+	     Thread.sleep(2000);
+	    EntityLocator.ClickCloseIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	    
+	
+	}
+	
+	public static void AddExistingAnnualReportLLP(WebDriver driver,ExtentTest test) throws InterruptedException 
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickNewBtn(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocType(driver).click();
+	    
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickPolicy(driver).click();
+	    
+//	    Thread.sleep(3000);
+//	    EntityLocator.ClickSerialNoOfAGM(driver).sendKeys("7365");
+//	    
+//	    Thread.sleep(3000);
+//	    EntityLocator.ClickLastRenewDate(driver).sendKeys("13-04-2023");
+//	    
+	    Thread.sleep(3000);
+	    EntityLocator.ClickFY(driver).click();
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.SelectFY(driver).click();
+	    
+	    Thread.sleep(3000);
+	    EntityLocator. ClickDescrition(driver).sendKeys("TestTest");
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
+	    
+	    Thread.sleep(4000);
+	    EntityLocator.ClickSaveBtnLLPDOC(driver).click();
+	    
+	    
+	    Thread.sleep(3000);   
+	    try
+		 {
+		    String msg = EntityLocator.ClickValidMsg(driver).getText();
+			test.log(LogStatus.FAIL, "Message Displayed = " +msg);
+		 }
+		catch(Exception e)
+		{
+				String msg1 = EntityLocator.ClickInValidMsg(driver).getText();
+				test.log(LogStatus.PASS, "Message Displayed = " +msg1);
+		}
+	    
+	     Thread.sleep(2000);
+	    EntityLocator.ClickCloseIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	    
+	
+	}
+	public static void WithoutEnteringDocumentAnnualReportLLP(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickNewBtn(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocType(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickPolicy(driver).click();
+	    
+//         EntityLocator. ClickLicenseRegistrationNo(driver).sendKeys("53467");
+//	    
+//	    Thread.sleep(2000);
+//	    EntityLocator.ClickLastRenewDate(driver).sendKeys("13-04-2023");
+//	    
+//	    Thread.sleep(2000);
+//	    EntityLocator.ClickUpcomingRenewDate(driver).sendKeys("29-04-2023");
+    
+	    Thread.sleep(2000);
+	    EntityLocator. ClickDescrition(driver).sendKeys("ABCDEF");
+	    
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickSaveBtnLLPDOC(driver).click();
+	    
+	    Thread.sleep(2000);
+	    String msg=EntityLocator.ClickValidMsgFile1(driver).getText();
+	     if(msg.equalsIgnoreCase("Please select File"))
+	     {
+	    	 test.log(LogStatus.PASS,"Message Displayed =" +msg);
+	     }
+	     else
+		    {
+		    	 test.log(LogStatus.FAIL, "Message Displayed =" +msg);
+		    }
+	     
+	     Thread.sleep(2000);
+		    EntityLocator.ClickCloseIcon(driver).click();
+		    
+		    Thread.sleep(2000);
+		    EntityLocator.clickcloseIcon(driver).click();
+		    
+		    Thread.sleep(4000);
+		     EntityLocator.ClickDashboard(driver).click();
+	     
+	}
+	
+	public static void ViewDocumentAnnualReportLLP(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.AnnualReportLLP(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ViewAnnualReportLLP(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickClose(driver).click();
+	    
+	    test.log(LogStatus.PASS,"View Popup Open Successfully");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	    
+	}
+	public static void DownloadDocumentAnnualReportLLP(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	
+	    Thread.sleep(2000);
+	    EntityLocator.AnnualReportLLP(driver).click();
+	    
+	    
+	    
+	    
+	    File dir = new File("C://Users//Admin//Downloads");
+	  	File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
+	  		
+	  	Thread.sleep(2000);
+	 	EntityLocator.DownloadAnnualReportLLP(driver).click();		//Exporting (Downloading) file
+	  		
+	    Thread.sleep(3000);
+	    File dir1 = new File("C://Users//Admin//Downloads");
+	    File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
+	  		
+	  		
+	  	if (dirContents.length < allFilesNew.length) 
+	  	{
+	  		test.log(LogStatus.PASS,  "  Document downloaded successfully.");
+	  	} 
+	  	else 
+	  	{
+	  		test.log(LogStatus.FAIL, "  Document does not downloaded.");
+	  	}
+	   
+	  	 Thread.sleep(2000);
+		    EntityLocator.clickcloseIcon(driver).click();
+	  	
+	  	 Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	  
+	    
+	}
+	public static void DeleteDocumentAnnualReportLLP(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDocumentTab(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.AnnualReportLLP(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.DeleteAnnualReportLLP(driver).click();
+	   
+	    Thread.sleep(2000);
+	    String msg=EntityLocator.ClickDeleteValidMsg(driver).getText();
+	    Thread.sleep(2000);
+	    if(msg.equalsIgnoreCase("Are you sure you want to delete this data?"))
+	     {
+	    	
+	    	 test.log(LogStatus.PASS,"The item should get deleted from the list and success message will displayed  =" +msg);
+	     }
+	     else
+		    {
+		    	 test.log(LogStatus.FAIL, "The item should get deleted from the list and success message will displayed  =" +msg);
+		    }
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickYes(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void BranchDetailesLLP(WebDriver driver,ExtentTest test) throws InterruptedException 
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	
+	    Thread.sleep(2000);
+	   
+	    
+	    if(EntityLocator.ClickBranchDetailes(driver).isEnabled())
+	    {
+	      Thread.sleep(2000);
+	      EntityLocator.ClickBranchDetailes(driver).click();
+	      test.log(LogStatus.PASS, "Branch Detailes is clickable");
+	    }
+	    else
+	    {
+	    	 test.log(LogStatus.PASS, "Branch Detailes is not clickable");
+	    }
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	
+	}
+	public static void AddBranchDetailesLLP(WebDriver driver,ExtentTest test,XSSFWorkbook workbook) throws InterruptedException 
+	{
+		sheet = workbook.getSheetAt(0);
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	
+	    Thread.sleep(2000);
+	    EntityLocator.ClickBranchDetailes(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickAddNew(driver).click();
+	    
+	  
+	    wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IframeMyCompliances"));
+	    
+	    Thread.sleep(2000);
+	    Row row = sheet.getRow(45);						//Selected 1st index row (Second row)
+		org.apache.poi.ss.usermodel.Cell c = row.getCell(1);						//Selected cell (1 row,1 column)
+		String name = c.getStringCellValue();			//Got the URL stored at position 1,1
+		EntityLocator.ClickName(driver).sendKeys("Karad");
+		
+		Thread.sleep(2000);
+	    EntityLocator.ClickBranchType(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.SelectBranchType(driver).click();
+	    
+	
+		
+		 Thread.sleep(2000);
+		 Row row1 = sheet.getRow(46);						//Selected 1st index row (Second row)
+		 org.apache.poi.ss.usermodel.Cell c1 = row1.getCell(1);						//Selected cell (1 row,1 column)
+		 String ContactPerson = c1.getStringCellValue();			//Got the URL stored at position 1,1
+		 EntityLocator.ClickContactPerson(driver).sendKeys(ContactPerson);
+		 
+//		 Thread.sleep(2000);
+//		 Row row2 = sheet.getRow(47);						//Selected 1st index row (Second row)
+//		 org.apache.poi.ss.usermodel.Cell c2 = row2.getCell(1);						//Selected cell (1 row,1 column)
+//		 int ContactNumber= (int)c2.getNumericCellValue();
+//		 EntityLocator.ClickContactNumber(driver).sendKeys(" "+ContactNumber);
+		 
+		 Thread.sleep(2000);
+		 EntityLocator.ClickContactNumber(driver).sendKeys("1234253452");
+		 Thread.sleep(2000);
+		 Row row3 = sheet.getRow(48);						//Selected 1st index row (Second row)
+		 org.apache.poi.ss.usermodel.Cell c3 = row3.getCell(1);						//Selected cell (1 row,1 column)
+		 String email = c3.getStringCellValue();			//Got the URL stored at position 1,1
+		 EntityLocator.ClickEmail(driver).sendKeys(email);
+		 
+		 Thread.sleep(2000);
+		 Row row4 = sheet.getRow(49);						//Selected 1st index row (Second row)
+		 org.apache.poi.ss.usermodel.Cell c4 = row4.getCell(1);						//Selected cell (1 row,1 column)
+		 String address = c4.getStringCellValue();			//Got the URL stored at position 1,1
+		 EntityLocator.ClickAddressLine(driver).sendKeys(address);
+		 Thread.sleep(2000);
+		 EntityLocator.ClickState(driver).click();
+		 Thread.sleep(2000);
+		 EntityLocator.SelectState(driver).click();
+		 Thread.sleep(2000);
+		 EntityLocator.ClickCity(driver).click();
+		 Thread.sleep(2000);
+		 EntityLocator.SelectCity(driver).click();
+		 Thread.sleep(2000);
+		 EntityLocator.ClickBtnSave(driver).click();
+		 
+		 Thread.sleep(3000);   
+		  String msg = EntityLocator.ValidMsg(driver).getText();
+		  if(msg.equalsIgnoreCase("Details Save Successfully")) 
+		  {
+				test.log(LogStatus.PASS, "Message Displayed = " +msg);
+		  }
+	       else
+			{
+					
+					test.log(LogStatus.FAIL, "Message Displayed = " +msg);
+			}
+		    
+		  
+		  driver.switchTo().parentFrame();
+		  Thread.sleep(2000);
+		  EntityLocator.CloseIcon(driver).click();
+		  
+		  Thread.sleep(2000);
+		    EntityLocator.clickcloseIcon(driver).click();
+		  Thread.sleep(4000);
+		     EntityLocator.ClickDashboard(driver).click();
+}
+	
+	public static void InvaliddBranchDetailesLLP(WebDriver driver,ExtentTest test,XSSFWorkbook workbook) throws InterruptedException 
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	
+	    Thread.sleep(2000);
+	    EntityLocator.ClickBranchDetailes(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickAddNew(driver).click();
+	    
+	  
+	    wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IframeMyCompliances"));
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickName(driver).sendKeys("Rajsthan");
+		
+		Thread.sleep(2000);
+	    EntityLocator.ClickBranchType(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.SelectBranchType(driver).click();
+	    
+
+		 Thread.sleep(2000);
+		 EntityLocator.ClickContactPerson(driver).sendKeys("456*abc");
+		 
+
+		 Thread.sleep(2000);
+		 EntityLocator.ClickContactNumber(driver).sendKeys("12342532");
+		 
+		 Thread.sleep(2000);
+		  EntityLocator.ClickEmail(driver).sendKeys("abc$gmail.com");
+		 
+		 Thread.sleep(2000);
+		 EntityLocator.ClickAddressLine(driver).sendKeys("mumbai");
+		 
+		 Thread.sleep(2000);
+		 EntityLocator.ClickState(driver).click();
+		 Thread.sleep(2000);
+		 EntityLocator.SelectState(driver).click();
+		 Thread.sleep(2000);
+		 EntityLocator.ClickCity(driver).click();
+		 Thread.sleep(2000);
+		 EntityLocator.SelectCity(driver).click();
+		 Thread.sleep(2000);
+		 EntityLocator.ClickBtnSave(driver).click();
+		 
+		 Thread.sleep(3000);   
+		  String msg = EntityLocator.InvalidMsg(driver).getText();
+		  test.log(LogStatus.PASS, "Message Displayed = " +msg);
+		
+		    
+		  
+		  driver.switchTo().parentFrame();
+		  Thread.sleep(2000);
+		  EntityLocator.CloseIcon(driver).click();
+		  
+		  Thread.sleep(2000);
+		    EntityLocator.clickcloseIcon(driver).click();
+		  
+		  Thread.sleep(4000);
+		     EntityLocator.ClickDashboard(driver).click();
+	}	
+	public static void WithoutEnteringDataBranchDetailesLLP(WebDriver driver,ExtentTest test,XSSFWorkbook workbook) throws InterruptedException 
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	
+	    Thread.sleep(2000);
+	    EntityLocator.ClickBranchDetailes(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickAddNew(driver).click();
+	    
+	  
+	    wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IframeMyCompliances"));
+	    Thread.sleep(2000);
+		 EntityLocator.ClickBtnSave(driver).click();
+		 
+		 Thread.sleep(3000);   
+		  String msg = EntityLocator.InvalidMsg(driver).getText();
+		  test.log(LogStatus.PASS, "Message Displayed = " +msg);
+		
+		    
+		  
+		  driver.switchTo().parentFrame();
+		  Thread.sleep(2000);
+		  EntityLocator.CloseIcon(driver).click();
+		  
+		  Thread.sleep(2000);
+		    EntityLocator.clickcloseIcon(driver).click();
+		  
+		  Thread.sleep(4000);
+		     EntityLocator.ClickDashboard(driver).click();
+	}
+	
+	public static void TwoMandatoryFieldsBranchDetailesLLP(WebDriver driver,ExtentTest test,XSSFWorkbook workbook) throws InterruptedException 
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	
+	    Thread.sleep(2000);
+	    EntityLocator.ClickBranchDetailes(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickAddNew(driver).click();
+	    
+	  
+	    wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IframeMyCompliances"));
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickName(driver).sendKeys("Pune");
+		
+		Thread.sleep(2000);
+	    EntityLocator.ClickBranchType(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.SelectBranchType(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.ClickStatus(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.SelectStatus(driver).click();
+	    
+		 Thread.sleep(2000);
+		 EntityLocator.ClickBtnSave(driver).click();
+		 
+		 Thread.sleep(3000);   
+		  String msg = EntityLocator.InvalidMsg(driver).getText();
+		  test.log(LogStatus.PASS, "Message Displayed = " +msg);
+		
+		    
+		  
+		  driver.switchTo().parentFrame();
+		  Thread.sleep(2000);
+		  EntityLocator.CloseIcon(driver).click();
+		  
+		  Thread.sleep(2000);
+		    EntityLocator.clickcloseIcon(driver).click();
+		  
+		  Thread.sleep(4000);
+		     EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void EditBranchDetailesLLP(WebDriver driver,ExtentTest test,XSSFWorkbook workbook) throws InterruptedException 
+	{
+		
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	
+	    Thread.sleep(2000);
+	    EntityLocator.ClickBranchDetailes(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickEditIcon1(driver).click();
+	    
+	  
+	    wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IframeMyCompliances"));
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickName(driver).clear();
+	    Thread.sleep(2000);
+	    EntityLocator.ClickName(driver).sendKeys("Dehli");
+	    
+	    Thread.sleep(2000);
+		 EntityLocator.ClickBtnSave(driver).click();
+		 
+		 Thread.sleep(3000);   
+		  String msg = EntityLocator.InvalidMsg(driver).getText();
+		  test.log(LogStatus.PASS, "Message Displayed = " +msg);
+		
+		    
+		  
+		  driver.switchTo().parentFrame();
+		  Thread.sleep(2000);
+		  EntityLocator.CloseIcon(driver).click();
+		  
+		  Thread.sleep(2000);
+		    EntityLocator.clickcloseIcon(driver).click();
+		  
+		  Thread.sleep(4000);
+		     EntityLocator.ClickDashboard(driver).click();
+	}
+	
+	public static void UploadDocBranchDetailesLLP(WebDriver driver,ExtentTest test,XSSFWorkbook workbook) throws InterruptedException 
+	{
+		
+
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	
+	    Thread.sleep(2000);
+	    EntityLocator.ClickBranchDetailes(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickUploadDoc(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\compliance and litigation.docx");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickUpload(driver).click();
+	    
+
+	    Thread.sleep(2000);
+	    String msg=EntityLocator.ClickUploadValidMsg(driver).getText();
+	    if(msg.equalsIgnoreCase("File Upload successfully")) 
+		  {
+				test.log(LogStatus.PASS, "Message Displayed = " +msg);
+		  }
+	       else
+			{
+					
+					test.log(LogStatus.FAIL, "Message Displayed = " +msg);
+			}
+	    
+	    
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickCloseicon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+		  
+	    
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	    
+	}
+	
+	public static void InvalidUploadDocBranchDetailesLLP(WebDriver driver,ExtentTest test,XSSFWorkbook workbook) throws InterruptedException 
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	
+	    Thread.sleep(2000);
+	    EntityLocator.ClickBranchDetailes(driver).click();
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.ClickUploadDoc(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Act and Event Act Group Test Cases.xlsx");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickUpload(driver).click();
+	    
+
+	    Thread.sleep(4000);
+	    String msg=EntityLocator.ClickUploadInValidMsg(driver).getText();
+	    if(msg.equalsIgnoreCase("Please select file to upload")) 
+		  {
+				test.log(LogStatus.PASS, "Message Displayed = " +msg);
+		  }
+	       else
+			{
+					
+					test.log(LogStatus.FAIL, "Message Displayed = " +msg);
+			}
+	    
+	    
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickCloseicon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+		  
+	    
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	    
+	}  
+	public static void MultipleFileUploadDocBranchDetailesLLP(WebDriver driver,ExtentTest test,XSSFWorkbook workbook) throws InterruptedException 
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	
+	    Thread.sleep(2000);
+	    EntityLocator.ClickBranchDetailes(driver).click();
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.ClickUploadDoc(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\compliance and litigation.docx");
+	    Thread.sleep(2000);
+	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\file-sample_100kB.Doc");
+	
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickUpload(driver).click();
+	    
+
+	    Thread.sleep(4000);
+	    String msg=EntityLocator.ClickUploadValidMsg(driver).getText();
+	    if(msg.equalsIgnoreCase("File Upload successfully")) 
+		  {
+				test.log(LogStatus.PASS, "Message Displayed = " +msg);
+		  }
+	       else
+			{
+					
+					test.log(LogStatus.FAIL, "Message Displayed = " +msg);
+			}
+	    
+	    
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickCloseicon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+		  
+	    
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	    
+	}  
+	public static void InvalidMultipleFileUploadDocBranchDetailesLLP(WebDriver driver,ExtentTest test,XSSFWorkbook workbook) throws InterruptedException 
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	
+	    Thread.sleep(2000);
+	    EntityLocator.ClickBranchDetailes(driver).click();
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.ClickUploadDoc(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Act and Event Act Group Test Cases.xlsx");
+	    Thread.sleep(2000);
+	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Act and Event Act Group Test Cases.xlsx");
+	
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickUpload(driver).click();
+	    
+
+	    Thread.sleep(4000);
+	    String msg=EntityLocator.ClickUploadInValidMsg(driver).getText();
+	    if(msg.equalsIgnoreCase("Please select file to upload")) 
+		  {
+				test.log(LogStatus.PASS, "Message Displayed = " +msg);
+		  }
+	       else
+			{
+					
+					test.log(LogStatus.FAIL, "Message Displayed = " +msg);
+			}
+	    
+	    
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickCloseicon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+		  
+	    
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	    
+	}  
+	
+	public static void WithoutUploadDocBranchDetailesLLP(WebDriver driver,ExtentTest test,XSSFWorkbook workbook) throws InterruptedException 
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	
+	    Thread.sleep(2000);
+	    EntityLocator.ClickBranchDetailes(driver).click();
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.ClickUploadDoc(driver).click();
+	    
+	
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickUpload(driver).click();
+	    
+
+	    Thread.sleep(4000);
+	    String msg=EntityLocator.ClickUploadInValidMsg(driver).getText();
+	    if(msg.equalsIgnoreCase("Please select file to upload")) 
+		  {
+				test.log(LogStatus.PASS, "Message Displayed = " +msg);
+		  }
+	       else
+			{
+					
+					test.log(LogStatus.FAIL, "Message Displayed = " +msg);
+			}
+	    
+	    
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickCloseicon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+		  
+	    
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	    
+	} 
+	
+	
+	public static void CloseBranchDetailesLLP(WebDriver driver,ExtentTest test,XSSFWorkbook workbook) throws InterruptedException 
+	{
+	
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	
+	    Thread.sleep(2000);
+	    EntityLocator.ClickBranchDetailes(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickAddNew(driver).click();
+	    
+	  
+	    wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IframeMyCompliances"));
+	    
+	
+	    driver.switchTo().parentFrame();
+		 
+		  
+		 if(EntityLocator.CloseIcon(driver).isEnabled())
+		 {
+			 Thread.sleep(2000);
+			  EntityLocator.CloseIcon(driver).click();
+			  test.log(LogStatus.PASS, "Close Button is clickable");
+		 }
+		 else
+		 {
+			 test.log(LogStatus.PASS, "Close Button is not clickable");
+		 }
+		  
+		  
+		  Thread.sleep(2000);
+		    EntityLocator.clickcloseIcon(driver).click();
+		  Thread.sleep(4000);
+		     EntityLocator.ClickDashboard(driver).click();
+	
+	}
+	public static void BankDetailesLLP(WebDriver driver,ExtentTest test,XSSFWorkbook workbook) throws InterruptedException 
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	
+	  
+	    Thread.sleep(2000);
+	    if(EntityLocator.BankDetailes(driver).isEnabled())
+		 {
+			 Thread.sleep(2000);
+			 EntityLocator.BankDetailes(driver).click();
+			 test.log(LogStatus.PASS, "Branch Detailes is clickable");
+		 }
+		 else
+		 {
+			 test.log(LogStatus.PASS, "Branch Detailes is not clickable");
+		 }
+		  
+		  
+		  Thread.sleep(2000);
+		    EntityLocator.clickcloseIcon(driver).click();
+		  Thread.sleep(4000);
+		     EntityLocator.ClickDashboard(driver).click();
+	
+	}
+	public static void AddBankDetailesLLP(WebDriver driver,ExtentTest test,XSSFWorkbook workbook) throws InterruptedException 
+	{
+		sheet = workbook.getSheetAt(0);
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+		 EntityLocator.BankDetailes(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.AddBankDetailes(driver).click();
+	    
+	    Thread.sleep(2000);
+	    Row row = sheet.getRow(52);						//Selected 1st index row (Second row)
+		org.apache.poi.ss.usermodel.Cell c = row.getCell(1);						//Selected cell (1 row,1 column)
+		int AccNo= (int)c.getNumericCellValue();		//Got the URL stored at position 1,1
+		EntityLocator.ClickAccNo(driver).sendKeys(""+AccNo);
+		
+		Thread.sleep(2000);
+		Row row1 = sheet.getRow(53);						//Selected 1st index row (Second row)
+	    org.apache.poi.ss.usermodel.Cell c1 = row1.getCell(1);						//Selected cell (1 row,1 column)
+		String BankName = c1.getStringCellValue();			//Got the URL stored at position 1,1
+		EntityLocator.ClickBankName(driver).sendKeys(BankName);
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickAccType(driver).click();
+		
+		Thread.sleep(2000);
+		EntityLocator.SelectAccType(driver).click();
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickOpeningDate(driver).sendKeys("05-04-2023");
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickSave(driver).click();
+		
+		   Thread.sleep(4000);
+		    String msg=EntityLocator.BankvalidMsg(driver).getText();
+		    if(msg.equalsIgnoreCase("Record Save Successfully")) 
+			  {
+					test.log(LogStatus.PASS, "Message Displayed = " +msg);
+			  }
+		       else
+				{
+						
+						test.log(LogStatus.FAIL, "Message Displayed = " +msg);
+				}
+		
+	Thread.sleep(2000);
+	EntityLocator.ClickCloseIcon1(driver).click();
+		
+	Thread.sleep(2000);
+    EntityLocator.clickcloseIcon(driver).click();
+		    
+		   Thread.sleep(4000);
+		     EntityLocator.ClickDashboard(driver).click();
+		
+	
+	}
+	public static void DuplicateBankDetailesLLP(WebDriver driver,ExtentTest test,XSSFWorkbook workbook) throws InterruptedException 
+	{
+		sheet = workbook.getSheetAt(0);
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+		 EntityLocator.BankDetailes(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.AddBankDetailes(driver).click();
+	    
+	    Thread.sleep(2000);
+	    Row row = sheet.getRow(52);						//Selected 1st index row (Second row)
+		org.apache.poi.ss.usermodel.Cell c = row.getCell(1);						//Selected cell (1 row,1 column)
+		int AccNo= (int)c.getNumericCellValue();		//Got the URL stored at position 1,1
+		EntityLocator.ClickAccNo(driver).sendKeys(""+AccNo);
+		
+		Thread.sleep(2000);
+		Row row1 = sheet.getRow(53);						//Selected 1st index row (Second row)
+	    org.apache.poi.ss.usermodel.Cell c1 = row1.getCell(1);						//Selected cell (1 row,1 column)
+		String BankName = c1.getStringCellValue();			//Got the URL stored at position 1,1
+		EntityLocator.ClickBankName(driver).sendKeys(BankName);
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickAccType(driver).click();
+		
+		Thread.sleep(2000);
+		EntityLocator.SelectAccType(driver).click();
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickOpeningDate(driver).sendKeys("05-04-2023");
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickSave(driver).click();
+		
+		   Thread.sleep(4000);
+		    String msg=EntityLocator.BankvalidMsg(driver).getText();
+		    if(msg.equalsIgnoreCase("Record Save Successfully")) 
+			  {
+					test.log(LogStatus.FAIL, "Enter Dupliacte Bank Detailes = " +msg);
+			  }
+		       else
+				{
+						
+						test.log(LogStatus.PASS, "Enter Dupliacte Bank Detailes = " +msg);
+				}
+		
+	Thread.sleep(2000);
+	EntityLocator.ClickCloseIcon1(driver).click();
+		
+	Thread.sleep(2000);
+    EntityLocator.clickcloseIcon(driver).click();
+		    
+		   Thread.sleep(4000);
+		     EntityLocator.ClickDashboard(driver).click();
+		
+	
+	}
+	public static void InvalidAccountNoLLP(WebDriver driver,ExtentTest test) throws InterruptedException 
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+		 EntityLocator.BankDetailes(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.AddBankDetailes(driver).click();
+	    
+	    Thread.sleep(2000);
+		EntityLocator.ClickAccNo(driver).sendKeys("tty^74");
+		
+		
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickAccType(driver).click();
+		
+		Thread.sleep(2000);
+		EntityLocator.SelectAccType(driver).click();
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickOpeningDate(driver).sendKeys("05-04-2023");
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickSave(driver).click();
+		
+		
+		Thread.sleep(2000);
+		String msg=EntityLocator.AccnoBankInavalidMsg(driver).getText();
+		Thread.sleep(2000);
+		String msg1=EntityLocator.BankNameBankInavalidMsg(driver).getText();
+		
+		test.log(LogStatus.PASS, " Messeage Displayed =" +msg);
+		
+
+		
+	Thread.sleep(2000);
+	EntityLocator.ClickCloseIcon1(driver).click();
+		
+	Thread.sleep(2000);
+    EntityLocator.clickcloseIcon(driver).click();
+		    
+	Thread.sleep(4000);
+   EntityLocator.ClickDashboard(driver).click();
+		
+	
+	}
+	public static void InvalidBankNameLLP(WebDriver driver,ExtentTest test) throws InterruptedException 
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+		 EntityLocator.BankDetailes(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.AddBankDetailes(driver).click();
+	    
+	 
+		
+		Thread.sleep(2000);
+	   EntityLocator.ClickBankName(driver).sendKeys("4%gdd");
+		
+//		Thread.sleep(2000);
+//		//EntityLocator.ClickAccType(driver).click();
+//		
+//		Thread.sleep(2000);
+//		EntityLocator.SelectAccType(driver).click();
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickOpeningDate(driver).sendKeys("05-04-2023");
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickSave(driver).click();
+		
+		
+	
+		Thread.sleep(2000);
+		String msg=EntityLocator.BankNameBankInavalidMsg(driver).getText();
+		
+		test.log(LogStatus.PASS, " Messeage Displayed =" +msg);
+		
+
+		
+	      Thread.sleep(2000);
+	     EntityLocator.ClickCloseIcon1(driver).click();
+		
+	     Thread.sleep(2000);
+         EntityLocator.clickcloseIcon(driver).click();
+		    
+	     Thread.sleep(4000);
+          EntityLocator.ClickDashboard(driver).click();
+}
+	
+	public static void InvalidIFSCLLP(WebDriver driver,ExtentTest test) throws InterruptedException 
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+		 EntityLocator.BankDetailes(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.AddBankDetailes(driver).click();
+	    
+		Thread.sleep(2000);
+	   EntityLocator.ClickIfsc(driver).sendKeys("4%gdd");
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickAccType(driver).click();
+		
+		Thread.sleep(2000);
+		EntityLocator.SelectAccType(driver).click();
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickOpeningDate(driver).sendKeys("05-04-2023");
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickSave(driver).click();
+		
+		
+	
+		Thread.sleep(2000);
+		String msg=EntityLocator.IFSCBankInavalidMsg(driver).getText();
+		
+		test.log(LogStatus.PASS, " Messeage Displayed =" +msg);
+		
+
+		
+	      Thread.sleep(2000);
+	     EntityLocator.ClickCloseIcon1(driver).click();
+		
+	     Thread.sleep(2000);
+         EntityLocator.clickcloseIcon(driver).click();
+		    
+	     Thread.sleep(4000);
+          EntityLocator.ClickDashboard(driver).click();
+}
+	public static void DateBankDetailesLLP(WebDriver driver,ExtentTest test) throws InterruptedException 
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+		 EntityLocator.BankDetailes(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.AddBankDetailes(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickAccNo(driver).sendKeys("5434567879");
+	    
+		Thread.sleep(2000);
+		   EntityLocator.ClickBankName(driver).sendKeys("Bank of Maharasthra");
+			
+			Thread.sleep(2000);
+			EntityLocator.ClickAccType(driver).click();
+			
+			Thread.sleep(2000);
+			EntityLocator.SelectAccType(driver).click();
+	    
+	    Thread.sleep(2000);
+		EntityLocator.ClickOpeningDate(driver).sendKeys("05-04-2023");
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickClosingDate(driver).sendKeys("05-03-2023");
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickSave(driver).click();
+		
+		 Thread.sleep(4000);
+		    String msg=EntityLocator.BankvalidMsg(driver).getText();
+		    if(msg.equalsIgnoreCase("Record Save Successfully")) 
+			  {
+					test.log(LogStatus.FAIL, "Opening date is greater than closing date = " +msg);
+			  }
+		       else
+				{
+						
+						test.log(LogStatus.PASS, "Opening date is greater than closing date = " +msg);
+				}
+		
+	       Thread.sleep(2000);
+	       EntityLocator.ClickCloseIcon1(driver).click();
+		
+	        Thread.sleep(2000);
+            EntityLocator.clickcloseIcon(driver).click();
+		    
+		   Thread.sleep(4000);
+		     EntityLocator.ClickDashboard(driver).click();
+		
+	
+	}
+	public static void WithoutEnterBankDetailesLLP(WebDriver driver,ExtentTest test) throws InterruptedException 
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+		 EntityLocator.BankDetailes(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.AddBankDetailes(driver).click();
+	    
+	    Thread.sleep(2000);
+		EntityLocator.ClickSave(driver).click();
+		
+		Thread.sleep(2000);
+		String msg=EntityLocator.AccnoBankInavalidMsg(driver).getText();
+		Thread.sleep(2000);
+		String msg1=EntityLocator.BankNameBankInavalidMsg(driver).getText();
+		Thread.sleep(2000);
+		String msg2=EntityLocator.ClickTypeOfAccount(driver).getText();
+		Thread.sleep(2000);
+	    String msg3=EntityLocator.InvalidOpenDate(driver).getText();
+	    
+		test.log(LogStatus.PASS, " Messeage Displayed ="  +msg +"," +msg1 +"," +msg2 +"," +msg3);
+		
+		   Thread.sleep(2000);
+	       EntityLocator.ClickCloseIcon1(driver).click();
+		
+	        Thread.sleep(2000);
+            EntityLocator.clickcloseIcon(driver).click();
+		    
+		   Thread.sleep(4000);
+		     EntityLocator.ClickDashboard(driver).click();
+		
+		
+	}
+	public static void UpdateBankDetailesLLP(WebDriver driver,ExtentTest test) throws InterruptedException 
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+		 EntityLocator.BankDetailes(driver).click();
+	    
+		 Thread.sleep(3000);
+		  EntityLocator.UpdateBankDetailes(driver).click();
+		  
+		  Thread.sleep(2000);
+		    EntityLocator.ClickAccNo(driver).clear();
+		  
+		  Thread.sleep(2000);
+		    EntityLocator.ClickAccNo(driver).sendKeys("5434567879");
+		    
+		    Thread.sleep(2000);
+			EntityLocator.ClickSave(driver).click();
+			
+			 Thread.sleep(4000);
+			    String msg=EntityLocator.BankvalidMsg(driver).getText();
+			    if(msg.equalsIgnoreCase("Record Updated Successfully")) 
+				  {
+						test.log(LogStatus.PASS, "Message Displayed = " +msg);
+				  }
+			       else
+					{
+							
+							test.log(LogStatus.FAIL, "Message Displayed = " +msg);
+					}
+		    
+			    Thread.sleep(2000);
+			       EntityLocator.ClickCloseIcon1(driver).click();
+				
+			        Thread.sleep(2000);
+		            EntityLocator.clickcloseIcon(driver).click();
+				    
+				   Thread.sleep(4000);
+				     EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void InvalidUpdateBankDetailesLLP(WebDriver driver,ExtentTest test) throws InterruptedException 
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+		 EntityLocator.BankDetailes(driver).click();
+	    
+		 Thread.sleep(2000);
+		  EntityLocator.UpdateBankDetailes(driver).click();
+		  
+		  Thread.sleep(2000);
+		  EntityLocator.ClickAccNo(driver).clear();
+		  
+		  Thread.sleep(2000);
+		  EntityLocator.ClickAccNo(driver).sendKeys("786$5");
+		    
+		    Thread.sleep(2000);
+			EntityLocator.ClickBankName(driver).sendKeys("4%gdd");
+
+		     Thread.sleep(2000);
+			 EntityLocator.ClickIfsc(driver).sendKeys("4%gdd");
+				
+			Thread.sleep(2000);
+			EntityLocator.ClickOpeningDate(driver).sendKeys("05-04-202");
+			
+			 Thread.sleep(2000);
+				EntityLocator.ClickSave(driver).click();
+				
+				Thread.sleep(2000);
+				String msg=EntityLocator.AccnoBankInavalidMsg(driver).getText();
+				Thread.sleep(2000);
+				String msg1=EntityLocator.BankNameBankInavalidMsg(driver).getText();
+				Thread.sleep(2000);
+				String msg2=EntityLocator.IFSCBankInavalidMsg(driver).getText();
+				Thread.sleep(2000);
+			    String msg3=EntityLocator.InvalidOpenDate1(driver).getText();
+			    
+				test.log(LogStatus.PASS, " Messeage Displayed ="  +msg +"," +msg1 +"," +msg2 +"," +msg3);
+				
+				
+				   Thread.sleep(2000);
+			       EntityLocator.ClickCloseIcon1(driver).click();
+				
+			        Thread.sleep(2000);
+		            EntityLocator.clickcloseIcon(driver).click();
+				    
+				   Thread.sleep(4000);
+				     EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void DeleteBankDetailesLLP(WebDriver driver,ExtentTest test) throws InterruptedException 
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+		 EntityLocator.BankDetailes(driver).click();
+				
+		 Thread.sleep(2000);
+		 EntityLocator.DeleteBankDetailes(driver).click();
+		 
+		 Thread.sleep(2000);
+		 EntityLocator.ClickYes(driver).click();
+		 
+			Thread.sleep(5000);
+			// Switching to Alert        
+			Alert alert1 = driver.switchTo().alert();		
+	     // Capturing alert message.    
+			String alertMessage1= driver.switchTo().alert().getText();	
+			  test.log(LogStatus.PASS, alertMessage1);
+			// Displaying alert message		
+			   System.out.println(alertMessage1);
+			 // Accepting alert		
+			  alert1.accept(); 
+			  
+			
+		        Thread.sleep(2000);
+	            EntityLocator.clickcloseIcon(driver).click();
+			    
+			   Thread.sleep(4000);
+			     EntityLocator.ClickDashboard(driver).click();
+			  
+	}
+	public static void DeleteBankDetailes1LLP(WebDriver driver,ExtentTest test) throws InterruptedException 
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
+	    Thread.sleep(2000);
+	    EntityLocator.clickEditIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+		 EntityLocator.BankDetailes(driver).click();
+				
+		 Thread.sleep(2000);
+		 EntityLocator.DeleteBankDetailes(driver).click();
+		
+		 
+		 if(EntityLocator.DeleteBankDetailes1(driver).isEnabled())
+		 {   
+			 Thread.sleep(2000);
+		     EntityLocator.DeleteBankDetailes1(driver).click();
+		     
+		     test.log(LogStatus.PASS,"User Should be able to cancel deletion of an item");
+		 }
+		 else
+		 {
+			 test.log(LogStatus.FAIL,"User Should not be able to cancel deletion of an item");
+		 }
+		 
+	
+		
+	        Thread.sleep(2000);
+          EntityLocator.clickcloseIcon(driver).click();
+		    
+		   Thread.sleep(4000);
+		     EntityLocator.ClickDashboard(driver).click();
+		 
+	}  
+			 
+	public static void EntityExcelUploadFile(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickEntityExcel(driver).click();
+		
+		Thread.sleep(2000);
+		EntityLocator.clickChooseFile(driver).sendKeys("C:\\Users\\Admin\\Desktop\\Snehal\\ComplianceLatest\\Secreterial\\TestData\\EntityExcelFile.xlsx");
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton1(driver).click();
+
+		try 
+		  {
+		   Thread.sleep(3000);
+	        String msg=	EntityLocator.EntityExcelValidMsg(driver).getText();
+	        test.log(LogStatus.PASS,"Enter Valid Data In Entity Excel File =" +msg );
+	       
+		  }
+	      catch(Exception  e) 
+		  {
+	    	 Thread.sleep(3000);
+			 String msg=EntityLocator.EntityExcelInvalidMsg(driver).getText();
+			  test.log(LogStatus.FAIL, "Enter Valid Data In Entity Excel File =" +msg );
+			
+		  }
+		Thread.sleep(2000);
+		EntityLocator.clickCloseIcon(driver).click();
+		
+	    Thread.sleep(4000);
+	    EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void InvalidDataEntityExcelUploadFile(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickEntityExcel(driver).click();
+		
+		Thread.sleep(2000);
+		EntityLocator.clickChooseFile(driver).sendKeys("C:\\Users\\Admin\\Desktop\\Snehal\\ComplianceLatest\\Secreterial\\TestData\\EntityExcelFile1.xlsx");
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton1(driver).click();
+
+		try 
+		  {
+		   Thread.sleep(3000);
+	        String msg=	EntityLocator.EntityExcelInvalidMsg(driver).getText();
+	        test.log(LogStatus.PASS,"Enter Invalid Data in Entity Excel File =" +msg );
+	       
+		  }
+	      catch(Exception  e) 
+		  {
+	    	 Thread.sleep(3000);
+			 String msg=EntityLocator.EntityExcelValidMsg(driver).getText();
+			  test.log(LogStatus.FAIL, "Enter Invalid Data in Entity Excel File =" +msg );
+			
+		  }
+		Thread.sleep(2000);
+		EntityLocator.clickCloseIcon(driver).click();
+		
+	    Thread.sleep(4000);
+	    EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void EnterExistingDataEntityExcelUploadFile(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickEntityExcel(driver).click();
+		
+		Thread.sleep(2000);
+		EntityLocator.clickChooseFile(driver).sendKeys("C:\\Users\\Admin\\Desktop\\Snehal\\ComplianceLatest\\Secreterial\\TestData\\EntityExcelFile.xlsx");
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton1(driver).click();
+
+		try 
+		  {
+		   Thread.sleep(3000);
+	        String msg=	EntityLocator.EntityExcelInvalidMsg(driver).getText();
+	        test.log(LogStatus.PASS,"Enter Existing Data in Entity Excel File =" +msg );
+	       
+		  }
+	      catch(Exception  e) 
+		  {
+	    	 Thread.sleep(3000);
+			 String msg=EntityLocator.EntityExcelValidMsg(driver).getText();
+			  test.log(LogStatus.FAIL,"Enter Existing Data in Entity Excel File =" +msg );
+			
+		  }
+		Thread.sleep(2000);
+		EntityLocator.clickCloseIcon(driver).click();
+		
+	    Thread.sleep(4000);
+	    EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void WithoutEnteringDataEntityExcelUploadFile(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickEntityExcel(driver).click();
+		
+		Thread.sleep(2000);
+		EntityLocator.clickChooseFile(driver).sendKeys("C:\\Users\\Admin\\Desktop\\Snehal\\ComplianceLatest\\Secreterial\\TestData\\EntityExcelFile2.xlsx");
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton1(driver).click();
+
+		try 
+		  {
+		   Thread.sleep(3000);
+	        String msg=	EntityLocator.EntityExcelInvalidMsg(driver).getText();
+	        test.log(LogStatus.PASS,"Without Enter Data In Entity Excel File =" +msg );
+	       
+		  }
+	      catch(Exception  e) 
+		  {
+	    	 Thread.sleep(3000);
+			 String msg=EntityLocator.EntityExcelValidMsg(driver).getText();
+			  test.log(LogStatus.FAIL, "Without Enter Data In Entity Excel File =" +msg  );
+			
+		  }
+		Thread.sleep(2000);
+		EntityLocator.clickCloseIcon(driver).click();
+		
+	    Thread.sleep(4000);
+	    EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void EnterInvalidEntityExcelUploadFile(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickEntityExcel(driver).click();
+		
+		Thread.sleep(2000);
+		EntityLocator.clickChooseFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\5May Release Point.txt");
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton1(driver).click();
+
+		try 
+		  {
+		   Thread.sleep(3000);
+	        String msg=	EntityLocator.EntityExcelValidMsg(driver).getText();
+	        test.log(LogStatus.PASS,"Upload Invalid File In Entity Excel =" +msg );
+	       
+		  }
+	      catch(Exception  e) 
+		  {
+	    	 Thread.sleep(3000);
+			 String msg=EntityLocator.EntityExcelInvalidMsg(driver).getText();
+			  test.log(LogStatus.FAIL, "Upload Invalid File In Entity Excel =" +msg  );
+			
+		  }
+		Thread.sleep(2000);
+		EntityLocator.clickCloseIcon(driver).click();
+		
+	    Thread.sleep(4000);
+	    EntityLocator.ClickDashboard(driver).click();
+	}
+	
+	public static void WithoutSelectingFileEntityExcelUploadFile(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickEntityExcel(driver).click();
+		
+		
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton1(driver).click();
+
+		try 
+		  {
+		   Thread.sleep(3000);
+	        String msg=	EntityLocator.EntityExcelValidMsg1(driver).getText();
+	        test.log(LogStatus.PASS,"Without selecting a file In Entity Excel =" +msg );
+	       
+		  }
+	      catch(Exception  e) 
+		  {
+	    	 Thread.sleep(3000);
+			 String msg=EntityLocator.EntityExcelInvalidMsg(driver).getText();
+			  test.log(LogStatus.FAIL, "without selecting a fileIn Entity Excel =" +msg  );
+			
+		  }
+		Thread.sleep(2000);
+		EntityLocator.clickCloseIcon(driver).click();
+		
+	    Thread.sleep(4000);
+	    EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void LLPExcelUploadFile(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickLLPExcel(driver).click();
+		
+		Thread.sleep(2000);
+		EntityLocator.clickChooseFile(driver).sendKeys("C:\\Users\\Admin\\Desktop\\Snehal\\ComplianceLatest\\Secreterial\\TestData\\LLP Sample File.xlsx");
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton1(driver).click();
+
+		try 
+		  {
+		   Thread.sleep(3000);
+	        String msg=	EntityLocator.EntityExcelValidMsg(driver).getText();
+	        test.log(LogStatus.PASS,"Enter Valid Data In LLP Excel File =" +msg );
+	       
+		  }
+	      catch(Exception  e) 
+		  {
+	    	 Thread.sleep(3000);
+			 String msg=EntityLocator.EntityExcelInvalidMsg(driver).getText();
+			  test.log(LogStatus.FAIL, "Enter Valid Data In LLP Excel File =" +msg );
+			
+		  }
+		Thread.sleep(2000);
+		EntityLocator.clickCloseIcon(driver).click();
+		
+	    Thread.sleep(4000);
+	    EntityLocator.ClickDashboard(driver).click();
+	}
+	
+	public static void InvalidDataLLPExcelUploadFile(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickLLPExcel(driver).click();
+		
+		Thread.sleep(2000);
+		EntityLocator.clickChooseFile(driver).sendKeys("C:\\Users\\Admin\\Desktop\\Snehal\\ComplianceLatest\\Secreterial\\TestData\\LLP Sample File1.xlsx");
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton1(driver).click();
+
+		try 
+		  {
+		   Thread.sleep(3000);
+	        String msg=	EntityLocator.EntityExcelInvalidMsg(driver).getText();
+	        test.log(LogStatus.PASS,"Enter Invalid Data in Entity Excel File =" +msg );
+	       
+		  }
+	      catch(Exception  e) 
+		  {
+	    	 Thread.sleep(3000);
+			 String msg=EntityLocator.EntityExcelValidMsg(driver).getText();
+			  test.log(LogStatus.FAIL, "Enter Invalid Data in Entity Excel File =" +msg );
+			
+		  }
+		Thread.sleep(2000);
+		EntityLocator.clickCloseIcon(driver).click();
+		
+	    Thread.sleep(4000);
+	    EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void EnterExistingDataLLPExcelUploadFile(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickLLPExcel(driver).click();
+		
+		Thread.sleep(2000);
+		EntityLocator.clickChooseFile(driver).sendKeys("C:\\Users\\Admin\\Desktop\\Snehal\\ComplianceLatest\\Secreterial\\TestData\\LLP Sample File.xlsx");
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton1(driver).click();
+
+		try 
+		  {
+		   Thread.sleep(3000);
+	        String msg=	EntityLocator.EntityExcelInvalidMsg(driver).getText();
+	        test.log(LogStatus.PASS,"Enter Existing Data In LLP Excel File =" +msg );
+	       
+		  }
+	      catch(Exception  e) 
+		  {
+	    	 Thread.sleep(3000);
+			 String msg=EntityLocator.EntityExcelValidMsg(driver).getText();
+			  test.log(LogStatus.FAIL, "Enter Existing Data In LLP Excel File =" +msg );
+			
+		  }
+		Thread.sleep(2000);
+		EntityLocator.clickCloseIcon(driver).click();
+		
+	    Thread.sleep(4000);
+	    EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void WithoutEnteringDataLLPExcelUploadFile(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickLLPExcel(driver).click();
+		
+		Thread.sleep(2000);
+		EntityLocator.clickChooseFile(driver).sendKeys("C:\\Users\\Admin\\Desktop\\Snehal\\ComplianceLatest\\Secreterial\\TestData\\LLP Sample File2.xlsx");
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton1(driver).click();
+
+		try 
+		  {
+		   Thread.sleep(3000);
+	        String msg=	EntityLocator.EntityExcelInvalidMsg(driver).getText();
+	        test.log(LogStatus.PASS,"Without Enter Data In LLP Excel File =" +msg );
+	       
+		  }
+	      catch(Exception  e) 
+		  {
+	    	 Thread.sleep(3000);
+			 String msg=EntityLocator.EntityExcelValidMsg(driver).getText();
+			  test.log(LogStatus.FAIL, "Without Enter Data In LLP Excel File =" +msg  );
+			
+		  }
+		Thread.sleep(2000);
+		EntityLocator.clickCloseIcon(driver).click();
+		
+	    Thread.sleep(4000);
+	    EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void EnterInvalidLLPExcelUploadFile(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickLLPExcel(driver).click();
+		
+		Thread.sleep(2000);
+		EntityLocator.clickChooseFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\5May Release Point.txt");
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton1(driver).click();
+
+		try 
+		  {
+		   Thread.sleep(3000);
+	        String msg=	EntityLocator.EntityExcelValidMsg(driver).getText();
+	        test.log(LogStatus.PASS,"Upload Invalid File In LLP Excel =" +msg );
+	       
+		  }
+	      catch(Exception  e) 
+		  {
+	    	 Thread.sleep(3000);
+			 String msg=EntityLocator.EntityExcelInvalidMsg(driver).getText();
+			  test.log(LogStatus.FAIL, "Upload Invalid File In LLP Excel =" +msg  );
+			
+		  }
+		Thread.sleep(2000);
+		EntityLocator.clickCloseIcon(driver).click();
+		
+	    Thread.sleep(4000);
+	    EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void WithoutSelectingFileLLPExcelUploadFile(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickLLPExcel(driver).click();
+		
+		
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton1(driver).click();
+
+		try 
+		  {
+		   Thread.sleep(3000);
+	        String msg=	EntityLocator.EntityExcelValidMsg1(driver).getText();
+	        test.log(LogStatus.PASS,"Without selecting a file In LLP Excel =" +msg );
+	       
+		  }
+	      catch(Exception  e) 
+		  {
+	    	 Thread.sleep(3000);
+			 String msg=EntityLocator.EntityExcelInvalidMsg(driver).getText();
+			  test.log(LogStatus.FAIL, "without selecting a file In LLP Excel =" +msg  );
+			
+		  }
+		Thread.sleep(2000);
+		EntityLocator.clickCloseIcon(driver).click();
+		
+	    Thread.sleep(4000);
+	    EntityLocator.ClickDashboard(driver).click();
+	}
+	
+	
+	
+	public static void MGT7ExcelUploadFile(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickMGT7Excel(driver).click();
+		
+		Thread.sleep(2000);
+		EntityLocator.clickChooseFile(driver).sendKeys("C:\\Users\\Admin\\Desktop\\Snehal\\ComplianceLatest\\Secreterial\\TestData\\KAPL - MGT-7 (2020-21)-25.03.2022 Signed  T90729922.pdf");
+		Thread.sleep(2000);
+		EntityLocator.clickChooseFile(driver).sendKeys("C:\\Users\\Admin\\Desktop\\Snehal\\ComplianceLatest\\Secreterial\\TestData\\BFN_Form_MGT_7SPZSPZ_28 12 2021.pdf");
+		
+		Thread.sleep(2000);
+		EntityLocator.clickChooseFile(driver).sendKeys("C:\\Users\\Admin\\Desktop\\Snehal\\ComplianceLatest\\Secreterial\\TestData\\1. Spresso MGT 7.pdf");
+		
+		
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton1(driver).click();
+
+		try 
+		  {
+		   Thread.sleep(3000);
+	        String msg=	EntityLocator.EntityExcelValidMsg2(driver).getText();
+	        test.log(LogStatus.PASS,"Upload Valid file In MGT-7 =" +msg );
+	       
+		  }
+	      catch(Exception  e) 
+		  {
+	    	 Thread.sleep(3000);
+			 String msg=EntityLocator.EntityExcelInvalidMsg(driver).getText();
+			  test.log(LogStatus.FAIL, "Upload Valid file In MGT-7 =" +msg );
+			
+		  }
+		Thread.sleep(2000);
+		EntityLocator.clickCloseIcon(driver).click();
+		
+	    Thread.sleep(4000);
+	    EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void MGT7ExcelInvalidUploadFile(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickMGT7Excel(driver).click();
+		
+		Thread.sleep(2000);
+		EntityLocator.clickChooseFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\5May Release Point.txt");
+		
+		
+		
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton1(driver).click();
+
+		try 
+		  {
+		   Thread.sleep(3000);
+	        String msg=	EntityLocator.EntityExcelValidMsg2(driver).getText();
+	        test.log(LogStatus.PASS,"Upload Invalid file In MGT-7 =" +msg );
+	       
+		  }
+	      catch(Exception  e) 
+		  {
+	    	 Thread.sleep(3000);
+			 String msg=EntityLocator.EntityExcelInvalidMsg(driver).getText();
+			  test.log(LogStatus.FAIL, "Upload InValid file In MGT-7 =" +msg );
+			
+		  }
+		Thread.sleep(2000);
+		EntityLocator.clickCloseIcon(driver).click();
+		
+	    Thread.sleep(4000);
+	    EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void MGT7ExcelDiffInvalidUploadFile(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickMGT7Excel(driver).click();
+		
+		Thread.sleep(2000);
+		EntityLocator.clickChooseFile(driver).sendKeys("C:\\Users\\Admin\\Downloads\\Committee Composition (5).pdf");
+		Thread.sleep(2000);
+		EntityLocator.clickChooseFile(driver).sendKeys("C:\\Users\\Admin\\Downloads\\Job_References-For 13 oct2022 (3).pdf");
+		
+		
+		
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton1(driver).click();
+
+		try 
+		  {
+		   Thread.sleep(3000);
+	        String msg=	EntityLocator.EntityExcelValidMsg2(driver).getText();
+	        test.log(LogStatus.PASS,"Upload Different InValid file In MGT-7 =" +msg );
+	       
+		  }
+	      catch(Exception  e) 
+		  {
+	    	 Thread.sleep(3000);
+			 String msg=EntityLocator.EntityExcelInvalidMsg(driver).getText();
+			  test.log(LogStatus.FAIL, "Upload Different InValid file In MGT-7 =" +msg );
+			
+		  }
+		Thread.sleep(2000);
+		EntityLocator.clickCloseIcon(driver).click();
+		
+	    Thread.sleep(4000);
+	    EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void MGT7ExcelExistingUploadFile(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickMGT7Excel(driver).click();
+		
+		Thread.sleep(2000);
+		EntityLocator.clickChooseFile(driver).sendKeys("C:\\Users\\Admin\\Desktop\\Snehal\\ComplianceLatest\\Secreterial\\TestData\\KAPL - MGT-7 (2020-21)-25.03.2022 Signed  T90729922.pdf");
+		Thread.sleep(2000);
+		EntityLocator.clickChooseFile(driver).sendKeys("C:\\Users\\Admin\\Desktop\\Snehal\\ComplianceLatest\\Secreterial\\TestData\\BFN_Form_MGT_7SPZSPZ_28 12 2021.pdf");
+		
+		Thread.sleep(2000);
+		EntityLocator.clickChooseFile(driver).sendKeys("C:\\Users\\Admin\\Desktop\\Snehal\\ComplianceLatest\\Secreterial\\TestData\\1. Spresso MGT 7.pdf");
+		
+		
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton1(driver).click();
+
+		try 
+		  {
+		   Thread.sleep(3000);
+	        String msg=	EntityLocator.EntityExcelValidMsg2(driver).getText();
+	        test.log(LogStatus.FAIL,"Upload Existing file In MGT-7 =" +msg );
+	       
+		  }
+	      catch(Exception  e) 
+		  {
+	    	 Thread.sleep(3000);
+			 String msg=EntityLocator.EntityExcelInvalidMsg(driver).getText();
+			  test.log(LogStatus.PASS, "Upload Existing file In MGT-7 =" +msg );
+			
+		  }
+		Thread.sleep(2000);
+		EntityLocator.clickCloseIcon(driver).click();
+		
+	    Thread.sleep(4000);
+	    EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void WithoutSelectingFileMGT7ExcelUploadFile(WebDriver driver,ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton(driver).click();
+		Thread.sleep(2000);
+		EntityLocator.clickMGT7Excel(driver).click();
+		
+		
+		Thread.sleep(2000);
+		EntityLocator.clickUploadButton1(driver).click();
+
+		try 
+		  {
+		   Thread.sleep(3000);
+	        String msg=	EntityLocator.EntityExcelValidMsg1(driver).getText();
+	        test.log(LogStatus.PASS,"Without selecting a file In MGT-7 Excel =" +msg );
+	       
+		  }
+	      catch(Exception  e) 
+		  {
+	    	 Thread.sleep(3000);
+			 String msg=EntityLocator.EntityExcelInvalidMsg(driver).getText();
+			  test.log(LogStatus.FAIL, "without selecting a file In MGT-7 Excel =" +msg  );
+			
+		  }
+		Thread.sleep(2000);
+		EntityLocator.clickCloseIcon(driver).click();
+		
+	    Thread.sleep(4000);
+	    EntityLocator.ClickDashboard(driver).click();
+	}
 	
 	 public static void selectOptionFromDropDown_bs(List<WebElement> options, String value) {
 			

@@ -1,40 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="29" passed="29" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-02T18:16:56 IST" name="Default suite" finished-at="2023-05-02T18:20:29 IST" duration-ms="213441">
+  <suite started-at="2023-05-09T17:44:56 IST" name="Default suite" finished-at="2023-05-09T17:57:21 IST" duration-ms="745447">
     <groups>
     </groups>
-    <test started-at="2023-05-02T18:16:56 IST" name="Default test" finished-at="2023-05-02T18:20:29 IST" duration-ms="213441">
+    <test started-at="2023-05-09T17:44:56 IST" name="Default test" finished-at="2023-05-09T17:57:21 IST" duration-ms="745447">
       <class name="CompanySecretoryTest.EntityTestCases">
-        <test-method is-config="true" signature="setBrowser()[pri:0, instance:CompanySecretoryTest.EntityTestCases@201a4587]" started-at="2023-05-02T18:16:56 IST" name="setBrowser" finished-at="2023-05-02T18:17:09 IST" duration-ms="12917" status="PASS">
+        <test-method is-config="true" signature="setBrowser()[pri:0, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:44:56 IST" name="setBrowser" finished-at="2023-05-09T17:45:01 IST" duration-ms="4928" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBrowser -->
-        <test-method signature="Login()[pri:1, instance:CompanySecretoryTest.EntityTestCases@201a4587]" started-at="2023-05-02T18:17:09 IST" name="Login" finished-at="2023-05-02T18:17:51 IST" duration-ms="41683" status="PASS">
+        <test-method signature="Login()[pri:1, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:45:01 IST" name="Login" finished-at="2023-05-09T17:45:11 IST" duration-ms="9801" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="EnterInvalidDataLLP()[pri:71, instance:CompanySecretoryTest.EntityTestCases@201a4587]" started-at="2023-05-02T18:17:51 IST" name="EnterInvalidDataLLP" finished-at="2023-05-02T18:18:48 IST" duration-ms="57323" status="PASS">
+        <test-method signature="ValidDataEntityExcelUpload()[pri:2, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:45:11 IST" name="ValidDataEntityExcelUpload" finished-at="2023-05-09T17:45:35 IST" duration-ms="24087" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- EnterInvalidDataLLP -->
-        <test-method signature="WithoutEnteringDocLLP()[pri:89, instance:CompanySecretoryTest.EntityTestCases@201a4587]" started-at="2023-05-02T18:18:48 IST" name="WithoutEnteringDocLLP" finished-at="2023-05-02T18:19:15 IST" duration-ms="27228" status="PASS">
+        </test-method> <!-- ValidDataEntityExcelUpload -->
+        <test-method signature="InvalidDataEntityExcelUpload()[pri:3, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:45:35 IST" name="InvalidDataEntityExcelUpload" finished-at="2023-05-09T17:45:56 IST" duration-ms="20823" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- WithoutEnteringDocLLP -->
-        <test-method signature="ViewDocumentLLP()[pri:90, instance:CompanySecretoryTest.EntityTestCases@201a4587]" started-at="2023-05-02T18:19:15 IST" name="ViewDocumentLLP" finished-at="2023-05-02T18:19:38 IST" duration-ms="22909" status="PASS">
+        </test-method> <!-- InvalidDataEntityExcelUpload -->
+        <test-method signature="ExistingDataEntityExcelUpload()[pri:4, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:45:56 IST" name="ExistingDataEntityExcelUpload" finished-at="2023-05-09T17:46:16 IST" duration-ms="20764" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ViewDocumentLLP -->
-        <test-method signature="DownloadDocumentLLP()[pri:91, instance:CompanySecretoryTest.EntityTestCases@201a4587]" started-at="2023-05-02T18:19:38 IST" name="DownloadDocumentLLP" finished-at="2023-05-02T18:20:03 IST" duration-ms="24907" status="PASS">
+        </test-method> <!-- ExistingDataEntityExcelUpload -->
+        <test-method signature="WithoutEnteringDataEntityExcelUpload()[pri:5, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:46:16 IST" name="WithoutEnteringDataEntityExcelUpload" finished-at="2023-05-09T17:46:40 IST" duration-ms="23862" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DownloadDocumentLLP -->
-        <test-method signature="DeleteDocumentLLP()[pri:92, instance:CompanySecretoryTest.EntityTestCases@201a4587]" started-at="2023-05-02T18:20:03 IST" name="DeleteDocumentLLP" finished-at="2023-05-02T18:20:29 IST" duration-ms="26362" status="PASS">
+        </test-method> <!-- WithoutEnteringDataEntityExcelUpload -->
+        <test-method signature="EnterInvalidEntityExcelUploadFile()[pri:6, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:46:40 IST" name="EnterInvalidEntityExcelUploadFile" finished-at="2023-05-09T17:47:01 IST" duration-ms="20778" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DeleteDocumentLLP -->
+        </test-method> <!-- EnterInvalidEntityExcelUploadFile -->
+        <test-method signature="WithoutselectingfileEntityExcelUploadFile()[pri:7, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:47:01 IST" name="WithoutselectingfileEntityExcelUploadFile" finished-at="2023-05-09T17:47:20 IST" duration-ms="18940" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WithoutselectingfileEntityExcelUploadFile -->
+        <test-method signature="LLPExcelUploadFile()[pri:8, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:47:20 IST" name="LLPExcelUploadFile" finished-at="2023-05-09T17:47:41 IST" duration-ms="21231" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LLPExcelUploadFile -->
+        <test-method signature="InvalidDataLLPExcelUploadFile()[pri:9, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:47:41 IST" name="InvalidDataLLPExcelUploadFile" finished-at="2023-05-09T17:48:05 IST" duration-ms="23882" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidDataLLPExcelUploadFile -->
+        <test-method signature="EnterExistingDataInvalidDataLLPExcelUploadFile()[pri:10, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:48:05 IST" name="EnterExistingDataInvalidDataLLPExcelUploadFile" finished-at="2023-05-09T17:48:29 IST" duration-ms="24001" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EnterExistingDataInvalidDataLLPExcelUploadFile -->
+        <test-method signature="WithoutEnteringDataLLPExcelUpload()[pri:11, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:48:29 IST" name="WithoutEnteringDataLLPExcelUpload" finished-at="2023-05-09T17:48:53 IST" duration-ms="24094" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WithoutEnteringDataLLPExcelUpload -->
+        <test-method signature="EnterInvalidLLPExcelUploadFile()[pri:12, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:48:53 IST" name="EnterInvalidLLPExcelUploadFile" finished-at="2023-05-09T17:49:14 IST" duration-ms="20789" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EnterInvalidLLPExcelUploadFile -->
+        <test-method signature="WithoutselectingfileLLPExcelUploadFile()[pri:13, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:49:14 IST" name="WithoutselectingfileLLPExcelUploadFile" finished-at="2023-05-09T17:49:33 IST" duration-ms="18723" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WithoutselectingfileLLPExcelUploadFile -->
+        <test-method signature="MGT7ExcelUploadFile()[pri:14, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:49:33 IST" name="MGT7ExcelUploadFile" finished-at="2023-05-09T17:49:58 IST" duration-ms="24926" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MGT7ExcelUploadFile -->
+        <test-method signature="MGT7ExcelInvalidUploadFile()[pri:15, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:49:58 IST" name="MGT7ExcelInvalidUploadFile" finished-at="2023-05-09T17:50:19 IST" duration-ms="20807" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MGT7ExcelInvalidUploadFile -->
+        <test-method signature="MGT7ExcelDiffInvalidUploadFile()[pri:16, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:50:19 IST" name="MGT7ExcelDiffInvalidUploadFile" finished-at="2023-05-09T17:50:41 IST" duration-ms="22824" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MGT7ExcelDiffInvalidUploadFile -->
+        <test-method signature="MGT7ExcelExistingUploadFile()[pri:17, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:50:41 IST" name="MGT7ExcelExistingUploadFile" finished-at="2023-05-09T17:51:06 IST" duration-ms="24997" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MGT7ExcelExistingUploadFile -->
+        <test-method signature="WithoutselectingfileMGT7ExcelUploadFile()[pri:18, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:51:06 IST" name="WithoutselectingfileMGT7ExcelUploadFile" finished-at="2023-05-09T17:51:25 IST" duration-ms="18655" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WithoutselectingfileMGT7ExcelUploadFile -->
+        <test-method signature="AddBankDetailesLLP()[pri:140, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:51:25 IST" name="AddBankDetailesLLP" finished-at="2023-05-09T17:52:02 IST" duration-ms="36922" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddBankDetailesLLP -->
+        <test-method signature="DuplicateBankDetailesLLP()[pri:141, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:52:02 IST" name="DuplicateBankDetailesLLP" finished-at="2023-05-09T17:52:39 IST" duration-ms="36692" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DuplicateBankDetailesLLP -->
+        <test-method signature="InvalidAccountNoLLP()[pri:142, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:52:39 IST" name="InvalidAccountNoLLP" finished-at="2023-05-09T17:53:13 IST" duration-ms="34574" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidAccountNoLLP -->
+        <test-method signature="InvalidBankNameLLP()[pri:143, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:53:13 IST" name="InvalidBankNameLLP" finished-at="2023-05-09T17:53:42 IST" duration-ms="28517" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidBankNameLLP -->
+        <test-method signature="InvalidIFSCLLP()[pri:144, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:53:42 IST" name="InvalidIFSCLLP" finished-at="2023-05-09T17:54:15 IST" duration-ms="33141" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidIFSCLLP -->
+        <test-method signature="DateBankDetailesLLP()[pri:145, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:54:15 IST" name="DateBankDetailesLLP" finished-at="2023-05-09T17:54:54 IST" duration-ms="38970" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DateBankDetailesLLP -->
+        <test-method signature="WithoutEnterBankDetailesLLP()[pri:146, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:54:54 IST" name="WithoutEnterBankDetailesLLP" finished-at="2023-05-09T17:55:24 IST" duration-ms="30443" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WithoutEnterBankDetailesLLP -->
+        <test-method signature="UpdateBankDetailesLLP()[pri:147, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:55:24 IST" name="UpdateBankDetailesLLP" finished-at="2023-05-09T17:55:56 IST" duration-ms="31343" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UpdateBankDetailesLLP -->
+        <test-method signature="InvalidUpdateBankDetailesLLP()[pri:148, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:55:56 IST" name="InvalidUpdateBankDetailesLLP" finished-at="2023-05-09T17:56:37 IST" duration-ms="40942" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidUpdateBankDetailesLLP -->
+        <test-method signature="DeleteBankDetailesLLP()[pri:149, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:56:37 IST" name="DeleteBankDetailesLLP" finished-at="2023-05-09T17:57:02 IST" duration-ms="25074" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeleteBankDetailesLLP -->
+        <test-method signature="DeleteBankDetailes1LLP()[pri:150, instance:CompanySecretoryTest.EntityTestCases@4310d43]" started-at="2023-05-09T17:57:02 IST" name="DeleteBankDetailes1LLP" finished-at="2023-05-09T17:57:21 IST" duration-ms="19813" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeleteBankDetailes1LLP -->
       </class> <!-- CompanySecretoryTest.EntityTestCases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

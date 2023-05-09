@@ -99,7 +99,7 @@ public class EntityTestCases {
 			extent.flush();
 		}
 
-//	@Test(priority =3 )
+	//@Test(priority =3 )
 	
 	void TwoMandatoryFields() throws InterruptedException, IOException
 	{
@@ -574,8 +574,74 @@ void AddLicenseRegistration() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-
 //@Test(priority = 44)
+
+void EnterInvalidDataLicenseRegistration() throws InterruptedException, IOException
+{
+	test = extent.startTest("Enter Invalid Data License/Registration  Document Verification");
+	
+	EntityMasterMethod.EnterInvalidDataLicenseRegistration(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 45)
+
+void WithoutEnteringLicenseRegistrationDocument() throws InterruptedException, IOException
+{
+	test = extent.startTest("Without upload  License/Registration  Document Verification");
+	
+	EntityMasterMethod.WithoutEnteringLicenseRegistrationDocument(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 46)
+
+void AddExistingLicenseRegistration() throws InterruptedException, IOException
+{
+	test = extent.startTest("Add Existing License/Registration  Document Verification");
+	
+	EntityMasterMethod.AddExistingLicenseRegistration(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 47)
+
+void ViewLicenseRegistrationDocument() throws InterruptedException, IOException
+{
+	test = extent.startTest("View  License/Registration  Document Verification");
+	
+	EntityMasterMethod.ViewLicenseRegistrationDocument(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 48)
+
+void DownloadLicenseRegistrationDocument() throws InterruptedException, IOException
+{
+	test = extent.startTest("Download  License/Registration Document Verification");
+	
+	EntityMasterMethod.DownloadLicenseRegistrationDocument(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 49)
+
+void DeleteLicenseRegistrationDocument() throws InterruptedException, IOException
+{
+	test = extent.startTest("Delete License/Registration Document Verification");
+	
+	EntityMasterMethod.DeleteLicenseRegistrationDocument(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+
+//@Test(priority = 50)
 
 void AddAnnualReport() throws InterruptedException, IOException
 {
@@ -586,7 +652,64 @@ void AddAnnualReport() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 45)
+//@Test(priority = 51)
+
+void AddExistingDataAnnualReport() throws InterruptedException, IOException
+{
+	test = extent.startTest("Add Existing Data Annual Report  Document Verification");
+	
+	EntityMasterMethod.AddExistingDataAnnualReport(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 52)
+
+void WithoutUploadFileAnnualReport() throws InterruptedException, IOException
+{
+	test = extent.startTest("Without Upload File Annual Report Verification");
+	
+	EntityMasterMethod.WithoutUploadFileAnnualReport(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+
+//@Test(priority = 53)
+
+void ViewAnnualReportDocument() throws InterruptedException, IOException
+{
+	test = extent.startTest("View  Annual Report  Document Verification");
+	
+	EntityMasterMethod.ViewAnnualReportDocument(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 54)
+
+void DownloadAnnualReportDocument() throws InterruptedException, IOException
+{
+	test = extent.startTest("Download  Annual Report Document Verification");
+	
+	EntityMasterMethod.DownloadAnnualReportDocument(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 55)
+
+void DeleteAnnualReportDocument() throws InterruptedException, IOException
+{
+	test = extent.startTest("Delete Annual Report Document Verification");
+	
+	EntityMasterMethod.DeleteAnnualReportDocument(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+
+//@Test(priority = 56)
 
 void BranchDetailes() throws InterruptedException, IOException
 {
@@ -597,7 +720,7 @@ void BranchDetailes() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 46)
+//@Test(priority = 57)
 
 void AddBranchDetailes() throws InterruptedException, IOException
 {
@@ -608,7 +731,7 @@ void AddBranchDetailes() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 47)
+//@Test(priority = 58)
 
 void InvaliddBranchDetailes() throws InterruptedException, IOException
 {
@@ -619,7 +742,7 @@ void InvaliddBranchDetailes() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 48)
+//@Test(priority = 59)
 
 void TwoMandatoryFieldsBranchDetailes() throws InterruptedException, IOException
 {
@@ -630,7 +753,7 @@ void TwoMandatoryFieldsBranchDetailes() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 49)
+//@Test(priority = 60)
 
 void WithoutEnteringDataBranchDetailes() throws InterruptedException, IOException
 {
@@ -642,7 +765,7 @@ void WithoutEnteringDataBranchDetailes() throws InterruptedException, IOExceptio
 	extent.flush();
 }
 
-//@Test(priority = 50)
+//@Test(priority = 61)
 
 void EditBranchDetailes() throws InterruptedException, IOException
 {
@@ -654,7 +777,7 @@ void EditBranchDetailes() throws InterruptedException, IOException
 	extent.flush();
 }
 
-//@Test(priority = 51)
+//@Test(priority = 62)
 
 void UploadDocBranchDetailes() throws InterruptedException, IOException
 {
@@ -665,7 +788,7 @@ void UploadDocBranchDetailes() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 52)
+//@Test(priority = 63)
 
 void InvalidUploadDocBranchDetailes() throws InterruptedException, IOException
 {
@@ -676,7 +799,7 @@ void InvalidUploadDocBranchDetailes() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 53)
+//@Test(priority = 64)
 
 void MultipleFileUploadDocBranchDetailes() throws InterruptedException, IOException
 {
@@ -687,7 +810,7 @@ void MultipleFileUploadDocBranchDetailes() throws InterruptedException, IOExcept
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 54)
+//@Test(priority = 65)
 
 void InvalidMultipleFileUploadDocBranchDetailes() throws InterruptedException, IOException
 {
@@ -699,7 +822,7 @@ void InvalidMultipleFileUploadDocBranchDetailes() throws InterruptedException, I
 	extent.flush();
 }
 
-//@Test(priority = 55)
+//@Test(priority = 66)
 
 void WithoutUploadDocBranchDetailes() throws InterruptedException, IOException
 {
@@ -710,7 +833,7 @@ void WithoutUploadDocBranchDetailes() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 56)
+//@Test(priority = 67)
 
 void CloseBranchDetailes() throws InterruptedException, IOException
 {
@@ -721,7 +844,7 @@ void CloseBranchDetailes() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 57)
+//@Test(priority = 68)
 
 void BankDetailes() throws InterruptedException, IOException
 {
@@ -734,7 +857,7 @@ void BankDetailes() throws InterruptedException, IOException
 }
 
 
-//@Test(priority = 58)
+//@Test(priority = 69)
 
 void AddBankDetailes() throws InterruptedException, IOException
 {
@@ -745,7 +868,7 @@ void AddBankDetailes() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 59)
+//@Test(priority = 70)
 
 void DuplicateBankDetailes() throws InterruptedException, IOException
 {
@@ -756,7 +879,7 @@ void DuplicateBankDetailes() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-///@Test(priority = 60)
+///@Test(priority = 71)
 
 void InvalidAccountNo() throws InterruptedException, IOException
 {
@@ -767,7 +890,7 @@ void InvalidAccountNo() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 61)
+//@Test(priority = 72)
 
 void InvalidBankName() throws InterruptedException, IOException
 {
@@ -778,7 +901,7 @@ void InvalidBankName() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 62)
+//@Test(priority = 73)
 
 void InvalidIFSC() throws InterruptedException, IOException
 {
@@ -790,7 +913,7 @@ void InvalidIFSC() throws InterruptedException, IOException
 	extent.flush();
 }
 
-//@Test(priority = 63)
+//@Test(priority = 74)
 
 void DateBankDetailes() throws InterruptedException, IOException
 {
@@ -801,7 +924,7 @@ void DateBankDetailes() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 64)
+//@Test(priority = 75)
 
 void WithoutEnterBankDetailes() throws InterruptedException, IOException
 {
@@ -812,7 +935,7 @@ void WithoutEnterBankDetailes() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 65)
+//@Test(priority = 76)
 
 void UpdateBankDetailes() throws InterruptedException, IOException
 {
@@ -823,7 +946,7 @@ void UpdateBankDetailes() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 66)
+//@Test(priority = 77)
 
 void InvalidUpdateBankDetailes() throws InterruptedException, IOException
 {
@@ -834,7 +957,7 @@ void InvalidUpdateBankDetailes() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 67)
+//@Test(priority = 78)
 
 void DeleteBankDetailes() throws InterruptedException, IOException
 {
@@ -845,7 +968,7 @@ void DeleteBankDetailes() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 68)
+//@Test(priority = 79)
 
 void DeleteBankDetailes1() throws InterruptedException, IOException
 {
@@ -856,7 +979,7 @@ void DeleteBankDetailes1() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 69)
+//@Test(priority = 80)
 
 void LimitedLiabilityPartnership() throws InterruptedException, IOException
 {
@@ -868,7 +991,7 @@ void LimitedLiabilityPartnership() throws InterruptedException, IOException
 	extent.flush();
 }
 
-//@Test(priority = 70)
+//@Test(priority = 81)
 
 void AddLLP() throws InterruptedException, IOException
 {
@@ -880,7 +1003,7 @@ void AddLLP() throws InterruptedException, IOException
 	extent.flush();
 }
 
-@Test(priority = 71)
+//@Test(priority = 82)
 
 void EnterInvalidDataLLP() throws InterruptedException, IOException
 {
@@ -891,7 +1014,7 @@ void EnterInvalidDataLLP() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 71)
+//@Test(priority = 83)
 
 void DuplicateLLP() throws InterruptedException, IOException
 {
@@ -903,7 +1026,7 @@ void DuplicateLLP() throws InterruptedException, IOException
 	extent.flush();
 }
 
-//@Test(priority = 72)
+//@Test(priority = 84)
 
 void TwoMandatoryLLP() throws InterruptedException, IOException
 {
@@ -915,7 +1038,7 @@ void TwoMandatoryLLP() throws InterruptedException, IOException
 	extent.flush();
 }
 
-//@Test(priority = 73)
+//@Test(priority = 85)
 
 void WithoutEnteringFieldsLLP() throws InterruptedException, IOException
 {
@@ -926,7 +1049,7 @@ void WithoutEnteringFieldsLLP() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 74)
+//@Test(priority = 86)
 
 void CloseButtonLLP() throws InterruptedException, IOException
 {
@@ -937,7 +1060,7 @@ void CloseButtonLLP() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 75)
+//@Test(priority = 87)
 
 void UpdateLLP() throws InterruptedException, IOException
 {
@@ -948,7 +1071,7 @@ void UpdateLLP() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 76)
+//@Test(priority = 88)
 
 void InvalidUpdateLLP() throws InterruptedException, IOException
 {
@@ -960,7 +1083,7 @@ void InvalidUpdateLLP() throws InterruptedException, IOException
 	extent.flush();
 }
 
-//@Test(priority = 77)
+//@Test(priority = 89)
 
 void EditCloseButtonLLP() throws InterruptedException, IOException
 {
@@ -972,7 +1095,7 @@ void EditCloseButtonLLP() throws InterruptedException, IOException
 	extent.flush();
 }
 
-//@Test(priority = 78)
+//@Test(priority = 90)
 
 void BuisnessActivityLLP() throws InterruptedException, IOException
 {
@@ -984,7 +1107,7 @@ void BuisnessActivityLLP() throws InterruptedException, IOException
 	extent.flush();
 }
 
-//@Test(priority = 79)
+//@Test(priority = 91)
 
 void AddBuisnessActivityLLP() throws InterruptedException, IOException
 {
@@ -996,7 +1119,7 @@ void AddBuisnessActivityLLP() throws InterruptedException, IOException
 	extent.flush();
 }
 
-//@Test(priority = 80)
+//@Test(priority = 92)
 
 void NoDataFoundLLP() throws InterruptedException, IOException
 {
@@ -1008,7 +1131,7 @@ void NoDataFoundLLP() throws InterruptedException, IOException
 	extent.flush();
 }
 
-//@Test(priority = 81)
+//@Test(priority = 93)
 
 void WithOutEnterDataLLP() throws InterruptedException, IOException
 {
@@ -1019,7 +1142,7 @@ void WithOutEnterDataLLP() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 82)
+//@Test(priority = 94)
 
 void EditLLP() throws InterruptedException, IOException
 {
@@ -1030,7 +1153,7 @@ void EditLLP() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 83)
+//@Test(priority = 95)
 
 void EditInvalidDataLLP() throws InterruptedException, IOException
 {
@@ -1042,7 +1165,7 @@ void EditInvalidDataLLP() throws InterruptedException, IOException
 	extent.flush();
 }
 
-//@Test(priority = 84)
+//@Test(priority = 96)
 
 void BADeleteIconLLP() throws InterruptedException, IOException
 {
@@ -1053,7 +1176,7 @@ void BADeleteIconLLP() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 85)
+//@Test(priority = 97)
 
 void BACloseBtnLLP() throws InterruptedException, IOException
 {
@@ -1065,7 +1188,7 @@ void BACloseBtnLLP() throws InterruptedException, IOException
 	extent.flush();
 }
 
-//@Test(priority = 86)
+//@Test(priority = 98)
 
 void DocumentTabLLP() throws InterruptedException, IOException
 {
@@ -1076,7 +1199,7 @@ void DocumentTabLLP() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 87)
+//@Test(priority = 99)
 
 void AddDocumentLLP() throws InterruptedException, IOException
 {
@@ -1087,7 +1210,7 @@ void AddDocumentLLP() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 88)
+//@Test(priority = 100)
 
 void AlreadyExistDocumentLLP() throws InterruptedException, IOException
 {
@@ -1099,7 +1222,7 @@ void AlreadyExistDocumentLLP() throws InterruptedException, IOException
 	extent.flush();
 }
 
-@Test(priority = 89)
+//@Test(priority = 101)
 
 void WithoutEnteringDocLLP() throws InterruptedException, IOException
 {
@@ -1110,7 +1233,7 @@ void WithoutEnteringDocLLP() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority = 90)
+//@Test(priority = 102)
 
 void ViewDocumentLLP() throws InterruptedException, IOException
 {
@@ -1121,7 +1244,7 @@ void ViewDocumentLLP() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority = 91)
+//@Test(priority = 103)
 
 void DownloadDocumentLLP() throws InterruptedException, IOException
 {
@@ -1132,13 +1255,735 @@ void DownloadDocumentLLP() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority = 92)
+//@Test(priority = 104)
 
 void DeleteDocumentLLP() throws InterruptedException, IOException
 {
 	test = extent.startTest("Limited Liability Partnership Delete Document Verification");
 	
 	EntityMasterMethod.DeleteDocumentLLP(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 105)
+
+void AddDocumentLLPDEED() throws InterruptedException, IOException
+{
+	test = extent.startTest("Limited Liability Partnership DEED Add Document Verification");
+	
+	EntityMasterMethod.AddNewDocumentLLPDEED(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 106)
+
+void WithoutEnteringDocumentLLPDEED() throws InterruptedException, IOException
+{
+	test = extent.startTest("Limited Liability Partnership DEED Without Upload Document Verification");
+	
+	EntityMasterMethod.WithoutEnteringDocumentLLPDEED(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 107)
+
+void AddExistingDocumentLLPDEED() throws InterruptedException, IOException
+{
+	test = extent.startTest("Limited Liability Partnership DEED Add Existing Document Verification");
+	
+	EntityMasterMethod.AddExistingDocumentLLPDEED(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 108)
+
+void ViewDocumentLLPDEED() throws InterruptedException, IOException
+{
+	test = extent.startTest("Limited Liability Partnership DEED View Document Verification");
+	
+	EntityMasterMethod.ViewDocumentLLPDEED(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 109)
+
+void DownloadDocumentLLPDEED() throws InterruptedException, IOException
+{
+	test = extent.startTest("Limited Liability Partnership DEED Download Document Verification");
+	
+	EntityMasterMethod.DownloadDocumentLLPDEED(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 110)
+
+void DeleteDocumentLLPDEED() throws InterruptedException, IOException
+{
+	test = extent.startTest("Limited Liability Partnership DEED Delete Document Verification");
+	
+	EntityMasterMethod.DeleteDocumentLLP(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 111)
+
+void AddPolicyDocLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Limited Liability Partnership Add Policy  Document Verification");
+	
+	EntityMasterMethod.AddPolicyDocLLP(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+
+//@Test(priority = 112)
+
+void WithoutEnteringDocumentPolicyLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Limited Liability Partnership Policy Without Upload Document Verification");
+	
+	EntityMasterMethod.WithoutEnteringDocumentLLPDEED(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 113)
+
+void AddExistingDocumentPolicyLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Limited Liability Partnership Policy Add Existing Document Verification");
+	
+	EntityMasterMethod.AddExistingDocumentPolicyLLP(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 114)
+
+void ViewDocumentPolicyLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Limited Liability Partnership Policy View Document Verification");
+	
+	EntityMasterMethod.ViewDocumentLLPDEED(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 115)
+
+void DownloadDocumentPolicyLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Limited Liability Partnership Policy Download Document Verification");
+	
+	EntityMasterMethod.DownloadDocumentLLPDEED(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 116)
+
+void DeleteDocumentPolicyLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Limited Liability Partnership Policy Delete Document Verification");
+	
+	EntityMasterMethod.DeleteDocumentPolicyLLP(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 117)
+
+void AddDocumentLicenseRegistrationLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Limited Liability Partnership License/Registration Add Document Verification");
+	
+	EntityMasterMethod.AddLicenseRegistrationDocLLP(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 118)
+
+void WithoutEnteringDocumenLicenseRegistrationLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Limited Liability Partnership LicensecRegistration Without Upload Document Verification");
+	
+	EntityMasterMethod.WithoutEnteringDocumentLicenseRegistrationLLP(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 119)
+
+void AddExistingDocumenLicenseRegistrationLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Limited Liability Partnership LicensecRegistration Without Upload Document Verification");
+	
+	EntityMasterMethod.AddExistingLicenseRegistrationDocLLP(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 120)
+
+void ViewDocumentLicenseRegistrationLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Limited Liability Partnership License/Registration View Document Verification");
+	
+	EntityMasterMethod.ViewDocumentLicenseRegistrationLLP(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+
+//@Test(priority = 121)
+
+void DownloadDocumentLicenseRegistraionLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Limited Liability Partnership License/Registration Download Document Verification");
+	
+	EntityMasterMethod.DownloadDocumentLicenseRegistraionLLP(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority =122)
+
+void DeleteDocumentLicenseRegistrationLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Limited Liability Partnership License/Registration Delete Document Verification");
+	
+	EntityMasterMethod.DeleteDocumentLicenseRegistrationLLP(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 123)
+
+void AddDocumentAnnualReportLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Limited Liability Partnership Annual Report Add Document Verification");
+	
+	EntityMasterMethod.AddAnnualReportLLP(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 124)
+
+void AddExistingAnnualReportLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Limited Liability Partnership Annual Report Add Existing Document Verification");
+	
+	EntityMasterMethod.AddExistingAnnualReportLLP(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 125)
+
+void WithoutEnteringDocumentAnnualReportLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Limited Liability Partnership Annual Report Without Upload Document Verification");
+	
+	EntityMasterMethod.WithoutEnteringDocumentAnnualReportLLP(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 126)
+
+void ViewDocumentAnnualReportLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Limited Liability Partnership Annual Report View Document Verification");
+	
+	EntityMasterMethod.ViewDocumentAnnualReportLLP(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 127)
+
+void DownloadDocumentAnnualReportLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Limited Liability Partnership Annual Report Download Document Verification");
+	
+	EntityMasterMethod.DownloadDocumentAnnualReportLLP(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority =128)
+
+void DeleteDocumentAnnualReportLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Limited Liability Partnership Annual Report Delete Document Verification");
+	
+	EntityMasterMethod.DeleteDocumentAnnualReportLLP(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+
+//@Test(priority = 129)
+
+void BranchDetailesLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Branch Detailes LLP Verification");
+	
+	EntityMasterMethod.BranchDetailesLLP(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 130)
+
+void AddBranchDetailesLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Add  Branch Detailes LLP Verification");
+	
+	EntityMasterMethod.AddBranchDetailesLLP(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 131)
+
+void InvaliddBranchDetailesLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Invalid LLP Branch Detailes Verification");
+	
+	EntityMasterMethod.InvaliddBranchDetailes(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 132)
+
+void WithoutEnteringDataBranchDetailesLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Without Entering Fields LLP Branch Detailes Verification");
+	
+	EntityMasterMethod.WithoutEnteringDataBranchDetailesLLP(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 133)
+
+void TwoMandatoryFieldsBranchDetailesLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Two Mandatory Fields Branch Detailes LLP Verification");
+	
+	EntityMasterMethod.TwoMandatoryFieldsBranchDetailesLLP(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 134)
+
+void EditBranchDetailesLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Update Branch Detailes LLP Verification");
+	
+	EntityMasterMethod.EditBranchDetailesLLP(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 135)
+
+void UploadDocBranchDetailesLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Upload Document  Branch Detailes LLP Verification");
+	
+	EntityMasterMethod.UploadDocBranchDetailesLLP(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 134)
+
+void InvalidUploadDocBranchDetailesLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Invalid Upload Document  Branch Detailes LLP Verification");
+	
+	EntityMasterMethod.InvalidUploadDocBranchDetailesLLP(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 135)
+
+void MultipleFileUploadDocBranchDetailesLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Multiple File Upload Branch Detailes LLP Verification");
+	
+	EntityMasterMethod.MultipleFileUploadDocBranchDetailesLLP(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 136)
+
+void InvalidMultipleFileUploadDocBranchDetailesLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Invalid Multiple File Upload Branch Detailes LLP Verification");
+	
+	EntityMasterMethod.InvalidMultipleFileUploadDocBranchDetailesLLP(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+
+//@Test(priority = 137)
+
+void WithoutUploadDocBranchDetailesLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Without Upload File Branch Detailes LLP Verification");
+	
+	EntityMasterMethod.WithoutUploadDocBranchDetailesLLP(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 138)
+
+void CloseBranchDetailesLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Close Button Branch Detailes LLP Verification");
+	
+	EntityMasterMethod.CloseBranchDetailesLLP(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 139)
+
+void BankDetailesLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest(" Bank Detailes LLP Verification");
+	
+	EntityMasterMethod.BankDetailesLLP(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+
+
+@Test(priority = 140)
+
+void AddBankDetailesLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Add Bank Detailes LLP Verification");
+	
+	EntityMasterMethod.AddBankDetailesLLP(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 141)
+
+void DuplicateBankDetailesLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Duplicate Bank Detailes LLP Verification");
+	
+	EntityMasterMethod.DuplicateBankDetailesLLP(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 142)
+
+void InvalidAccountNoLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Invalid Account No LLP Verification");
+	
+	EntityMasterMethod.InvalidAccountNoLLP(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 143)
+
+void InvalidBankNameLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Invalid Bank Name LLP Verification");
+	
+	EntityMasterMethod.InvalidBankNameLLP(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 144)
+
+void InvalidIFSCLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Invalid IFSC LLP Verification");
+	
+	EntityMasterMethod.InvalidIFSCLLP(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+
+@Test(priority = 145)
+
+void DateBankDetailesLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Opening date is greater than closing date Verification");
+	
+	EntityMasterMethod.DateBankDetailesLLP(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 146)
+
+void WithoutEnterBankDetailesLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Without Enter Bank Detailes LLP Verification");
+	
+	EntityMasterMethod.WithoutEnterBankDetailesLLP(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 147)
+
+void UpdateBankDetailesLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Update Bank Detailes LLP Verification");
+	
+	EntityMasterMethod.UpdateBankDetailesLLP(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 148)
+
+void InvalidUpdateBankDetailesLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Invalid Update Bank Detailes LLP Verification");
+	
+	EntityMasterMethod.InvalidUpdateBankDetailesLLP (driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 149)
+
+void DeleteBankDetailesLLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Delete Confirmation Bank Detailes LLP Verification");
+	
+	EntityMasterMethod.DeleteBankDetailesLLP(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 150)
+
+void DeleteBankDetailes1LLP() throws InterruptedException, IOException
+{
+	test = extent.startTest("Delete  Cancel Bank Detailes LLP Verification");
+	
+	EntityMasterMethod.DeleteBankDetailes1LLP(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 151)
+
+void ValidDataEntityExcelUpload() throws InterruptedException, IOException
+{
+	test = extent.startTest("Enter Valid Data Entity Excel Upload File Verification");
+	
+	EntityMasterMethod.EntityExcelUploadFile(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 152)
+
+void InvalidDataEntityExcelUpload() throws InterruptedException, IOException
+{
+	test = extent.startTest("Enter InValid Data Entity Excel Upload File Verification");
+	
+	EntityMasterMethod.InvalidDataEntityExcelUploadFile(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 153)
+
+void ExistingDataEntityExcelUpload() throws InterruptedException, IOException
+{
+	test = extent.startTest("Enter Existing Data Entity Excel Upload File Verification");
+	
+	EntityMasterMethod.EnterExistingDataEntityExcelUploadFile(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 154)
+
+void WithoutEnteringDataEntityExcelUpload() throws InterruptedException, IOException
+{
+	test = extent.startTest("Without Entering Data Entity Excel Upload File Verification");
+	
+	EntityMasterMethod.WithoutEnteringDataEntityExcelUploadFile(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 155)
+
+void EnterInvalidEntityExcelUploadFile() throws InterruptedException, IOException
+{
+	test = extent.startTest("Upload Invalid file Entity Excel Verification");
+	
+	EntityMasterMethod.EnterInvalidEntityExcelUploadFile(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 156)
+
+void WithoutselectingfileEntityExcelUploadFile() throws InterruptedException, IOException
+{
+	test = extent.startTest("Without selecting a file Entity Excel Verification");
+	
+	EntityMasterMethod.WithoutSelectingFileEntityExcelUploadFile(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 157)
+
+void LLPExcelUploadFile() throws InterruptedException, IOException
+{
+	test = extent.startTest("Enter Valid LLP Excel Verification");
+	
+	EntityMasterMethod.LLPExcelUploadFile(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 158)
+
+void InvalidDataLLPExcelUploadFile() throws InterruptedException, IOException
+{
+	test = extent.startTest("Enter InValid Data In LLP Excel Verification");
+	
+	EntityMasterMethod.InvalidDataLLPExcelUploadFile(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 159)
+
+void EnterExistingDataInvalidDataLLPExcelUploadFile() throws InterruptedException, IOException
+{
+	test = extent.startTest("Enter Existing Data In LLP Excel Verification");
+	
+	EntityMasterMethod.EnterExistingDataLLPExcelUploadFile(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 160)
+
+void WithoutEnteringDataLLPExcelUpload() throws InterruptedException, IOException
+{
+	test = extent.startTest("Without Entering Data LLP Excel Upload File Verification");
+	
+	EntityMasterMethod.WithoutEnteringDataLLPExcelUploadFile(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 161)
+
+void EnterInvalidLLPExcelUploadFile() throws InterruptedException, IOException
+{
+	test = extent.startTest("Upload Invalid file LLP Excel Verification");
+	
+	EntityMasterMethod.EnterInvalidLLPExcelUploadFile(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 162)
+
+void WithoutselectingfileLLPExcelUploadFile() throws InterruptedException, IOException
+{
+	test = extent.startTest("Without selecting a file LLP Excel Verification");
+	
+	EntityMasterMethod.WithoutSelectingFileLLPExcelUploadFile(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 163)
+
+void MGT7ExcelUploadFile() throws InterruptedException, IOException
+{
+	test = extent.startTest("Upload Valid file MGT-7 Excel Verification");
+	
+	EntityMasterMethod.MGT7ExcelUploadFile(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 164)
+
+void MGT7ExcelInvalidUploadFile() throws InterruptedException, IOException
+{
+	test = extent.startTest("Upload InValid file MGT-7 Excel Verification");
+	
+	EntityMasterMethod.MGT7ExcelInvalidUploadFile(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 165)
+
+void MGT7ExcelDiffInvalidUploadFile() throws InterruptedException, IOException
+{
+	test = extent.startTest("Upload InValid different file MGT-7 Excel Verification");
+	
+	EntityMasterMethod.MGT7ExcelDiffInvalidUploadFile(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 166)
+
+void MGT7ExcelExistingUploadFile() throws InterruptedException, IOException
+{
+	test = extent.startTest("Upload Existing file MGT-7 Excel Verification");
+	
+	EntityMasterMethod.MGT7ExcelExistingUploadFile(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 167)
+
+void WithoutselectingfileMGT7ExcelUploadFile() throws InterruptedException, IOException
+{
+	test = extent.startTest("Without selecting a file MGT-7 Excel Verification");
+	
+	EntityMasterMethod.WithoutSelectingFileMGT7ExcelUploadFile(driver, test);
 	
 	extent.endTest(test);
 	extent.flush();

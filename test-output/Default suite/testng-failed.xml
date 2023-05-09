@@ -5,12 +5,23 @@
     <classes>
       <class name="CompanySecretoryTest.EntityTestCases">
         <methods>
-          <include name="DownloadDocumentLLP"/>
-          <include name="WithoutEnteringDocLLP"/>
-          <include name="DeleteDocumentLLP"/>
-          <include name="ViewDocumentLLP"/>
+          <include name="MGT7ExcelUploadFile"/>
+          <include name="InvalidUpdateBankDetailesLLP"/>
           <include name="setBrowser"/>
-          <include name="EnterInvalidDataLLP"/>
+          <include name="WithoutEnterBankDetailesLLP"/>
+          <include name="AddBankDetailesLLP"/>
+          <include name="InvalidBankNameLLP"/>
+          <include name="MGT7ExcelExistingUploadFile"/>
+          <include name="MGT7ExcelInvalidUploadFile"/>
+          <include name="DateBankDetailesLLP"/>
+          <include name="InvalidAccountNoLLP"/>
+          <include name="InvalidIFSCLLP"/>
+          <include name="DeleteBankDetailes1LLP"/>
+          <include name="MGT7ExcelDiffInvalidUploadFile"/>
+          <include name="WithoutselectingfileMGT7ExcelUploadFile"/>
+          <include name="UpdateBankDetailesLLP"/>
+          <include name="DeleteBankDetailesLLP"/>
+          <include name="DuplicateBankDetailesLLP"/>
         </methods>
       </class> <!-- CompanySecretoryTest.EntityTestCases -->
     </classes>
