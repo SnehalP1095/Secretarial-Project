@@ -461,7 +461,7 @@ void WithoutEnterignCOIDocument() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 34)
+//@Test(priority =34)
 
 void ViewCOIDocument() throws InterruptedException, IOException
 {
@@ -1679,7 +1679,7 @@ void BankDetailesLLP() throws InterruptedException, IOException
 }
 
 
-@Test(priority = 140)
+//@Test(priority = 140)
 
 void AddBankDetailesLLP() throws InterruptedException, IOException
 {
@@ -1690,7 +1690,7 @@ void AddBankDetailesLLP() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority = 141)
+//@Test(priority = 141)
 
 void DuplicateBankDetailesLLP() throws InterruptedException, IOException
 {
@@ -1701,7 +1701,7 @@ void DuplicateBankDetailesLLP() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority = 142)
+//@Test(priority = 142)
 
 void InvalidAccountNoLLP() throws InterruptedException, IOException
 {
@@ -1712,7 +1712,7 @@ void InvalidAccountNoLLP() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority = 143)
+//@Test(priority = 143)
 
 void InvalidBankNameLLP() throws InterruptedException, IOException
 {
@@ -1723,7 +1723,7 @@ void InvalidBankNameLLP() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority = 144)
+//@Test(priority = 144)
 
 void InvalidIFSCLLP() throws InterruptedException, IOException
 {
@@ -1984,6 +1984,302 @@ void WithoutselectingfileMGT7ExcelUploadFile() throws InterruptedException, IOEx
 	test = extent.startTest("Without selecting a file MGT-7 Excel Verification");
 	
 	EntityMasterMethod.WithoutSelectingFileMGT7ExcelUploadFile(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 168)
+
+void ClickImport() throws InterruptedException, IOException
+{
+	test = extent.startTest("Import Button is clickable or not ");
+	
+	EntityMasterMethod.ClickImport(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 169)
+
+void ClickImportCheckBox() throws InterruptedException, IOException
+{
+	test = extent.startTest("CheckBox is Selected or not ");
+	
+	EntityMasterMethod.ClickImportCheckBox(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 170)
+
+void ValidationOfSaveBtn() throws InterruptedException, IOException
+{
+	test = extent.startTest("In Import Tab Validation Of Save Btn ");
+	
+	EntityMasterMethod.ValidationOfSaveBtn(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 171)
+
+void ClickApplicabilty() throws InterruptedException, IOException
+{
+	test = extent.startTest("Applicability Option is clickable or not ");
+	
+	EntityMasterMethod.ClickApplicabilty(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 172)
+
+void ClickAmountInINR() throws InterruptedException, IOException
+{
+	test = extent.startTest("Save Applicability");
+	
+	EntityMasterMethod.SaveApplicability(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 173)
+
+void YesRadioBtnApplicability() throws InterruptedException, IOException
+{
+	test = extent.startTest("Yes Radio Btn Applicability Verification");
+	
+	EntityMasterMethod.YesRadioBtnApplicability(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 174)
+
+void NoRadioBtnApplicability() throws InterruptedException, IOException
+{
+	test = extent.startTest("No Radio Btn Applicability Verification");
+	
+	EntityMasterMethod.NoRadioBtnApplicability(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 175)
+
+void CloseApplicability() throws InterruptedException, IOException
+{
+	test = extent.startTest("Close Button Applicability Verification ");
+	
+	EntityMasterMethod.CloseApplicability(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+
+@Test(priority = 176)
+
+void ClickShareHoldingOption() throws InterruptedException, IOException
+{
+	test = extent.startTest("ShareHolding Verification ");
+	
+	EntityMasterMethod.ClickShareHoldingOption(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 177)
+
+void AddShareHolding() throws InterruptedException, IOException
+{
+	test = extent.startTest("ShareHolding Verification ");
+	
+	EntityMasterMethod.AddShareHolding(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 178)
+
+void ClickShareHoldingDeatils() throws InterruptedException, IOException
+{
+	test = extent.startTest("ShareHolding Detailes Verification ");
+	
+	EntityMasterMethod.ClickShareHoldingDeatils(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 179)
+
+void AddShareHoldingDetailes() throws InterruptedException, IOException
+{
+	test = extent.startTest("ShareHolding Detailes Verification ");
+	
+	EntityMasterMethod.ShareHoldingDeatils(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 180)
+
+void EnterInvaliddataFoliooftransferor() throws InterruptedException, IOException
+{
+	test = extent.startTest("Enter Invalid data Folio of transferor ShareHolding Detailes Verification ");
+	
+	EntityMasterMethod.EnterInvaliddataFoliooftransferor(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 181)
+
+void WithoutEnterDataInSahreHoldingDetailes() throws InterruptedException, IOException
+{
+	test = extent.startTest("Without Enter Data In ShareHolding Detailes Verification ");
+	
+	EntityMasterMethod.WithoutEnterDataInSahreHoldingDetailes(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 182)
+
+void CloseBtnSahreHoldingDetailes() throws InterruptedException, IOException
+{
+	test = extent.startTest("Close Button ShareHolding Detailes Verification ");
+	
+	EntityMasterMethod.CloseBtnSahreHoldingDetailes(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 183)
+
+void UploadFileShareHoldingDetailes() throws InterruptedException, IOException
+{
+	test = extent.startTest("Upload File ShareHolding Detailes Verification ");
+	
+	EntityMasterMethod.UploadFileShareHoldingDeatils(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 184)
+
+void UploadExistingFileShareHoldingDetailes() throws InterruptedException, IOException
+{
+	test = extent.startTest("Upload Existing File ShareHolding Detailes Verification ");
+	
+	EntityMasterMethod.UploadExistingFileShareHoldingDeatils(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 185)
+
+void InvalidDataUploadFileShareHoldingDeatils() throws InterruptedException, IOException
+{
+	test = extent.startTest("Enter Invalid Data in Upload File ShareHolding Detailes Verification ");
+	
+	EntityMasterMethod.InvalidDataUploadFileShareHoldingDeatils(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 186)
+
+void EmptyDataUploadshareHoldingDeatils() throws InterruptedException, IOException
+{
+	test = extent.startTest("Enter Empty Data in Upload file ShareHolding Detailes Verification ");
+	
+	EntityMasterMethod.EmptyDataUploadshareHoldingDeatils(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 187)
+
+void InvalidFileUploadShareHoldingDetailes() throws InterruptedException, IOException
+{
+	test = extent.startTest("Invalid Upload file ShareHolding Detailes Verification ");
+	
+	EntityMasterMethod.InvalidFileUploadShareHoldingDetailes(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 188)
+
+void WithoutSelectingFileUploadShareHoldingDetailes() throws InterruptedException, IOException
+{
+	test = extent.startTest("Without Selecting Upload file ShareHolding Detailes Verification ");
+	
+	EntityMasterMethod.WithoutSelectingFileUploadShareHoldingDetailes(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 189)
+
+void UploadFileSahreHolding() throws InterruptedException, IOException
+{
+	test = extent.startTest("Upload File ShareHolding  Verification ");
+	
+	EntityMasterMethod.UploadShareHolding(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 190)
+
+void ExistingUploadFileSahreHolding() throws InterruptedException, IOException
+{
+	test = extent.startTest("Upload Existing File ShareHolding  Verification ");
+	
+	EntityMasterMethod.UploadExistingFileShareHolding(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 191)
+void InvalidUploadShareHolding() throws InterruptedException, IOException
+{
+	test = extent.startTest("Enter Invalid  Data  Upload Existing File ShareHolding  Verification ");
+	
+	EntityMasterMethod.InvalidUploadShareHolding(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+
+@Test(priority = 192)
+void EmptyFileUploadShareHolding() throws InterruptedException, IOException
+{
+	test = extent.startTest("Empty File UploadS shareHolding  Verification ");
+	
+	EntityMasterMethod.EmptyFileUploadShareHolding(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+
+@Test(priority = 193)
+void InvalidFileUploadShareHolding() throws InterruptedException, IOException
+{
+	test = extent.startTest("Invalid File Upload ShareHolding Verification ");
+	
+	EntityMasterMethod.InvalidFileUploadShareHolding(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 194)
+void WithoutSelectingFileUploadShareHolding() throws InterruptedException, IOException
+{
+	test = extent.startTest("Without selecting File Upload ShareHolding Verification ");
+	
+	EntityMasterMethod.WithoutSelectingFileUploadShareHolding(driver, test);
 	
 	extent.endTest(test);
 	extent.flush();

@@ -68,7 +68,7 @@ public class EntityMasterMethod
 	    }
 	    else
 	    {
-	    	 test.log(LogStatus.PASS, "Deemed Public Compnay is not Selected");
+	    	 test.log(LogStatus.FAIL, "Deemed Public Compnay is not Selected");
 	    }
 	    
 	    Thread.sleep(4000);
@@ -1033,7 +1033,7 @@ public class EntityMasterMethod
 	    Thread.sleep(3000);
 	    File dir1 = new File("C://Users//Admin//Downloads");
 	    File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
-	  		
+	   
 	  		
 	  	if (dirContents.length < allFilesNew.length) 
 	  	{
@@ -1375,6 +1375,9 @@ public class EntityMasterMethod
 	    
 	     Thread.sleep(2000);
 	    EntityLocator.ClickCloseIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
 	    Thread.sleep(4000);
 	     EntityLocator.ClickDashboard(driver).click();
 		
@@ -1422,8 +1425,12 @@ public class EntityMasterMethod
 				test.log(LogStatus.FAIL, "Message Displayed = " +msg);
 		}
 	    
+	  
 	     Thread.sleep(2000);
 	    EntityLocator.ClickCloseIcon(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
 	    Thread.sleep(4000);
 	     EntityLocator.ClickDashboard(driver).click();
 		
@@ -1466,6 +1473,9 @@ public class EntityMasterMethod
 	     
 	     Thread.sleep(2000);
 		    EntityLocator.ClickCloseIcon(driver).click();
+		    
+		    Thread.sleep(2000);
+		    EntityLocator.clickcloseIcon(driver).click();
 		    Thread.sleep(4000);
 		     EntityLocator.ClickDashboard(driver).click();
 	     
@@ -1618,7 +1628,7 @@ public class EntityMasterMethod
 	    
 	     Thread.sleep(2000);
 	    EntityLocator.ClickCloseIcon(driver).click();
-	    Thread.sleep(2000);
+	    Thread.sleep(3000);
 	    EntityLocator.clickcloseIcon(driver).click();
 	    
 	    Thread.sleep(4000);
@@ -7325,7 +7335,7 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		EntityLocator.clickUploadButton(driver).click();
 		Thread.sleep(2000);
 		EntityLocator.clickEntityExcel(driver).click();
@@ -7904,7 +7914,1388 @@ public class EntityMasterMethod
 	    Thread.sleep(4000);
 	    EntityLocator.ClickDashboard(driver).click();
 	}
+	public static void ClickImport(WebDriver driver,ExtentTest test) throws InterruptedException 
+	{
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
 	
+		Thread.sleep(2000);
+	   if(EntityLocator.ClickImport(driver).isEnabled())
+	    {
+	      Thread.sleep(2000);
+	      EntityLocator.ClickImport(driver).click();
+	      test.log(LogStatus.PASS, "Import Button is clickable");
+	    }
+	    else
+	    {
+	    	 test.log(LogStatus.PASS, "Import Button is not clickable");
+	    }
+	   
+	   Thread.sleep(2000);
+	    EntityLocator.CloseBtn(driver).click();
+	  
+	    
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	
+	}
+	public static void ClickImportCheckBox(WebDriver driver,ExtentTest test) throws InterruptedException 
+	{
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+	    Thread.sleep(2000);
+	      EntityLocator.ClickImport(driver).click();
+	
+		Thread.sleep(2000);
+	   if(EntityLocator.ClickImportChcekbox(driver).isEnabled())
+	    {
+	      Thread.sleep(2000);
+	      EntityLocator.ClickImportChcekbox(driver).click();
+	      test.log(LogStatus.PASS, "CheckBox is Clickable");
+	    }
+	    else
+	    {
+	    	 test.log(LogStatus.PASS, "CheckBox is not Clickable");
+	    }
+	   
+	   Thread.sleep(2000);
+	    EntityLocator.CloseBtn(driver).click();
+	  
+	    
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	
+	}
+	public static void ValidationOfSaveBtn(WebDriver driver,ExtentTest test) throws InterruptedException 
+	{
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+	    Thread.sleep(2000);
+	      EntityLocator.ClickImport(driver).click();
+	      
+	      Thread.sleep(2000);
+	      EntityLocator.ClickImportChcekbox(driver).click();
+	      
+	      Thread.sleep(2000);
+	      EntityLocator.ClickImportSaveBtn(driver).click();
+	      
+	      Thread.sleep(500);
+	      String msg=EntityLocator.ValidationOfSaveMsg(driver).getText();
+	
+	      Thread.sleep(2000);
+	   if(msg.equalsIgnoreCase("Save Successfully."))
+	    {
+	     
+	      test.log(LogStatus.PASS, "Message Displayed =" +msg);
+	    }
+	    else
+	    {
+	    	 test.log(LogStatus.FAIL,  "Message Displayed =" +msg);
+	    }
+
+		
+	
+	   Thread.sleep(2000);
+	    EntityLocator.CloseBtn(driver).click();
+	  
+	    
+	    Thread.sleep(4000);
+	     EntityLocator.ClickDashboard(driver).click();
+	
+	}
+	
+	public static void ClickApplicabilty(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+	   
+	    
+	    Thread.sleep(2000);
+		   if(EntityLocator.ClickMoreActionApplicability(driver).isEnabled())
+		    {
+		      Thread.sleep(4000);
+		      EntityLocator.ClickMoreActionApplicability(driver).click();
+		      test.log(LogStatus.PASS, "Applicability Option is Clickable");
+		    }
+		    else
+		    {
+		    	 test.log(LogStatus.PASS, "Applicability Option is not Clickable");
+		    }
+		   
+		    Thread.sleep(2000);
+		    EntityLocator.ClickApplicabilityCloseBtn(driver).click();
+
+		    Thread.sleep(4000);
+		     EntityLocator.ClickDashboard(driver).click();
+		   
+	}
+	
+	public static void SaveApplicability(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+	     Thread.sleep(4000);
+	      EntityLocator.ClickMoreActionApplicability(driver).click();
+	    
+//	      Thread.sleep(4000);
+//	      EntityLocator.ClickAmountInINR(driver).click();
+//	      Thread.sleep(3000);
+//	      EntityLocator.ClickAmountInLack(driver).click();
+//	      Thread.sleep(4000);
+//	      EntityLocator.ClickAmountInINR(driver).click();
+//	      By locator = By.xpath("//*[@id='divAmount']/div/div[2]/div[2]/span[1]/span/input[1]");
+//
+//			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+//			Thread.sleep(4000);
+//			
+//			WebElement ViewButton = driver.findElement(locator);	
+//			Thread.sleep(3000);
+//		   JavascriptExecutor jse=(JavascriptExecutor)driver;
+//		    jse.executeScript("arguments[0].click();", ViewButton);
+//	      
+//	      
+//	      
+//	      Thread.sleep(3000);
+//	      EntityLocator.ClickTurnOver(driver).clear();
+//	      Thread.sleep(4000);
+//	      EntityLocator.ClickTurnOver(driver).sendKeys("7");
+//	      EntityLocator.ClickNetWorth(driver).clear();
+//	      Thread.sleep(4000);
+//	      EntityLocator.ClickNetWorth(driver).sendKeys("5");
+//	      EntityLocator.ClickNetProfit(driver).clear();
+//	      Thread.sleep(4000);
+//	      EntityLocator.ClickNetProfit(driver).sendKeys("8");
+//	      EntityLocator.ClickBorrowings(driver).clear();
+//	      Thread.sleep(4000);
+//	      EntityLocator.ClickBorrowings(driver).sendKeys("4");
+//	      EntityLocator.ClickDeposit(driver).clear();
+//	      Thread.sleep(4000);
+//	      EntityLocator.ClickDeposit(driver).sendKeys("5");
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickSaveBtn1(driver).click();
+	      
+	      Thread.sleep(4000);
+	     String msg= EntityLocator.ClickSaveApplicabilityMsg(driver).getText();
+	      
+	      if(msg.equalsIgnoreCase("Saved Successfully"))
+		    {
+		  
+		      test.log(LogStatus.PASS, "Message Displayed =" +msg);
+		    }
+		    else
+		    {
+		    	 test.log(LogStatus.FAIL, "Message Displayed =" +msg);
+		    }
+		   
+		    Thread.sleep(2000);
+		    EntityLocator.ClickApplicabilityCloseBtn(driver).click();
+
+		    Thread.sleep(4000);
+		     EntityLocator.ClickDashboard(driver).click();
+		   
+	}
+	
+	public static void YesRadioBtnApplicability(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+	     Thread.sleep(4000);
+	      EntityLocator.ClickMoreActionApplicability(driver).click();
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickYesRadioBtn(driver).click();
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickSaveBtn1(driver).click();
+	      
+	      Thread.sleep(4000);
+	     String msg= EntityLocator.ClickSaveApplicabilityMsg(driver).getText();
+	      
+	      if(msg.equalsIgnoreCase("Saved Successfully"))
+		    {
+		  
+		      test.log(LogStatus.PASS, "By selecting the Yes radio button changes the button state to selected =" +msg);
+		    }
+		    else
+		    {
+		    	 test.log(LogStatus.FAIL, "By selecting the Yes radio button changes the button state to selected  =" +msg);
+		    }
+		   
+		    Thread.sleep(2000);
+		    EntityLocator.ClickApplicabilityCloseBtn(driver).click();
+
+		    Thread.sleep(4000);
+		     EntityLocator.ClickDashboard(driver).click();
+	      
+	}
+	
+	public static void NoRadioBtnApplicability(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+	     Thread.sleep(4000);
+	      EntityLocator.ClickMoreActionApplicability(driver).click();
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickNoRadioBtn(driver).click();
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickSaveBtn1(driver).click();
+	      
+	      Thread.sleep(4000);
+	     String msg= EntityLocator.ClickSaveApplicabilityMsg(driver).getText();
+	      
+	      if(msg.equalsIgnoreCase("Saved Successfully"))
+		    {
+		  
+		      test.log(LogStatus.PASS, "By selecting the No radio button changes the button state to selected =" +msg);
+		    }
+		    else
+		    {
+		    	 test.log(LogStatus.FAIL, "By selecting the No radio button changes the button state to selected  =" +msg);
+		    }
+		   
+		    Thread.sleep(2000);
+		    EntityLocator.ClickApplicabilityCloseBtn(driver).click();
+
+		    Thread.sleep(4000);
+		     EntityLocator.ClickDashboard(driver).click();
+	      
+	}
+	
+	
+	public static void CloseApplicability(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+	     Thread.sleep(4000);
+	      EntityLocator.ClickMoreActionApplicability(driver).click();
+	      
+	      Thread.sleep(4000);
+	      if(EntityLocator.ClickCloseApplicability(driver).isEnabled())
+		    {
+		      Thread.sleep(2000);
+		      EntityLocator.ClickCloseApplicability(driver).click();
+		      test.log(LogStatus.PASS, "Close Buttton is clickable");
+		    }
+		    else
+		    {
+		    	 test.log(LogStatus.FAIL, "Close Buttton is not clickable");
+		    }
+	      
+	      Thread.sleep(4000);
+		     EntityLocator.ClickDashboard(driver).click();
+	      
+	}
+	
+	public static void ClickShareHoldingOption(WebDriver driver, ExtentTest test,XSSFWorkbook workbook) throws InterruptedException
+	{
+		
+		sheet=workbook.getSheetAt(0);
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+	    
+	
+	      
+	      if(EntityLocator.ClickShareHolding(driver).isEnabled())
+		    {
+		      Thread.sleep(2000);
+		      EntityLocator.ClickShareHolding(driver).click();
+		      test.log(LogStatus.PASS, "ShareHolding Option is clickable");
+		    }
+		    else
+		    {
+		    	 test.log(LogStatus.FAIL, "ShareHolding Option is not clickable");
+		    }
+	      Thread.sleep(4000);
+		     EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void AddShareHolding(WebDriver driver, ExtentTest test,XSSFWorkbook workbook) throws InterruptedException
+	{
+		
+		sheet=workbook.getSheetAt(0);
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+	    
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      Thread.sleep(4000);
+	      EntityLocator.ClickNewBtnShareHolding(driver).click();
+	      
+	  	  Thread.sleep(2000);
+	      Row row = sheet.getRow(63);						//Selected 1st index row (Second row)
+	      org.apache.poi.ss.usermodel.Cell c = row.getCell(1);						//Selected cell (1 row,1 column)
+		  int FolioNo = (int) c.getNumericCellValue();	//Got the URL stored at position 1,1
+		  EntityLocator.ClickFOLIONO(driver).sendKeys(FolioNo +"");
+		  
+		  Thread.sleep(4000);
+	      EntityLocator.ClickClassOfShares(driver).click();
+	      Thread.sleep(4000);
+	      EntityLocator.ClickClassOfShares1(driver).click();
+		  
+//	      Thread.sleep(4000);
+//	      EntityLocator. ClickNominalvaluepershare(driver).sendKeys("100");
+//	      
+//	      Thread.sleep(4000);
+//	      EntityLocator.ClickTotalsharesheld(driver).sendKeys("290375");
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickType(driver).click();
+	      Thread.sleep(4000);
+	      EntityLocator.ClickType1(driver).click();
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickNationality(driver).click();
+	      Thread.sleep(4000);
+	      EntityLocator.ClickNationality1(driver).click();
+	      
+	  	  Thread.sleep(2000);
+	      Row row1 = sheet.getRow(64);						//Selected 1st index row (Second row)
+	      org.apache.poi.ss.usermodel.Cell c1 = row1.getCell(1);						//Selected cell (1 row,1 column)
+		  String Name = c1.getStringCellValue();	//Got the URL stored at position 1,1
+		  EntityLocator.ClickNameofthemember(driver).sendKeys(Name);
+		  
+		  Thread.sleep(2000);
+	      Row row2 = sheet.getRow(65);						//Selected 1st index row (Second row)
+	      org.apache.poi.ss.usermodel.Cell c2 = row2.getCell(1);						//Selected cell (1 row,1 column)
+		  String NameOfJointHolders = c2.getStringCellValue();	//Got the URL stored at position 1,1
+		  EntityLocator.ClickNameofjointholders(driver).sendKeys(NameOfJointHolders);
+		  
+		  Thread.sleep(2000);
+	      Row row3 = sheet.getRow(66);						//Selected 1st index row (Second row)
+	      org.apache.poi.ss.usermodel.Cell c3 = row3.getCell(1);						//Selected cell (1 row,1 column)
+		  String CIN = c3.getStringCellValue();	//Got the URL stored at position 1,1
+		  EntityLocator.ClickCIN(driver).sendKeys(CIN);
+		  
+		  
+		  Thread.sleep(2000);
+	      Row row4 = sheet.getRow(67);						//Selected 1st index row (Second row)
+	      org.apache.poi.ss.usermodel.Cell c4 = row4.getCell(1);						//Selected cell (1 row,1 column)
+		  String Address = c4.getStringCellValue();	//Got the URL stored at position 1,1
+		  EntityLocator.ClickAddress(driver).sendKeys(Address);
+		  
+		  Thread.sleep(2000);
+	      Row row5 = sheet.getRow(68);						//Selected 1st index row (Second row)
+	      org.apache.poi.ss.usermodel.Cell c5 = row5.getCell(1);						//Selected cell (1 row,1 column)
+		  String FatherName = c5.getStringCellValue();	//Got the URL stored at position 1,1
+		  EntityLocator.ClickSpousename(driver).sendKeys(FatherName);
+		  
+		  Thread.sleep(2000);
+	      Row row6 = sheet.getRow(69);						//Selected 1st index row (Second row)
+	      org.apache.poi.ss.usermodel.Cell c6 = row6.getCell(1);						//Selected cell (1 row,1 column)
+		  String emailid = c6.getStringCellValue();	//Got the URL stored at position 1,1
+		  EntityLocator.ClickEmailId(driver).sendKeys(emailid);
+		  
+		  Thread.sleep(2000);
+	      Row row7 = sheet.getRow(70);						//Selected 1st index row (Second row)
+	      org.apache.poi.ss.usermodel.Cell c7 = row7.getCell(1);						//Selected cell (1 row,1 column)
+		  String Occupation = c7.getStringCellValue();	//Got the URL stored at position 1,1
+		  EntityLocator.ClickOccupation(driver).sendKeys(Occupation);
+		  
+		  Thread.sleep(2000);
+	      Row row8 = sheet.getRow(71);						//Selected 1st index row (Second row)
+	      org.apache.poi.ss.usermodel.Cell c8 = row8.getCell(1);						//Selected cell (1 row,1 column)
+		  String PAN = c8.getStringCellValue();	//Got the URL stored at position 1,1
+		  EntityLocator.ClickPAN(driver).sendKeys(PAN);
+		  
+		  Thread.sleep(2000);
+		  EntityLocator.ClickDateofbecomingmember(driver).sendKeys("04/06/1995");
+		  
+		  
+		  Thread.sleep(2000);
+		  EntityLocator. ClickSaveShareHolding(driver).click();
+		  
+		  
+		  Thread.sleep(4000);
+		     String msg= EntityLocator.ClickSaveMsg(driver).getText();
+		      
+		      if(msg.equalsIgnoreCase("Saved Successfully"))
+			    {
+			  
+			      test.log(LogStatus.PASS, "Add ShareHolding =" +msg);
+			    }
+			    else
+			    {
+			    	 test.log(LogStatus.FAIL, "Add ShareHolding  =" +msg);
+			    }
+		      
+		      Thread.sleep(2000);
+			  EntityLocator.ClickShareHoldingDetailes(driver).click();
+			  
+		      
+		      Thread.sleep(2000);
+			  EntityLocator.ClickCloseBtn(driver).click();
+
+	      Thread.sleep(4000);
+		  EntityLocator.ClickDashboard(driver).click();
+		  
+	}
+	
+	public static void ClickShareHoldingDeatils(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      
+			Thread.sleep(2000);
+		      EntityLocator.ClickEditShareHoldingDetailes(driver).click();
+		      
+		      Thread.sleep(2000);
+			  if(EntityLocator.ClickShareHoldingDetailes(driver).isEnabled())
+			    {
+			      Thread.sleep(2000);
+			      EntityLocator.ClickShareHoldingDetailes(driver).click();
+			      test.log(LogStatus.PASS, "ShareHolding Detailes Option is clickable");
+			    }
+			    else
+			    {
+			    	 test.log(LogStatus.FAIL, "ShareHolding Detailes Option is not clickable");
+			    }
+			  
+			    Thread.sleep(2000);
+				  EntityLocator.ClickCloseBtn(driver).click();
+
+		      Thread.sleep(4000);
+			  EntityLocator.ClickDashboard(driver).click();
+	}
+	
+	public static void ShareHoldingDeatils(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      
+			Thread.sleep(2000);
+		      EntityLocator.ClickEditShareHoldingDetailes(driver).click();
+		      
+		      
+		      Thread.sleep(2000);
+			  EntityLocator.ClickShareHoldingDetailes(driver).click();
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickAddNewShareHoldingDetailes(driver).click();
+
+			  Thread.sleep(2000);
+			  EntityLocator.ClickAllotmentNo(driver).sendKeys("ABC35");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickDateOfAllotment(driver).sendKeys("01/05/2023");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickNoOfSharesAlloted(driver).sendKeys("3");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickDistinctivenumbersFroms(driver).sendKeys("1");
+			 
+			  Thread.sleep(2000);
+			  EntityLocator.ClickDistinctivenumbersTo(driver).sendKeys("2");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickFoliooftransferor(driver).sendKeys("PQR@123");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickNameOftransferor(driver).sendKeys("abv@123");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickDateofissue(driver).sendKeys("06/05/2023");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickCertificateNo(driver).sendKeys("A&11");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickLockInPeriod(driver).sendKeys("13$A");
+			  
+//			  Thread.sleep(2000);
+//			  EntityLocator.ClickAmountPayable(driver).sendKeys("1000");
+//			  
+//			  Thread.sleep(2000);
+//			  EntityLocator.ClickDeemedtobepaid(driver).sendKeys("1000");
+//			  
+//			  Thread.sleep(2000);
+//			  EntityLocator.ClickDueAmount(driver).sendKeys("2000");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickIfsharesareissuedforconsiderationotherthancashbrieparticularsthereof(driver).sendKeys("A&11");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickDateOfTransfer(driver).sendKeys("06/05/2023");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickNoofsharestransferred(driver).sendKeys("4");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickDistinctivenumbersFroms1(driver).sendKeys("3");
+			 
+			  Thread.sleep(2000);
+			  EntityLocator.ClickDistinctivenumbersTo1(driver).sendKeys("4");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickFoliooftransferee(driver).sendKeys("LMN$23");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickNameOftransferee(driver).sendKeys("LMN$23");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickBalanceshares(driver).sendKeys("23");
+			  Thread.sleep(2000);
+			  EntityLocator.ClickRemark(driver).sendKeys("ok");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickSaveShareHoldingDetailes(driver).click();
+			  
+			  Thread.sleep(4000);
+			   String msg1= EntityLocator.ClickSaveMsg1(driver).getText();
+			  Thread.sleep(2000);
+			  if(msg1.equalsIgnoreCase("Saved Successfully."))
+			    {
+			  
+			      test.log(LogStatus.PASS, "Add ShareHolding Detailes =" +msg1);
+			    }
+			    else
+			    {
+			    	 test.log(LogStatus.FAIL, "Add ShareHolding Detailes =" +msg1);
+			    }
+			  
+		      
+		      Thread.sleep(2000);
+			  EntityLocator.ClickCloseBtn1(driver).click();
+
+	      Thread.sleep(4000);
+		  EntityLocator.ClickDashboard(driver).click();
+			  
+	}
+	public static void EnterInvaliddataFoliooftransferor(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      
+			Thread.sleep(2000);
+		      EntityLocator.ClickEditShareHoldingDetailes(driver).click();
+		      
+		      
+		      Thread.sleep(2000);
+			  EntityLocator.ClickShareHoldingDetailes(driver).click();
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickAddNewShareHoldingDetailes(driver).click();
+
+			  Thread.sleep(2000);
+			  EntityLocator.ClickAllotmentNo(driver).sendKeys("ABC35");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickDateOfAllotment(driver).sendKeys("01/05/2023");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickNoOfSharesAlloted(driver).sendKeys("3");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickDistinctivenumbersFroms(driver).sendKeys("1");
+			 
+			  Thread.sleep(2000);
+			  EntityLocator.ClickDistinctivenumbersTo(driver).sendKeys("2");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickFoliooftransferor(driver).sendKeys("*675$");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickNameOftransferor(driver).sendKeys("abv@123");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickDateofissue(driver).sendKeys("06/05/2023");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickCertificateNo(driver).sendKeys("A&11");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickLockInPeriod(driver).sendKeys("13$A");
+			  
+//			  Thread.sleep(2000);
+//			  EntityLocator.ClickAmountPayable(driver).sendKeys("1000");
+//			  
+//			  Thread.sleep(2000);
+//			  EntityLocator.ClickDeemedtobepaid(driver).sendKeys("1000");
+//			  
+//			  Thread.sleep(2000);
+//			  EntityLocator.ClickDueAmount(driver).sendKeys("2000");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickIfsharesareissuedforconsiderationotherthancashbrieparticularsthereof(driver).sendKeys("A&11");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickDateOfTransfer(driver).sendKeys("06/05/2023");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickNoofsharestransferred(driver).sendKeys("4");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickDistinctivenumbersFroms1(driver).sendKeys("3");
+			 
+			  Thread.sleep(2000);
+			  EntityLocator.ClickDistinctivenumbersTo1(driver).sendKeys("4");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickFoliooftransferee(driver).sendKeys("%$sd");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickNameOftransferee(driver).sendKeys("LMN$23");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickBalanceshares(driver).sendKeys("23");
+			  Thread.sleep(2000);
+			  EntityLocator.ClickRemark(driver).sendKeys("ok");
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickSaveShareHoldingDetailes(driver).click();
+			  
+			  Thread.sleep(4000);
+			   String msg1= EntityLocator.ClickSaveMsg1(driver).getText();
+			  Thread.sleep(2000);
+			  if(msg1.equalsIgnoreCase("Saved Successfully."))
+			    {
+			  
+			      test.log(LogStatus.FAIL, "Enter Invalid data Folio of transferor =" +msg1);
+			    }
+			    else
+			    {
+			    	 test.log(LogStatus.PASS, "Enter Invalid data Folio of transferor =" +msg1);
+			    }
+			  
+		      
+		      Thread.sleep(2000);
+			  EntityLocator.ClickCloseBtn1(driver).click();
+
+	      Thread.sleep(4000);
+		  EntityLocator.ClickDashboard(driver).click();
+			  
+	}
+	
+	
+	public static void WithoutEnterDataInSahreHoldingDetailes(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      
+			Thread.sleep(2000);
+		      EntityLocator.ClickEditShareHoldingDetailes(driver).click();
+		      
+		      
+		      Thread.sleep(2000);
+			  EntityLocator.ClickShareHoldingDetailes(driver).click();
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickAddNewShareHoldingDetailes(driver).click();
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickSaveShareHoldingDetailes(driver).click();
+			  
+			  Thread.sleep(4000);
+			   String msg1= EntityLocator.ClickSaveMsg1(driver).getText();
+			  Thread.sleep(2000);
+			  if(msg1.equalsIgnoreCase("Saved Successfully."))
+			    {
+			  
+			      test.log(LogStatus.FAIL, "Wihout Enter Data In ShareHolding Detailes=" +msg1);
+			    }
+			    else
+			    {
+			    	 test.log(LogStatus.PASS, "Wihout Enter Data In ShareHolding Detailes =" +msg1);
+			    }
+			  
+		      
+		      Thread.sleep(2000);
+			  EntityLocator.ClickCloseBtn1(driver).click();
+
+	      Thread.sleep(4000);
+		  EntityLocator.ClickDashboard(driver).click();
+			  
+	}
+	public static void CloseBtnSahreHoldingDetailes(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      
+			Thread.sleep(2000);
+		      EntityLocator.ClickEditShareHoldingDetailes(driver).click();
+		      
+		      
+		      Thread.sleep(2000);
+			  EntityLocator.ClickShareHoldingDetailes(driver).click();
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickAddNewShareHoldingDetailes(driver).click();
+			  Thread.sleep(2000);
+	            if(EntityLocator.ClickCloseBtnShareHoldingDeatiles(driver).isEnabled())
+	            {
+	                 Thread.sleep(2000);
+	                 EntityLocator.ClickCloseBtnShareHoldingDeatiles(driver).click();
+	                 test.log(LogStatus.PASS, "Close Buttton is clickable");
+	            }
+	          else
+	          {
+	    	         test.log(LogStatus.FAIL, "Close Buttton is not clickable");
+	          }
+	           
+
+		      Thread.sleep(4000);
+			  EntityLocator.ClickDashboard(driver).click();
+	}
+	
+	
+	public static void UploadShareHolding(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      Thread.sleep(4000);
+	      EntityLocator.ClickUploadBtnShareHolding(driver).click();
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickChooseFileShareHolding(driver).sendKeys("C:\\Users\\Admin\\Desktop\\Snehal\\ComplianceLatest\\Secreterial\\TestData\\ShareHolding_BasicDetails.xlsx");
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickUploadBtnShareHolding1(driver).click();
+	      
+	      Thread.sleep(4000);
+	      String msg=EntityLocator.ClickUploadValidationMsg(driver).getText();
+	      
+	      Thread.sleep(2000);
+		  if(msg.equalsIgnoreCase("Record Save Successfully"))
+		    {
+		  
+		      test.log(LogStatus.PASS, "Upload File ShareHolding =" +msg);
+		    }
+		    else
+		    {
+		    	 test.log(LogStatus.FAIL, "Upload File ShareHolding =" +msg);
+		    }
+	      
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickApplicabilityCloseBtn(driver).click();
+	      
+	      Thread.sleep(4000);
+		  EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void UploadExistingFileShareHolding(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      Thread.sleep(4000);
+	      EntityLocator.ClickUploadBtnShareHolding(driver).click();
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickChooseFileShareHolding(driver).sendKeys("C:\\Users\\Admin\\Desktop\\Snehal\\ComplianceLatest\\Secreterial\\TestData\\ShareHolding_BasicDetails.xlsx");
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickUploadBtnShareHolding1(driver).click();
+	      
+	      Thread.sleep(4000);
+	      String msg=EntityLocator.ClickUploadValidationMsg(driver).getText();
+	      
+	      Thread.sleep(2000);
+		  if(msg.equalsIgnoreCase("Record Save Successfully"))
+		    {
+		  
+		      test.log(LogStatus.FAIL, "The system should display an error message indicating that the file has already been uploaded and cannot be uploaded again. ="    +msg);
+		    }
+		    else
+		    {
+		    	 test.log(LogStatus.PASS, "The system should display an error message indicating that the file has already been uploaded and cannot be uploaded again. ="    +msg);
+		    }
+	      
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickApplicabilityCloseBtn(driver).click();
+	      
+	      Thread.sleep(4000);
+		  EntityLocator.ClickDashboard(driver).click();
+	}
+	
+	public static void InvalidUploadShareHolding(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      Thread.sleep(4000);
+	      EntityLocator.ClickUploadBtnShareHolding(driver).click();
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickChooseFileShareHolding(driver).sendKeys("C:\\Users\\Admin\\Desktop\\Snehal\\ComplianceLatest\\Secreterial\\TestData\\ShareHolding_BasicDetails (1).xlsx");
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickUploadBtnShareHolding1(driver).click();
+	      
+	      Thread.sleep(4000);
+	      String msg=EntityLocator.ClickInvalidUploadValidationMsg(driver).getText();
+	      
+	      Thread.sleep(2000);
+		  if(msg.equalsIgnoreCase("Please enter valid Date Of Allotment at row - 2"))
+		    {
+		  
+		      test.log(LogStatus.PASS, "Enter Invalid data in Upload File =" +msg);
+		    }
+		    else
+		    {
+		    	 test.log(LogStatus.FAIL, "Enter Invalid data in Upload File  =" +msg);
+		    }
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickApplicabilityCloseBtn(driver).click();
+	      
+	      Thread.sleep(4000);
+		  EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void EmptyFileUploadShareHolding(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      Thread.sleep(4000);
+	      EntityLocator.ClickUploadBtnShareHolding(driver).click();
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickChooseFileShareHolding(driver).sendKeys("C:\\Users\\Admin\\Desktop\\Snehal\\ComplianceLatest\\Secreterial\\TestData\\ShareHolding_BasicDetails (2).xlsx");
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickUploadBtnShareHolding1(driver).click();
+	      
+	      Thread.sleep(4000);
+	      String msg=EntityLocator.ClickUploadValidationMsg(driver).getText();
+	      
+	      Thread.sleep(2000);
+		  if(msg.equalsIgnoreCase("Record Save Successfully"))
+		    {
+		  
+		      test.log(LogStatus.FAIL, "User receives an error message indicating that the required fields must be filled out. ="    +msg);
+		    }
+		    else
+		    {
+		    	 test.log(LogStatus.PASS, "User receives an error message indicating that the required fields must be filled out. ="    +msg);
+		    }
+	      
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickApplicabilityCloseBtn(driver).click();
+	      
+	      Thread.sleep(4000);
+		  EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void InvalidFileUploadShareHolding(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      Thread.sleep(4000);
+	      EntityLocator.ClickUploadBtnShareHolding(driver).click();
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickChooseFileShareHolding(driver).sendKeys("C:\\Users\\Admin\\Downloads\\Workspace Filter Test Cases.xlsx");
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickUploadBtnShareHolding1(driver).click();
+	      
+	      Thread.sleep(4000);
+	      String msg=EntityLocator.ClickUploadValidationMsg(driver).getText();
+	      
+	      Thread.sleep(2000);
+		  if(msg.equalsIgnoreCase("No Data Found in Excel Document or Sheet Name must be 'ShareHoldings'"))
+		    {
+		  
+		      test.log(LogStatus.FAIL, " Error message should be displayed on popup but error message comes in Green colour =" +msg);
+		    }
+		    else
+		    {
+		    	 test.log(LogStatus.PASS, "Error message should be displayed on popup but error message comes in Green colour ="    +msg);
+		    }
+	      
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickApplicabilityCloseBtn(driver).click();
+	      
+	      Thread.sleep(4000);
+		  EntityLocator.ClickDashboard(driver).click();
+	}
+	
+	public static void WithoutSelectingFileUploadShareHolding(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      Thread.sleep(4000);
+	      EntityLocator.ClickUploadBtnShareHolding(driver).click();
+	      
+	     
+	      Thread.sleep(4000);
+	      EntityLocator.ClickUploadBtnShareHolding1(driver).click();
+	      
+	      Thread.sleep(4000);
+	      String msg=EntityLocator.WithoutSelectingFileUploadShareHolding(driver).getText();
+	      
+	      Thread.sleep(2000);
+		  if(msg.equalsIgnoreCase(" "))
+		    {
+		  
+		      test.log(LogStatus.PASS, "An error message is displayed informing the user that 'Errors:Please Select File'. =" +msg);
+		    }
+		    else
+		    {
+		    	 test.log(LogStatus.FAIL, "An error message is displayed informing the user that 'Errors:Please Select File'. =" +msg);
+		    }
+	      
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickApplicabilityCloseBtn(driver).click();
+	      
+	      Thread.sleep(4000);
+		  EntityLocator.ClickDashboard(driver).click();
+	}
+	
+	public static void UploadFileShareHoldingDeatils(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      
+			Thread.sleep(2000);
+		      EntityLocator.ClickEditShareHoldingDetailes(driver).click();
+		      
+		      
+		      Thread.sleep(2000);
+			  EntityLocator.ClickShareHoldingDetailes(driver).click();
+			  
+			  
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickUploadBtnShareHoldingDetailes(driver).click();
+			  
+			    Thread.sleep(4000);
+			      EntityLocator.ClickChooseFileShareHolding(driver).sendKeys("C:\\Users\\Admin\\Desktop\\Snehal\\ComplianceLatest\\Secreterial\\TestData\\ShareholdingDetails (1).xlsx");
+			  
+			      
+			      Thread.sleep(4000);
+			      EntityLocator.ClickUploadBtnShareHolding1(driver).click();
+			  
+			      Thread.sleep(4000);
+			      String msg=EntityLocator.ClickUploadValidationMsg(driver).getText();
+			      
+			      Thread.sleep(2000);
+				  if(msg.equalsIgnoreCase("Record Save Successfully"))
+				    {
+				  
+				      test.log(LogStatus.PASS, "Upload File ShareHolding Detailes =" +msg);
+				    }
+				    else
+				    {
+				    	 test.log(LogStatus.FAIL, "Upload File ShareHolding Detailes =" +msg);
+				    }
+				   Thread.sleep(4000);
+				      EntityLocator.ClickCloseBtn2(driver).click();
+			      
+			      Thread.sleep(4000);
+			      EntityLocator.ClickShareHoldingDetailesCloseBtn(driver).click();
+			      
+			      Thread.sleep(4000);
+				  EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void UploadExistingFileShareHoldingDeatils(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      
+			Thread.sleep(2000);
+		      EntityLocator.ClickEditShareHoldingDetailes(driver).click();
+		      
+		      
+		      Thread.sleep(2000);
+			  EntityLocator.ClickShareHoldingDetailes(driver).click();
+			  
+			  
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickUploadBtnShareHoldingDetailes(driver).click();
+			  
+			    Thread.sleep(4000);
+			      EntityLocator.ClickChooseFileShareHolding(driver).sendKeys("C:\\Users\\Admin\\Desktop\\Snehal\\ComplianceLatest\\Secreterial\\TestData\\ShareholdingDetails (1).xlsx");
+			  
+			      
+			      Thread.sleep(4000);
+			      EntityLocator.ClickUploadBtnShareHolding1(driver).click();
+			  
+			      Thread.sleep(4000);
+			      String msg=EntityLocator.ClickUploadValidationMsg(driver).getText();
+			      
+			      Thread.sleep(2000);
+				  if(msg.equalsIgnoreCase("Record Save Successfully"))
+				    {
+				  
+				      test.log(LogStatus.FAIL, "Upload Existing File ShareHolding Detailes =" +msg);
+				    }
+				    else
+				    {
+				    	 test.log(LogStatus.PASS, "Upload Existing File ShareHolding Detailes =" +msg);
+				    }
+				   Thread.sleep(4000);
+				      EntityLocator.ClickCloseBtn2(driver).click();
+			      
+			      Thread.sleep(4000);
+			      EntityLocator.ClickShareHoldingDetailesCloseBtn(driver).click();
+			      
+			      Thread.sleep(4000);
+				  EntityLocator.ClickDashboard(driver).click();
+	}
+	
+	public static void InvalidDataUploadFileShareHoldingDeatils(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      
+			Thread.sleep(2000);
+		      EntityLocator.ClickEditShareHoldingDetailes(driver).click();
+		      
+		      
+		      Thread.sleep(2000);
+			  EntityLocator.ClickShareHoldingDetailes(driver).click();
+			  
+			  
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickUploadBtnShareHoldingDetailes(driver).click();
+			  
+			    Thread.sleep(4000);
+			      EntityLocator.ClickChooseFileShareHolding(driver).sendKeys("C:\\Users\\Admin\\Desktop\\Snehal\\ComplianceLatest\\Secreterial\\TestData\\ShareholdingDetails (2).xlsx");
+			  
+			      
+			      Thread.sleep(4000);
+			      EntityLocator.ClickUploadBtnShareHolding1(driver).click();
+			  
+			      Thread.sleep(4000);
+			      String msg=EntityLocator.ClickInvalidUploadValidationMsg(driver).getText();
+			      
+			      Thread.sleep(2000);
+				  if(msg.equalsIgnoreCase("Please enter valid Date Of Allotment at row - 2"))
+				    {
+				  
+				      test.log(LogStatus.PASS, "Enter Invalid Data in Upload File ShareHolding Detailes =" +msg);
+				    }
+				    else
+				    {
+				    	 test.log(LogStatus.FAIL, "Enter Invalid Data in Upload File ShareHolding Detailes =" +msg);
+				    }
+				   Thread.sleep(4000);
+				      EntityLocator.ClickCloseBtn2(driver).click();
+			      
+			      Thread.sleep(4000);
+			      EntityLocator.ClickShareHoldingDetailesCloseBtn(driver).click();
+			      
+			      Thread.sleep(4000);
+				  EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void EmptyDataUploadshareHoldingDeatils(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      
+			Thread.sleep(2000);
+		      EntityLocator.ClickEditShareHoldingDetailes(driver).click();
+		      
+		      
+		      Thread.sleep(2000);
+			  EntityLocator.ClickShareHoldingDetailes(driver).click();
+			  
+			  
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickUploadBtnShareHoldingDetailes(driver).click();
+			  
+			    Thread.sleep(4000);
+			      EntityLocator.ClickChooseFileShareHolding(driver).sendKeys("C:\\Users\\Admin\\Desktop\\Snehal\\ComplianceLatest\\Secreterial\\TestData\\ShareholdingDetails (3).xlsx");
+			  
+			      
+			      Thread.sleep(4000);
+			      EntityLocator.ClickUploadBtnShareHolding1(driver).click();
+			      Thread.sleep(4000);
+			      String msg=EntityLocator.ClickUploadValidationMsg(driver).getText();
+			      Thread.sleep(2000);
+				  if(msg.equalsIgnoreCase("Record Save Successfully"))
+				    {
+				  
+				      test.log(LogStatus.FAIL, "User receives an error message indicating that the required fields must be filled out =" +msg);
+				    }
+				    else
+				    {
+				    	 test.log(LogStatus.PASS, "User receives an error message indicating that the required fields must be filled out =" +msg);
+				    }
+				   Thread.sleep(4000);
+				      EntityLocator.ClickCloseBtn2(driver).click();
+			      
+			      Thread.sleep(4000);
+			      EntityLocator.ClickShareHoldingDetailesCloseBtn(driver).click();
+			      
+			      Thread.sleep(4000);
+				  EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void InvalidFileUploadShareHoldingDetailes(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      
+			Thread.sleep(2000);
+		      EntityLocator.ClickEditShareHoldingDetailes(driver).click();
+		      
+		      
+		      Thread.sleep(2000);
+			  EntityLocator.ClickShareHoldingDetailes(driver).click();
+			  Thread.sleep(2000);
+			  EntityLocator.ClickUploadBtnShareHoldingDetailes(driver).click();
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickChooseFileShareHolding(driver).sendKeys("C:\\Users\\Admin\\Downloads\\Workspace Filter Test Cases.xlsx");
+	      
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickUploadBtnShareHolding1(driver).click();
+	      
+	      Thread.sleep(4000);
+	      String msg=EntityLocator.ClickUploadValidationMsg(driver).getText();
+	      
+	      Thread.sleep(2000);
+		  if(msg.equalsIgnoreCase("No Data Found in Excel Document or Sheet Name must be 'ShareHoldings'"))
+		    {
+		  
+		      test.log(LogStatus.FAIL, " Error message should be displayed on popup but error message comes in Green colour =" +msg);
+		    }
+		    else
+		    {
+		    	 test.log(LogStatus.PASS, "Error message should be displayed on popup but error message comes in Green colour ="    +msg);
+		    }
+	      
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHoldingDetailesCloseBtn(driver).click();
+	      
+	      Thread.sleep(4000);
+		  EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void WithoutSelectingFileUploadShareHoldingDetailes(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      
+			Thread.sleep(2000);
+		      EntityLocator.ClickEditShareHoldingDetailes(driver).click();
+		      
+		      
+		      Thread.sleep(2000);
+			  EntityLocator.ClickShareHoldingDetailes(driver).click();
+			  
+			  Thread.sleep(2000);
+			  EntityLocator.ClickUploadBtnShareHoldingDetailes(driver).click();
+			  
+	      
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickUploadBtnShareHolding1(driver).click();
+	      Thread.sleep(4000);
+	      String msg=EntityLocator.WithoutSelectingFileUploadShareHolding(driver).getText();
+	      
+	      Thread.sleep(2000);
+		  if(msg.equalsIgnoreCase(" "))
+		    {
+		  
+		      test.log(LogStatus.PASS, "An error message is displayed informing the user that 'Errors:Please Select File'. =" +msg);
+		    }
+		    else
+		    {
+		    	 test.log(LogStatus.FAIL, "An error message is displayed informing the user that 'Errors:Please Select File'. =" +msg);
+		    }
+	      
+	      
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHoldingDetailesCloseBtn(driver).click();
+	      
+	      Thread.sleep(4000);
+		  EntityLocator.ClickDashboard(driver).click();
+	}
 	 public static void selectOptionFromDropDown_bs(List<WebElement> options, String value) {
 			
 			for(WebElement option:options) {

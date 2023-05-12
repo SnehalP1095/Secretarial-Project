@@ -5,23 +5,24 @@
     <classes>
       <class name="CompanySecretoryTest.EntityTestCases">
         <methods>
-          <include name="MGT7ExcelUploadFile"/>
-          <include name="InvalidUpdateBankDetailesLLP"/>
+          <include name="WithoutSelectingFileUploadShareHoldingDetailes"/>
+          <include name="UploadFileShareHoldingDetailes"/>
+          <include name="ClickShareHoldingDeatils"/>
           <include name="setBrowser"/>
-          <include name="WithoutEnterBankDetailesLLP"/>
-          <include name="AddBankDetailesLLP"/>
-          <include name="InvalidBankNameLLP"/>
-          <include name="MGT7ExcelExistingUploadFile"/>
-          <include name="MGT7ExcelInvalidUploadFile"/>
-          <include name="DateBankDetailesLLP"/>
-          <include name="InvalidAccountNoLLP"/>
-          <include name="InvalidIFSCLLP"/>
-          <include name="DeleteBankDetailes1LLP"/>
-          <include name="MGT7ExcelDiffInvalidUploadFile"/>
-          <include name="WithoutselectingfileMGT7ExcelUploadFile"/>
-          <include name="UpdateBankDetailesLLP"/>
-          <include name="DeleteBankDetailesLLP"/>
-          <include name="DuplicateBankDetailesLLP"/>
+          <include name="UploadExistingFileShareHoldingDetailes"/>
+          <include name="InvalidUploadShareHolding"/>
+          <include name="EnterInvaliddataFoliooftransferor"/>
+          <include name="WithoutSelectingFileUploadShareHolding"/>
+          <include name="InvalidDataUploadFileShareHoldingDeatils"/>
+          <include name="EmptyDataUploadshareHoldingDeatils"/>
+          <include name="ExistingUploadFileSahreHolding"/>
+          <include name="EmptyFileUploadShareHolding"/>
+          <include name="CloseBtnSahreHoldingDetailes"/>
+          <include name="InvalidFileUploadShareHoldingDetailes"/>
+          <include name="InvalidFileUploadShareHolding"/>
+          <include name="UploadFileSahreHolding"/>
+          <include name="AddShareHoldingDetailes"/>
+          <include name="WithoutEnterDataInSahreHoldingDetailes"/>
         </methods>
       </class> <!-- CompanySecretoryTest.EntityTestCases -->
     </classes>
