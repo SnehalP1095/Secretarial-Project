@@ -2284,4 +2284,115 @@ void WithoutSelectingFileUploadShareHolding() throws InterruptedException, IOExc
 	extent.endTest(test);
 	extent.flush();
 }
+//@Test(priority = 195)
+void ClickShareHoldingPattern() throws InterruptedException, IOException
+{
+	test = extent.startTest("ShareHolding Pattern Button is clickable or not ");
+	
+	EntityMasterMethod.ClickShareHoldingPattern(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+
+@Test(priority = 196)
+void AddCategoryMaster() throws InterruptedException, IOException
+{
+	test = extent.startTest("Add Category Master ShareHolding Verification ");
+	
+	EntityMasterMethod.AddCategoryMaster(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 197)
+void UploadShareholdingCategoryMaster() throws InterruptedException, IOException
+{
+	test = extent.startTest("Upload file  Category Master ShareHolding Verification ");
+	
+	EntityMasterMethod.UploadShareholdingCategoryMaster(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority =198)
+void EnterInvalidDataUploadShareholdingCategoryMaster() throws InterruptedException, IOException
+{
+	test = extent.startTest("Enter Invalid Data Upload file Category Master ShareHolding Verification ");
+	
+	EntityMasterMethod.EnterInvalidDataUploadShareholdingCategoryMaster(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 199)
+void EnterInvalidDateUploadShareholdingCategoryMaster() throws InterruptedException, IOException
+{
+	test = extent.startTest("Enter Invalid Date Upload file Category Master ShareHolding Verification ");
+	
+	EntityMasterMethod.EnterInvalidDateUploadShareholdingCategoryMaster(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 200)
+void EnterEmptyDataUploadShareholdingCategoryMaster() throws InterruptedException, IOException
+{
+	test = extent.startTest("Enter Empty data Upload file Category Master ShareHolding Verification ");
+	
+	EntityMasterMethod.EnterEmptyDataUploadShareholdingCategoryMaster(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 201)
+void InvalidUploadFileShareholdingCategoryMaster() throws InterruptedException, IOException
+{
+	test = extent.startTest("Invalid Upload file Category Master ShareHolding Verification ");
+	
+	EntityMasterMethod.InvalidUploadFileShareholdingCategoryMaster(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 2)
+void WithoutUploadFileShareholdingCategoryMaster() throws InterruptedException, IOException
+{
+	test = extent.startTest("Without Selecting File Category Master ShareHolding Verification ");
+	
+	EntityMasterMethod.WithoutUploadFileShareholdingCategoryMaster(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 203)
+void ClickShareHoldingHistorical() throws InterruptedException, IOException
+{
+	test = extent.startTest("ShareHolding Historical Button is clickable or not ");
+	
+	EntityMasterMethod.ClickShareHoldingHistorical(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 204)
+void EnterInvalidDateShareHoldingHistorical() throws InterruptedException, IOException
+{
+	test = extent.startTest("Enter Invalid Date In ShareHolding Historical Verification ");
+	
+	EntityMasterMethod.EnterInvalidDateShareHoldingHistorical(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+//@Test(priority = 205)
+void EmptyDateShareHoldingHistorical() throws InterruptedException, IOException
+{
+	test = extent.startTest("Empty Date In ShareHolding Historical Verification ");
+	
+	EntityMasterMethod.EmptyDateShareHoldingHistorical(driver, test);
+	
+	extent.endTest(test);
+	extent.flush();
+}
 }
