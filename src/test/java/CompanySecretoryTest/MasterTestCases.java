@@ -100,7 +100,160 @@ public class MasterTestCases {
 		extent.endTest(test);
 		extent.flush();
 	}
+@Test(priority = 3)
 
+void AcceptAlphaCharactersCommittee() throws InterruptedException, IOException
+{
+	test = extent.startTest(" Accept Alpha Chabracters Committee Master  Verification");
+	
+	CommitteeMethod.AcceptAlphaCharactersCommittee(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 4)
+
+void CloseBtnCommittee() throws InterruptedException, IOException
+{
+	test = extent.startTest(" Close Button Committee Master  Verification");
+	
+	CommitteeMethod.CloseBtnCommittee(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 5)
+
+void WithoutEnteringDataCommittee() throws InterruptedException, IOException
+{
+	test = extent.startTest(" Without Entering Data Committee Master  Verification");
+	
+	CommitteeMethod.WithoutEnteringDataCommittee(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 5)
+
+void EnterInvalidDataCommittee() throws InterruptedException, IOException
+{
+	test = extent.startTest(" Enter Invalid Data Committee Master  Verification");
+	
+	CommitteeMethod.EnterInvalidDataCommittee(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 6)
+
+void UpdateCommittee() throws InterruptedException, IOException
+{
+	test = extent.startTest(" Update Committee Master  Verification");
+	
+	CommitteeMethod.UpdateCommittee(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 7)
+
+void AddCommitteeMemberRule() throws InterruptedException, IOException
+{
+	test = extent.startTest(" Add Committee Member Rule Committee Master  Verification");
+	
+	CommitteeMethod.AddCommitteeMemberRule(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 8)
+
+void UpdateCommitteeMemberRule() throws InterruptedException, IOException
+{
+	test = extent.startTest(" Update Committee Member Rule Committee Master  Verification");
+	
+	CommitteeMethod.UpdateCommitteeMemberRule(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 9)
+
+void AddCommitteeQuoramRule() throws InterruptedException, IOException
+{
+	test = extent.startTest(" Add Committee Quram  Rule Committee Master  Verification");
+	
+	CommitteeMethod.AddCommitteeQuoramRule(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 10)
+
+void UpdateCommitteeQuoramRule() throws InterruptedException, IOException
+{
+	test = extent.startTest(" Update Committee Quram  Rule Committee Master  Verification");
+	
+	CommitteeMethod.UpdateCommitteeQuoramRule(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 11)
+
+void AddCommitteeMeetingRule() throws InterruptedException, IOException
+{
+	test = extent.startTest(" Add Committee Meeting  Rule Committee Master  Verification");
+	
+	CommitteeMethod.AddCommitteeMeetingRule(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 12)
+
+void UploadCommitteDocument() throws InterruptedException, IOException
+{
+	test = extent.startTest(" Upload Committee Document Committee Master  Verification");
+	
+	CommitteeMethod.UploadCommitteDocument(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 13)
+
+void DeleteCommitteDocument() throws InterruptedException, IOException
+{
+	test = extent.startTest(" Delete Committee Document Committee Master  Verification");
+	
+	CommitteeMethod.DeleteCommitteDocument(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 14)
+
+void WithoutUploadCommitteDocument() throws InterruptedException, IOException
+{
+	test = extent.startTest(" Without Upload Committee Document Committee Master  Verification");
+	
+	CommitteeMethod.WithoutUploadCommitteDocument(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
+@Test(priority = 15)
+
+void AcceptTotalStrengthNumericFont() throws InterruptedException, IOException
+{
+	test = extent.startTest(" Accept Total Strength Numeric Font Committee Master  Verification");
+	
+	CommitteeMethod.AcceptTotalStrengthNumericFont(driver, test,workbook);
+	
+	extent.endTest(test);
+	extent.flush();
+}
 //@Test(priority = 3)
 
 void CommitteComposition() throws InterruptedException, IOException
@@ -112,7 +265,7 @@ void CommitteComposition() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority = 4)
+//@Test(priority = 4)
 
 void AuditorMaster() throws InterruptedException, IOException
 {
@@ -127,7 +280,7 @@ void AuditorMaster() throws InterruptedException, IOException
 
 
 
-///@Test(priority = 4)
+//@Test(priority = 4)
 
 void AuditorMaster1() throws InterruptedException, IOException
 {
@@ -215,7 +368,7 @@ void AuditorMaster8() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority = 12)
+//@Test(priority = 12)
 
 void AuditorMaster9() throws InterruptedException, IOException
 {
@@ -226,7 +379,7 @@ void AuditorMaster9() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority = 13)
+//@Test(priority = 13)
 
 void AuditorMaster10() throws InterruptedException, IOException
 {
@@ -239,7 +392,7 @@ void AuditorMaster10() throws InterruptedException, IOException
 }
 
 
-@Test(priority = 14)
+//@Test(priority = 14)
 
 void ConfigurationMaster() throws InterruptedException, IOException
 {
@@ -251,7 +404,7 @@ void ConfigurationMaster() throws InterruptedException, IOException
 	extent.flush();
 }
 
-@Test(priority = 15)
+//@Test(priority = 15)
 
 void UserMaster() throws InterruptedException, IOException
 {

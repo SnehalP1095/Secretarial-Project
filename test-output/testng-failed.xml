@@ -5,33 +5,12 @@
     <classes>
       <class name="CompanySecretoryTest.EntityTestCases">
         <methods>
-          <include name="WithoutSelectingFileUploadShareHoldingDetailes"/>
-          <include name="MGT7ExcelUploadFile"/>
-          <include name="AddCategoryMaster"/>
+          <include name="EnterEmptyDataResignationofAuditor"/>
+          <include name="ClickInternalAuditor"/>
+          <include name="EnterInvalidDataResignationofAuditor"/>
+          <include name="Resignationofauditor"/>
+          <include name="CloseBtnResignationofAuditor"/>
           <include name="setBrowser"/>
-          <include name="WithoutSelectingFileUploadShareHolding"/>
-          <include name="InvalidDataUploadFileShareHoldingDeatils"/>
-          <include name="ExistingUploadFileSahreHolding"/>
-          <include name="MGT7ExcelInvalidUploadFile"/>
-          <include name="InvalidFileUploadShareHoldingDetailes"/>
-          <include name="CloseBtnSahreHoldingDetailes"/>
-          <include name="InvalidFileUploadShareHolding"/>
-          <include name="ClickShareHoldingDeatils"/>
-          <include name="UploadFileShareHoldingDetailes"/>
-          <include name="AddShareHolding"/>
-          <include name="UploadExistingFileShareHoldingDetailes"/>
-          <include name="InvalidUploadShareHolding"/>
-          <include name="EnterInvaliddataFoliooftransferor"/>
-          <include name="ClickShareHoldingHistorical"/>
-          <include name="EmptyDataUploadshareHoldingDeatils"/>
-          <include name="MGT7ExcelExistingUploadFile"/>
-          <include name="EmptyFileUploadShareHolding"/>
-          <include name="UploadFileSahreHolding"/>
-          <include name="ClickShareHoldingOption"/>
-          <include name="MGT7ExcelDiffInvalidUploadFile"/>
-          <include name="WithoutselectingfileMGT7ExcelUploadFile"/>
-          <include name="AddShareHoldingDetailes"/>
-          <include name="WithoutEnterDataInSahreHoldingDetailes"/>
         </methods>
       </class> <!-- CompanySecretoryTest.EntityTestCases -->
     </classes>

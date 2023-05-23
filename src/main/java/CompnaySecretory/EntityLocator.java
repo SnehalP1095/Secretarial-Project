@@ -1168,7 +1168,7 @@ public class EntityLocator
 	}
 	public static WebElement ClickShareHolding(WebDriver driver)		//Method for closing Message Popup
 	{
-		Secreterial = driver.findElement(By.xpath("//*[@id='griDDLActionMenu_listbox']/li[4]"));
+		Secreterial = driver.findElement(By.xpath("(//*[@id='griDDLActionMenu_listbox']/li[4])[11]"));
 		return Secreterial;
 	}
 	public static WebElement ClickNewBtnShareHolding(WebDriver driver)		//Method for closing Message Popup
@@ -1291,6 +1291,11 @@ public class EntityLocator
 		Secreterial = driver.findElement(By.xpath("/html/body/div[11]/div[1]/div/a"));
 		return Secreterial;
 	}
+	public static WebElement ClickCloseBtn5(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("(//a[@class='k-button k-bare k-button-icon k-window-action'])[3]"));
+		return Secreterial;
+	}
 	public static WebElement ClickCloseBtn1(WebDriver driver)		//Method for closing Message Popup
 	{
 		Secreterial = driver.findElement(By.xpath("/html/body/div[23]/div[1]/div/a"));
@@ -1313,7 +1318,7 @@ public class EntityLocator
 	}
 	public static WebElement ClickEditShareHoldingDetailes(WebDriver driver)		//Method for closing Message Popup
 	{
-		Secreterial = driver.findElement(By.xpath("(//a[@class='k-grid-Edit k-grid-edit hoverCircle k-grid-button'])[4]"));
+		Secreterial = driver.findElement(By.xpath("(//a[@class='k-grid-Edit k-grid-edit hoverCircle k-grid-button'])"));
 		return Secreterial;
 	}
 	public static WebElement ClickAddNewShareHoldingDetailes(WebDriver driver)		//Method for closing Message Popup
@@ -1619,6 +1624,422 @@ public class EntityLocator
    public static WebElement ClickShareholdingHistoricalNoRecordFound(WebDriver driver)		//Method for closing Message Popup
    {
 	  Secreterial = driver.findElement(By.xpath("//*[@id='GridOfAllShareholdingHist']/div[2]/div[1]/div"));
+	  return Secreterial;
+   }
+   public static WebElement ClickSearchField(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='filterEntityName']"));
+	  return Secreterial;
+   }
+   public static WebElement ClickArrow(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//span[@class='k-icon k-i-filter']"));
+	  return Secreterial;
+   }
+   public static WebElement ClickStartDate(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//input[@title='Value']"));
+	  return Secreterial;
+   }
+   public static WebElement ClickEndDate(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//input[@title='Additional value']"));
+	  return Secreterial;
+   }
+   public static WebElement ClickFilter1(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("(//button[@type='submit'])[2]"));
+	  return Secreterial;
+   }
+   public static WebElement ClickClearBtn(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//button[@type='reset']"));
+	  return Secreterial;
+   }
+   public static WebElement ClickViewBtn(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//a[@class='k-grid-Edit k-grid-view  k-grid-button hoverCircle']"));
+	  return Secreterial;
+   }
+   public static WebElement ClickDownloadBtn(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//a[@class='k-grid-Download k-grid-download  k-grid-button hoverCircle']"));
+	  return Secreterial;
+   }
+   public static WebElement ClickCloseBtn4(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("(//a[@class='k-button k-bare k-button-icon k-window-action'])[10]"));
+	  return Secreterial;
+   }
+   public static WebElement ClickEditIconSH(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//a[@class='k-grid-Edit k-grid-edit hoverCircle k-grid-button']"));
+	  return Secreterial;
+   }
+   public static WebElement ClickCloseBtn3(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='btnclose4']"));
+	  return Secreterial;
+   }
+   public static WebElement ClickDeleteValidationMsg(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='wndDelete']/h5"));
+	  return Secreterial;
+   }
+   public static WebElement ClickShareCertificateBtn(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//a[@class='k-grid-Document k-grid-document k-grid-button']"));
+	  return Secreterial;
+   }
+   public static WebElement ClickSelectTransaction(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='frmNewChargeDetails']/div[3]/div/div[1]/span[1]/span/span[1]"));
+	  return Secreterial;
+   }
+   public static WebElement ClickSelectTransaction1(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='AllotmentNo_listbox']/li[4]"));
+	  return Secreterial;
+   }
+   public static WebElement ClickDirectorAutorized(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='frmNewChargeDetails']/div[3]/div/div[2]/span[1]/span/span[1]"));
+	  return Secreterial;
+   }
+   public static WebElement SelectDirectorAutorized(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='Director1_listbox']/li"));
+	  return Secreterial;
+   }
+   public static WebElement ClickDirectorAutorized1(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='frmNewChargeDetails']/div[3]/div/div[3]/span[1]/span/span[1]"));
+	  return Secreterial;
+   }
+   public static WebElement SelectDirectorAutorized1(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='Director2_listbox']/li"));
+	  return Secreterial;
+   }
+   public static WebElement ClickAuthorizedSignatory(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='frmNewChargeDetails']/div[4]/div/div[1]/span[1]/span/span[1]"));
+	  return Secreterial;
+   }
+   public static WebElement SelectAuthorizedSignatory(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='AuthSecreatory_listbox']/li"));
+	  return Secreterial;
+   }
+   public static WebElement ClickDateOfIssues(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='FYStart']"));
+	  return Secreterial;
+   }
+   public static WebElement ClickTypeOfShare(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='frmNewChargeDetails']/div[4]/div/div[3]/span/span/span[1]"));
+	  return Secreterial;
+   }
+   public static WebElement SelectTypeOfShare(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='TypeOfShare_listbox']/li[1]"));
+	  return Secreterial;
+   }
+   public static WebElement ValidMsgShareCertificate(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='frmNewChargeDetails']/div[1]/div/div/lable"));
+	  return Secreterial;
+   }
+   public static WebElement ViewShareCertificate(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='btnShareCertificatePreview']"));
+	  return Secreterial;
+   }
+   public static WebElement DownloadShareCertificate(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='btnShareCertificateDownload']"));
+	  return Secreterial;
+   }
+   public static WebElement NoDataFoundShareCertificate(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("/html/body/pre"));
+	  return Secreterial;
+   }
+   public static WebElement ClickManagementPersonnel(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("(//*[@id='griDDLActionMenu_listbox']/li[6])[11]"));
+	  return Secreterial;
+   }
+   public static WebElement ClickManagementPersonnelExportToPDF(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//span[@class='k-icon k-i-file-pdf']"));
+	  return Secreterial;
+   }
+   public static WebElement ClickCommittees(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("(//*[@id='griDDLActionMenu_listbox']/li[7])[11]"));
+	  return Secreterial;
+   }
+   public static WebElement ClickCommitteeMatrix(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("(//*[@id='griDDLActionMenu_listbox']/li[8])[11]"));
+	  return Secreterial;
+   }
+   public static WebElement ClickAuditor(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("(//*[@id='griDDLActionMenu_listbox']/li[9])[11]"));
+	  return Secreterial;
+   }
+   public static WebElement ClickStatutoryNewBtn(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='StaturoryCreatenew']"));
+	  return Secreterial;
+   }
+   public static WebElement ClickStatutoryYes(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//span[@class='checkmark1']"));
+	  return Secreterial;
+   }
+   public static WebElement ClickNaturOfAppointment(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("(//span[@class='k-dropdown-wrap k-state-default'])[9]"));
+	  return Secreterial;
+   }
+   public static WebElement SelectNaturOfAppointment(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='txtNature_of_Appointment_listbox']/li[3]"));
+	  return Secreterial;
+   }
+   public static WebElement SelectNaturOfAppointment1(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='txtNature_of_Appointment_listbox']/li[6]"));
+	  return Secreterial;
+   }
+   public static WebElement ClickDateOfAppointment(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='dpdateofAppointment']"));
+	  return Secreterial;
+   }
+   public static WebElement ClickSRN(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='SRN']"));
+	  return Secreterial;
+   }
+   public static WebElement ClickStatutoryNo(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("(//span[@class='checkmark1'])[6]"));
+	  return Secreterial;
+   }
+   public static WebElement ClickCategoryOfAuditor(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='tblStatutoryInfo']/tbody/tr/td[1]/span/span/span[1]"));
+	  return Secreterial;
+   }
+   public static WebElement ClickCategoryOfAuditor1(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='ddlCriteria0_listbox']/li[1]"));
+	  return Secreterial;
+   }
+   public static WebElement SelectCategoryOfAuditor(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("(//*[@id='ddlCriteria0_listbox']/li[3])[2]"));
+	  return Secreterial;
+   }
+   public static WebElement ClickAuditorFirm(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='tblStatutoryInfo']/tbody/tr/td[2]/div/span/span/span[1]"));
+	  return Secreterial;
+   }
+   public static WebElement SelectAuditorFirm(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='AuditDeatilsList_0__Auditor_Id_listbox']/li[1]"));
+	  return Secreterial;
+   }
+   public static WebElement SelectAuditorFirm1(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='AuditDeatilsList_0__Auditor_Id_listbox']/li[3]"));
+	  return Secreterial;
+   }
+   public static WebElement ClickNumberofFYforwhichAuditorisappointed(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='tblStatutoryInfo']/tbody/tr/td[4]/span[1]/span/span[1]"));
+	  return Secreterial;
+   }
+   public static WebElement SelectNumberofFYforwhichAuditorisappointed1(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='ddlNumberofFY0_listbox']/li[1]"));
+	  return Secreterial;
+   }
+   public static WebElement SelectNumberofFYforwhichAuditorisappointed(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("(//*[@id='ddlNumberofFY0_listbox']/li[3])[2]"));
+	  return Secreterial;
+   }
+  
+   public static WebElement ClickDueDate(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='AuditDeatilsList_0__dueDate']"));
+	  return Secreterial;
+   }
+   public static WebElement ClickFYStartDateDate(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='AuditDeatilsList_0__AppointedFirstFYDate']"));
+	  return Secreterial;
+   }
+   public static WebElement ClickFYLastDateDate(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='AuditDeatilsList_0__AppointedLastFYDate']"));
+	  return Secreterial;
+   }
+   public static WebElement ClickSaveStatutory(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='btnllp']"));
+	  return Secreterial;
+   }
+   public static WebElement ClickValidMsgStatutory(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='frmUpdatestatutoryAuditor']/div[1]/div/div/lable"));
+	  return Secreterial;
+   }
+   public static WebElement ClickValidMsgStatutory1(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='frmUpdatestatutoryAuditor']/div[2]/div/div/lable"));
+	  return Secreterial;
+   }
+   public static WebElement ClickInValidMsgStatutory(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='frmUpdatestatutoryAuditor']/div[3]/div/div[5]/div[2]/span[2]"));
+	  return Secreterial;
+   }
+   public static WebElement ClickStatusStatutoryAuditor(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='Section1']/div[1]/div/div[1]/div[2]/span/span/span[1]"));
+	  return Secreterial;
+   }
+   public static WebElement SelectStatusStatutoryAuditor(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='Istenuar_listbox']/li[2]"));
+	  return Secreterial;
+   }
+   public static WebElement ClickClearFilterStatutoryAuditor(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='clearfillter']"));
+	  return Secreterial;
+   }
+   public static WebElement ClickUpdateStatutoryAuditor(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//a[@class='k-grid-Edit k-grid-edit hoverCircle k-grid-button']"));
+	  return Secreterial;
+   }
+   public static WebElement ClickResignationofAuditor(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//a[@class='k-grid-R k-grid-resignation']"));
+	  return Secreterial;
+   }
+   public static WebElement ClickLeaveType(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='frmUpdateResignation']/div[1]/div/div[1]/div/div[2]/span[2]/span/span[1]"));
+	  return Secreterial;
+   }
+   public static WebElement SelectLeaveType(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("(//*[@id='ddlLeaveType_listbox']/li[3])[2]"));
+	  return Secreterial;
+   }
+   public static WebElement ClickDateOfSubmission(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='DateOfResignationSubmit']"));
+	  return Secreterial;
+   }
+   public static WebElement ClickDated(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='dpRegignation_Date']"));
+	  return Secreterial;
+   }
+   public static WebElement ClickReason(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='textareaResonForLeave']"));
+	  return Secreterial;
+   }
+   public static WebElement ClickUploadDocument(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='Resignation_Doc']"));
+	  return Secreterial;
+   }
+   public static WebElement SaveResignation(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='btnregignation']"));
+	  return Secreterial;
+   }
+   public static WebElement SaveValidMsgResignation(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='DivAuditorResignation']/div[1]/div/div/lable"));
+	  return Secreterial;
+   }
+   public static WebElement NatureofAppointment(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='txtNature_of_Appointment-list']/div[1]"));
+	  return Secreterial;
+   }
+   public static WebElement ClickValidAuditorsFirm(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//div[@id='AuditDeatilsList[0].Auditor_Id_validationMessage']"));
+	  return Secreterial;
+   }
+   public static WebElement ClickCloseCommittee(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("/html/body/div[20]/div[1]/div/a"));
+	  return Secreterial;
+   }
+   public static WebElement ClickCancelResignation(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='btnCancelAuditorResignation']"));
+	  return Secreterial;
+   }
+   public static WebElement InvalidMsgResignation(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='frmUpdateResignation']/div[1]/div/div[1]/div/div[3]/span[3]"));
+	  return Secreterial;
+   }
+   public static WebElement InvalidMsgResignation1(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='frmUpdateResignation']/div[1]/div/div[1]/div/div[4]/span[3]"));
+	  return Secreterial;
+   }
+   public static WebElement InvalidMsgResignation2(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='LeaveType_validationMessage']"));
+	  return Secreterial;
+   }
+   public static WebElement InvalidMsgResignation3(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='DateOfResignation_validationMessage']"));
+	  return Secreterial;
+   }
+   public static WebElement ClickInternalAuditor(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='mytab2']/a"));
+	  return Secreterial;
+   }
+   public static WebElement ClickInternalAuditorCategory(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='frmUpdateInternalAuditor']/div[3]/div/div[1]/div[1]/span[2]/span/span[1]"));
+	  return Secreterial;
+   }
+   public static WebElement SelectInternalAuditorCategory(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("(//*[@id='ddlCriteria_listbox']/li[2])[16]"));
+	  return Secreterial;
+   }
+   public static WebElement ClickInternalAuditorName(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("//*[@id='frmUpdateInternalAuditor']/div[3]/div/div[1]/div[2]/span[2]/span/span[1]"));
+	  return Secreterial;
+   }
+   public static WebElement SelectInternalAuditorName(WebDriver driver)		//Method for closing Message Popup
+   {
+	  Secreterial = driver.findElement(By.xpath("(//*[@id='Auditor_Id_listbox']/li[1])[12]"));
 	  return Secreterial;
    }
 }

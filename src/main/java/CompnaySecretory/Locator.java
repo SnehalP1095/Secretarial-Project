@@ -1164,4 +1164,5 @@ public class Locator {
 		Secreterial =driver.findElement(By.xpath("//*[@id='ContactNumber_validationMessage']"));
 		return Secreterial;
 	}
+	
 }

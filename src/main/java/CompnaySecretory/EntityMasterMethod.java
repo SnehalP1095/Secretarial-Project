@@ -7064,7 +7064,7 @@ public class EntityMasterMethod
 	       Thread.sleep(2000);
 	       EntityLocator.ClickCloseIcon1(driver).click();
 		
-	        Thread.sleep(2000);
+	        Thread.sleep(3000);
             EntityLocator.clickcloseIcon(driver).click();
 		    
 		   Thread.sleep(4000);
@@ -8006,6 +8006,60 @@ public class EntityMasterMethod
 	
 	}
 	
+	public static void SearchFieldImportTab(WebDriver driver,ExtentTest test) throws InterruptedException 
+	{
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+	    Thread.sleep(2000);
+	      EntityLocator.ClickImport(driver).click();
+	      
+	      Thread.sleep(2000);
+	      EntityLocator.ClickSearchField(driver).sendKeys("BEACH HAVEN PROPERTIES PRIVATE LIMITED",Keys.ENTER);
+	      
+	      String msg="BEACH HAVEN PROPERTIES PRIVATE LIMITED";
+	      
+	      if(msg.equalsIgnoreCase(msg))
+	      {
+	    	  test.log(LogStatus.PASS, "Message Displayed =" +msg);
+	      }
+	      else
+	      {
+	    	  test.log(LogStatus.FAIL, "Message Displayed =" +msg);
+	      }
+	      Thread.sleep(2000);
+		    EntityLocator.CloseBtn(driver).click();
+		  
+		    
+		    Thread.sleep(4000);
+		     EntityLocator.ClickDashboard(driver).click();
+	}
+	
+	public static void SearchFieldEntityTab(WebDriver driver,ExtentTest test) throws InterruptedException 
+	{
+		
+	    WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+	    
+	    String msg="U72266KA2002PLC030311";
+	      
+	      if(msg.equalsIgnoreCase(msg))
+	      {
+	    	  test.log(LogStatus.PASS, "Message Displayed =" +msg);
+	      }
+	      else
+	      {
+	    	  test.log(LogStatus.FAIL, "Message Displayed =" +msg);
+	      }
+	      Thread.sleep(4000);
+		     EntityLocator.ClickDashboard(driver).click();
+	    
+	}
+	
+	
 	public static void ClickApplicabilty(WebDriver driver, ExtentTest test) throws InterruptedException
 	{
 		
@@ -8218,12 +8272,16 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
+		
+	    Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+	   
 	  
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
 	    
 	
-	      
+		Thread.sleep(2000);
 	      if(EntityLocator.ClickShareHolding(driver).isEnabled())
 		    {
 		      Thread.sleep(2000);
@@ -8244,6 +8302,10 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		  EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		   
 	  
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
@@ -8370,6 +8432,10 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		
 	  
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
@@ -8406,6 +8472,10 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+	
 	  
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
@@ -8519,7 +8589,10 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
-	  
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		  
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
 
@@ -8634,6 +8707,10 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		
 	  
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
@@ -8682,6 +8759,10 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+
 	  
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
@@ -8723,6 +8804,10 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		
 	  
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
@@ -8766,6 +8851,10 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+	
 	  
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
@@ -8810,6 +8899,10 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		
 	  
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
@@ -8852,6 +8945,10 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+
 	  
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
@@ -8895,6 +8992,10 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		
 	  
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
@@ -8939,6 +9040,10 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+	
 	  
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
@@ -8981,6 +9086,10 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+
 	  
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
@@ -9036,6 +9145,10 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		   
 	  
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
@@ -9092,6 +9205,10 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		
 	  
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
@@ -9147,6 +9264,10 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+	
 	  
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
@@ -9201,6 +9322,10 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		
 	  
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
@@ -9253,6 +9378,10 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+
 	  
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
@@ -9304,6 +9433,10 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		   
 	  
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
@@ -9337,6 +9470,10 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		
 	  
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
@@ -9441,6 +9578,10 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+
 	  
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
@@ -9489,6 +9630,10 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		
 	  
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
@@ -9521,7 +9666,7 @@ public class EntityMasterMethod
 	    	 test.log(LogStatus.FAIL, "The error message should be displayed =" +msg);
 	     }
 	      Thread.sleep(2000);
-	      EntityLocator.ClickCloseBtn1(driver).click();
+	      EntityLocator.ClickCloseCategoryMaster(driver).click();
 	      Thread.sleep(4000);
  	      EntityLocator.ClickShareHoldingDetailesCloseBtn(driver).click();
  	      
@@ -9536,6 +9681,10 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+	
 	  
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
@@ -9568,7 +9717,7 @@ public class EntityMasterMethod
 	    	 test.log(LogStatus.FAIL, "The error message should be displayed =" +msg);
 	     }
 	      Thread.sleep(2000);
-	      EntityLocator.CloseBtn1(driver).click();
+	      EntityLocator.ClickCloseCategoryMaster(driver).click();
 	      Thread.sleep(4000);
  	      EntityLocator.ClickShareHoldingDetailesCloseBtn(driver).click();
  	      
@@ -9582,6 +9731,10 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+	
 	  
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
@@ -9614,7 +9767,7 @@ public class EntityMasterMethod
 	    	 test.log(LogStatus.PASS, "Message should be displayed on popup =" +msg);
 	     }
 	      Thread.sleep(2000);
-	      EntityLocator.ClickCloseBtn1(driver).click();
+	      EntityLocator.ClickCloseCategoryMaster(driver).click();
 	      Thread.sleep(4000);
  	      EntityLocator.ClickShareHoldingDetailesCloseBtn(driver).click();
  	      
@@ -9628,6 +9781,10 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+	
 	  
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
@@ -9660,7 +9817,7 @@ public class EntityMasterMethod
 	    	 test.log(LogStatus.FAIL, "Message should be displayed on popup =" +msg);
 	     }
 	      Thread.sleep(2000);
-	      EntityLocator.ClickCloseBtn1(driver).click();
+	      EntityLocator.ClickCloseCategoryMaster(driver).click();
 	      Thread.sleep(4000);
  	      EntityLocator.ClickShareHoldingDetailesCloseBtn(driver).click();
  	      
@@ -9674,6 +9831,10 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		 
 	  
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
@@ -9705,7 +9866,7 @@ public class EntityMasterMethod
 	    	 test.log(LogStatus.FAIL, "Error message is Not displayed informing the user that =" +msg);
 	     }
 	      Thread.sleep(2000);
-	      EntityLocator.ClickCloseBtn1(driver).click();
+	      EntityLocator.ClickCloseCategoryMaster(driver).click();
 	      Thread.sleep(4000);
  	      EntityLocator.ClickShareHoldingDetailesCloseBtn(driver).click();
  	      
@@ -9719,6 +9880,10 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+	
 	  
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
@@ -9755,6 +9920,10 @@ public class EntityMasterMethod
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		
 	  
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
@@ -9802,6 +9971,10 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
 	  
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+	
+		
 		Thread.sleep(2000);
 	    EntityLocator.ClickMoreAction(driver).click();
 
@@ -9835,7 +10008,1644 @@ public class EntityMasterMethod
  	 	  EntityLocator.ClickDashboard(driver).click();
 	     
 	}    
-	 public static void selectOptionFromDropDown_bs(List<WebElement> options, String value) {
+	
+	
+	public static void ClearButtonShareHoldingHistorical(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+	
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      
+	      Thread.sleep(2000);
+	      EntityLocator.ClickShareHoldingPattern(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator.ClickShareholdingHistorical(driver).click();
+	      
+	      Thread.sleep(2000);
+	      EntityLocator.ClickArrow(driver).click();
+	      
+	      Thread.sleep(2000);
+	      EntityLocator.ClickStartDate(driver).sendKeys("1/1/2023");
+	      
+	      Thread.sleep(2000);
+	      EntityLocator.ClickEndDate(driver).sendKeys("31/5/2023");
+	      
+	      Thread.sleep(2000);
+	      EntityLocator.ClickFilter1(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator.ClickArrow(driver).click();
+	      
+	    
+	      
+	      if(EntityLocator.ClickClearBtn(driver).isEnabled())
+		    {
+		      Thread.sleep(2000);
+		      EntityLocator.ClickClearBtn(driver).click();
+		      test.log(LogStatus.PASS, "Clear Button is clickable");
+		    }
+		    else
+		    {
+		    	 test.log(LogStatus.FAIL, "Clear Button is not clickable");
+		    }
+	      Thread.sleep(4000);
+ 	      EntityLocator.ClickShareHoldingDetailesCloseBtn(driver).click();
+ 	      
+ 	      Thread.sleep(4000);
+ 	 	  EntityLocator.ClickDashboard(driver).click();
+	      
+	      
+	}
+	
+	public static void ViewButtonShareHoldingHistorical(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      
+	      Thread.sleep(2000);
+	      EntityLocator.ClickShareHoldingPattern(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator.ClickShareholdingHistorical(driver).click();
+	      
+	      Thread.sleep(2000);
+	      EntityLocator.ClickViewBtn(driver).click();
+	      
+	      test.log(LogStatus.PASS, "View Icon Open Successfully");
+	      
+	      
+	      Thread.sleep(2000);
+	      EntityLocator.ClickCloseBtn4(driver).click();
+	      Thread.sleep(4000);
+ 	      EntityLocator.ClickShareHoldingDetailesCloseBtn(driver).click();
+ 	      
+ 	      Thread.sleep(4000);
+ 	 	  EntityLocator.ClickDashboard(driver).click();
+	      
+	}
+	public static void DownloadButtonShareHoldingHistorical(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      
+	      Thread.sleep(2000);
+	      EntityLocator.ClickShareHoldingPattern(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator.ClickShareholdingHistorical(driver).click();
+	      
+	      File dir = new File("C://Users//Admin//Downloads");
+		  	File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
+		  		
+		  	Thread.sleep(2000);
+		 	EntityLocator.ClickDownloadBtn(driver).click();		//Exporting (Downloading) file
+		  		
+		    Thread.sleep(3000);
+		    File dir1 = new File("C://Users//Admin//Downloads");
+		    File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
+		   
+		  		
+		  	if (dirContents.length < allFilesNew.length) 
+		  	{
+		  		test.log(LogStatus.PASS,  "  Document downloaded successfully.");
+		  	} 
+		  	else 
+		  	{
+		  		test.log(LogStatus.FAIL, "  Document does not downloaded.");
+		  	}
+	      
+	      Thread.sleep(4000);
+ 	      EntityLocator.ClickShareHoldingDetailesCloseBtn(driver).click();
+ 	      
+ 	      Thread.sleep(4000);
+ 	 	  EntityLocator.ClickDashboard(driver).click();
+	      
+	}
+	
+	public static void EditBtnShareHolding(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickEditShareHoldingDetailes(driver).click();
+	      
+	      Thread.sleep(2000);
+		  EntityLocator.ClickShareHoldingDetailes(driver).click();
+	      Thread.sleep(4000);
+	      if(EntityLocator.ClickEditIconSH(driver).isEnabled())
+		    {
+              Thread.sleep(4000);
+		      EntityLocator.ClickEditIconSH(driver).click();
+		      test.log(LogStatus.PASS, "Edit ShareHolding Detailes Button is clickable");
+		    }
+		    else
+		    {
+		    	 test.log(LogStatus.FAIL, "Edit ShareHolding Detailes Button is not clickable");
+		    }
+	      
+	      Thread.sleep(4000);
+	      EntityLocator.ClickCloseBtn(driver).click();
+	      
+	      
+ 	      Thread.sleep(4000);
+ 	 	  EntityLocator.ClickDashboard(driver).click();
+	      
+	      
+	}
+	public static void UpdateShareHolding(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      Thread.sleep(4000);
+	      EntityLocator.ClickEditIconSH(driver).click();
+	      Thread.sleep(4000);
+	      EntityLocator.ClickFOLIONO(driver).clear();
+	      Thread.sleep(4000);
+	      EntityLocator.ClickFOLIONO(driver).sendKeys("29");
+	      
+		  Thread.sleep(2000);
+		  EntityLocator. ClickSaveShareHolding(driver).click();
+		  
+		  
+		  Thread.sleep(4000);
+		     String msg= EntityLocator.ClickSaveMsg1(driver).getText();
+		      
+		      if(msg.equalsIgnoreCase("Updated Successfully."))
+			    {
+			  
+			      test.log(LogStatus.PASS, "Update ShareHolding =" +msg);
+			    }
+			    else
+			    {
+			    	 test.log(LogStatus.FAIL, "Update ShareHolding  =" +msg);
+			    }
+		      
+		      Thread.sleep(2000);
+			  EntityLocator.ClickShareHoldingDetailes(driver).click();
+			  
+		      
+		      Thread.sleep(2000);
+			  EntityLocator.ClickCloseBtn(driver).click();
+
+	      Thread.sleep(4000);
+		  EntityLocator.ClickDashboard(driver).click();
+	      
+	      }
+	public static void EnterInvalidDataShareHolding(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+	
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      Thread.sleep(4000);
+	      EntityLocator.ClickEditIconSH(driver).click();
+	      Thread.sleep(4000);
+	      EntityLocator.ClickEmailId(driver).clear();
+	      Thread.sleep(4000);
+	      EntityLocator.ClickEmailId(driver).sendKeys("abc#%2@gmail.com");
+	      
+		  Thread.sleep(2000);
+		  EntityLocator. ClickSaveShareHolding(driver).click();
+		  
+		  
+		  Thread.sleep(4000);
+		     String msg= EntityLocator.InValidEmail(driver).getText();
+		      
+		      if(msg.equalsIgnoreCase("Please Enter Correct Email Address"))
+			    {
+			  
+			      test.log(LogStatus.PASS, "Enter Invalid Data in ShareHolding =" +msg);
+			    }
+			    else
+			    {
+			    	 test.log(LogStatus.FAIL, "Enter Invalid Data in ShareHolding  =" +msg);
+			    }
+		      
+		      Thread.sleep(2000);
+			  EntityLocator.ClickShareHoldingDetailes(driver).click();
+			  
+		      
+		      Thread.sleep(2000);
+			  EntityLocator.ClickCloseBtn(driver).click();
+
+	      Thread.sleep(4000);
+		  EntityLocator.ClickDashboard(driver).click();
+	      
+	      } 
+	public static void CloseBtnShareHolding(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		    
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      Thread.sleep(4000);
+	      EntityLocator.ClickEditIconSH(driver).click();
+	    
+	      Thread.sleep(4000);
+	      if(EntityLocator.ClickCloseBtn3(driver).isEnabled())
+		    {
+		      Thread.sleep(2000);
+		      EntityLocator.ClickCloseBtn3(driver).click();
+		      test.log(LogStatus.PASS, "Close Buttton  is clickable");
+		    }
+		    else
+		    {
+		    	 test.log(LogStatus.FAIL, "Close Buttton is not clickable");
+		    }
+	     
+      Thread.sleep(4000);
+	  EntityLocator.ClickDashboard(driver).click();
+	}
+	
+	public static void DeleteShareHolding(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      Thread.sleep(4000);
+	      EntityLocator.ClickDeleteIcon(driver).click();
+	      
+	      Thread.sleep(2000);
+		    String msg=EntityLocator.ClickDeleteValidationMsg(driver).getText();
+		    Thread.sleep(2000);
+		    if(msg.equalsIgnoreCase("Are you sure you want to delete this data?"))
+		     {
+		    	
+		    	 test.log(LogStatus.PASS,"The item should get deleted from the list and success message will displayed =" +msg);
+		     }
+		     else
+			    {
+			    	 test.log(LogStatus.FAIL, "The item should get deleted from the list and success message will displayed =" +msg);
+			    }
+		    
+	      Thread.sleep(4000);
+	      EntityLocator.ClickYes(driver).click();
+	      
+	      Thread.sleep(5000);
+		    // Switching to Alert        
+	        Alert alert1 = driver.switchTo().alert();		
+	        		
+	        // Capturing alert message.    
+	        String alertMessage1= driver.switchTo().alert().getText();	
+	        
+	        
+	        test.log(LogStatus.PASS, alertMessage1);
+	        		
+	        // Displaying alert message		
+	        System.out.println(alertMessage1);
+	        
+	     // Accepting alert		
+	        alert1.accept();
+	      Thread.sleep(4000);
+		  EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void DeleteNoIconShareHolding(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      Thread.sleep(4000);
+	      EntityLocator.ClickDeleteIcon(driver).click();
+	      Thread.sleep(2000);
+		    EntityLocator.ClickDeleteValidationMsg(driver).click();
+		    Thread.sleep(2000);
+		    if(EntityLocator.DeleteBankDetailes1(driver).isEnabled())
+			 {   
+				 Thread.sleep(2000);
+			     EntityLocator.DeleteBankDetailes1(driver).click();
+			     
+			     test.log(LogStatus.PASS,"User Should be able to cancel deletion of an item");
+			 }
+			 else
+			 {
+				 test.log(LogStatus.FAIL,"User Should not be able to cancel deletion of an item");
+			 }
+		    Thread.sleep(4000);
+			EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void ClickShareCertificateBtn(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		  
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      
+	     
+	      Thread.sleep(4000);
+	      if(EntityLocator.ClickShareCertificateBtn(driver).isEnabled())
+		    {
+		      Thread.sleep(2000);
+		      EntityLocator.ClickShareCertificateBtn(driver).click();
+		      test.log(LogStatus.PASS, "Share Certificate Button is Clickable");
+		    }
+		    else
+		    {
+		    	 test.log(LogStatus.FAIL, "Share Certificate Button is Not Clickable");
+		    }
+	      
+	      Thread.sleep(2000);
+	      EntityLocator.ClickCloseBtn5(driver).click();
+		    Thread.sleep(4000);
+				EntityLocator.ClickDashboard(driver).click();
+		    
+	}
+	public static void AddShareCertificate(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		  
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator.ClickShareCertificateBtn(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator.ClickSelectTransaction(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator.ClickSelectTransaction1(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator.ClickDirectorAutorized(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator.SelectDirectorAutorized(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator.ClickDirectorAutorized1(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator.SelectDirectorAutorized1(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator.ClickAuthorizedSignatory(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator. SelectAuthorizedSignatory(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator. ClickDateOfIssues(driver).sendKeys("01/05/2023");
+	      Thread.sleep(2000);
+	      EntityLocator.ClickTypeOfShare(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator.SelectTypeOfShare(driver).click();
+	      
+	      Thread.sleep(2000);
+	      EntityLocator.ClickFilter1(driver).click();
+	      
+	      Thread.sleep(2000);
+	      String msg=EntityLocator.ValidMsgShareCertificate(driver).getText();
+	      
+	      if(msg.equalsIgnoreCase("Record Updated Successfully"))
+	      {
+	    	  test.log(LogStatus.PASS,"Message Displayed=" +msg);
+	      }
+	      else
+	      {
+	    	  test.log(LogStatus.FAIL,"Message Displayed=" +msg);  
+	      }
+	      Thread.sleep(2000);
+	      EntityLocator.ClickCloseBtn5(driver).click();
+		    Thread.sleep(4000);
+				EntityLocator.ClickDashboard(driver).click();
+		    
+	}
+	
+	public static void WithoutEnteringDataShareCertificate(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		  
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator.ClickShareCertificateBtn(driver).click();
+	      
+	      Thread.sleep(2000);
+	      EntityLocator.ClickFilter1(driver).click();
+	      
+	      Thread.sleep(2000);
+	      String msg=EntityLocator.ValidMsgShareCertificate(driver).getText();
+	      
+	      if(msg.equalsIgnoreCase("Record Updated Successfully"))
+	      {
+	    	  test.log(LogStatus.FAIL,"Message Displayed=" +msg);
+	      }
+	      else
+	      {
+	    	  test.log(LogStatus.PASS,"Message Displayed=" +msg);  
+	      }
+	      Thread.sleep(2000);
+	      EntityLocator.ClickCloseBtn5(driver).click();
+		    Thread.sleep(4000);
+				EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void ViewShareCertificate(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		  
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator.ClickShareCertificateBtn(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator. ViewShareCertificate(driver).click();
+	      
+	      String msg="CIN – U72266KA2002PLC030311";
+	      if(msg.equalsIgnoreCase(msg))
+	      {
+	    	  test.log(LogStatus.PASS, "Share Certificate Popup Open Successfully=" +msg);
+	      }
+	      else
+	      {
+	    	  test.log(LogStatus.FAIL, "Share Certificate Popup does not Open Successfully=" +msg);
+	      }
+	      Thread.sleep(2000);
+	      EntityLocator.CloseBtn(driver).click();
+		    Thread.sleep(4000);
+				EntityLocator.ClickDashboard(driver).click();
+	}
+	
+	      
+	public static void DownloadShareCertificate(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		  
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator.ClickShareCertificateBtn(driver).click();
+	      
+	    
+	      
+	      File dir = new File("C://Users//Admin//Downloads");
+		  	File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
+		  		
+		  	Thread.sleep(2000);
+		 	EntityLocator.DownloadShareCertificate(driver).click();		//Exporting (Downloading) file
+		  		
+		    Thread.sleep(3000);
+		    File dir1 = new File("C://Users//Admin//Downloads");
+		    File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
+		   
+		  		
+		  	if (dirContents.length < allFilesNew.length) 
+		  	{
+		  		test.log(LogStatus.PASS,  "Share Certificate Document downloaded successfully.");
+		  	} 
+		  	else 
+		  	{
+		  		test.log(LogStatus.FAIL, "Share Certificate Document does not downloaded.");
+		  	}
+		  	
+		    Thread.sleep(2000);
+		      EntityLocator.ClickCloseBtn5(driver).click();
+			    Thread.sleep(4000);
+					EntityLocator.ClickDashboard(driver).click();
+	}
+	
+	public static void DownloadShareCertificateAfterSaving(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		
+		  Thread.sleep(2000);
+		    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		  
+	  
+		Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+
+	      Thread.sleep(4000);
+	      EntityLocator.ClickShareHolding(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator.ClickShareCertificateBtn(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator.ClickSelectTransaction(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator.ClickSelectTransaction1(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator.ClickDirectorAutorized(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator.SelectDirectorAutorized(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator.ClickDirectorAutorized1(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator.SelectDirectorAutorized1(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator.ClickAuthorizedSignatory(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator. SelectAuthorizedSignatory(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator. ClickDateOfIssues(driver).sendKeys("01/05/2023");
+	      Thread.sleep(2000);
+	      EntityLocator.ClickTypeOfShare(driver).click();
+	      Thread.sleep(2000);
+	      EntityLocator.SelectTypeOfShare(driver).click();
+	      
+	      Thread.sleep(2000);
+	      EntityLocator.ClickFilter1(driver).click();
+	      File dir = new File("C://Users//Admin//Downloads");
+		  	File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
+		  		
+		  	Thread.sleep(2000);
+		 	EntityLocator.DownloadShareCertificate(driver).click();		//Exporting (Downloading) file
+		  		
+		    Thread.sleep(3000);
+		    File dir1 = new File("C://Users//Admin//Downloads");
+		    File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
+		   	
+		   		 	if (dirContents.length < allFilesNew.length) 
+		  	        {
+		  		       test.log(LogStatus.PASS,  "Share Certificate Document downloaded successfully.");
+		  	        } 
+		        	else 
+		  	         {
+		        		Thread.sleep(2000);
+					 	String msg=EntityLocator.NoDataFoundShareCertificate(driver).getText();
+					 	test.log(LogStatus.FAIL, "Message displayed ="+msg);
+		  	         }
+		
+		   
+		   	Thread.sleep(2000);
+		   	driver.navigate().back();
+		  	
+		    
+			    Thread.sleep(4000);
+					EntityLocator.ClickDashboard(driver).click();
+		    
+	}
+	
+	
+	public static void Managementpersonnel (WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		  
+	  
+	    Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+	    
+	    Thread.sleep(2000);
+	    if(EntityLocator.ClickManagementPersonnel(driver).isEnabled())
+	    {
+	       Thread.sleep(2000);
+	       EntityLocator.ClickManagementPersonnel(driver).click();
+	       test.log(LogStatus.PASS, "Management Personnel Option is clickable");
+	    }
+	    else
+	    {
+	    	 test.log(LogStatus.PASS, "Management Personnel Option is not clickable");
+	    }
+	     Thread.sleep(2000);
+	       EntityLocator.ClickApplicabilityCloseBtn(driver).click();
+	       
+	       Thread.sleep(4000);
+			EntityLocator.ClickDashboard(driver).click();
+	}
+	
+	public static void ManagementpersonnelExportToPDF (WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		  
+	  
+	    Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+	    
+	    Thread.sleep(2000);
+	       EntityLocator.ClickManagementPersonnel(driver).click();
+	       
+	
+		       
+		       File dir = new File("C://Users//Admin//Downloads");
+			  	File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
+			  		
+			    Thread.sleep(2000);
+			       EntityLocator. ClickManagementPersonnelExportToPDF(driver).click();		//Exporting (Downloading) file
+			  		
+			    Thread.sleep(3000);
+			    File dir1 = new File("C://Users//Admin//Downloads");
+			    File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
+			   
+			  		
+			  	if (dirContents.length < allFilesNew.length) 
+			  	{
+			  		test.log(LogStatus.PASS,  "Export To PDF File downloaded successfully.");
+			  	} 
+			  	else 
+			  	{
+			  		test.log(LogStatus.FAIL, "  Export To PDF File does not downloaded.");
+			  	}
+			     Thread.sleep(2000);
+			       EntityLocator.ClickApplicabilityCloseBtn(driver).click();
+			       
+			       Thread.sleep(4000);
+					EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void ClickCommitte (WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		  
+	  
+	    Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+	    
+	    
+	    if(EntityLocator.ClickCommittees(driver).isEnabled())
+	    {
+	       Thread.sleep(2000);
+	       EntityLocator.ClickCommittees(driver).click();
+	       test.log(LogStatus.PASS, "Committees Option is clickable");
+	    }
+	    else
+	    {
+	    	 test.log(LogStatus.PASS, "Committees Option is not clickable");
+	    }
+	     Thread.sleep(2000);
+	       EntityLocator.CloseEntity(driver).click();
+	       
+	       Thread.sleep(4000);
+			EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void ClickCloseBtnOfCommitte (WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		  
+	  
+	    Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+	    
+	    Thread.sleep(2000);
+	       EntityLocator.ClickCommittees(driver).click();
+	    
+	    Thread.sleep(2000);
+	    if(EntityLocator.CloseEntity(driver).isEnabled())
+	    {
+	    	  Thread.sleep(2000);
+		       EntityLocator.CloseEntity(driver).click();
+	       test.log(LogStatus.PASS, "Close Button of Committees option is clickable");
+	    }
+	    else
+	    {
+	    	 test.log(LogStatus.PASS, "Close Button of Committees option is clickable");
+	    }
+	    
+	       
+	       Thread.sleep(4000);
+			EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void ClickCommitteeMatrix (WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		  
+	  
+	    Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+	    
+	    Thread.sleep(2000);
+	    if(EntityLocator.ClickCommitteeMatrix(driver).isEnabled())
+	    {
+	       Thread.sleep(2000);
+	       EntityLocator.ClickCommitteeMatrix(driver).click();
+	       test.log(LogStatus.PASS, "Committee Matrix Option is clickable");
+	    }
+	    else
+	    {
+	    	 test.log(LogStatus.PASS, "Committee Matrix Option is not clickable");
+	    }
+	     Thread.sleep(2000);
+	       EntityLocator.ClickCloseCommittee(driver).click();
+	       
+	       Thread.sleep(4000);
+			EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void ClickAuditor (WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		  
+	  
+	    Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+	    
+	    Thread.sleep(2000);
+	    if(EntityLocator.ClickAuditor(driver).isEnabled())
+	    {
+	       Thread.sleep(2000);
+	       EntityLocator.ClickAuditor(driver).click();
+	       test.log(LogStatus.PASS, "Auditor Option is clickable");
+	    }
+	    else
+	    {
+	    	 test.log(LogStatus.PASS, "Auditor Option is not clickable");
+	    }
+	 
+	       
+	       Thread.sleep(4000);
+			EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void AddStatutoryAuditor (WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		  
+	  
+	    Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+	    
+	    Thread.sleep(2000);
+	       EntityLocator.ClickAuditor(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickStatutoryNewBtn(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickStatutoryYes(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickNaturOfAppointment(driver).click();
+	       
+	       Thread.sleep(2000);
+	       EntityLocator.SelectNaturOfAppointment(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickDateOfAppointment(driver).sendKeys("01/05/2023");
+	       Thread.sleep(2000);
+	       EntityLocator.ClickSRN(driver).sendKeys("645");
+	       Thread.sleep(2000);
+	       EntityLocator.ClickStatutoryNo(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator. ClickCategoryOfAuditor(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.SelectCategoryOfAuditor(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickAuditorFirm(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.SelectAuditorFirm(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickNumberofFYforwhichAuditorisappointed(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.SelectNumberofFYforwhichAuditorisappointed(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickDueDate(driver).sendKeys("30/05/2023");
+	       Thread.sleep(2000);
+	       EntityLocator. ClickFYStartDateDate(driver).sendKeys("01/04/2023");
+	       Thread.sleep(2000);
+	       EntityLocator.ClickFYLastDateDate(driver).sendKeys("01/30/2023");
+	       Thread.sleep(2000);
+	       EntityLocator.ClickSaveStatutory(driver).click();
+	      try
+	       {
+	    	  Thread.sleep(2000);
+	    	   String msg=EntityLocator.ClickValidMsgStatutory(driver).getText();
+	    	   test.log(LogStatus.PASS, "Message Displayed=" +msg);
+	       }
+	       
+	       catch(Exception e)
+	       {
+	    	   Thread.sleep(2000);
+	    	   String msg=EntityLocator.ClickValidMsgStatutory1(driver).getText();
+	    	   test.log(LogStatus.PASS, "Message Displayed=" +msg);
+	       }
+	       Thread.sleep(2000);
+	       EntityLocator.CloseEntity(driver).click();
+	       Thread.sleep(4000);
+	    	EntityLocator.ClickDashboard(driver).click();
+	       
+	       
+	}
+	
+	public static void EnterInvalidDataStatutoryAuditor (WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		  
+	  
+	    Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+	    
+	    Thread.sleep(2000);
+	       EntityLocator.ClickAuditor(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickStatutoryNewBtn(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickStatutoryYes(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickNaturOfAppointment(driver).click();
+	       
+	       Thread.sleep(2000);
+	       EntityLocator.SelectNaturOfAppointment(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickDateOfAppointment(driver).sendKeys("01-05-2023");
+	       Thread.sleep(2000);
+	       EntityLocator.ClickSRN(driver).sendKeys("645");
+	       Thread.sleep(2000);
+	       EntityLocator.ClickStatutoryNo(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator. ClickCategoryOfAuditor(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.SelectCategoryOfAuditor(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickAuditorFirm(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.SelectAuditorFirm(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickNumberofFYforwhichAuditorisappointed(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.SelectNumberofFYforwhichAuditorisappointed(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickDueDate(driver).sendKeys("30/05/2023");
+	       Thread.sleep(2000);
+	       EntityLocator. ClickFYStartDateDate(driver).sendKeys("01/04/2023");
+	       Thread.sleep(2000);
+	       EntityLocator.ClickFYLastDateDate(driver).sendKeys("01/30/2023");
+	       Thread.sleep(2000);
+	       EntityLocator.ClickSaveStatutory(driver).click();
+	       Thread.sleep(2000);
+	       String msg=EntityLocator.ClickInValidMsgStatutory(driver).getText();
+	       
+	       if(msg.equalsIgnoreCase("01-05-2023 is an invalid date format"))
+	       {
+	    	   test.log(LogStatus.PASS, "Message Displayed=" +msg);
+	       }
+	       else
+	       {
+	    	   test.log(LogStatus.FAIL, "Message Displayed=" +msg);
+	       }
+	       Thread.sleep(2000);
+	       EntityLocator.CloseEntity(driver).click();
+	       Thread.sleep(4000);
+	    	EntityLocator.ClickDashboard(driver).click();
+	       
+	       
+	}
+	public static void EnterTwoMandatoryFiledStatutoryAuditor (WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		  
+	  
+	    Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+	    
+	    Thread.sleep(2000);
+	       EntityLocator.ClickAuditor(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickStatutoryNewBtn(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickStatutoryYes(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickNaturOfAppointment(driver).click();
+	       
+	       Thread.sleep(2000);
+	       EntityLocator.SelectNaturOfAppointment(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickDateOfAppointment(driver).sendKeys("01/05/2023");
+	       
+	       Thread.sleep(2000);
+	       EntityLocator.ClickSaveStatutory(driver).click();
+	       Thread.sleep(2000);
+	       String msg=EntityLocator.ClickValidMsgStatutory(driver).getText();
+	       
+	       if(msg.equalsIgnoreCase("Statutory auditor save successfully"))
+	       {
+	    	   test.log(LogStatus.FAIL, "Message Displayed=" +msg);
+	       }
+	       else
+	       {
+	    	   test.log(LogStatus.PASS, "Message Displayed=" +msg);
+	       }
+	       Thread.sleep(2000);
+	       EntityLocator.CloseEntity(driver).click();
+	       Thread.sleep(4000);
+	    	EntityLocator.ClickDashboard(driver).click();
+	       
+	}
+	public static void EmptyFiledStatutoryAuditor (WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		  
+	  
+	    Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+	    
+	    Thread.sleep(2000);
+	       EntityLocator.ClickAuditor(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickStatutoryNewBtn(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickSaveStatutory(driver).click();
+	       Thread.sleep(2000);
+	       String msg=EntityLocator.ClickValidMsgStatutory(driver).getText();
+	       
+	       if(msg.equalsIgnoreCase("Statutory auditor save successfully"))
+	       {
+	    	   test.log(LogStatus.FAIL, "Message Displayed=" +msg);
+	       }
+	       else
+	       {
+	    	   test.log(LogStatus.PASS, "Message Displayed=" +msg);
+	       }
+	       Thread.sleep(2000);
+	       EntityLocator.CloseEntity(driver).click();
+	       Thread.sleep(4000);
+	    	EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void CloseBtnStatutoryAuditor (WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		  
+	  
+	    Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+	    
+	    Thread.sleep(2000);
+	       EntityLocator.ClickAuditor(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickStatutoryNewBtn(driver).click();
+	       Thread.sleep(2000);
+	       if(EntityLocator.CloseEntity(driver).isEnabled())
+		    {
+		      Thread.sleep(2000);
+		      EntityLocator.CloseEntity(driver).click();
+		      test.log(LogStatus.PASS, "Close Button is Clickable");
+		    }
+		    else
+		    {
+		    	 test.log(LogStatus.FAIL, "Close Button is not Clickable");
+		    }
+	       Thread.sleep(4000);
+	    	EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void ClearBtnStatutoryAuditor (WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		  
+	  
+	    Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+	    
+	    Thread.sleep(2000);
+	       EntityLocator.ClickAuditor(driver).click();
+	       
+	       Thread.sleep(2000);
+	       EntityLocator.ClickStatusStatutoryAuditor(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.SelectStatusStatutoryAuditor(driver).click();
+	       
+	       if(EntityLocator.ClickClearFilterStatutoryAuditor(driver).isEnabled())
+	       {
+	           Thread.sleep(2000);
+	           EntityLocator.ClickClearFilterStatutoryAuditor(driver).click();
+	           test.log(LogStatus.PASS, "Clear Button is clickable");
+	       }
+	       else
+	       {
+	    	   test.log(LogStatus.FAIL, "Clear Button is clickable");
+	       }
+	       Thread.sleep(4000);
+		    	EntityLocator.ClickDashboard(driver).click();
+	       
+	} 
+	
+	public static void UpdateStatutoryAuditor(WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		  
+	  
+	    Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+	    
+	    Thread.sleep(2000);
+	       EntityLocator.ClickAuditor(driver).click();
+	      
+	       Thread.sleep(2000);
+	       EntityLocator.ClickUpdateStatutoryAuditor(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickNaturOfAppointment(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.SelectNaturOfAppointment1(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickAuditorFirm(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.SelectAuditorFirm1(driver).click();
+	     
+	       Thread.sleep(2000);
+	       EntityLocator.ClickSaveStatutory(driver).click();
+	       Thread.sleep(2000);
+	       String msg=EntityLocator.ClickValidMsgStatutory(driver).getText();
+	       
+	       if(msg.equalsIgnoreCase("Statutory auditor update successfully"))
+	       {
+	    	   test.log(LogStatus.PASS, "Message Displayed=" +msg);
+	       }
+	       else
+	       {
+	    	   test.log(LogStatus.FAIL, "Message Displayed=" +msg);
+	       }
+	       Thread.sleep(2000);
+	       EntityLocator.CloseEntity(driver).click();
+	       Thread.sleep(4000);
+	    	EntityLocator.ClickDashboard(driver).click();
+	       
+	}
+	public static void UpdateEnterInvalidDataStatutoryAuditor (WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		  
+	  
+	    Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+	    
+	    Thread.sleep(2000);
+	       EntityLocator.ClickAuditor(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickUpdateStatutoryAuditor(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickStatutoryYes(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickNaturOfAppointment(driver).click();
+	       
+	       Thread.sleep(2000);
+	       EntityLocator.SelectNaturOfAppointment(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickDateOfAppointment(driver).clear();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickDateOfAppointment(driver).sendKeys("01-05-2023");
+	       Thread.sleep(2000);
+	       EntityLocator.ClickSRN(driver).sendKeys("64$5");
+	       Thread.sleep(2000);
+	       EntityLocator.ClickDueDate(driver).clear();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickDueDate(driver).sendKeys("30-05-2023");
+	       Thread.sleep(2000);
+	       EntityLocator. ClickFYStartDateDate(driver).clear();
+	       Thread.sleep(2000);
+	       EntityLocator. ClickFYStartDateDate(driver).sendKeys("01-04-2023");
+	       Thread.sleep(2000);
+	       EntityLocator.ClickFYLastDateDate(driver).clear();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickFYLastDateDate(driver).sendKeys("01-30-2023");
+	       Thread.sleep(2000);
+	       EntityLocator.ClickSaveStatutory(driver).click();
+	       Thread.sleep(2000);
+	       String msg=EntityLocator.ClickInValidMsgStatutory(driver).getText();
+	       
+	       if(msg.equalsIgnoreCase("01-05-2023 is an invalid date format"))
+	       {
+	    	   test.log(LogStatus.PASS, "Message Displayed=" +msg);
+	       }
+	       else
+	       {
+	    	   test.log(LogStatus.FAIL, "Message Displayed=" +msg);
+	       }
+	       Thread.sleep(2000);
+	       EntityLocator.CloseEntity(driver).click();
+	       Thread.sleep(4000);
+	    	EntityLocator.ClickDashboard(driver).click();
+	       
+	       
+	}
+	public static void CloseBtnUpdateStatutoryAuditor (WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		  
+	  
+	    Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+	    
+	    Thread.sleep(2000);
+	       EntityLocator.ClickAuditor(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickUpdateStatutoryAuditor(driver).click();
+	       Thread.sleep(2000);
+	       if(EntityLocator.CloseEntity(driver).isEnabled())
+		    {
+		      Thread.sleep(2000);
+		      EntityLocator.CloseEntity(driver).click();
+		      test.log(LogStatus.PASS, "Close Button is Clickable");
+		    }
+		    else
+		    {
+		    	 test.log(LogStatus.FAIL, "Close Button is not Clickable");
+		    }
+	       Thread.sleep(4000);
+	    	EntityLocator.ClickDashboard(driver).click();
+	}
+	
+	public static void ResignationofAuditor (WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		  
+	  
+	    Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickAuditor(driver).click();
+	    Thread.sleep(2000);
+		EntityLocator.ClickResignationofAuditor(driver).click();
+	    Thread.sleep(2000);
+		EntityLocator.ClickCancelResignation(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickLeaveType(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.SelectLeaveType(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDateOfSubmission(driver).sendKeys("31/05/2023");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDated(driver).sendKeys("01/05/2023");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickReason(driver).sendKeys("ABC");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickUploadDocument(driver).sendKeys("C:\\Users\\Admin\\Documents\\Litigation Product Test Cases1.xlsx");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.SaveResignation(driver).click();
+	    
+	    Thread.sleep(2000);
+	    String msg=EntityLocator.SaveValidMsgResignation(driver).getText();
+	    
+	    if(msg.equalsIgnoreCase("Saved Successfully."))
+	    {
+	    	test.log(LogStatus.PASS, "Message Displayed ="+msg);
+	    }
+	    else
+	    {
+	    	test.log(LogStatus.FAIL, "Message Displayed ="+msg);
+	    }
+	    Thread.sleep(2000);
+	    EntityLocator.CloseEntity(driver).click();
+	    Thread.sleep(4000);
+    	EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void UpdateEnterEmptyFieldsStatutoryAuditor (WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		  
+	  
+	    Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+	    
+	    Thread.sleep(2000);
+	       EntityLocator.ClickAuditor(driver).click();
+	       
+	       Thread.sleep(2000);
+	       EntityLocator.ClickUpdateStatutoryAuditor(driver).click();
+	   
+	
+	       Thread.sleep(2000);
+	       EntityLocator.ClickNaturOfAppointment(driver).click();
+	       
+	       Thread.sleep(2000);
+	       EntityLocator.NatureofAppointment(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickDateOfAppointment(driver).clear();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickSRN(driver).clear();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickStatutoryNo(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator. ClickCategoryOfAuditor(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickCategoryOfAuditor1(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickNumberofFYforwhichAuditorisappointed(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.SelectNumberofFYforwhichAuditorisappointed1(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickNumberofFYforwhichAuditorisappointed(driver).click();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickDueDate(driver).clear();
+	       Thread.sleep(2000);
+	       EntityLocator. ClickFYStartDateDate(driver).clear();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickFYLastDateDate(driver).clear();
+	       Thread.sleep(2000);
+	       EntityLocator.ClickSaveStatutory(driver).click();
+	       Thread.sleep(2000);
+	       String msg=EntityLocator.ClickValidAuditorsFirm(driver).getText();
+	      
+	       if(msg.equalsIgnoreCase("The Auditor_Id field is required."))
+	       {
+	    	   test.log(LogStatus.PASS, "Message Displayed= " +msg);
+	       }
+	       else
+	       {
+	    	   test.log(LogStatus.FAIL, "Message Displayed= " +msg);
+	       }
+	       Thread.sleep(2000);
+	       EntityLocator.CloseEntity(driver).click();
+	       Thread.sleep(4000);
+	    	EntityLocator.ClickDashboard(driver).click();
+	       
+	       
+	}
+	
+	public static void EnterInvalidDataResignationofAuditor (WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		  
+	  
+	    Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickAuditor(driver).click();
+	    Thread.sleep(2000);
+		EntityLocator.ClickResignationofAuditor(driver).click();
+	    Thread.sleep(2000);
+		EntityLocator.ClickCancelResignation(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickLeaveType(driver).click();
+	    Thread.sleep(2000);
+	    EntityLocator.SelectLeaveType(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDateOfSubmission(driver).sendKeys("31/05/202");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickDated(driver).sendKeys("01/05/202");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickReason(driver).sendKeys("ABC@123");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickUploadDocument(driver).sendKeys("C:\\Users\\Admin\\Documents\\Litigation Product Test Cases1.xlsx");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.SaveResignation(driver).click();
+	    
+	    Thread.sleep(2000);
+	    String msg=EntityLocator.InvalidMsgResignation(driver).getText();
+	    String msg1=EntityLocator.InvalidMsgResignation1(driver).getText();
+	    
+	  
+	   test.log(LogStatus.PASS, "Enter Invalid Fields ="+msg +"," +msg1);
+	
+	    Thread.sleep(2000);
+	    EntityLocator.CloseEntity(driver).click();
+	    Thread.sleep(4000);
+    	EntityLocator.ClickDashboard(driver).click();
+	}
+	
+	public static void EnterEmptyDataResignationofAuditor (WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		  
+	  
+	    Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickAuditor(driver).click();
+	    Thread.sleep(2000);
+		EntityLocator.ClickResignationofAuditor(driver).click();
+		
+		Thread.sleep(2000);
+		EntityLocator.SaveResignation(driver).click();
+		
+		String msg=EntityLocator.InvalidMsgResignation2(driver).getText();
+		String msg1=EntityLocator.InvalidMsgResignation3(driver).getText();
+		
+		test.log(LogStatus.PASS, "Enter Empty Data =" +msg +"," +msg1);
+		
+		Thread.sleep(2000);
+		EntityLocator.CloseEntity(driver).click();
+		Thread.sleep(4000);
+	    EntityLocator.ClickDashboard(driver).click();
+		    
+	}
+	
+	public static void CloseBtnResignationofAuditor (WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		  
+	  
+	    Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickAuditor(driver).click();
+	    Thread.sleep(2000);
+		EntityLocator.ClickResignationofAuditor(driver).click();
+	
+		Thread.sleep(2000);
+		if(EntityLocator.CloseEntity(driver).isEnabled())
+		{
+			Thread.sleep(2000);
+			EntityLocator.CloseEntity(driver).click();
+			test.log(LogStatus.PASS, "Close Button is Clickable" );
+		}
+		else
+		{
+			Thread.sleep(2000);
+			test.log(LogStatus.PASS, "Close Button is Clickable" );
+		}
+		Thread.sleep(4000);
+	    EntityLocator.ClickDashboard(driver).click();
+		    
+	}
+	
+	public static void ClickInternalAuditor (WebDriver driver, ExtentTest test) throws InterruptedException
+	{
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		Thread.sleep(2000);
+		EntityLocator.selectImg(driver).click();
+		
+		
+		Thread.sleep(2000);
+		EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
+		  
+	  
+	    Thread.sleep(2000);
+	    EntityLocator.ClickMoreAction(driver).click();
+	    
+	    Thread.sleep(2000);
+	       EntityLocator.ClickAuditor(driver).click();
+	       
+	       Thread.sleep(2000);
+	       EntityLocator.ClickInternalAuditor(driver).click();
+	       
+	       Thread.sleep(2000);
+			if(EntityLocator.ClickInternalAuditor(driver).isEnabled())
+			{
+				Thread.sleep(2000);
+				EntityLocator.ClickInternalAuditor(driver).click();
+				test.log(LogStatus.PASS, "The system should navigate to the Internal Auditor page" );
+			}
+			else
+			{
+				Thread.sleep(2000);
+				test.log(LogStatus.PASS, "The system should not navigate to the Internal Auditor page" );
+			}
+			Thread.sleep(4000);
+		    EntityLocator.ClickDashboard(driver).click();
+	}
+	static void selectOptionFromDropDown_bs(List<WebElement> options, String value) {
 			
 			for(WebElement option:options) {
 				if(option.getText().equals(value)) {

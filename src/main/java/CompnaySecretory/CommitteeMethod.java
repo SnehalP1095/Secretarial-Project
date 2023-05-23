@@ -93,6 +93,20 @@ public class CommitteeMethod {
 			}
 			Locator.CloseBtn(driver).click();
 			
+		     Thread.sleep(4000);
+			  EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void AcceptAlphaCharactersCommittee(WebDriver driver, ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
+	{
+		
+		Thread.sleep(2000);
+	    Locator.selectImg(driver).click();
+	    
+	    Thread.sleep(2000);
+		 Locator.ClickMaster(driver).click();
+	    
+		Thread.sleep(2000);
+	    Locator.CommitteeMaster(driver).click();
 			 Thread.sleep(2000);
 			    Locator.NewCommittee(driver).click();
 			    
@@ -112,7 +126,21 @@ public class CommitteeMethod {
 							test.log(LogStatus.FAIL, "Accept Alpha Characters =" +MSG1);
 						}
 						Locator.CloseBtn(driver).click();
+						Thread.sleep(4000);
+						  EntityLocator.ClickDashboard(driver).click();
+	}
 						
+	public static void CloseBtnCommittee(WebDriver driver, ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
+	{		
+		
+	        	Thread.sleep(2000);
+	             Locator.selectImg(driver).click();
+	    
+	            Thread.sleep(2000);
+		        Locator.ClickMaster(driver).click();
+	    
+		         Thread.sleep(2000);
+	             Locator.CommitteeMaster(driver).click();
 						 Thread.sleep(2000);
 						    Locator.NewCommittee(driver).click();
 						    
@@ -128,6 +156,9 @@ public class CommitteeMethod {
 								test.log(LogStatus.PASS, "Close button is clickable");
 								
 							}
+						 Thread.sleep(4000);
+						  EntityLocator.ClickDashboard(driver).click();
+	}
 						
 						/*Thread.sleep(2000);
 						    Locator.NewCommittee(driver).click();
@@ -149,6 +180,19 @@ public class CommitteeMethod {
 										test.log(LogStatus.FAIL, "Message Dispalyed =Accept Alpha numeric and special characters description " +MSG2);
 									}
 									Locator.CloseBtn(driver).click();*/
+	
+	public static void WithoutEnteringDataCommittee(WebDriver driver, ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
+	{		
+		
+		
+		             Thread.sleep(2000);
+	                  Locator.selectImg(driver).click();
+	    
+	                  Thread.sleep(2000);
+		               Locator.ClickMaster(driver).click();
+	    
+		                Thread.sleep(2000);
+	                    Locator.CommitteeMaster(driver).click();
 						 Thread.sleep(2000);
 						    Locator.NewCommittee(driver).click();		
 						    Thread.sleep(2000);
@@ -164,7 +208,24 @@ public class CommitteeMethod {
 								{
 									test.log(LogStatus.FAIL, "Without Entering Data = " +MSG3);
 								}
+								Thread.sleep(4000);
 								Locator.CloseBtn(driver).click();
+								Thread.sleep(4000);
+								  EntityLocator.ClickDashboard(driver).click();
+	}
+	
+								
+		public static void EnterInvalidDataCommittee(WebDriver driver, ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
+		 {		
+									
+								Thread.sleep(2000);
+								 Locator.selectImg(driver).click();
+								  
+								    Thread.sleep(2000);
+					               Locator.ClickMaster(driver).click();
+								    
+									 Thread.sleep(2000);
+								           Locator.CommitteeMaster(driver).click();
 			
 								 Thread.sleep(2000);
 								    Locator.NewCommittee(driver).click();
@@ -186,8 +247,21 @@ public class CommitteeMethod {
 											test.log(LogStatus.FAIL, "Committee Name is Wrong = " +MSG4);
 										}
 										 Locator.CloseBtn(driver).click();
+										 Thread.sleep(4000);
+										  EntityLocator.ClickDashboard(driver).click();
+	}
 								
+	public static void UpdateCommittee(WebDriver driver, ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
+	{	
 		
+        Thread.sleep(2000);
+        Locator.selectImg(driver).click();
+
+        Thread.sleep(2000);
+         Locator.ClickMaster(driver).click();
+
+          Thread.sleep(2000);
+          Locator.CommitteeMaster(driver).click();
 			Thread.sleep(2000);
 			Locator.EditIcon(driver).click();
 			
@@ -215,6 +289,19 @@ public class CommitteeMethod {
 					}
 					Locator.CloseBtn(driver).click();
 					
+					 Thread.sleep(4000);
+					  EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void AddCommitteeMemberRule(WebDriver driver, ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
+	{			
+        Thread.sleep(2000);
+        Locator.selectImg(driver).click();
+
+        Thread.sleep(2000);
+         Locator.ClickMaster(driver).click();
+
+          Thread.sleep(2000);
+          Locator.CommitteeMaster(driver).click();
 					Thread.sleep(2000);
 					Locator.ClickRule(driver).click();
 					Thread.sleep(2000);
@@ -236,7 +323,7 @@ public class CommitteeMethod {
 					
 					 Thread.sleep(3000);
 					 String msg3 = Locator.RuleValidationMsg(driver).getText();
-						if(msg3.contains("Saved Successfully."))
+						if(msg3.contains("Meeting Update Successfully."))
 						{
 							test.log(LogStatus.PASS, "Message Dispalyed =Member " +msg3);
 						}
@@ -245,7 +332,27 @@ public class CommitteeMethod {
 							test.log(LogStatus.FAIL, "Message Dispalyed = Member " +msg3);
 						}
 						
-						
+						Thread.sleep(2000);
+						Locator.ClickClose(driver).click();
+						 Thread.sleep(4000);
+						  EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void UpdateCommitteeMemberRule(WebDriver driver, ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
+	{		
+        Thread.sleep(2000);
+        Locator.selectImg(driver).click();
+
+        Thread.sleep(2000);
+         Locator.ClickMaster(driver).click();
+
+          Thread.sleep(2000);
+          Locator.CommitteeMaster(driver).click();
+					Thread.sleep(2000);
+					Locator.ClickRule(driver).click();
+					Thread.sleep(2000);
+					Locator.ClickComapnayName(driver).click();
+					Thread.sleep(2000);
+					Locator.SelectComapnayName(driver).click();
 						Thread.sleep(2000);
 						Locator.clickEditMemberRule(driver).click();
 						Thread.sleep(2000);
@@ -263,7 +370,7 @@ public class CommitteeMethod {
 						
 						 Thread.sleep(3000);
 						 String msg7 = Locator.clickValidationMemberRule(driver).getText();
-							if(msg7.contains("Updated Successfully."))
+							if(msg7.contains("Meeting Update Successfully."))
 							{
 								test.log(LogStatus.PASS, "Message Dispalyed =Member " +msg7);
 							}
@@ -271,10 +378,33 @@ public class CommitteeMethod {
 							{
 								test.log(LogStatus.FAIL, "Message Dispalyed =Member " +msg7);
 							}
-						
-						Thread.sleep(2000);
-						Locator.clickDeleteMemberRule(driver).click();
-						
+							
+							Thread.sleep(2000);
+							Locator.clickDeleteMemberRule(driver).click();
+							
+							Thread.sleep(2000);
+							Locator.ClickClose(driver).click();
+							 Thread.sleep(4000);
+							  EntityLocator.ClickDashboard(driver).click();
+	}
+
+					
+			public static void AddCommitteeQuoramRule(WebDriver driver, ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
+			{				
+		        Thread.sleep(2000);
+		        Locator.selectImg(driver).click();
+
+		        Thread.sleep(2000);
+		         Locator.ClickMaster(driver).click();
+
+		          Thread.sleep(2000);
+		          Locator.CommitteeMaster(driver).click();
+							Thread.sleep(2000);
+							Locator.ClickRule(driver).click();
+							Thread.sleep(2000);
+							Locator.ClickComapnayName(driver).click();
+							Thread.sleep(2000);
+							Locator.SelectComapnayName(driver).click();
 						Thread.sleep(2000);
 						Locator.RuleQuoram(driver).click();
 						Thread.sleep(2000);
@@ -301,9 +431,31 @@ public class CommitteeMethod {
 								test.log(LogStatus.FAIL, "Message Dispalyed =Quoram " +msg4);
 							}
 							
+							Thread.sleep(2000);
+							Locator.ClickClose(driver).click();
+							 Thread.sleep(4000);
+							  EntityLocator.ClickDashboard(driver).click();
+			}
 							
-							
-						
+			public static void UpdateCommitteeQuoramRule(WebDriver driver, ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
+			{	
+				
+		        Thread.sleep(2000);
+		        Locator.selectImg(driver).click();
+
+		        Thread.sleep(2000);
+		         Locator.ClickMaster(driver).click();
+
+		          Thread.sleep(2000);
+		          Locator.CommitteeMaster(driver).click();
+							Thread.sleep(2000);
+							Locator.ClickRule(driver).click();
+							Thread.sleep(2000);
+							Locator.ClickComapnayName(driver).click();
+							Thread.sleep(2000);
+							Locator.SelectComapnayName(driver).click();
+							Thread.sleep(2000);
+							Locator.RuleQuoram(driver).click();
 							Thread.sleep(2000);
 							Locator.clickeditQuramRule(driver).click();
 							
@@ -332,8 +484,31 @@ public class CommitteeMethod {
 								
 								Thread.sleep(2000);
 								Locator.clickDeleteQuramRule(driver).click();
+								
+								Thread.sleep(2000);
+								Locator.ClickClose(driver).click();
+								 Thread.sleep(4000);
+								  EntityLocator.ClickDashboard(driver).click();
+			}
+			
 							
-						
+			public static void AddCommitteeMeetingRule(WebDriver driver, ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
+			{		
+				
+		        Thread.sleep(2000);
+		        Locator.selectImg(driver).click();
+
+		        Thread.sleep(2000);
+		         Locator.ClickMaster(driver).click();
+
+		          Thread.sleep(2000);
+		          Locator.CommitteeMaster(driver).click();
+							Thread.sleep(2000);
+							Locator.ClickRule(driver).click();
+							Thread.sleep(2000);
+							Locator.ClickComapnayName(driver).click();
+							Thread.sleep(2000);
+							Locator.SelectComapnayName(driver).click();
 						
 						Thread.sleep(2000);
 						Locator.clickMeeting(driver).click();
@@ -348,7 +523,7 @@ public class CommitteeMethod {
 						
 						 Thread.sleep(3000);
 						 String msg5 = Locator.ValidationMeeting(driver).getText();
-							if(msg5.contains("Update Successfully."))
+							if(msg5.contains("Meeting Update Successfully."))
 							{
 								test.log(LogStatus.PASS, "Message Dispalyed = Meeting " +msg5);
 							}
@@ -358,12 +533,28 @@ public class CommitteeMethod {
 							}
 						Thread.sleep(2000);
 						Locator.ClickClose(driver).click();
+						Thread.sleep(4000);
+						  EntityLocator.ClickDashboard(driver).click();
+			}
+			
+      public static void UploadCommitteDocument(WebDriver driver, ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
+       {	
+    	  
+			
+	        Thread.sleep(2000);
+	        Locator.selectImg(driver).click();
+
+	        Thread.sleep(2000);
+	         Locator.ClickMaster(driver).click();
+
+	          Thread.sleep(2000);
+	          Locator.CommitteeMaster(driver).click();
 						
 						Thread.sleep(2000);
 						Locator.UploadDocument(driver).click();
 						
 						Thread.sleep(2000);
-						Locator.SelectFiles(driver).sendKeys("C:\\Users\\Admin\\Documents\\Job_References-For 13 oct2022 (3).pdf");
+						Locator.SelectFiles(driver).sendKeys("C:\\Users\\Admin\\Documents\\file-sample_500kB.docx");
 						
 						Thread.sleep(2000);
 						Locator.ClickUploadBtn(driver).click();
@@ -383,7 +574,22 @@ public class CommitteeMethod {
 							Thread.sleep(2000);
 							Locator.CloseBtn1(driver).click();
 							
+							Thread.sleep(4000);
+							  EntityLocator.ClickDashboard(driver).click();
+       }
+							
+      public static void DeleteCommitteDocument(WebDriver driver, ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
+      {	
+    	  
+			
+	        Thread.sleep(2000);
+	        Locator.selectImg(driver).click();
 
+	        Thread.sleep(2000);
+	         Locator.ClickMaster(driver).click();
+
+	          Thread.sleep(2000);
+	          Locator.CommitteeMaster(driver).click();
 							Thread.sleep(2000);
 							Locator.ClickDeleteCommittee(driver).click();
 							
@@ -401,8 +607,22 @@ public class CommitteeMethod {
 						        System.out.println(alertMessage1);
 						        
 						     // Accepting alert		
-						        alert1.accept();	
-							
+						        alert1.accept();
+						    	Thread.sleep(4000);
+								  EntityLocator.ClickDashboard(driver).click();
+      }
+      public static void WithoutUploadCommitteDocument(WebDriver driver, ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
+      {					
+    	  
+			
+	        Thread.sleep(2000);
+	        Locator.selectImg(driver).click();
+
+	        Thread.sleep(2000);
+	         Locator.ClickMaster(driver).click();
+
+	          Thread.sleep(2000);
+	          Locator.CommitteeMaster(driver).click();
 							Thread.sleep(2000);
 							Locator.UploadDocument(driver).click();
 											
@@ -426,14 +646,26 @@ public class CommitteeMethod {
 												
 							Thread.sleep(2000);
 							Locator.CloseBtn1(driver).click();
-							
-							
-							Thread.sleep(2000);
-							Locator.ClickRule(driver).click();
-							Thread.sleep(2000);
-							Locator.ClickComapnayName(driver).click();
-							Thread.sleep(2000);
-							Locator.SelectComapnayName1(driver).click();
+							Thread.sleep(4000);
+							  EntityLocator.ClickDashboard(driver).click();
+      }
+      public static void AcceptTotalStrengthNumericFont(WebDriver driver, ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
+      {				
+			
+          Thread.sleep(2000);
+	        Locator.selectImg(driver).click();
+
+	        Thread.sleep(2000);
+	         Locator.ClickMaster(driver).click();
+
+	          Thread.sleep(2000);
+	          Locator.CommitteeMaster(driver).click();
+						Thread.sleep(2000);
+						Locator.ClickRule(driver).click();
+						Thread.sleep(2000);
+						Locator.ClickComapnayName(driver).click();
+						Thread.sleep(2000);
+						Locator.SelectComapnayName(driver).click();
 							Thread.sleep(2000);
 							Locator.TotalStrength(driver).sendKeys("2");
 							Thread.sleep(2000);
@@ -455,7 +687,10 @@ public class CommitteeMethod {
 								}
 								Thread.sleep(2000);
 								Locator.ClickClose(driver).click();
+								Thread.sleep(4000);
+								  EntityLocator.ClickDashboard(driver).click();
+					}
 										 
 	}
 
-}
+
