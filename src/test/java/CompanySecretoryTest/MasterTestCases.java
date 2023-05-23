@@ -254,7 +254,7 @@ void AcceptTotalStrengthNumericFont() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 3)
+@Test(priority = 16)
 
 void CommitteComposition() throws InterruptedException, IOException
 {
@@ -265,7 +265,7 @@ void CommitteComposition() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 4)
+@Test(priority = 17)
 
 void AuditorMaster() throws InterruptedException, IOException
 {
@@ -280,7 +280,7 @@ void AuditorMaster() throws InterruptedException, IOException
 
 
 
-//@Test(priority = 4)
+@Test(priority = 18)
 
 void AuditorMaster1() throws InterruptedException, IOException
 {
@@ -291,7 +291,7 @@ void AuditorMaster1() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 5)
+@Test(priority = 19)
 
 void AuditorMaster2() throws InterruptedException, IOException
 {
@@ -302,7 +302,7 @@ void AuditorMaster2() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 6)
+@Test(priority = 20)
 
 void AuditorMaster3() throws InterruptedException, IOException
 {
@@ -313,7 +313,7 @@ void AuditorMaster3() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 7)
+@Test(priority = 21)
 
 void AuditorMaster4() throws InterruptedException, IOException
 {
@@ -324,7 +324,7 @@ void AuditorMaster4() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 8)
+@Test(priority = 22)
 
 void AuditorMaster5() throws InterruptedException, IOException
 {
@@ -335,7 +335,7 @@ void AuditorMaster5() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 9)
+@Test(priority = 23)
 
 void AuditorMaster6() throws InterruptedException, IOException
 {
@@ -346,7 +346,7 @@ void AuditorMaster6() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 10)
+@Test(priority = 24)
 
 void AuditorMaster7() throws InterruptedException, IOException
 {
@@ -357,7 +357,7 @@ void AuditorMaster7() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 11)
+@Test(priority = 25)
 
 void AuditorMaster8() throws InterruptedException, IOException
 {
@@ -368,7 +368,7 @@ void AuditorMaster8() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 12)
+@Test(priority = 26)
 
 void AuditorMaster9() throws InterruptedException, IOException
 {
@@ -379,7 +379,7 @@ void AuditorMaster9() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 13)
+@Test(priority = 27)
 
 void AuditorMaster10() throws InterruptedException, IOException
 {
@@ -392,7 +392,7 @@ void AuditorMaster10() throws InterruptedException, IOException
 }
 
 
-//@Test(priority = 14)
+@Test(priority = 28)
 
 void ConfigurationMaster() throws InterruptedException, IOException
 {
@@ -404,7 +404,7 @@ void ConfigurationMaster() throws InterruptedException, IOException
 	extent.flush();
 }
 
-//@Test(priority = 15)
+@Test(priority = 29)
 
 void UserMaster() throws InterruptedException, IOException
 {

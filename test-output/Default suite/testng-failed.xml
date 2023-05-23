@@ -5,12 +5,23 @@
     <classes>
       <class name="CompanySecretoryTest.EntityTestCases">
         <methods>
+          <include name="ClearBtnInternalAuditor"/>
           <include name="EnterEmptyDataResignationofAuditor"/>
           <include name="ClickInternalAuditor"/>
+          <include name="AddInternalAuditor"/>
+          <include name="EmptyFiledsCancelBtnResignationofInternalAuditor"/>
+          <include name="EmptyFiledsCancelBtnResignationofAuditor"/>
+          <include name="EditInternalAuditor"/>
           <include name="EnterInvalidDataResignationofAuditor"/>
+          <include name="ResignationofInternalAuditor"/>
           <include name="Resignationofauditor"/>
           <include name="CloseBtnResignationofAuditor"/>
           <include name="setBrowser"/>
+          <include name="EnterTwoFieldsInternalAuditor"/>
+          <include name="EnterInvalidDataResignationofInternalAuditor"/>
+          <include name="CloseBtnInternalAuditor"/>
+          <include name="EnterExistingDataInternalAuditor"/>
+          <include name="EnterEmptyDataResignationofInternalAuditor"/>
         </methods>
       </class> <!-- CompanySecretoryTest.EntityTestCases -->
     </classes>
