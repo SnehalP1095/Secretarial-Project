@@ -19,13 +19,13 @@ public class LoginPOM
 	
 	public static WebElement setUname(WebDriver driver)		//Method for searching Username input
 	{
-		uname = driver.findElement(By.xpath("//input[@placeholder='Username']"));
+		uname = driver.findElement(By.xpath("//*[@id='txtemail']"));
 		return uname;
 	}
 	
 	public static WebElement setPassword(WebDriver driver)	//Method for searching Password input
 	{
-		pass =driver.findElement(By.xpath("//input[@placeholder='Password']"));
+		pass =driver.findElement(By.xpath("//*[@id='txtpass']"));
 		return pass;
 	}
 	
@@ -72,7 +72,8 @@ public class LoginPOM
 	
 	public static WebElement clickComplicane(WebDriver driver)		//Method for searching Compliance image
 	{
-		comp_img = driver.findElement(By.xpath("//div[@id='dvbtnCompliance']/div[1]/img"));
+		//comp_img = driver.findElement(By.xpath("//div[@id='dvbtnCompliance']/div[1]/img"));
+		comp_img = driver.findElement(By.xpath("//div[@id='dvbtnCompliance']"));
 		return comp_img;
 	}
 	
@@ -91,6 +92,68 @@ public class LoginPOM
 	public static WebElement ClickContract(WebDriver driver)
 	{
 		comp_img = driver.findElement(By.xpath("//*[@id='dvbtnContract']"));
+		return comp_img;
+	}
+	public static WebElement clickSecreterial(WebDriver driver)		//Method for searching Compliance image
+	{
+		//comp_img = driver.findElement(By.xpath("//div[@id='dvbtnCompliance']/div[1]/img"));
+		comp_img = driver.findElement(By.xpath("//*[@id='dvbtnSecretarial']"));
+		return comp_img;
+	}
+
+	public static WebElement ClickForgotPass(WebDriver driver)
+	{
+		comp_img = driver.findElement(By.xpath("//*[@id='lbtResetPassword']"));
+		return comp_img;
+	}
+	public static WebElement ClickEmailid(WebDriver driver)
+	{
+		comp_img = driver.findElement(By.xpath("//*[@id='txtResetPasswordUserID']"));
+		return comp_img;
+	}
+	public static WebElement ClickSubmit(WebDriver driver)
+	{
+		comp_img = driver.findElement(By.xpath("//*[@id='btnProceed']"));
+		return comp_img;
+	}
+	public static WebElement ClickBackButton(WebDriver driver)
+	{
+		comp_img = driver.findElement(By.xpath("//*[@id='lnklogin']"));
+		return comp_img;
+	}public static WebElement ClickBackButton1(WebDriver driver)
+	{
+		comp_img = driver.findElement(By.xpath("//*[@id='lnkBackLogin']"));
+		return comp_img;
+	}
+	
+	public static WebElement ClickAccountLocked(WebDriver driver)
+	{
+		comp_img = driver.findElement(By.xpath("//*[@id='lbtUnlockAccount']"));
+		return comp_img;
+	}
+	public static WebElement ClickGoogle(WebDriver driver)
+	{
+		comp_img = driver.findElement(By.xpath("//*[@id='divLogin']/div[10]/div[1]/div/span[2]"));
+		return comp_img;
+	}
+	public static WebElement ClickLoginHelp(WebDriver driver)
+	{
+		comp_img = driver.findElement(By.xpath("//*[@id='hlnkHelp']"));
+		return comp_img;
+	}
+	public static WebElement Clickreadmsg(WebDriver driver)
+	{
+		comp_img = driver.findElement(By.xpath("//*[@id='vsLogin']/ul/li"));
+		return comp_img;
+	}
+	public static WebElement Clickdiffuser(WebDriver driver)
+	{
+		comp_img = driver.findElement(By.xpath("//*[@id='lnkLogOut']"));
+		return comp_img;
+	}
+	public static WebElement ClickreadMsg(WebDriver driver)
+	{
+		comp_img = driver.findElement(By.xpath("//*[@id='ValidationSummary3']/ul/li"));
 		return comp_img;
 	}
 }

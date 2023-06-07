@@ -91,9 +91,20 @@ private static List<WebElement> elementsList = null;
 			 Thread.sleep(3000);
 			 Locator.CloseBtn(driver).click();
 			 
+				Thread.sleep(4000);
+				  EntityLocator.ClickDashboard(driver).click();
+	 }
 			 
+	 public static void WithoutEnteringData(WebDriver driver,ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
+	  { 
 			 //Without Entering Data
 			 
+		 Thread.sleep(2000);
+		    Locator.selectImg(driver).click();
+		 Thread.sleep(2000);
+		 Locator.ClickMaster(driver).click();
+		 Thread.sleep(2000);
+		 Locator.ClickCommitteeCompistion(driver).click();
 			 Thread.sleep(2000);
 			 Locator.ClickNewBtn(driver).click();
 			 
@@ -113,8 +124,18 @@ private static List<WebElement> elementsList = null;
 			 
 				 Thread.sleep(3000);
 				 Locator.CloseBtn(driver).click();
+					Thread.sleep(4000);
+					  EntityLocator.ClickDashboard(driver).click();
+	  }
+	 public static void CloseBtnCommitteeComposition(WebDriver driver,ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
+	  { 	 
 			//Close Button working or not
-				 
+		 Thread.sleep(2000);
+		    Locator.selectImg(driver).click();
+		 Thread.sleep(2000);
+		 Locator.ClickMaster(driver).click();
+		 Thread.sleep(2000);
+		 Locator.ClickCommitteeCompistion(driver).click();
 				 Thread.sleep(2000);
 				 Locator.ClickNewBtn(driver).click();
 				 
@@ -129,8 +150,18 @@ private static List<WebElement> elementsList = null;
 							test.log(LogStatus.PASS, "Close button is clickable");
 							
 						}
+					 Thread.sleep(4000);
+					  EntityLocator.ClickDashboard(driver).click();
+	  }
+	 public static void DateFormatCommitteeComposition(WebDriver driver,ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
+	  { 
 			 //Date format dd/mm/yyyy accept or not
-					 
+		 Thread.sleep(2000);
+		    Locator.selectImg(driver).click();
+		 Thread.sleep(2000);
+		 Locator.ClickMaster(driver).click();
+		 Thread.sleep(2000);
+		 Locator.ClickCommitteeCompistion(driver).click();
 					 Thread.sleep(2000);
 					 Locator.ClickNewBtn(driver).click();
 					 Thread.sleep(2000);
@@ -171,9 +202,19 @@ private static List<WebElement> elementsList = null;
 						
 						 Thread.sleep(3000);
 						 Locator.CloseBtn(driver).click();
-						
+						 Thread.sleep(4000);
+						  EntityLocator.ClickDashboard(driver).click();
+	  }
+	 public static void UpdateCommitteeComposition(WebDriver driver,ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
+	  { 
+		 Thread.sleep(2000);
+		    Locator.selectImg(driver).click();
+		 Thread.sleep(2000);
+		 Locator.ClickMaster(driver).click();
+		 Thread.sleep(2000);
+		 Locator.ClickCommitteeCompistion(driver).click();	
 
-		 Thread.sleep(3000);
+		     Thread.sleep(3000);
 			 Locator.clickdropdown(driver).click();
 			 Thread.sleep(3000);
 			 Locator.selectdropdown(driver).click();
@@ -200,7 +241,18 @@ private static List<WebElement> elementsList = null;
 				Thread.sleep(3000);
 				 Locator.CloseBtn(driver).click(); 
 				 
-				 
+				 Thread.sleep(4000);
+				  EntityLocator.ClickDashboard(driver).click();
+	  }
+	 
+	 public static void DeleteCommitteeComposition(WebDriver driver,ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
+	  { 		 
+		 Thread.sleep(2000);
+		    Locator.selectImg(driver).click();
+		 Thread.sleep(2000);
+		 Locator.ClickMaster(driver).click();
+		 Thread.sleep(2000);
+		 Locator.ClickCommitteeCompistion(driver).click();
 				 Locator.clickdropdown(driver).click();
 				 Thread.sleep(3000);
 				 Locator.selectdropdown(driver).click();
@@ -222,8 +274,21 @@ private static List<WebElement> elementsList = null;
 			        System.out.println(alertMessage1);
 			        
 			     // Accepting alert		
-			        alert1.accept();	
-			        
+			        alert1.accept();
+			   	 
+					 Thread.sleep(4000);
+					  EntityLocator.ClickDashboard(driver).click();
+	  }
+		
+	 public static void ExportToPDFCommitteeComposition(WebDriver driver,ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
+    { 
+		 
+		 Thread.sleep(2000);
+		    Locator.selectImg(driver).click();
+		 Thread.sleep(2000);
+		 Locator.ClickMaster(driver).click();
+		 Thread.sleep(2000);
+		 Locator.ClickCommitteeCompistion(driver).click();
 			            Thread.sleep(100);
 						File dir = new File("C://Users//Admin//Downloads");
 						File[] dirContents = dir.listFiles();							//Counting number of files in directory before download 
@@ -243,6 +308,10 @@ private static List<WebElement> elementsList = null;
 						{
 							test.log(LogStatus.FAIL, "File doesn't downloaded successfully.");
 						}
+						
+						 
+						 Thread.sleep(4000);
+						  EntityLocator.ClickDashboard(driver).click();
 						
 					
 	 }

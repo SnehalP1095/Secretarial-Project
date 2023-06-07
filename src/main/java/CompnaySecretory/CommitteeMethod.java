@@ -323,7 +323,7 @@ public class CommitteeMethod {
 					
 					 Thread.sleep(3000);
 					 String msg3 = Locator.RuleValidationMsg(driver).getText();
-						if(msg3.contains("Meeting Update Successfully."))
+						if(msg3.contains("Saved Successfully."))
 						{
 							test.log(LogStatus.PASS, "Message Dispalyed =Member " +msg3);
 						}
@@ -370,7 +370,7 @@ public class CommitteeMethod {
 						
 						 Thread.sleep(3000);
 						 String msg7 = Locator.clickValidationMemberRule(driver).getText();
-							if(msg7.contains("Meeting Update Successfully."))
+							if(msg7.contains("Updated Successfully."))
 							{
 								test.log(LogStatus.PASS, "Message Dispalyed =Member " +msg7);
 							}
@@ -523,7 +523,7 @@ public class CommitteeMethod {
 						
 						 Thread.sleep(3000);
 						 String msg5 = Locator.ValidationMeeting(driver).getText();
-							if(msg5.contains("Meeting Update Successfully."))
+							if(msg5.contains("Meeting Save Successfully."))
 							{
 								test.log(LogStatus.PASS, "Message Dispalyed = Meeting " +msg5);
 							}

@@ -37,14 +37,14 @@ private static List<WebElement> elementsList = null;
 		return sheet;
 	}
 	
-	public static void User(WebDriver driver,ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
+	public static void AddUser(WebDriver driver,ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
 	{
 		sheet = workbook.getSheetAt(0);	
 		//JavascriptExecutor js = (JavascriptExecutor) driver;
 		Thread.sleep(2000);
 	    Locator.selectImg(driver).click();
 		Thread.sleep(2000);
-	 Locator.ClickMaster(driver).click();
+	     Locator.ClickMaster(driver).click();
 	    
 		//js.executeScript("window.scrollBy(0,500)");
 		//js.executeScript("document.querySelector("div[id='ascrail2001'] div").scrollLeft=5000");
@@ -105,6 +105,22 @@ private static List<WebElement> elementsList = null;
 			
 			Thread.sleep(4000);
 			Locator.CloseUserPopup(driver).click();
+			Thread.sleep(4000);
+			  EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void UpdateUser(WebDriver driver,ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
+	{
+		
+		Thread.sleep(2000);
+	    Locator.selectImg(driver).click();
+		Thread.sleep(2000);
+	     Locator.ClickMaster(driver).click();
+	    
+		//js.executeScript("window.scrollBy(0,500)");
+		//js.executeScript("document.querySelector("div[id='ascrail2001'] div").scrollLeft=5000");
+	  
+		Thread.sleep(3000);
+	    Locator.clickUser(driver).click();
 			
 			Thread.sleep(2000);
 			Locator.ClickEditUser(driver).click();
@@ -132,49 +148,54 @@ private static List<WebElement> elementsList = null;
 				}
 				Thread.sleep(2000);
 				Locator.CloseUserPopup(driver).click();
+				Thread.sleep(4000);
+				  EntityLocator.ClickDashboard(driver).click();
+	}
 				
-				//Invalid FirstName and LastName
-				/*Thread.sleep(2000);
-			    Locator.clickNewUser(driver).click();
-				Thread.sleep(2000);
-				Locator.clickFirstName(driver).sendKeys("DF$");
-				Thread.sleep(2000);
-				Locator.clickLastName(driver).sendKeys("KFH#");
-				Thread.sleep(2000);
-				Locator.ClickSaveBtn(driver).click();
-					
-				Thread.sleep(3000);
-				String msg9 = Locator.InvalidMsg(driver).getText();
+
 				
-					test.log(LogStatus.PASS, "Message Dispalyed =" +msg9);
-			
-		        Thread.sleep(2000);
-				Locator.CloseUserPopup(driver).click();
+	public static void FilterUser(WebDriver driver,ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
+	{	
+		
+		Thread.sleep(2000);
+	    Locator.selectImg(driver).click();
+		Thread.sleep(2000);
+	     Locator.ClickMaster(driver).click();
+	    
+		//js.executeScript("window.scrollBy(0,500)");
+		//js.executeScript("document.querySelector("div[id='ascrail2001'] div").scrollLeft=5000");
+	  
+		Thread.sleep(3000);
+	    Locator.clickUser(driver).click();		
+		Thread.sleep(2000);
+		Locator.ClickFilter(driver).sendKeys("Director");
 				
-				//Invalid Contact No
-				Thread.sleep(2000);
-			    Locator.clickNewUser(driver).click();
-			
-				Thread.sleep(2000);
-				Locator.clickContactNo(driver).sendKeys("231234");
-		        Thread.sleep(2000);
-				Locator.ClickSaveBtn(driver).click();
-					
-				Thread.sleep(3000);
-				String msg10 = Locator.ValidationContactNo(driver).getText();
-				test.log(LogStatus.PASS, "Message Dispalyed =" +msg10);
-			    Thread.sleep(2000);
-				Locator.CloseUserPopup(driver).click();*/
+		String msg="Director";
 				
-			
-				Thread.sleep(2000);
-				Locator.ClickFilter(driver).sendKeys("Director");
-				
-				test.log(LogStatus.PASS, "Filter Work Successfully");
-				
-				
+		if(msg.equalsIgnoreCase(msg))
+		{
+			test.log(LogStatus.PASS, "Filter Work Successfully");
+		}
+		else
+		{
+		    test.log(LogStatus.FAIL, "Filter Dose not Work Successfully");
+		}
+		Thread.sleep(4000);
+		EntityLocator.ClickDashboard(driver).click();
+	}
+	public static void WithoutEnteringDataUser(WebDriver driver,ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
+	{		
 				//Without Entering data 
-				
+		Thread.sleep(2000);
+	    Locator.selectImg(driver).click();
+		Thread.sleep(2000);
+	     Locator.ClickMaster(driver).click();
+	    
+		//js.executeScript("window.scrollBy(0,500)");
+		//js.executeScript("document.querySelector("div[id='ascrail2001'] div").scrollLeft=5000");
+	  
+		Thread.sleep(3000);
+	    Locator.clickUser(driver).click();	
 				Thread.sleep(2000);
 			    Locator.clickNewUser(driver).click();
 			    
@@ -188,12 +209,25 @@ private static List<WebElement> elementsList = null;
 				
 				 test.log(LogStatus.PASS, "Without entering data = " +msg3 +"," +msg4 +"," +msg5 +"," +msg6);
 				 
-				 Thread.sleep(4000);
+				   Thread.sleep(4000);
 					Locator.CloseUserPopup(driver).click();
+					Thread.sleep(4000);
+					EntityLocator.ClickDashboard(driver).click();
+	}
 					
 					
+	public static void EnterInvalidDataUser(WebDriver driver,ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
+	{				
 					//Enter invalid data
-					
+	               Thread.sleep(2000);
+                    Locator.selectImg(driver).click();
+	               Thread.sleep(2000);
+                   Locator.ClickMaster(driver).click();
+    
+	
+  
+	                  Thread.sleep(3000);
+                      Locator.clickUser(driver).click();	
 					Thread.sleep(2000);
 				    Locator.clickNewUser(driver).click();
 				    Thread.sleep(2000);
@@ -221,8 +255,12 @@ private static List<WebElement> elementsList = null;
 					
 					 Thread.sleep(4000);
 						Locator.CloseUserPopup(driver).click();
+						Thread.sleep(4000);
+						EntityLocator.ClickDashboard(driver).click();
+	}
 						
-						
+	public static void EnterValidDataUser(WebDriver driver,ExtentTest test, XSSFWorkbook workbook) throws InterruptedException, IOException
+	{					
 						// valid Data Accept 
 						
 						Thread.sleep(2000);
@@ -253,11 +291,15 @@ private static List<WebElement> elementsList = null;
 								test.log(LogStatus.FAIL, "Enter Valid Data =" +msg13);
 							}
 						
-						
+							 Thread.sleep(4000);
+								Locator.CloseUserPopup(driver).click();
+								Thread.sleep(4000);
+								EntityLocator.ClickDashboard(driver).click();
+	}
 						
 						
 		
 	}
 	
 	
-}
+

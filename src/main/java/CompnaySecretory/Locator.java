@@ -851,13 +851,13 @@ public class Locator {
 	public static WebElement SelectSecretarialAuditorDropDown(WebDriver driver)
 	{
 		
-		Secreterial =driver.findElement(By.xpath("(//*[@id='ddlAuditor_Type_listbox']/li[3])[5]"));
+		Secreterial =driver.findElement(By.xpath("(//*[@id='ddlAuditor_Type_listbox']/li[3])"));
 		return Secreterial;
 	}
 	public static WebElement SelectCostAuditorDropDown(WebDriver driver)
 	{
 		WebDriverWait wait=new WebDriverWait(driver,30);
-		Secreterial =driver.findElement(By.xpath("(//*[@id='ddlAuditor_Type_listbox']/li[4])[7]"));
+		Secreterial =driver.findElement(By.xpath("(//*[@id='ddlAuditor_Type_listbox']/li[4])"));
 		return Secreterial;
 	}
 	public static WebElement clickCategoryOfAuditor(WebDriver driver)
@@ -876,7 +876,7 @@ public class Locator {
 	public static WebElement SelectCategoryOfAuditor1(WebDriver driver)
 	{
 		
-		Secreterial =driver.findElement(By.xpath("(//*[@id='ddlAuditor_Category_listbox']/li[2])[3]"));
+		Secreterial =driver.findElement(By.xpath("(//*[@id='ddlAuditor_Category_listbox']/li[2])"));
 		return Secreterial;
 	}
 	public static WebElement SelectCategoryOfAuditor2(WebDriver driver)

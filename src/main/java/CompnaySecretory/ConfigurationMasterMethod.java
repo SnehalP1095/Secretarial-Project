@@ -38,7 +38,7 @@ private static List<WebElement> elementsList = null;
 		sheet = workbook.getSheetAt(0);					//Retrieving second sheet of Workbook
 		return sheet;
 	}
-	public static void ConfigurationMaster(WebDriver driver,ExtentTest test, XSSFWorkbook workbook) throws InterruptedException
+	public static void ConfigurationMaster(WebDriver driver,ExtentTest test) throws InterruptedException
 	{
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		//Add Configuration
@@ -90,8 +90,8 @@ private static List<WebElement> elementsList = null;
     }
     Thread.sleep(2000);
     Locator.clickClose(driver).click();
-    	    
-		    
+	
+    	   	    
 		    //Detailes of circular
 				
 				
@@ -142,11 +142,22 @@ private static List<WebElement> elementsList = null;
 		    
 		    Thread.sleep(2000);
 		    Locator.clickClose(driver).click();
+		    Thread.sleep(4000);
+			  EntityLocator.ClickDashboard(driver).click();
+			}
 		    
 		    
 		    
-		    
+	public static void UpdateConfiguration(WebDriver driver,ExtentTest test) throws InterruptedException 
+	{
+		
 		    //Update Configuration
+		Thread.sleep(2000);
+	    Locator.selectImg(driver).click();
+	    Thread.sleep(2000);
+	    Locator.ClickMaster(driver).click();
+	    Thread.sleep(2000);
+	    Locator.ClickConfiguration(driver).click();
 				   Thread.sleep(2000);
 				    Locator.clickEditIcon(driver).click();
 				    Thread.sleep(2000);
@@ -168,8 +179,22 @@ private static List<WebElement> elementsList = null;
 						}
 						Thread.sleep(2000);
 					    Locator.clickClose(driver).click();
+					    Thread.sleep(4000);
+						  EntityLocator.ClickDashboard(driver).click();
+	}
 					    
-					    //Date Pattern DD//MM//YYYY
+    
+        public static void DateFormateConfiguration(WebDriver driver,ExtentTest test) throws InterruptedException 
+        {
+				    
+           //Date Pattern DD//MM//YYYY
+        	WebDriverWait wait=new WebDriverWait(driver,20);
+        	Thread.sleep(2000);
+    	    Locator.selectImg(driver).click();
+    	    Thread.sleep(2000);
+    	    Locator.ClickMaster(driver).click();
+    	    Thread.sleep(2000);
+    	    Locator.ClickConfiguration(driver).click();
 					    
 					    Thread.sleep(2000);
 					    Locator.ClickNewBtn1(driver).click();
@@ -202,8 +227,22 @@ private static List<WebElement> elementsList = null;
 					    
 					    Thread.sleep(2000);
 					    Locator.clickClose(driver).click();
-					    
+					    Thread.sleep(4000);
+						  EntityLocator.ClickDashboard(driver).click();
+        }
+        public static void MeetingNumberingpatternConfiguration(WebDriver driver,ExtentTest test) throws InterruptedException 
+        {
+				    
+         
+        	WebDriverWait wait=new WebDriverWait(driver,20);		    
 					    //Meeting Numbering pattern
+        	
+        	Thread.sleep(2000);
+    	    Locator.selectImg(driver).click();
+    	    Thread.sleep(2000);
+    	    Locator.ClickMaster(driver).click();
+    	    Thread.sleep(2000);
+    	    Locator.ClickConfiguration(driver).click();
 					    
 					    Thread.sleep(2000);
 					    Locator.ClickNewBtn1(driver).click();
@@ -225,9 +264,23 @@ private static List<WebElement> elementsList = null;
 					    }
 					    Thread.sleep(5000);
 					    Locator.clickClose(driver).click();
+					    Thread.sleep(4000);
+						  EntityLocator.ClickDashboard(driver).click();
+        }
 					    
+        public static void AddButtonConfiguration(WebDriver driver,ExtentTest test) throws InterruptedException 
+        {
+				    
 					  //Add Button Working or not
-					    
+        	        WebDriverWait wait=new WebDriverWait(driver,20);		    
+		   
+
+                     Thread.sleep(2000);
+                     Locator.selectImg(driver).click();
+                     Thread.sleep(2000);
+                     Locator.ClickMaster(driver).click();
+                     Thread.sleep(2000);
+                     Locator.ClickConfiguration(driver).click();
 					    Thread.sleep(4000);
 		                Locator.ClickNewBtn1(driver).click();
 						
@@ -250,12 +303,15 @@ private static List<WebElement> elementsList = null;
 								}
 						  Thread.sleep(4000);
 						Locator.clickClose(driver).click();
+						  Thread.sleep(4000);
+						  EntityLocator.ClickDashboard(driver).click();
+		 }
 					    
 					    
 					    
 					    
     
-	}
+
 	
     public static void selectOptionFromDropDown_bs(List<WebElement> options, String value) {
 		

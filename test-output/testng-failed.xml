@@ -1,15 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="cfo.CFOcountStatutory">
+      <class name="CompanySecretoryTest.EntityTestCases">
         <methods>
+          <include name="CloseBtnUpdateStatutoryAuditor"/>
+          <include name="AddInternalAuditor"/>
+          <include name="ClickInternalAuditor"/>
+          <include name="UpdateStatutoryAuditor"/>
+          <include name="EditInternalAuditor"/>
+          <include name="ResignationofInternalAuditor"/>
+          <include name="ResignationofAuditorCloseCA"/>
+          <include name="ResignationofAuditorEmpty"/>
           <include name="setBrowser"/>
-          <include name="Closing"/>
-          <include name="Login"/>
+          <include name="ResignationofAuditorCancel"/>
+          <include name="ResignationofAuditorClose"/>
+          <include name="CostAuditorAddNew"/>
+          <include name="EnterTwoFieldsInternalAuditor"/>
+          <include name="CAAddNewClose"/>
+          <include name="CostAuditorAddNewED"/>
+          <include name="CostAuditorAddNewTwoMan"/>
+          <include name="ResignationofAuditorCancelCA"/>
+          <include name="ResignationofAuditor"/>
+          <include name="EmptyFiledStatutoryAuditor"/>
+          <include name="ClearBtnStatutoryAuditor"/>
+          <include name="CostAuditorAddNewEmpty"/>
+          <include name="ClearBtnInternalAuditor"/>
+          <include name="EnterEmptyDataResignationofAuditor"/>
+          <include name="EmptyFiledsCancelBtnResignationofInternalAuditor"/>
+          <include name="ResignationofAuditorEmptyCA"/>
+          <include name="EnterInvalidDataResignationofAuditor"/>
+          <include name="Resignationofauditor"/>
+          <include name="UpdateEnterInvalidDataStatutoryAuditor"/>
+          <include name="CancelBtnResignationofAuditor"/>
+          <include name="CloseBtnResignationofAuditor"/>
+          <include name="CloseBtnStatutoryAuditor"/>
+          <include name="CAEditClose"/>
+          <include name="UpdateEnterEmptyFieldsStatutoryAuditor"/>
+          <include name="EnterTwoMandatoryFiledStatutoryAuditor"/>
+          <include name="EnterInvalidDataStatutoryAuditor"/>
+          <include name="AddStatutoryAuditor"/>
+          <include name="CloseBtnInternalAuditor"/>
+          <include name="CAClearFilter"/>
+          <include name="EnterExistingDataInternalAuditor"/>
+          <include name="ResignationofAuditorCA"/>
         </methods>
-      </class> <!-- cfo.CFOcountStatutory -->
+      </class> <!-- CompanySecretoryTest.EntityTestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
