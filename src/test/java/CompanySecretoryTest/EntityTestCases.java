@@ -88,7 +88,7 @@ public class EntityTestCases {
 		extent.flush();
 	}
 	
-	@Test(priority = 2)
+//	@Test(priority = 2)
 	
 		void EntityType() throws InterruptedException, IOException
 		{
@@ -100,7 +100,7 @@ public class EntityTestCases {
 			extent.flush();
 		}
 
-	@Test(priority =3 )
+//	@Test(priority =3 )
 	
 	void TwoMandatoryFields() throws InterruptedException, IOException
 	{
@@ -111,7 +111,7 @@ public class EntityTestCases {
 		extent.endTest(test);
 		extent.flush();
 	}
-@Test(priority = 4)
+//@Test(priority = 4)
 	
 	void WithoutEnteringField() throws InterruptedException, IOException
 	{
@@ -122,7 +122,7 @@ public class EntityTestCases {
 		extent.endTest(test);
 		extent.flush();
 	}
-@Test(priority = 5)
+//@Test(priority = 5)
 
 void CloseBtn() throws InterruptedException, IOException
 {
@@ -134,7 +134,7 @@ void CloseBtn() throws InterruptedException, IOException
 	extent.flush();
 }
 
-@Test(priority = 6)
+//@Test(priority = 6)
 
 void AddEntity() throws InterruptedException, IOException
 {
@@ -158,7 +158,7 @@ void EnterInvalidData() throws InterruptedException, IOException
 }
 
 
-@Test(priority = 8)
+//@Test(priority = 8)
 
 void EditIcon() throws InterruptedException, IOException
 {
@@ -171,7 +171,7 @@ void EditIcon() throws InterruptedException, IOException
 }
 
 
-@Test(priority = 9)
+//@Test(priority = 9)
 
 void InvalidEditIcon() throws InterruptedException, IOException
 {
@@ -182,7 +182,7 @@ void InvalidEditIcon() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority = 10)
+//@Test(priority = 10)
 
 void EditCloseBtn() throws InterruptedException, IOException
 {
@@ -193,7 +193,7 @@ void EditCloseBtn() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority = 11)
+///@Test(priority = 11)
 
 void BuisnessActivity() throws InterruptedException, IOException
 {
@@ -3136,6 +3136,105 @@ void CostAuditorAddNewED() throws InterruptedException, IOException
 		extent.endTest(test);
 		extent.flush();
 	}	
-
+	@Test(priority =2) 
+	void ClickMBP4() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Entity - More Action - Statutory Auditors-MBP-4 tab ");
+		
+		EntityMasterMethod.ClickMBP4(driver,test);
+		
+		extent.endTest(test);
+		extent.flush();
+	}
+@Test(priority =3) 
+	void ClickUploadExistingRegistor() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Entity - More Action - Statutory Auditors-MBP-4 tab -Upload File with valid data ");
+		
+		EntityMasterMethod.ClickUploadExistingRegistorValidData(driver,test);
+		
+		extent.endTest(test);
+		extent.flush();
+	}	
+	@Test(priority = 4) 
+	void ClickUploadExistingRegistorInvalidData() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Entity - More Action - Statutory Auditors-MBP-4 tab -Upload File with Invalid data ");
+		
+		EntityMasterMethod.ClickUploadExistingRegistorInvalidData(driver,test);
+		
+		extent.endTest(test);
+		extent.flush();
+	}	
+	@Test(priority = 5) 
+	void ClickUploadExistingRegistorDupliacteData() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Entity - More Action - Statutory Auditors-MBP-4 tab -Upload File with Duplicate data ");
+		
+		EntityMasterMethod.ClickUploadExistingRegistorDupliacteData(driver,test);
+		
+		extent.endTest(test);
+		extent.flush();
+	}	
+	@Test(priority = 6) 
+	void ClickUploadExistingRegistorWithoutData() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Entity - More Action - Statutory Auditors-MBP-4 tab -Upload File without data ");
+		
+		EntityMasterMethod.ClickUploadExistingRegistorWithoutData(driver,test);
+		
+		extent.endTest(test);
+		extent.flush();
+	}	
+	@Test(priority = 7) 
+	void ClickUploadExistingRegistorInvalidFileFormat() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Entity - More Action - Statutory Auditors-MBP-4 tab -Invalid File Format ");
+		
+		EntityMasterMethod.ClickUploadExistingRegistorInvalidFileFormat(driver,test);
+		
+		extent.endTest(test);
+		extent.flush();
+	}	
+	@Test(priority = 8) 
+	void ClickUploadExistingRegistorWithoutSelectingFile() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Entity - More Action - Statutory Auditors-MBP-4 tab -Without selecting file ");
+		
+		EntityMasterMethod.ClickUploadExistingRegistorWithoutSelectingFile(driver,test);
+		
+		extent.endTest(test);
+		extent.flush();
+	}	
+	@Test(priority = 9) 
+	void ClickUploadOldRegistorWithValidFile() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Entity - More Action - Statutory Auditors-MBP-4 tab -Select Old-with valid file ");
+		
+		EntityMasterMethod.ClickUploadOldRegistorWithValidFile(driver,test);
+		
+		extent.endTest(test);
+		extent.flush();
+	}	
+	@Test(priority =10) 
+	void ClickUploadOldRegistorWithInValidFile() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Entity - More Action - Statutory Auditors-MBP-4 tab -Select Old-with invalid file ");
+		
+		EntityMasterMethod.ClickUploadOldRegistorWithInValidFile(driver,test);
+		
+		extent.endTest(test);
+		extent.flush();
+	}	
+	@Test(priority =11) 
+	void ClickUploadOldRegistorWithDuplicateData() throws InterruptedException, IOException
+	{
+		test = extent.startTest("Entity - More Action - Statutory Auditors-MBP-4 tab -Select Old-with Duplicate data ");
+		
+		EntityMasterMethod.ClickUploadOldRegistorWithDuplicateData(driver,test);
+		
+		extent.endTest(test);
+		extent.flush();
+	}	
 
 }

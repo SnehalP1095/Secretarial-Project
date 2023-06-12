@@ -2541,5 +2541,51 @@ public class EntityLocator
 		Secreterial = driver.findElement(By.xpath("//*[@id='main-content']/header/div[1]/ul/li[1]/a"));
 		return Secreterial;
 	}
+	public static WebElement  clickStatutoryRegistor (WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='griDDLActionMenu_listbox']/li[10]"));
+		return Secreterial;
+	}
+	public static WebElement  clickMBP4(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='mytab9']/a"));
+		return Secreterial;
+	}
+	public static WebElement  clickUploadBtn(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("(//*[@id='btnUplaodDeposit'])[2]"));
+		return Secreterial;
+	}
+	public static WebElement  clickUploadBtn1(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//button[@type='submit']"));
+		return Secreterial;
+	}
+	public static WebElement  clickUploadfileInValidMsg(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='frmUpdateUploadEntity']/div[1]/div/div/ul/li/label"));
+		return Secreterial;
+	}
+	public static WebElement  clickUploadfileValidMsg(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='frmUpdateUploadEntity']/div[1]/div/div/lable"));
+		return Secreterial;
+	}
+	public static WebElement SelectFile1(WebDriver driver)
+	{
+		Secreterial=driver.findElement(By.xpath("//*[@id='File']"));
+		return Secreterial;
+	}
+	public static WebElement clickInvalidMsg(WebDriver driver)
+	{
+		Secreterial=driver.findElement(By.xpath("//*[@id='frmUpdateUploadEntity']/div[1]/div/div"));
+		return Secreterial;
+	}
+	public static WebElement clickOld(WebDriver driver)
+	{
+		Secreterial=driver.findElement(By.cssSelector("label[for='IsExistingMBP4_2']"));
+		return Secreterial;
+	}
+   
    
 }

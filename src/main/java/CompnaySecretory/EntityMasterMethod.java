@@ -13581,6 +13581,400 @@ public class EntityMasterMethod
 		 
 	 }
 	
+
+	public static void ClickMBP4(WebDriver driver, ExtentTest test) throws InterruptedException
+	 {
+
+         	WebDriverWait wait = new WebDriverWait(driver, (120));
+            Thread.sleep(2000);
+            EntityLocator.selectImg(driver).click();
+            Thread.sleep(2000);
+            EntityLocator.ClickMoreAction(driver).click();
+            Thread.sleep(2000);
+            EntityLocator.clickStatutoryRegistor(driver).click();
+            Thread.sleep(2000);
+            if(EntityLocator.clickMBP4(driver).isEnabled())
+    	    {
+    	      Thread.sleep(2000);
+    	      EntityLocator.clickMBP4(driver).click();
+    	      test.log(LogStatus.PASS, "MBP-4 tab is Selected");
+    	    }
+    	    else
+    	    {
+    	    	 test.log(LogStatus.FAIL, "MBP-4 tab is not Selected");
+    	    }
+            Thread.sleep(2000);
+    		EntityLocator.ClickDashboard(driver).click();
+            
+            
+	 }
+	
+	public static void ClickUploadExistingRegistorValidData(WebDriver driver, ExtentTest test) throws InterruptedException
+	 {
+
+        	WebDriverWait wait = new WebDriverWait(driver, (120));
+           Thread.sleep(2000);
+           EntityLocator.selectImg(driver).click();
+           Thread.sleep(2000);
+           EntityLocator.ClickMoreAction(driver).click();
+           Thread.sleep(2000);
+           EntityLocator.clickStatutoryRegistor(driver).click();
+           Thread.sleep(2000);
+           EntityLocator.clickMBP4(driver).click();
+           Thread.sleep(2000);
+           EntityLocator.clickUploadBtn(driver).click();
+           Thread.sleep(2000);
+           EntityLocator.SelectFile1(driver).sendKeys("C:\\Users\\Admin\\Downloads\\SampleExcelMBP4-Existing (5).xlsx");
+           Thread.sleep(2000);
+           EntityLocator.clickUploadBtn1(driver).click();
+           
+           try 
+ 		  {
+ 		   Thread.sleep(3000);
+ 	        String msg=	EntityLocator.clickUploadfileValidMsg(driver).getText();
+ 	        test.log(LogStatus.PASS,"Enter Valid Data In MBP-4 Existing Excel File  =" +msg );
+ 	       
+ 		  }
+ 	      catch(Exception  e) 
+ 		  {
+ 	    	 Thread.sleep(3000);
+ 			 String msg=EntityLocator.clickUploadfileInValidMsg(driver).getText();
+ 			  test.log(LogStatus.FAIL, "Enter Valid Data In MBP-4 Existing Excel File =" +msg );
+ 			
+ 		  }
+           
+           Thread.sleep(2000);
+   		   EntityLocator.ClickDashboard(driver).click();
+	 }
+	public static void ClickUploadExistingRegistorInvalidData(WebDriver driver, ExtentTest test) throws InterruptedException
+	 {
+
+       	WebDriverWait wait = new WebDriverWait(driver, (120));
+          Thread.sleep(2000);
+          EntityLocator.selectImg(driver).click();
+          Thread.sleep(2000);
+          EntityLocator.ClickMoreAction(driver).click();
+          Thread.sleep(2000);
+          EntityLocator.clickStatutoryRegistor(driver).click();
+          Thread.sleep(2000);
+          EntityLocator.clickMBP4(driver).click();
+          Thread.sleep(2000);
+          EntityLocator.clickUploadBtn(driver).click();
+          Thread.sleep(2000);
+          EntityLocator.SelectFile1(driver).sendKeys("C:\\Users\\Admin\\Downloads\\SampleExcelMBP4-Existing (5).xlsx");
+          Thread.sleep(2000);
+          EntityLocator.clickUploadBtn1(driver).click();
+          
+          try 
+		  {
+		   Thread.sleep(3000);
+	        String msg=	EntityLocator.clickUploadfileInValidMsg(driver).getText();
+	        test.log(LogStatus.PASS,"Enter InValid Data In MBP-4 Existing Excel File  =" +msg );
+	       
+		  }
+	      catch(Exception  e) 
+		  {
+	    	 Thread.sleep(3000);
+			 String msg=EntityLocator.clickUploadfileValidMsg(driver).getText();
+			  test.log(LogStatus.FAIL, "Enter InValid Data In MBP-4 Existing Excel File =" +msg );
+			
+		  }
+          
+          Thread.sleep(2000);
+  		   EntityLocator.ClickDashboard(driver).click();
+	 }
+	public static void ClickUploadExistingRegistorDupliacteData(WebDriver driver, ExtentTest test) throws InterruptedException
+	 {
+
+      	WebDriverWait wait = new WebDriverWait(driver, (120));
+         Thread.sleep(2000);
+         EntityLocator.selectImg(driver).click();
+         Thread.sleep(2000);
+         EntityLocator.ClickMoreAction(driver).click();
+         Thread.sleep(2000);
+         EntityLocator.clickStatutoryRegistor(driver).click();
+         Thread.sleep(2000);
+         EntityLocator.clickMBP4(driver).click();
+         Thread.sleep(2000);
+         EntityLocator.clickUploadBtn(driver).click();
+         Thread.sleep(2000);
+         EntityLocator.SelectFile1(driver).sendKeys("C:\\Users\\Admin\\Downloads\\SampleExcelMBP4-Existing (5).xlsx");
+         Thread.sleep(2000);
+         EntityLocator.clickUploadBtn1(driver).click();
+         
+         try 
+		  {
+		   Thread.sleep(3000);
+	        String msg=	EntityLocator.clickUploadfileInValidMsg(driver).getText();
+	        test.log(LogStatus.PASS,"Enter InValid Data In MBP-4 Existing Excel File  =" +msg );
+	       
+		  }
+	      catch(Exception  e) 
+		  {
+	    	 Thread.sleep(3000);
+			 String msg=EntityLocator.clickUploadfileValidMsg(driver).getText();
+			  test.log(LogStatus.FAIL, "Enter InValid Data In MBP-4 Existing Excel File =" +msg );
+			
+		  }
+         
+         Thread.sleep(2000);
+ 		 EntityLocator.ClickDashboard(driver).click();
+	 }
+	public static void ClickUploadExistingRegistorWithoutData(WebDriver driver, ExtentTest test) throws InterruptedException
+	 {
+
+      	WebDriverWait wait = new WebDriverWait(driver, (120));
+         Thread.sleep(2000);
+         EntityLocator.selectImg(driver).click();
+         Thread.sleep(2000);
+         EntityLocator.ClickMoreAction(driver).click();
+         Thread.sleep(2000);
+         EntityLocator.clickStatutoryRegistor(driver).click();
+         Thread.sleep(2000);
+         EntityLocator.clickMBP4(driver).click();
+         Thread.sleep(2000);
+         EntityLocator.clickUploadBtn(driver).click();
+         
+         Thread.sleep(2000);
+         EntityLocator.SelectFile1(driver).sendKeys("C:\\Users\\Admin\\Downloads\\SampleExcelMBP4-Existing (2).xlsx");
+        
+         Thread.sleep(2000);
+         EntityLocator.clickUploadBtn1(driver).click();
+         
+      
+         
+         try 
+		  {
+		   Thread.sleep(3000);
+	        String msg=	EntityLocator.clickUploadfileInValidMsg(driver).getText();
+	        test.log(LogStatus.PASS,"Without data In MBP-4 Existing Excel File  =" +msg );
+	       
+		  }
+	      catch(Exception  e) 
+		  {
+	    	 Thread.sleep(3000);
+			 String msg=EntityLocator.clickUploadfileValidMsg(driver).getText();
+			  test.log(LogStatus.FAIL, "Without data Data In MBP-4 Existing Excel File =" +msg );
+			
+		  }
+         
+         Thread.sleep(2000);
+ 		   EntityLocator.ClickDashboard(driver).click();
+	 }
+	public static void ClickUploadExistingRegistorInvalidFileFormat(WebDriver driver, ExtentTest test) throws InterruptedException
+	 {
+
+     	WebDriverWait wait = new WebDriverWait(driver, (120));
+        Thread.sleep(2000);
+        EntityLocator.selectImg(driver).click();
+        Thread.sleep(2000);
+        EntityLocator.ClickMoreAction(driver).click();
+        Thread.sleep(2000);
+        EntityLocator.clickStatutoryRegistor(driver).click();
+        Thread.sleep(2000);
+        EntityLocator.clickMBP4(driver).click();
+        Thread.sleep(2000);
+        EntityLocator.clickUploadBtn(driver).click();
+        
+        Thread.sleep(2000);
+        EntityLocator.SelectFile1(driver).sendKeys("C:\\Users\\Admin\\Downloads\\AvaSec June (2).xlsx");
+       
+        Thread.sleep(2000);
+        EntityLocator.clickUploadBtn1(driver).click();
+        
+     
+        
+        try 
+		  {
+		   Thread.sleep(3000);
+	        String msg=	EntityLocator.clickUploadfileValidMsg(driver).getText();
+	        test.log(LogStatus.PASS,"Enter Invalid file format In MBP-4 Existing Excel File  =" +msg );
+	       
+		  }
+	      catch(Exception  e) 
+		  {
+	    	 Thread.sleep(3000);
+			 String msg=EntityLocator.clickUploadfileInValidMsg(driver).getText();
+			  test.log(LogStatus.FAIL, "Enter Invalid file format In MBP-4 Existing Excel File =" +msg );
+			
+		  }
+        
+        Thread.sleep(2000);
+		   EntityLocator.ClickDashboard(driver).click();
+	 }
+	public static void ClickUploadExistingRegistorWithoutSelectingFile(WebDriver driver, ExtentTest test) throws InterruptedException
+	 {
+
+    	WebDriverWait wait = new WebDriverWait(driver, (120));
+       Thread.sleep(2000);
+       EntityLocator.selectImg(driver).click();
+       Thread.sleep(2000);
+       EntityLocator.ClickMoreAction(driver).click();
+       Thread.sleep(2000);
+       EntityLocator.clickStatutoryRegistor(driver).click();
+       Thread.sleep(2000);
+       EntityLocator.clickMBP4(driver).click();
+       Thread.sleep(2000);
+       EntityLocator.clickUploadBtn(driver).click();
+       
+       
+      
+       Thread.sleep(2000);
+       EntityLocator.clickUploadBtn1(driver).click();
+       
+    
+       
+       try 
+		  {
+		   Thread.sleep(3000);
+	        String msg=	EntityLocator.clickInvalidMsg(driver).getText();
+	        test.log(LogStatus.FAIL,"Without selecting file In MBP-4 Existing Excel File  =" +msg );
+	       
+		  }
+	      catch(Exception  e) 
+		  {
+	    	 Thread.sleep(3000);
+			 String msg=EntityLocator.clickUploadfileInValidMsg(driver).getText();
+			  test.log(LogStatus.PASS, "Without selecting file  In MBP-4 Existing Excel File =" +msg );
+			
+		  }
+       
+       Thread.sleep(2000);
+	  EntityLocator.ClickDashboard(driver).click();
+	 }
+	public static void ClickUploadOldRegistorWithValidFile(WebDriver driver, ExtentTest test) throws InterruptedException
+	 {
+
+    	WebDriverWait wait = new WebDriverWait(driver, (120));
+      Thread.sleep(2000);
+      EntityLocator.selectImg(driver).click();
+      Thread.sleep(2000);
+      EntityLocator.ClickMoreAction(driver).click();
+      Thread.sleep(2000);
+      EntityLocator.clickStatutoryRegistor(driver).click();
+      Thread.sleep(2000);
+      EntityLocator.clickMBP4(driver).click();
+      Thread.sleep(2000);
+      EntityLocator.clickUploadBtn(driver).click();
+      
+      Thread.sleep(2000);
+      EntityLocator.clickOld(driver).click();
+      
+      Thread.sleep(2000);
+      EntityLocator.SelectFile1(driver).sendKeys("C:\\Users\\Admin\\Downloads\\SampleExcelMBP4-Old (1).xlsx");
+     
+      Thread.sleep(2000);
+      EntityLocator.clickUploadBtn1(driver).click();
+      
+   
+      
+      try 
+		  {
+		   Thread.sleep(3000);
+	        String msg=	EntityLocator.clickUploadfileValidMsg(driver).getText();
+	        test.log(LogStatus.PASS,"Without selecting file In MBP-4 Existing Excel File  =" +msg );
+	       
+		  }
+	      catch(Exception  e) 
+		  {
+	    	 Thread.sleep(3000);
+			 String msg=EntityLocator.clickInvalidMsg(driver).getText();
+			  test.log(LogStatus.FAIL, "Without selecting file  In MBP-4 Existing Excel File =" +msg );
+			
+		  }
+      
+      Thread.sleep(2000);
+	  EntityLocator.ClickDashboard(driver).click();
+	 }
+	public static void ClickUploadOldRegistorWithInValidFile(WebDriver driver, ExtentTest test) throws InterruptedException
+	 {
+
+   	WebDriverWait wait = new WebDriverWait(driver, (120));
+     Thread.sleep(2000);
+     EntityLocator.selectImg(driver).click();
+     Thread.sleep(2000);
+     EntityLocator.ClickMoreAction(driver).click();
+     Thread.sleep(2000);
+     EntityLocator.clickStatutoryRegistor(driver).click();
+     Thread.sleep(2000);
+     EntityLocator.clickMBP4(driver).click();
+     Thread.sleep(2000);
+     EntityLocator.clickUploadBtn(driver).click();
+     
+     Thread.sleep(2000);
+     EntityLocator.clickOld(driver).click();
+     
+     Thread.sleep(2000);
+     EntityLocator.SelectFile1(driver).sendKeys("C:\\Users\\Admin\\Downloads\\SampleExcelMBP4-Old (1).xlsx");
+    
+     Thread.sleep(2000);
+     EntityLocator.clickUploadBtn1(driver).click();
+     
+  
+     
+     try 
+		  {
+		   Thread.sleep(3000);
+	        String msg=	EntityLocator.clickUploadfileInValidMsg(driver).getText();
+	        test.log(LogStatus.PASS,"Without selecting file In MBP-4 Existing Excel File  =" +msg );
+	       
+		  }
+	      catch(Exception  e) 
+		  {
+	    	 Thread.sleep(3000);
+			 String msg=EntityLocator.clickInvalidMsg(driver).getText();
+			  test.log(LogStatus.FAIL, "Without selecting file  In MBP-4 Existing Excel File =" +msg );
+			
+		  }
+     
+     Thread.sleep(2000);
+	  EntityLocator.ClickDashboard(driver).click();
+	 }
+	
+	public static void ClickUploadOldRegistorWithDuplicateData(WebDriver driver, ExtentTest test) throws InterruptedException
+	 {
+
+   	WebDriverWait wait = new WebDriverWait(driver, (120));
+     Thread.sleep(2000);
+     EntityLocator.selectImg(driver).click();
+     Thread.sleep(2000);
+     EntityLocator.ClickMoreAction(driver).click();
+     Thread.sleep(2000);
+     EntityLocator.clickStatutoryRegistor(driver).click();
+     Thread.sleep(2000);
+     EntityLocator.clickMBP4(driver).click();
+     Thread.sleep(2000);
+     EntityLocator.clickUploadBtn(driver).click();
+     
+     Thread.sleep(2000);
+     EntityLocator.clickOld(driver).click();
+     
+     Thread.sleep(2000);
+     EntityLocator.SelectFile1(driver).sendKeys("C:\\Users\\Admin\\Downloads\\SampleExcelMBP4-Old (1).xlsx");
+    
+     Thread.sleep(2000);
+     EntityLocator.clickUploadBtn1(driver).click();
+     
+  
+     
+     try 
+		  {
+		   Thread.sleep(3000);
+	        String msg=	EntityLocator.clickUploadfileValidMsg(driver).getText();
+	        test.log(LogStatus.PASS,"Without selecting file In MBP-4 Existing Excel File  =" +msg );
+	       
+		  }
+	      catch(Exception  e) 
+		  {
+	    	 Thread.sleep(3000);
+			 String msg=EntityLocator.clickInvalidMsg(driver).getText();
+			  test.log(LogStatus.FAIL, "Without selecting file  In MBP-4 Existing Excel File =" +msg );
+			
+		  }
+     
+     Thread.sleep(2000);
+	  EntityLocator.ClickDashboard(driver).click();
+	 }
 	
 	static void selectOptionFromDropDown_bs(List<WebElement> options, String value) {
 			
