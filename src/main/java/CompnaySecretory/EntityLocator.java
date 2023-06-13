@@ -2586,6 +2586,101 @@ public class EntityLocator
 		Secreterial=driver.findElement(By.cssSelector("label[for='IsExistingMBP4_2']"));
 		return Secreterial;
 	}
-   
+	public static WebElement clickGenerateRegistor(WebDriver driver)
+	{
+		Secreterial=driver.findElement(By.xpath("(//*[@id='btnGenerateDeposit'])[2]"));
+		return Secreterial;
+	}
+	public static WebElement clickExistingDropdown(WebDriver driver)
+	{
+		Secreterial=driver.findElement(By.xpath("//*[@id='divExisting']/span/span/span[1]"));
+		return Secreterial;
+	}
+	public static WebElement clickOldDropdown(WebDriver driver)
+	{
+		Secreterial=driver.findElement(By.xpath("//*[@id='divOld']/span/span/span[1]"));
+		return Secreterial;
+	}
+	public static WebElement clickExistingDropdown1(WebDriver driver)
+	{
+		Secreterial=driver.findElement(By.xpath("//*[@id='ddlDirector_listbox']/li[2]"));
+		return Secreterial;
+	}
+	public static WebElement clickDownloadBtn(WebDriver driver)
+	{
+		Secreterial=driver.findElement(By.xpath("//*[@id='btnDirectorRegisters']"));
+		return Secreterial;
+	}
+	public static WebElement clickOldBtn(WebDriver driver)
+	{
+		Secreterial=driver.findElement(By.cssSelector("label[for='IsCheckregister_2']"));
+		return Secreterial;
+	}
+	public static WebElement clickOldDropdown1(WebDriver driver)
+	{
+		Secreterial=driver.findElement(By.xpath("//*[@id='ddlPastDirector_listbox']/li[2]"));
+		return Secreterial;
+	}
+	public static WebElement clickAllBtn(WebDriver driver)
+	{
+		Secreterial=driver.findElement(By.cssSelector("label[for='IsCheckregister_3']"));
+		return Secreterial;
+	}
+	public static WebElement clickViewBtn(WebDriver driver)
+	{
+		Secreterial=driver.findElement(By.xpath("(//*[@id='btnDirectorRegisters'])[2]"));
+		return Secreterial;
+	}
+	public static WebElement clickViewPage(WebDriver driver)
+	{
+		Secreterial=driver.findElement(By.xpath("//*[@id='wndDocViewer_wnd_title']"));
+		return Secreterial;
+	}
+	public static WebElement clickViewClosePage(WebDriver driver)
+	{
+		Secreterial=driver.findElement(By.xpath("(//a[@class='k-button k-bare k-button-icon k-window-action'])[17]"));
+		return Secreterial;
+	}
+	public static WebElement  clickPASTROD(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='mytab10']/a"));
+		return Secreterial;
+	}
+	public static WebElement  clickPASTRODUpload(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='btnUploadPastdirector']"));
+		return Secreterial;
+	}
+	public static WebElement clickPASTRODUploadButton(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='frmUpdateUploadEntity']/div[3]/button"));
+		return Secreterial;
+	}
+	public static WebElement clickPASTRODValidMsg(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='frmUpdateUploadEntity']/div[1]/div[2]/div/lable"));
+		return Secreterial;
+	}
+	public static WebElement  clickPASTRODInValidMsg(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='frmUpdateUploadEntity']/div[1]/div[2]/div/lable"));
+		return Secreterial;
+	}
+	public static WebElement  clickPASTRODGenerateRegostor(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='btnGeneratePastdirector']"));
+		return Secreterial;
+	}
+	public static WebElement  clickPASTRODGenerateRegostorDropdown(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='wndRegisterPastROD']/div/div/div/table/tbody/tr/td[1]/div/span/span/span[1]"));
+		return Secreterial;
+	}
+	public static WebElement  clickPASTRODGenerateRegostorDropdown1(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("(//*[@id='ddlDirector_listbox']/li[2])"));
+		return Secreterial;
+	}
+	
    
 }
