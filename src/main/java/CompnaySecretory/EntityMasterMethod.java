@@ -94,6 +94,7 @@ public class EntityMasterMethod
 	    EntityLocator.clickAddNewBtn(driver).click();
 	    Thread.sleep(2000);
 	    EntityLocator.clickEntityType(driver).click();
+	    Thread.sleep(200);
 	    List<WebElement>entitytype = driver.findElements(By.xpath("//ul[@id='ddlEntityType_listbox']/li"));
 		selectOptionFromDropDown_bs(entitytype, "Deemed Public Company");
 	    
@@ -152,6 +153,12 @@ public class EntityMasterMethod
 		org.apache.poi.ss.usermodel.Cell c4 = row4.getCell(1);						//Selected cell (1 row,1 column)
 		String address = c4.getStringCellValue();			//Got the URL stored at position 1,1
 		EntityLocator.AddressE(driver).sendKeys(address);
+		 
+		Thread.sleep(2000);
+		    Row row5 = sheet.getRow(41);						//Selected 1st index row (Second row)
+			org.apache.poi.ss.usermodel.Cell c5 = row5.getCell(1);						//Selected cell (1 row,1 column)
+			String address1 = c5.getStringCellValue();			//Got the URL stored at position 1,1
+			EntityLocator.AddressE1(driver).sendKeys(address1);
 	  
 	  Thread.sleep(2000);
 	  EntityLocator.StateE(driver).click();
@@ -257,6 +264,7 @@ public class EntityMasterMethod
 		    EntityLocator.clickAddNewBtn(driver).click();
 		    Thread.sleep(2000);
 		    EntityLocator.clickEntityType(driver).click();
+		    Thread.sleep(200);
 		    List<WebElement>entitytype = driver.findElements(By.xpath("//ul[@id='ddlEntityType_listbox']/li"));
 			selectOptionFromDropDown_bs(entitytype, "Deemed Public Company");
 		    
@@ -311,6 +319,7 @@ public class EntityMasterMethod
 	    EntityLocator.clickAddNewBtn(driver).click();
 	    Thread.sleep(2000);
 	    EntityLocator.clickEntityType(driver).click();
+	    Thread.sleep(2000);
 	    List<WebElement>entitytype = driver.findElements(By.xpath("//ul[@id='ddlEntityType_listbox']/li"));
 		selectOptionFromDropDown_bs(entitytype, "Deemed Public Company");
 		
@@ -379,7 +388,7 @@ public class EntityMasterMethod
 	    Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    Thread.sleep(2000);
 	    EntityLocator.clickEntityType(driver).click();
 	    Thread.sleep(2000);
@@ -425,7 +434,7 @@ public class EntityMasterMethod
 	    Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    Thread.sleep(2000);
 	    EntityLocator.clickEntityType(driver).click();
 	    Thread.sleep(2000);
@@ -462,7 +471,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    Thread.sleep(2000);
 	    EntityLocator.clickEntityType(driver).click();
 	    Thread.sleep(2000);
@@ -496,7 +505,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	   
 	    Thread.sleep(2000);
 	    if(EntityLocator.clickBusinessActivity(driver).isEnabled())
@@ -526,7 +535,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    Thread.sleep(2000);
 	    EntityLocator.clickBusinessActivity(driver).click();
 	    
@@ -574,7 +583,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    Thread.sleep(3000);
 	    EntityLocator.clickBusinessActivity(driver).click();
 	    
@@ -607,7 +616,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    Thread.sleep(2000);
 	    EntityLocator.clickBusinessActivity(driver).click();
 	    
@@ -645,7 +654,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    Thread.sleep(2000);
 	    EntityLocator.clickBusinessActivity(driver).click();
 	    
@@ -696,7 +705,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    Thread.sleep(2000);
 	    EntityLocator.clickBusinessActivity(driver).click();
 	    
@@ -739,7 +748,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    Thread.sleep(2000);
 	    EntityLocator.clickBusinessActivity(driver).click();
 	    
@@ -790,7 +799,7 @@ public class EntityMasterMethod
 	Thread.sleep(2000);
     EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
     Thread.sleep(2000);
-    EntityLocator.clickEditIcon(driver).click();
+    EntityLocator.clickEditIcon1(driver).click();
     Thread.sleep(2000);
     EntityLocator.clickBusinessActivity(driver).click();
     Thread.sleep(2000);
@@ -821,7 +830,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	     Thread.sleep(2000);
 	    if(EntityLocator.ClickDocumentTab(driver).isEnabled())
@@ -848,7 +857,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(3000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -863,7 +872,7 @@ public class EntityMasterMethod
 	    EntityLocator.ClickDocTypeDropDown(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator. ClickDescrition(driver).sendKeys("ABCD");
+	    EntityLocator. ClickDescrition(driver).sendKeys("ABCDE");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
@@ -901,7 +910,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(3000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -916,7 +925,7 @@ public class EntityMasterMethod
 	    EntityLocator.ClickDocTypeDropDown(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator. ClickDescrition(driver).sendKeys("ABC");
+	    EntityLocator. ClickDescrition(driver).sendKeys("ABCDE");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
@@ -952,7 +961,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -991,7 +1000,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -1016,7 +1025,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -1061,7 +1070,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -1098,7 +1107,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -1113,7 +1122,7 @@ public class EntityMasterMethod
 	    EntityLocator.ClickAOA(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator. ClickDescrition(driver).sendKeys("ABCD");
+	    EntityLocator. ClickDescrition(driver).sendKeys("ABECD");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
@@ -1134,7 +1143,9 @@ public class EntityMasterMethod
 	    
 	     Thread.sleep(2000);
 	    EntityLocator.ClickCloseIcon(driver).click();
-	    Thread.sleep(4000);
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    Thread.sleep(200);
 	     EntityLocator.ClickDashboard(driver).click();
 	}
 	
@@ -1146,7 +1157,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -1161,7 +1172,7 @@ public class EntityMasterMethod
 	    EntityLocator.ClickAOA(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator. ClickDescrition(driver).sendKeys("ABCD");
+	    EntityLocator. ClickDescrition(driver).sendKeys("ABECD");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
@@ -1182,7 +1193,9 @@ public class EntityMasterMethod
 	    
 	     Thread.sleep(2000);
 	    EntityLocator.ClickCloseIcon(driver).click();
-	    Thread.sleep(4000);
+	    Thread.sleep(2000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    Thread.sleep(200);
 	     EntityLocator.ClickDashboard(driver).click();
 	}
 	
@@ -1194,7 +1207,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -1224,7 +1237,9 @@ public class EntityMasterMethod
 	     
 	     Thread.sleep(2000);
 		    EntityLocator.ClickCloseIcon(driver).click();
-		    Thread.sleep(4000);
+		    Thread.sleep(2000);
+		    EntityLocator.clickcloseIcon(driver).click();
+		    Thread.sleep(200);
 		     EntityLocator.ClickDashboard(driver).click();
 	}
 	
@@ -1237,7 +1252,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -1259,7 +1274,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -1300,7 +1315,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -1339,7 +1354,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -1354,7 +1369,7 @@ public class EntityMasterMethod
 	    EntityLocator.ClickCOI(driver).click();
 	 
 	    Thread.sleep(2000);
-	    EntityLocator. ClickDescrition(driver).sendKeys("PQR");
+	    EntityLocator. ClickDescrition(driver).sendKeys("PQRS");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
@@ -1391,7 +1406,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -1406,7 +1421,7 @@ public class EntityMasterMethod
 	    EntityLocator.ClickCOI(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator. ClickDescrition(driver).sendKeys("ABCD");
+	    EntityLocator. ClickDescrition(driver).sendKeys("PQRS");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
@@ -1443,7 +1458,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -1489,7 +1504,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -1514,7 +1529,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -1553,7 +1568,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -1592,7 +1607,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -1607,7 +1622,7 @@ public class EntityMasterMethod
 	    EntityLocator.ClickPolicy(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator. ClickDescrition(driver).sendKeys("ABCD");
+	    EntityLocator. ClickDescrition(driver).sendKeys("ABCDRE");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
@@ -1643,7 +1658,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -1658,7 +1673,7 @@ public class EntityMasterMethod
 	    EntityLocator.ClickPolicy(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator. ClickDescrition(driver).sendKeys("ABCD");
+	    EntityLocator. ClickDescrition(driver).sendKeys("ABCDRE");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
@@ -1680,6 +1695,9 @@ public class EntityMasterMethod
 	     Thread.sleep(2000);
 	    EntityLocator.ClickCloseIcon(driver).click();
 	    
+	    Thread.sleep(3000);
+	    EntityLocator.clickcloseIcon(driver).click();
+	    
 	    Thread.sleep(4000);
 	     EntityLocator.ClickDashboard(driver).click();
 		
@@ -1692,7 +1710,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -1722,7 +1740,8 @@ public class EntityMasterMethod
 	     
 	     Thread.sleep(2000);
 		    EntityLocator.ClickCloseIcon(driver).click();
-		    
+		    Thread.sleep(3000);
+		    EntityLocator.clickcloseIcon(driver).click();
 		    Thread.sleep(4000);
 		     EntityLocator.ClickDashboard(driver).click();
 	     
@@ -1735,7 +1754,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -1763,7 +1782,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -1803,7 +1822,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -1840,7 +1859,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -1855,7 +1874,7 @@ public class EntityMasterMethod
 	    EntityLocator.ClickLicenseRegistration(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator. ClickLicenseRegistrationNo(driver).sendKeys("@18");
+	    EntityLocator. ClickLicenseRegistrationNo(driver).sendKeys("@30");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickLastRenewDate(driver).sendKeys("16/04/2023");
@@ -1864,7 +1883,7 @@ public class EntityMasterMethod
 	    EntityLocator.ClickUpcomingRenewDate(driver).sendKeys("16/05/2023");
 	    
 	    Thread.sleep(2000);
-	    EntityLocator. ClickDescrition(driver).sendKeys("Test");
+	    EntityLocator. ClickDescrition(driver).sendKeys("Test Test");
 	    
 	    
 	    Thread.sleep(2000);
@@ -1903,7 +1922,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -1966,7 +1985,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -2026,7 +2045,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -2089,7 +2108,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -2118,7 +2137,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -2160,7 +2179,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -2201,7 +2220,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -2217,7 +2236,7 @@ public class EntityMasterMethod
 	    EntityLocator.ClickAnnualReport(driver).click();
 	    
 	    Thread.sleep(3000);
-	    EntityLocator.ClickSerialNoOfAGM(driver).sendKeys("65");
+	    EntityLocator.ClickSerialNoOfAGM(driver).sendKeys("645");
 	    
 	    Thread.sleep(3000);
 	    EntityLocator.ClickLastRenewDate(driver).sendKeys("13/04/2023");
@@ -2229,7 +2248,7 @@ public class EntityMasterMethod
 	    EntityLocator.SelectFY(driver).click();
 	    
 	    Thread.sleep(3000);
-	    EntityLocator. ClickDescrition(driver).sendKeys("ABCD");
+	    EntityLocator. ClickDescrition(driver).sendKeys("ABCED");
 	    
 	    Thread.sleep(3000);
 	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Act and Section Column Test Cases.xlsx");
@@ -2267,7 +2286,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -2334,7 +2353,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -2396,7 +2415,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -2425,7 +2444,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -2464,7 +2483,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
@@ -2505,7 +2524,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	
 	    Thread.sleep(2000);
 	   
@@ -2536,7 +2555,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	
 	    Thread.sleep(2000);
 	    EntityLocator.ClickBranchDetailes(driver).click();
@@ -2551,7 +2570,7 @@ public class EntityMasterMethod
 	    Row row = sheet.getRow(45);						//Selected 1st index row (Second row)
 		org.apache.poi.ss.usermodel.Cell c = row.getCell(1);						//Selected cell (1 row,1 column)
 		String name = c.getStringCellValue();			//Got the URL stored at position 1,1
-		EntityLocator.ClickName(driver).sendKeys("Pune");
+		EntityLocator.ClickName(driver).sendKeys("Nagapur");
 		
 		Thread.sleep(2000);
 	    EntityLocator.ClickBranchType(driver).click();
@@ -2573,7 +2592,7 @@ public class EntityMasterMethod
 //		 EntityLocator.ClickContactNumber(driver).sendKeys(" "+ContactNumber);
 		 
 		 Thread.sleep(2000);
-		 EntityLocator.ClickContactNumber(driver).sendKeys("1234253452");
+		 EntityLocator.ClickContactNumber(driver).sendKeys("1233253452");
 		 Thread.sleep(2000);
 		 Row row3 = sheet.getRow(48);						//Selected 1st index row (Second row)
 		 org.apache.poi.ss.usermodel.Cell c3 = row3.getCell(1);						//Selected cell (1 row,1 column)
@@ -2629,7 +2648,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	
 	    Thread.sleep(2000);
 	    EntityLocator.ClickBranchDetailes(driver).click();
@@ -2699,7 +2718,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	
 	    Thread.sleep(2000);
 	    EntityLocator.ClickBranchDetailes(driver).click();
@@ -2751,7 +2770,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	
 	    Thread.sleep(2000);
 	    EntityLocator.ClickBranchDetailes(driver).click();
@@ -2790,13 +2809,13 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	
 	    Thread.sleep(2000);
 	    EntityLocator.ClickBranchDetailes(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.ClickEditIcon(driver).click();
+	    EntityLocator.ClickEditIcon2(driver).click();
 	    
 	  
 	    wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt("IframeMyCompliances"));
@@ -2835,7 +2854,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	
 	    Thread.sleep(2000);
 	    EntityLocator.ClickBranchDetailes(driver).click();
@@ -2844,7 +2863,7 @@ public class EntityMasterMethod
 	    EntityLocator.ClickUploadDoc(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Committee Composition.pdf");
+	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Job_References-For 13 oct2022.pdf");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickUpload(driver).click();
@@ -2885,7 +2904,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	
 	    Thread.sleep(2000);
 	    EntityLocator.ClickBranchDetailes(driver).click();
@@ -2935,7 +2954,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	
 	    Thread.sleep(2000);
 	    EntityLocator.ClickBranchDetailes(driver).click();
@@ -2944,7 +2963,7 @@ public class EntityMasterMethod
 	    EntityLocator.ClickUploadDoc(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Committee Composition.pdf");
+	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Job_References-For 13 oct2022.pdf");
 	    Thread.sleep(2000);
 	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\file-sample_100kB.Doc");
 	
@@ -2988,7 +3007,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	
 	    Thread.sleep(2000);
 	    EntityLocator.ClickBranchDetailes(driver).click();
@@ -3041,7 +3060,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	
 	    Thread.sleep(2000);
 	    EntityLocator.ClickBranchDetailes(driver).click();
@@ -3091,7 +3110,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	
 	    Thread.sleep(2000);
 	    EntityLocator.ClickBranchDetailes(driver).click();
@@ -3134,7 +3153,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	  
 	    Thread.sleep(2000);
 	    if(EntityLocator.BankDetailes(driver).isEnabled())
@@ -3165,7 +3184,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 		 EntityLocator.BankDetailes(driver).click();
@@ -3229,7 +3248,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 		 EntityLocator.BankDetailes(driver).click();
@@ -3300,7 +3319,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 		 EntityLocator.BankDetailes(driver).click();
@@ -3355,7 +3374,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 		 EntityLocator.BankDetailes(driver).click();
@@ -3407,7 +3426,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 		 EntityLocator.BankDetailes(driver).click();
@@ -3457,7 +3476,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 		 EntityLocator.BankDetailes(driver).click();
@@ -3519,7 +3538,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 		 EntityLocator.BankDetailes(driver).click();
@@ -3562,7 +3581,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 		 EntityLocator.BankDetailes(driver).click();
@@ -3610,7 +3629,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 		 EntityLocator.BankDetailes(driver).click();
@@ -3667,7 +3686,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 		 EntityLocator.BankDetailes(driver).click();
@@ -3707,7 +3726,7 @@ public class EntityMasterMethod
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickEditIcon(driver).click();
+	    EntityLocator.clickEditIcon1(driver).click();
 	    
 	    Thread.sleep(2000);
 		 EntityLocator.BankDetailes(driver).click();

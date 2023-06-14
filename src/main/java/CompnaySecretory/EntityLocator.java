@@ -130,6 +130,11 @@ public class EntityLocator
 		Secreterial = driver.findElement(By.xpath("//*[@id='txtRegAddress1']"));
 		return Secreterial;
 	}
+	public static WebElement AddressE1(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//*[@id='txtRegAddress2']"));
+		return Secreterial;
+	}
 	
 	public static WebElement StateE(WebDriver driver)		//Method for closing Message Popup
 	{
@@ -238,9 +243,14 @@ public class EntityLocator
 		Secreterial = driver.findElement(By.xpath("//*[@id='filterSearch']"));
 		return Secreterial;                     
 	}
+	public static WebElement clickEditIcon1(WebDriver driver)		//Method for closing Message Popup
+	{
+		Secreterial = driver.findElement(By.xpath("//a[@class='k-grid-Edit k-grid-edit hoverCircle k-grid-button']"));
+		return Secreterial;                     
+	}
 	public static WebElement clickEditIcon(WebDriver driver)		//Method for closing Message Popup
 	{
-		Secreterial = driver.findElement(By.xpath("//*[@class='k-grid-Edit k-grid-edit hoverCircle k-grid-button']"));
+		Secreterial = driver.findElement(By.xpath("//*[@id='gridbank_active_cell']/a[1]/span/img"));
 		return Secreterial;                     
 	}
 	public static WebElement clickUpdateBtn(WebDriver driver)		//Method for closing Message Popup
@@ -638,6 +648,11 @@ public class EntityLocator
 	public static WebElement ClickEditIcon(WebDriver driver)
 	{
 		Secreterial=driver.findElement(By.xpath("(//a[@class='k-grid-Edit k-grid-edit hoverCircle k-grid-button'])[6]"));
+		return Secreterial;
+	}
+	public static WebElement ClickEditIcon2(WebDriver driver)
+	{
+		Secreterial=driver.findElement(By.xpath("//*[@id='gridKendobranchdetils_active_cell']/a[1]/span/img"));
 		return Secreterial;
 	}
 	public static WebElement ClickEditIcon1(WebDriver driver)
