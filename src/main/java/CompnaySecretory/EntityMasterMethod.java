@@ -38,7 +38,7 @@ public class EntityMasterMethod
 	public static XSSFSheet ReadExcel() throws IOException
 	{
 		//String workingDir = System.getProperty("user.dir");
-		fis = new FileInputStream("C:\\Users\\Admin\\Desktop\\Snehal\\ComplianceLatest\\Secreterial\\TestData\\SecreterialSheet3.xlsx");
+		fis = new FileInputStream("E:\\Snehal\\ComplianceLatest\\Secretarial-Project-main\\Secretarial-Project-main\\TestData\\SecreterialSheet3.xlsx");
 		
 		workbook = new XSSFWorkbook(fis);
 		sheet = workbook.getSheetAt(0);					//Retrieving second sheet of Workbook
@@ -360,7 +360,7 @@ public class EntityMasterMethod
 		selectOptionFromDropDown_bs(entitytype, "Deemed Public Company");
 		
 		
-	     
+		  Thread.sleep(2000);
 	     if(EntityLocator.CloseEntity(driver).isEnabled())
 		    {
 		      Thread.sleep(2000);
@@ -653,7 +653,7 @@ public class EntityMasterMethod
 		EntityLocator.selectImg(driver).click();
 		Thread.sleep(2000);
 	    EntityLocator.ClickFilter(driver).sendKeys("U72266KA2002PLC030311",Keys.ENTER);
-	    Thread.sleep(2000);
+	    Thread.sleep(3000);
 	    EntityLocator.clickEditIcon1(driver).click();
 	    Thread.sleep(2000);
 	    EntityLocator.clickBusinessActivity(driver).click();
@@ -872,10 +872,10 @@ public class EntityMasterMethod
 	    EntityLocator.ClickDocTypeDropDown(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator. ClickDescrition(driver).sendKeys("ABCDE");
+	    EntityLocator. ClickDescrition(driver).sendKeys("ABCADE");
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
+	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Snehal Patil\\Downloads\\Litigation_Notice_Upload_Format.xlsx");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickSaveBtn(driver).click();
@@ -925,10 +925,10 @@ public class EntityMasterMethod
 	    EntityLocator.ClickDocTypeDropDown(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator. ClickDescrition(driver).sendKeys("ABCDE");
+	    EntityLocator. ClickDescrition(driver).sendKeys("ABACDE");
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
+	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Snehal Patil\\Downloads\\Litigation_Notice_Upload_Format.xlsx");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickSaveBtn(driver).click();
@@ -1033,14 +1033,14 @@ public class EntityMasterMethod
 	    
 	    
 	    
-	    File dir = new File("C://Users//Admin//Downloads");
+	    File dir = new File("C:\\Users\\Snehal Patil\\Downloads");
 	  	File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 	  		
 	  	Thread.sleep(2000);
 	 	EntityLocator.ClickDownloadIcon(driver).click();		//Exporting (Downloading) file
 	  		
 	    Thread.sleep(3000);
-	    File dir1 = new File("C://Users//Admin//Downloads");
+	    File dir1 = new File("C:\\Users\\Snehal Patil\\Downloads");
 	    File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 	   
 	  		
@@ -1122,10 +1122,10 @@ public class EntityMasterMethod
 	    EntityLocator.ClickAOA(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator. ClickDescrition(driver).sendKeys("ABECD");
+	    EntityLocator. ClickDescrition(driver).sendKeys("ABED");
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
+	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Snehal Patil\\Downloads\\Litigation_Notice_Upload_Format.xlsx");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickSaveBtn(driver).click();
@@ -1172,11 +1172,11 @@ public class EntityMasterMethod
 	    EntityLocator.ClickAOA(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator. ClickDescrition(driver).sendKeys("ABECD");
+	    EntityLocator. ClickDescrition(driver).sendKeys("ABED");
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
-	    
+	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Snehal Patil\\Downloads\\\\Litigation_Notice_Upload_Format.xlsx");
+	   
 	    Thread.sleep(2000);
 	    EntityLocator.ClickSaveBtn(driver).click();
 	    Thread.sleep(2000);   
@@ -1281,14 +1281,14 @@ public class EntityMasterMethod
 	  
 	   
 	    
-	    File dir = new File("C://Users//Admin//Downloads");
+	    File dir = new File("C://Users//Snehal Patil//Downloads");
 	  	File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 	  		
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDownloadAOAIcon(driver).click();	//Exporting (Downloading) file
 	  		
 	    Thread.sleep(3000);
-	    File dir1 = new File("C://Users//Admin//Downloads");
+	    File dir1 = new File("C://Users//Snehal Patil//Downloads");
 	    File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 	  		
 	  		
@@ -1369,10 +1369,10 @@ public class EntityMasterMethod
 	    EntityLocator.ClickCOI(driver).click();
 	 
 	    Thread.sleep(2000);
-	    EntityLocator. ClickDescrition(driver).sendKeys("PQRS");
+	    EntityLocator. ClickDescrition(driver).sendKeys("STD");
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
+	    EntityLocator.ClickFile(driver).sendKeys("C://Users//Snehal Patil//Downloads\\Litigation_Notice_Upload_Format.xlsx");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickSaveBtn(driver).click();
@@ -1421,10 +1421,10 @@ public class EntityMasterMethod
 	    EntityLocator.ClickCOI(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator. ClickDescrition(driver).sendKeys("PQRS");
+	    EntityLocator. ClickDescrition(driver).sendKeys("STD");
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
+	    EntityLocator.ClickFile(driver).sendKeys("C://Users//Snehal Patil//Downloads\\\\Litigation_Notice_Upload_Format.xlsx");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickSaveBtn(driver).click();
@@ -1536,14 +1536,14 @@ public class EntityMasterMethod
 	  
 	    
 	    
-	    File dir = new File("C://Users//Admin//Downloads");
+	    File dir = new File("C://Users//Snehal Patil//Downloads");
 	  	File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 	  		
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDownloadCOIIcon(driver).click();	//Exporting (Downloading) file
 	  		
 	    Thread.sleep(3000);
-	    File dir1 = new File("C://Users//Admin//Downloads");
+	    File dir1 = new File("C://Users//Snehal Patil//Downloads");
 	    File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 	  		
 	  		
@@ -1622,10 +1622,10 @@ public class EntityMasterMethod
 	    EntityLocator.ClickPolicy(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator. ClickDescrition(driver).sendKeys("ABCDRE");
+	    EntityLocator. ClickDescrition(driver).sendKeys("ABCDR");
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
+	    EntityLocator.ClickFile(driver).sendKeys("C://Users//Snehal Patil//Downloads//Litigation_Notice_Upload_Format.xlsx");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickSaveBtn(driver).click();
@@ -1673,10 +1673,10 @@ public class EntityMasterMethod
 	    EntityLocator.ClickPolicy(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator. ClickDescrition(driver).sendKeys("ABCDRE");
+	    EntityLocator. ClickDescrition(driver).sendKeys("ABCDR");
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
+	    EntityLocator.ClickFile(driver).sendKeys("C://Users//Snehal Patil//Downloads//Litigation_Notice_Upload_Format.xlsx");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickSaveBtn(driver).click();
@@ -1789,14 +1789,14 @@ public class EntityMasterMethod
 	 
 	   
 	    
-	    File dir = new File("C://Users//Admin//Downloads");
+	    File dir = new File("C://Users//Snehal Patil//Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		
 		 Thread.sleep(2000);
 		 EntityLocator.ClickDownloadAOAIcon(driver).click();		//Exporting (Downloading) file
 		
 		Thread.sleep(3000);
-		File dir1 = new File("C://Users//Admin//Downloads");
+		File dir1 = new File("C://Users//Snehal Patil//Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
 		
@@ -1874,7 +1874,7 @@ public class EntityMasterMethod
 	    EntityLocator.ClickLicenseRegistration(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator. ClickLicenseRegistrationNo(driver).sendKeys("@30");
+	    EntityLocator. ClickLicenseRegistrationNo(driver).sendKeys("@12");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickLastRenewDate(driver).sendKeys("16/04/2023");
@@ -1887,7 +1887,7 @@ public class EntityMasterMethod
 	    
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Act and Section Column Test Cases.xlsx");
+	    EntityLocator.ClickFile(driver).sendKeys("C://Users//Snehal Patil//Downloads//Litigation_Notice_Upload_Format.xlsx");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickSaveBtn(driver).click();
@@ -1950,7 +1950,7 @@ public class EntityMasterMethod
 	    
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Act and Section Column Test Cases.xlsx");
+	    EntityLocator.ClickFile(driver).sendKeys("C://Users//Snehal Patil//Downloads//Litigation_Notice_Upload_Format.xlsx");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickSaveBtn(driver).click();
@@ -2000,7 +2000,7 @@ public class EntityMasterMethod
 	    EntityLocator.ClickLicenseRegistration(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator. ClickLicenseRegistrationNo(driver).sendKeys("@19");
+	    EntityLocator. ClickLicenseRegistrationNo(driver).sendKeys("@12");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickLastRenewDate(driver).sendKeys("16/05/2023");
@@ -2060,7 +2060,7 @@ public class EntityMasterMethod
 	    EntityLocator.ClickLicenseRegistration(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator. ClickLicenseRegistrationNo(driver).sendKeys("@18");
+	    EntityLocator. ClickLicenseRegistrationNo(driver).sendKeys("@12");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickLastRenewDate(driver).sendKeys("16/04/2023");
@@ -2073,7 +2073,7 @@ public class EntityMasterMethod
 	    
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Act and Section Column Test Cases.xlsx");
+	    EntityLocator.ClickFile(driver).sendKeys("C://Users//Snehal Patil//Downloads//Litigation_Notice_Upload_Format.xlsx");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickSaveBtn(driver).click();
@@ -2145,14 +2145,14 @@ public class EntityMasterMethod
 	    Thread.sleep(2000);
 	    EntityLocator.LicenseRegistrationLLP(driver).click();
 	    
-	    File dir = new File("C://Users//Admin//Downloads");
+	    File dir = new File("C://Users//Snehal Patil//Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		
 		 Thread.sleep(2000);
 		 EntityLocator.DownloadLicenseRegistrationLLP(driver).click();		//Exporting (Downloading) file
 		
 		Thread.sleep(3000);
-		File dir1 = new File("C://Users//Admin//Downloads");
+		File dir1 = new File("C://Users//Snehal Patil//Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
 		
@@ -2236,7 +2236,7 @@ public class EntityMasterMethod
 	    EntityLocator.ClickAnnualReport(driver).click();
 	    
 	    Thread.sleep(3000);
-	    EntityLocator.ClickSerialNoOfAGM(driver).sendKeys("645");
+	    EntityLocator.ClickSerialNoOfAGM(driver).sendKeys("6845");
 	    
 	    Thread.sleep(3000);
 	    EntityLocator.ClickLastRenewDate(driver).sendKeys("13/04/2023");
@@ -2248,10 +2248,10 @@ public class EntityMasterMethod
 	    EntityLocator.SelectFY(driver).click();
 	    
 	    Thread.sleep(3000);
-	    EntityLocator. ClickDescrition(driver).sendKeys("ABCED");
+	    EntityLocator. ClickDescrition(driver).sendKeys("Automation Test");
 	    
 	    Thread.sleep(3000);
-	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Act and Section Column Test Cases.xlsx");
+	    EntityLocator.ClickFile(driver).sendKeys("C://Users//Snehal Patil//Downloads//Litigation_Notice_Upload_Format.xlsx");
 	    
 	    Thread.sleep(4000);
 	    EntityLocator.ClickSaveBtn(driver).click();
@@ -2260,11 +2260,13 @@ public class EntityMasterMethod
 	    Thread.sleep(3000);   
 	    try
 		 {
+	    	 Thread.sleep(3000); 
 		    String msg = EntityLocator.ClickValidMsg(driver).getText();
 			test.log(LogStatus.PASS, "Message Displayed = " +msg);
 		 }
 		catch(Exception e)
 		{
+			 Thread.sleep(3000); 
 				String msg1 = EntityLocator.ClickInValidMsg(driver).getText();
 				test.log(LogStatus.FAIL, "Message Displayed = " +msg1);
 		}
@@ -2302,7 +2304,7 @@ public class EntityMasterMethod
 	    EntityLocator.ClickAnnualReport(driver).click();
 	    
 	    Thread.sleep(3000);
-	    EntityLocator.ClickSerialNoOfAGM(driver).sendKeys("7365");
+	    EntityLocator.ClickSerialNoOfAGM(driver).sendKeys("6845");
 	    
 	    Thread.sleep(3000);
 	    EntityLocator.ClickLastRenewDate(driver).sendKeys("13/04/2023");
@@ -2314,10 +2316,10 @@ public class EntityMasterMethod
 	    EntityLocator.SelectFY(driver).click();
 	    
 	    Thread.sleep(3000);
-	    EntityLocator. ClickDescrition(driver).sendKeys("Test");
+	    EntityLocator. ClickDescrition(driver).sendKeys("Automation Test");
 	    
 	    Thread.sleep(3000);
-	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Act and Section Column Test Cases.xlsx");
+	    EntityLocator.ClickFile(driver).sendKeys("C://Users//Snehal Patil//Downloads//Litigation_Notice_Upload_Format.xlsx");
 	    
 	    Thread.sleep(4000);
 	    EntityLocator.ClickSaveBtn(driver).click();
@@ -2326,11 +2328,13 @@ public class EntityMasterMethod
 	    Thread.sleep(3000);   
 	    try
 		 {
+	    	 Thread.sleep(3000); 
 		    String msg = EntityLocator.ClickValidMsg(driver).getText();
 			test.log(LogStatus.FAIL, "Message Displayed = " +msg);
 		 }
 		catch(Exception e)
 		{
+			 Thread.sleep(3000); 
 				String msg1 = EntityLocator.ClickInValidMsg(driver).getText();
 				test.log(LogStatus.PASS, "Message Displayed = " +msg1);
 		}
@@ -2452,14 +2456,14 @@ public class EntityMasterMethod
 	    Thread.sleep(2000);
 	    EntityLocator.AnnualReportLLP(driver).click();
 	    
-	    File dir = new File("C://Users//Admin//Downloads");
+	    File dir = new File("C://Users//Snehal Patil//Downloads");
 		File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 		
 		 Thread.sleep(2000);
 		 EntityLocator.DownloadAnnualReport(driver).click();		//Exporting (Downloading) file
 		
 		Thread.sleep(3000);
-		File dir1 = new File("C://Users//Admin//Downloads");
+		File dir1 = new File("C://Users//Snehal Patil//Downloads");
 		File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 		
 		
@@ -2570,7 +2574,7 @@ public class EntityMasterMethod
 	    Row row = sheet.getRow(45);						//Selected 1st index row (Second row)
 		org.apache.poi.ss.usermodel.Cell c = row.getCell(1);						//Selected cell (1 row,1 column)
 		String name = c.getStringCellValue();			//Got the URL stored at position 1,1
-		EntityLocator.ClickName(driver).sendKeys("Nagapur");
+		EntityLocator.ClickName(driver).sendKeys("Satara");
 		
 		Thread.sleep(2000);
 	    EntityLocator.ClickBranchType(driver).click();
@@ -2863,7 +2867,7 @@ public class EntityMasterMethod
 	    EntityLocator.ClickUploadDoc(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Job_References-For 13 oct2022.pdf");
+	    EntityLocator.SelectFile(driver).sendKeys("C://Users//Snehal Patil//Downloads//sample.pdf");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickUpload(driver).click();
@@ -2913,7 +2917,7 @@ public class EntityMasterMethod
 	    EntityLocator.ClickUploadDoc(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Act and Event Act Group Test Cases.xlsx");
+	    EntityLocator.SelectFile(driver).sendKeys("C://Users//Snehal Patil//Downloads//Litigation_Notice_Upload_Format.xlsx");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickUpload(driver).click();
@@ -2963,9 +2967,9 @@ public class EntityMasterMethod
 	    EntityLocator.ClickUploadDoc(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Job_References-For 13 oct2022.pdf");
+	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Snehal Patil\\Downloads\\sample.pdf");
 	    Thread.sleep(2000);
-	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\file-sample_100kB.Doc");
+	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Snehal Patil\\Downloads\\file-sample_100kB.Doc");
 	
 	    
 	    Thread.sleep(2000);
@@ -3016,9 +3020,9 @@ public class EntityMasterMethod
 	    EntityLocator.ClickUploadDoc(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Act and Event Act Group Test Cases.xlsx");
+	    EntityLocator.SelectFile(driver).sendKeys("C://Users//Snehal Patil//Downloads//Litigation_Notice_Upload_Format.xlsx");
 	    Thread.sleep(2000);
-	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Act and Event Act Group Test Cases.xlsx");
+	    EntityLocator.SelectFile(driver).sendKeys("C://Users//Snehal Patil//Downloads//Litigation_Notice_Upload_Format.xlsx");
 	
 	    
 	    Thread.sleep(2000);
@@ -4207,14 +4211,13 @@ public class EntityMasterMethod
 	    WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
+		Thread.sleep(2000);
+	    EntityLocator.ClickFilter(driver).sendKeys("AAE-6302",Keys.ENTER);
 	    Thread.sleep(2000);
-	    EntityLocator.clickAddNewBtn(driver).click();
-	    Thread.sleep(2000);
-	    EntityLocator.clickEntityType(driver).click();
-	    List<WebElement>entitytype = driver.findElements(By.xpath("//ul[@id='ddlEntityType_listbox']/li"));
-		selectOptionFromDropDown_bs(entitytype, "Limited Liability Partnership (LLP)");
+	    EntityLocator.clickEditIcon(driver).click();
+	    
 		 
-		  
+		 Thread.sleep(2000);
 		 if(EntityLocator.CloseEntity(driver).isEnabled())
 		 {
 			 Thread.sleep(2000);
@@ -4245,24 +4248,20 @@ public class EntityMasterMethod
 	    EntityLocator.clickEditIcon(driver).click();
 	    
 	    Thread.sleep(2000);
-			EntityLocator.LLPEntityName(driver).clear();
-	    Thread.sleep(2000);
-		EntityLocator.LLPEntityName(driver).sendKeys("LNT Pvt Ltd");
+			EntityLocator.LLPPan(driver).clear();
+		    Thread.sleep(2000);
+			EntityLocator.LLPPan(driver).sendKeys("dfgsf45");
 		
 		  Thread.sleep(3000);
 		  EntityLocator.LLPSaveE(driver).click();
 		  
 		  Thread.sleep(2000);
-		    String Msg=EntityLocator.UpdateLLPValidMsg(driver).getText();
-		    if(Msg.equalsIgnoreCase("Record Updated Successfully"))
-		    {
+		    String Msg=EntityLocator.PANValidMsg(driver).getText();
+		   
 		     
 		      test.log(LogStatus.PASS, "Message Displayed = " +Msg);
-		    }
-		    else
-		    {
-		    	 test.log(LogStatus.FAIL, "Message Displayed = " +Msg);
-		    }
+		    
+	
 		  
 		  
 		    Thread.sleep(4000);
@@ -4273,9 +4272,9 @@ public class EntityMasterMethod
 	    
 	}
 	    
-	public static void UpdateLLP(WebDriver driver,ExtentTest test) throws InterruptedException 
+	public static void UpdateLLP(WebDriver driver,ExtentTest test,XSSFWorkbook workbook) throws InterruptedException 
 	{
-		
+		sheet = workbook.getSheetAt(0); 
 	    WebDriverWait wait=new WebDriverWait(driver,20);
 		Thread.sleep(2000);
 		EntityLocator.selectImg(driver).click();
@@ -4285,24 +4284,25 @@ public class EntityMasterMethod
 	    EntityLocator.clickEditIcon(driver).click();
 	    
 	    Thread.sleep(2000);
-			EntityLocator.LLPEntityName(driver).clear();
+	    EntityLocator.LLPPan(driver).clear();
+	   
 	    Thread.sleep(2000);
-	    EntityLocator.LLPPin(driver).sendKeys("abcd");
+	    Row row5 = sheet.getRow(61);						//Selected 1st index row (Second row)
+		org.apache.poi.ss.usermodel.Cell c5 = row5.getCell(1);						//Selected cell (1 row,1 column)
+		String PAN = c5.getStringCellValue();			//Got the URL stored at position 1,1
+		EntityLocator.LLPPan(driver).sendKeys(PAN);
 		
 		  Thread.sleep(3000);
 		  EntityLocator.LLPSaveE(driver).click();
 		  
 		  Thread.sleep(2000);
-		  String msg=EntityLocator.LLPINValidMsg(driver).getText();
+		  String msg=EntityLocator.LLPInvalidNameMsg(driver).getText();
+		  String msg1=EntityLocator.LLPInvalidPINMsg(driver).getText();
 		    
-		     
-		      test.log(LogStatus.PASS, "Message Displayed = " +msg);
+		   test.log(LogStatus.FAIL, "Message Displayed = " +msg +"," +msg1);
 		   
-		    
-		  
-		  
-		    Thread.sleep(4000);
-		     EntityLocator.CloseEntity(driver).click();
+		   Thread.sleep(4000);
+		   EntityLocator.CloseEntity(driver).click();
 		   
 		     Thread.sleep(4000);
 		     EntityLocator.ClickDashboard(driver).click();
@@ -4552,7 +4552,7 @@ public class EntityMasterMethod
 	    EntityLocator.clickBusinessActivity(driver).click();
 	    
 	    Thread.sleep(3000);
-	    EntityLocator.EditBALLP(driver).click();
+	    EntityLocator.EditBA(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickPercentage(driver).sendKeys("e");
@@ -4680,7 +4680,7 @@ public class EntityMasterMethod
 	    {
 	      Thread.sleep(2000);
 	      EntityLocator.ClickDocumentTab(driver).click();
-	      test.log(LogStatus.PASS, "Douement Tab is clickable");
+	      test.log(LogStatus.PASS, "Docuement Tab is clickable");
 	    }
 	    else
 	    {
@@ -4716,10 +4716,10 @@ public class EntityMasterMethod
 	    EntityLocator.ClickDocTypeDropDown(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator. ClickDescrition(driver).sendKeys("ABCD");
+	    EntityLocator. ClickDescrition(driver).sendKeys("ABACO");
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
+	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Snehal Patil\\Downloads\\Litigation_Notice_Upload_Format.xlsx");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickSaveBtnLLPDOC(driver).click();
@@ -4771,10 +4771,10 @@ public class EntityMasterMethod
 	    EntityLocator.ClickDocTypeDropDown(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator. ClickDescrition(driver).sendKeys("ABCD");
+	    EntityLocator. ClickDescrition(driver).sendKeys("ABACO");
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
+	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Snehal Patil\\Downloads\\Litigation_Notice_Upload_Format.xlsx");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickSaveBtnLLPDOC(driver).click();
@@ -4886,17 +4886,17 @@ public class EntityMasterMethod
 	    
 	    
 	    
-	    File dir = new File("C://Users//Admin//Downloads");
+	    File dir = new File("C://Users//Snehal Patil//Downloads");
 	  	File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 	  		
 	  	Thread.sleep(2000);
 	 	EntityLocator.ClickDownloadIcon(driver).click();		//Exporting (Downloading) file
 	  		
 	    Thread.sleep(3000);
-	    File dir1 = new File("C://Users//Admin//Downloads");
+	    File dir1 = new File("C://Users//Snehal Patil//Downloads");
 	    File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 	  		
-	  		
+	    Thread.sleep(3000);
 	  	if (dirContents.length < allFilesNew.length) 
 	  	{
 	  		test.log(LogStatus.PASS,  "  Document downloaded successfully.");
@@ -4978,10 +4978,10 @@ public class EntityMasterMethod
 	    EntityLocator.ClickDocTypeDropDownDEED(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator. ClickDescrition(driver).sendKeys("ABCDEF");
+	    EntityLocator. ClickDescrition(driver).sendKeys("KLAPO");
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
+	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Snehal Patil\\Downloads\\Litigation_Notice_Upload_Format.xlsx");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickSaveBtnLLPDOC(driver).click();
@@ -5081,10 +5081,10 @@ public class EntityMasterMethod
 	    EntityLocator.ClickDocTypeDropDownDEED(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator. ClickDescrition(driver).sendKeys("ABCDEF");
+	    EntityLocator. ClickDescrition(driver).sendKeys("KLAPO");
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
+	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Snehal Patil\\Downloads\\Litigation_Notice_Upload_Format.xlsx");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickSaveBtnLLPDOC(driver).click();
@@ -5092,12 +5092,12 @@ public class EntityMasterMethod
 	    try
 		 {
 		    String msg = EntityLocator.ClickValidMsg(driver).getText();
-			test.log(LogStatus.PASS, "Message Displayed = " +msg);
+			test.log(LogStatus.FAIL, "Message Displayed = " +msg);
 		 }
 		catch(Exception e)
 		{
 				String msg1 = EntityLocator.ClickInValidMsg(driver).getText();
-				test.log(LogStatus.FAIL, "Message Displayed = " +msg1);
+				test.log(LogStatus.PASS, "Message Displayed = " +msg1);
 		}
 	    
 	     Thread.sleep(2000);
@@ -5123,8 +5123,7 @@ public class EntityMasterMethod
 	    Thread.sleep(3000);
 	    EntityLocator.ClickDocumentTab(driver).click();
 	    
-	    Thread.sleep(2000);
-	    EntityLocator.PolicyLLP(driver).click();
+	   
 	    Thread.sleep(2000);
 	    EntityLocator.ViewDocLLPDEED(driver).click();
 	    Thread.sleep(2000);
@@ -5156,14 +5155,14 @@ public class EntityMasterMethod
 	    EntityLocator.PolicyLLP(driver).click();
 	    
 	    
-	    File dir = new File("C://Users//Admin//Downloads");
+	    File dir = new File("C://Users//Snehal Patil//Downloads");
 	  	File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 	  		
 	  	Thread.sleep(2000);
 	 	EntityLocator.DownloadDocLLPDEED(driver).click();		//Exporting (Downloading) file
 	  		
 	    Thread.sleep(3000);
-	    File dir1 = new File("C://Users//Admin//Downloads");
+	    File dir1 = new File("C://Users//Snehal Patil//Downloads");
 	    File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 	  		
 	  		
@@ -5243,17 +5242,21 @@ public class EntityMasterMethod
 	    Thread.sleep(3000);
 	    EntityLocator.ClickDocType(driver).click();
 	    
-	    Thread.sleep(2000);
-	    EntityLocator.ClickAOA(driver).click();
+	    Thread.sleep(200);
+	    List<WebElement>entitytype = driver.findElements(By.xpath("//ul[@id='DocumentType_listbox']/li"));
+		selectOptionFromDropDown_bs(entitytype, "Policy");
+	    
+//	    Thread.sleep(2000);
+//	    EntityLocator.ClickPolicyLLP(driver).click();
 	    
       
 	    
 	    
 	    Thread.sleep(2000);
-	    EntityLocator. ClickDescrition(driver).sendKeys("ABCDE");
+	    EntityLocator. ClickDescrition(driver).sendKeys("HSDG");
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
+	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Snehal Patil\\Downloads\\Litigation_Notice_Upload_Format.xlsx");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickSaveBtnLLPDOC(driver).click();
@@ -5297,8 +5300,9 @@ public class EntityMasterMethod
 	    Thread.sleep(3000);
 	    EntityLocator.ClickDocType(driver).click();
 	    
-	    Thread.sleep(2000);
-	    EntityLocator.ClickAOA(driver).click();
+	    Thread.sleep(200);
+	    List<WebElement>entitytype = driver.findElements(By.xpath("//ul[@id='DocumentType_listbox']/li"));
+		selectOptionFromDropDown_bs(entitytype, "Policy");
 	    
         EntityLocator. ClickLicenseRegistrationNo(driver).sendKeys("53467");
 	   
@@ -5351,17 +5355,17 @@ public class EntityMasterMethod
 	    Thread.sleep(3000);
 	    EntityLocator.ClickDocType(driver).click();
 	    
-	    Thread.sleep(2000);
-	    EntityLocator.ClickAOA(driver).click();
-	    
+	    Thread.sleep(200);
+	    List<WebElement>entitytype = driver.findElements(By.xpath("//ul[@id='DocumentType_listbox']/li"));
+		selectOptionFromDropDown_bs(entitytype, "Policy");
        
 	    
 	    
 	    Thread.sleep(2000);
-	    EntityLocator. ClickDescrition(driver).sendKeys("ABCDE");
+	    EntityLocator. ClickDescrition(driver).sendKeys("HSDG");
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
+	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Snehal Patil\\Downloads\\Litigation_Notice_Upload_Format.xlsx");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickSaveBtnLLPDOC(driver).click();
@@ -5399,6 +5403,8 @@ public class EntityMasterMethod
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
 	    Thread.sleep(2000);
+	    EntityLocator. PolicyLLP(driver).click();
+	    Thread.sleep(2000);
 	    EntityLocator.ViewDocLLPDEED(driver).click();
 	    Thread.sleep(2000);
 	    EntityLocator.ClickClose(driver).click();
@@ -5426,16 +5432,16 @@ public class EntityMasterMethod
 	    EntityLocator.ClickDocumentTab(driver).click();
 	
 	    
+	
 	    
-	    
-	    File dir = new File("C://Users//Admin//Downloads");
+	    File dir = new File("C://Users//Snehal Patil//Downloads");
 	  	File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 	  		
-	  	Thread.sleep(2000);
-	 	EntityLocator.DownloadDocLLPDEED(driver).click();		//Exporting (Downloading) file
+	    Thread.sleep(2000);
+	    EntityLocator. PolicyLLP(driver).click();	//Exporting (Downloading) file
 	  		
 	    Thread.sleep(3000);
-	    File dir1 = new File("C://Users//Admin//Downloads");
+	    File dir1 = new File("C://Users//Snehal Patil//Downloads");
 	    File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 	  		
 	  		
@@ -5468,6 +5474,9 @@ public class EntityMasterMethod
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDocumentTab(driver).click();
+	    
+	    Thread.sleep(2000);
+	    EntityLocator. PolicyLLP(driver).click();
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickDeleteIcon1(driver).click();
@@ -5516,19 +5525,19 @@ public class EntityMasterMethod
 	    Thread.sleep(2000);
 	    EntityLocator.ClickCOI(driver).click();
 	    
-//        EntityLocator. ClickLicenseRegistrationNo(driver).sendKeys("53467");
-//	    
-//	    Thread.sleep(2000);
-//	    EntityLocator.ClickLastRenewDate(driver).sendKeys("13-04-2023");
-//	    
-//	    Thread.sleep(2000);
-//	    EntityLocator.ClickUpcomingRenewDate(driver).sendKeys("29-04-2023");
+        EntityLocator. ClickLicenseRegistrationNo(driver).sendKeys("83746");
 	    
 	    Thread.sleep(2000);
-	    EntityLocator. ClickDescrition(driver).sendKeys("ABCDE");
+	    EntityLocator.ClickLastRenewDate(driver).sendKeys("13-04-2023");
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
+	    EntityLocator.ClickUpcomingRenewDate(driver).sendKeys("29-04-2023");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator. ClickDescrition(driver).sendKeys("HKEI");
+	    
+	    Thread.sleep(2000);
+	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Snehal Patil\\Downloads\\Litigation_Notice_Upload_Format.xlsx");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickSaveBtnLLPDOC(driver).click();
@@ -5642,10 +5651,10 @@ public class EntityMasterMethod
 //	    EntityLocator.ClickUpcomingRenewDate(driver).sendKeys("29-04-2023");
 	    
 	    Thread.sleep(2000);
-	    EntityLocator. ClickDescrition(driver).sendKeys("ABCDE");
+	    EntityLocator. ClickDescrition(driver).sendKeys("HGJI");
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
+	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Snehal Patil\\Downloads\\Litigation_Notice_Upload_Format.xlsx");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickSaveBtnLLPDOC(driver).click();
@@ -5717,14 +5726,14 @@ public class EntityMasterMethod
 	    EntityLocator.LicenseRegistrationLLP(driver).click();
 	    
 	    
-	    File dir = new File("C://Users//Admin//Downloads");
+	    File dir = new File("C://Users//Snehal Patil//Downloads");
 	  	File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 	  		
 	  	Thread.sleep(2000);
 	 	EntityLocator.DownloadLicenseRegistrationLLP(driver).click();		//Exporting (Downloading) file
 	  		
 	    Thread.sleep(3000);
-	    File dir1 = new File("C://Users//Admin//Downloads");
+	    File dir1 = new File("C://Users//Snehal Patil//Downloads");
 	    File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 	  		
 	  		
@@ -5808,12 +5817,15 @@ public class EntityMasterMethod
 	    Thread.sleep(2000);
 	    EntityLocator.ClickPolicy(driver).click();
 	    
-//	    Thread.sleep(3000);
-//	    EntityLocator.ClickSerialNoOfAGM(driver).sendKeys("7365");
-//	    
-//	    Thread.sleep(3000);
-//	    EntityLocator.ClickLastRenewDate(driver).sendKeys("13-04-2023");
-//	    
+	    Thread.sleep(3000);
+	    EntityLocator.ClickSerialNoOfAGM(driver).sendKeys("5674");
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.ClickLastRenewCalender(driver).click();
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.Date(driver).click();
+	    
 	    Thread.sleep(3000);
 	    EntityLocator.ClickFY(driver).click();
 	    
@@ -5821,10 +5833,10 @@ public class EntityMasterMethod
 	    EntityLocator.SelectFY(driver).click();
 	    
 	    Thread.sleep(3000);
-	    EntityLocator. ClickDescrition(driver).sendKeys("TestTest");
+	    EntityLocator. ClickDescrition(driver).sendKeys("Automation test");
 	    
 	    Thread.sleep(3000);
-	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
+	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Snehal Patil\\Desktop\\Test Cases\\Act Sub_Industry Test Cases.xlsx");
 	    
 	    Thread.sleep(4000);
 	    EntityLocator.ClickSaveBtnLLPDOC(driver).click();
@@ -5875,12 +5887,15 @@ public class EntityMasterMethod
 	    Thread.sleep(2000);
 	    EntityLocator.ClickPolicy(driver).click();
 	    
-//	    Thread.sleep(3000);
-//	    EntityLocator.ClickSerialNoOfAGM(driver).sendKeys("7365");
-//	    
-//	    Thread.sleep(3000);
-//	    EntityLocator.ClickLastRenewDate(driver).sendKeys("13-04-2023");
-//	    
+       Thread.sleep(3000);
+       EntityLocator.ClickSerialNoOfAGM(driver).sendKeys("5674");
+
+       Thread.sleep(3000);
+      EntityLocator.ClickLastRenewCalender(driver).click();
+
+      Thread.sleep(3000);
+      EntityLocator.Date(driver).click();
+
 	    Thread.sleep(3000);
 	    EntityLocator.ClickFY(driver).click();
 	    
@@ -5891,7 +5906,7 @@ public class EntityMasterMethod
 	    EntityLocator. ClickDescrition(driver).sendKeys("TestTest");
 	    
 	    Thread.sleep(3000);
-	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Change Role Test Cases.xlsx");
+	    EntityLocator.ClickFile(driver).sendKeys("C:\\Users\\Snehal Patil\\Desktop\\Test Cases\\Act Sub_Industry Test Cases.xlsx");
 	    
 	    Thread.sleep(4000);
 	    EntityLocator.ClickSaveBtnLLPDOC(driver).click();
@@ -5941,13 +5956,15 @@ public class EntityMasterMethod
 	    Thread.sleep(2000);
 	    EntityLocator.ClickPolicy(driver).click();
 	    
-//         EntityLocator. ClickLicenseRegistrationNo(driver).sendKeys("53467");
-//	    
-//	    Thread.sleep(2000);
-//	    EntityLocator.ClickLastRenewDate(driver).sendKeys("13-04-2023");
-//	    
-//	    Thread.sleep(2000);
-//	    EntityLocator.ClickUpcomingRenewDate(driver).sendKeys("29-04-2023");
+	    Thread.sleep(3000);
+	    EntityLocator.ClickSerialNoOfAGM(driver).sendKeys("7451");
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.ClickLastRenewCalender(driver).click();
+	    
+	    Thread.sleep(3000);
+	    EntityLocator.Date(driver).click();
+	    
     
 	    Thread.sleep(2000);
 	    EntityLocator. ClickDescrition(driver).sendKeys("ABCDEF");
@@ -6027,14 +6044,14 @@ public class EntityMasterMethod
 	    
 	    
 	    
-	    File dir = new File("C://Users//Admin//Downloads");
+	    File dir = new File("C://Users//Snehal Patil//Downloads");
 	  	File[] dirContents = dir.listFiles();						//Counting number of files in directory before download
 	  		
 	  	Thread.sleep(2000);
 	 	EntityLocator.DownloadAnnualReportLLP(driver).click();		//Exporting (Downloading) file
 	  		
 	    Thread.sleep(3000);
-	    File dir1 = new File("C://Users//Admin//Downloads");
+	    File dir1 = new File("C://Users//Snehal Patil//Downloads");
 	    File[] allFilesNew = dir1.listFiles();						//Counting number of files in directory after download
 	  		
 	  		
@@ -6149,7 +6166,7 @@ public class EntityMasterMethod
 	    Row row = sheet.getRow(45);						//Selected 1st index row (Second row)
 		org.apache.poi.ss.usermodel.Cell c = row.getCell(1);						//Selected cell (1 row,1 column)
 		String name = c.getStringCellValue();			//Got the URL stored at position 1,1
-		EntityLocator.ClickName(driver).sendKeys("Karad");
+		EntityLocator.ClickName(driver).sendKeys("Karnatka");
 		
 		Thread.sleep(2000);
 	    EntityLocator.ClickBranchType(driver).click();
@@ -6441,9 +6458,9 @@ public class EntityMasterMethod
 	    EntityLocator.ClickUploadDoc(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\compliance and litigation.docx");
+	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Snehal Patil\\Downloads\\sample.pdf");
 	    
-	    Thread.sleep(2000);
+	    Thread.sleep(3000);
 	    EntityLocator.ClickUpload(driver).click();
 	    
 
@@ -6491,7 +6508,7 @@ public class EntityMasterMethod
 	    EntityLocator.ClickUploadDoc(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Act and Event Act Group Test Cases.xlsx");
+	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Snehal Patil\\Desktop\\Test Cases\\Approver Test Case.xlsx");
 	    
 	    Thread.sleep(2000);
 	    EntityLocator.ClickUpload(driver).click();
@@ -6540,9 +6557,9 @@ public class EntityMasterMethod
 	    EntityLocator.ClickUploadDoc(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\compliance and litigation.docx");
+	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Snehal Patil\\Downloads\\sample.pdf");
 	    Thread.sleep(2000);
-	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\file-sample_100kB.Doc");
+	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Snehal Patil\\Downloads\\file-sample_100kB.Doc");
 	
 	    
 	    Thread.sleep(2000);
@@ -6592,9 +6609,9 @@ public class EntityMasterMethod
 	    EntityLocator.ClickUploadDoc(driver).click();
 	    
 	    Thread.sleep(2000);
-	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Act and Event Act Group Test Cases.xlsx");
+	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Snehal Patil\\Desktop\\Test Cases\\Approver Test Case.xlsx");
 	    Thread.sleep(2000);
-	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Admin\\Documents\\Act and Event Act Group Test Cases.xlsx");
+	    EntityLocator.SelectFile(driver).sendKeys("C:\\Users\\Snehal Patil\\Desktop\\Test Cases\\Approver Test Case.xlsx");
 	
 	    
 	    Thread.sleep(2000);

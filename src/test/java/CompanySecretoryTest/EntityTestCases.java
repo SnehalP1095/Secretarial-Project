@@ -37,7 +37,7 @@ public class EntityTestCases {
 	public static XSSFSheet ReadExcel() throws IOException
 	{
 		//String workingDir = System.getProperty("user.dir");
-		fis = new FileInputStream("C:\\Users\\Admin\\Desktop\\Snehal\\ComplianceLatest\\Secreterial\\TestData\\SecreterialSheet3.xlsx");
+		fis = new FileInputStream("E:\\Snehal\\ComplianceLatest\\Secretarial-Project-main\\Secretarial-Project-main\\TestData\\SecreterialSheet3.xlsx");
 		
 		workbook = new XSSFWorkbook(fis);
 		sheet = workbook.getSheetAt(0);					//Retrieving second sheet of Workbook
@@ -184,7 +184,7 @@ void EditCloseBtn() throws InterruptedException, IOException
 	
 	extent.endTest(test);
 	extent.flush();
-}*/
+}
 @Test(priority = 11)
 
 void BuisnessActivity() throws InterruptedException, IOException
@@ -386,7 +386,7 @@ void WithoutEnterignAOADocument() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority = 29)
+//@Test(priority = 29)
 
 void ViewAOADocument() throws InterruptedException, IOException
 {
@@ -745,7 +745,7 @@ void TwoMandatoryFieldsBranchDetailes() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-/*@Test(priority = 61)
+@Test(priority = 61)
 
 void WithoutEnteringDataBranchDetailes() throws InterruptedException, IOException
 {
@@ -757,7 +757,7 @@ void WithoutEnteringDataBranchDetailes() throws InterruptedException, IOExceptio
 	extent.flush();
 }
 
-@Test(priority = 62)
+//@Test(priority = 62)
 
 void EditBranchDetailes() throws InterruptedException, IOException
 {
@@ -769,7 +769,7 @@ void EditBranchDetailes() throws InterruptedException, IOException
 	extent.flush();
 }
 
-@Test(priority = 63)
+//@Test(priority = 63)
 
 void UploadDocBranchDetailes() throws InterruptedException, IOException
 {
@@ -927,7 +927,7 @@ void WithoutEnterBankDetailes() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority = 77)
+//@Test(priority = 77)
 
 void UpdateBankDetailes() throws InterruptedException, IOException
 {
@@ -974,7 +974,7 @@ void DeleteBankDetailes1() throws InterruptedException, IOException
 
 
          /* LimitedLiabilityPartnership*/
-/*@Test(priority = 81)
+@Test(priority = 81)
 
 void LimitedLiabilityPartnership() throws InterruptedException, IOException
 {
@@ -1061,12 +1061,12 @@ void UpdateLLP() throws InterruptedException, IOException
 {
 	test = extent.startTest("Update Limited Liability Partnership Verification");
 	
-	EntityMasterMethod.UpdateLLP(driver, test);
+	EntityMasterMethod.UpdateLLP(driver, test,workbook);
 	
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority = 89)
+@Test(priority =89)
 
 void InvalidUpdateLLP() throws InterruptedException, IOException
 {
@@ -1118,7 +1118,7 @@ void AddBuisnessActivityLLP() throws InterruptedException, IOException
 
 void NoDataFoundLLP() throws InterruptedException, IOException
 {
-	test = extent.startTest("Buisness Activity Tab Limited Liability Partnership Verification");
+	test = extent.startTest("Business activity' dropdown is not Activated -Buisness Activity Tab Limited Liability Partnership Verification");
 	
 	EntityMasterMethod.LLPBAnotFound(driver, test);
 	
@@ -1198,7 +1198,7 @@ void DocumentTabLLP() throws InterruptedException, IOException
 
 void AddDocumentLLP() throws InterruptedException, IOException
 {
-	test = extent.startTest("Limited Liability Partnership Add Document Verification");
+	test = extent.startTest("Limited Liability Partnership (COI) Add Document Verification");
 	
 	EntityMasterMethod.AddNewDocumentLLP(driver, test);
 	
@@ -1209,7 +1209,7 @@ void AddDocumentLLP() throws InterruptedException, IOException
 
 void AlreadyExistDocumentLLP() throws InterruptedException, IOException
 {
-	test = extent.startTest("Limited Liability Partnership Already Exist Document Verification");
+	test = extent.startTest("Limited Liability Partnership Already (COI)Exists Document Verification");
 	
 	EntityMasterMethod.AlreadyExistDocumentLLP(driver, test);
 	
@@ -1221,7 +1221,7 @@ void AlreadyExistDocumentLLP() throws InterruptedException, IOException
 
 void WithoutEnteringDocLLP() throws InterruptedException, IOException
 {
-	test = extent.startTest("Limited Liability Partnership Without Upload Document Verification");
+	test = extent.startTest("Limited Liability Partnership(COI) Without Upload Document Verification");
 	
 	EntityMasterMethod.WithoutEnteringDocumentLLP(driver, test);
 	
@@ -1232,7 +1232,7 @@ void WithoutEnteringDocLLP() throws InterruptedException, IOException
 
 void ViewDocumentLLP() throws InterruptedException, IOException
 {
-	test = extent.startTest("Limited Liability Partnership Document View Verification");
+	test = extent.startTest("Limited Liability Partnership (COI) Document View Verification");
 	
 	EntityMasterMethod.ViewDocumentLLP(driver, test);
 	
@@ -1243,7 +1243,7 @@ void ViewDocumentLLP() throws InterruptedException, IOException
 
 void DownloadDocumentLLP() throws InterruptedException, IOException
 {
-	test = extent.startTest("Limited Liability Partnership Download Document Verification");
+	test = extent.startTest("Limited Liability Partnership (COI) Download Document Verification");
 	
 	EntityMasterMethod.DownloadDocumentLLP(driver, test);
 	
@@ -1254,7 +1254,7 @@ void DownloadDocumentLLP() throws InterruptedException, IOException
 
 void DeleteDocumentLLP() throws InterruptedException, IOException
 {
-	test = extent.startTest("Limited Liability Partnership Delete Document Verification");
+	test = extent.startTest("Limited Liability Partnership (COI)Delete Document Verification");
 	
 	EntityMasterMethod.DeleteDocumentLLP(driver, test);
 	
@@ -1316,7 +1316,7 @@ void DownloadDocumentLLPDEED() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority = 111)
+@Test(priority =111)
 
 void DeleteDocumentLLPDEED() throws InterruptedException, IOException
 {
@@ -1367,7 +1367,7 @@ void ViewDocumentPolicyLLP() throws InterruptedException, IOException
 {
 	test = extent.startTest("Limited Liability Partnership Policy View Document Verification");
 	
-	EntityMasterMethod.ViewDocumentLLPDEED(driver, test);
+	EntityMasterMethod.ViewDocumentPolicyLLP(driver, test);
 	
 	extent.endTest(test);
 	extent.flush();
@@ -1378,7 +1378,7 @@ void DownloadDocumentPolicyLLP() throws InterruptedException, IOException
 {
 	test = extent.startTest("Limited Liability Partnership Policy Download Document Verification");
 	
-	EntityMasterMethod.DownloadDocumentLLPDEED(driver, test);
+	EntityMasterMethod.DownloadDocumentPolicyLLP(driver, test);
 	
 	extent.endTest(test);
 	extent.flush();
@@ -1420,14 +1420,14 @@ void WithoutEnteringDocumenLicenseRegistrationLLP() throws InterruptedException,
 
 void AddExistingDocumenLicenseRegistrationLLP() throws InterruptedException, IOException
 {
-	test = extent.startTest("Limited Liability Partnership LicensecRegistration Without Upload Document Verification");
+	test = extent.startTest("Limited Liability Partnership LicensecRegistration Add Existing  Document Verification");
 	
 	EntityMasterMethod.AddExistingLicenseRegistrationDocLLP(driver, test);
 	
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority = 121)
+//@Test(priority = 121)
 
 void ViewDocumentLicenseRegistrationLLP() throws InterruptedException, IOException
 {
@@ -1439,7 +1439,7 @@ void ViewDocumentLicenseRegistrationLLP() throws InterruptedException, IOExcepti
 	extent.flush();
 }
 
-@Test(priority = 122)
+//@Test(priority = 122)
 
 void DownloadDocumentLicenseRegistraionLLP() throws InterruptedException, IOException
 {
@@ -1450,7 +1450,7 @@ void DownloadDocumentLicenseRegistraionLLP() throws InterruptedException, IOExce
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority =123)
+//@Test(priority =123)
 
 void DeleteDocumentLicenseRegistrationLLP() throws InterruptedException, IOException
 {
@@ -1494,7 +1494,7 @@ void WithoutEnteringDocumentAnnualReportLLP() throws InterruptedException, IOExc
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority = 127)
+//@Test(priority = 127)
 
 void ViewDocumentAnnualReportLLP() throws InterruptedException, IOException
 {
@@ -1505,7 +1505,7 @@ void ViewDocumentAnnualReportLLP() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority = 128)
+//@Test(priority = 128)
 
 void DownloadDocumentAnnualReportLLP() throws InterruptedException, IOException
 {
@@ -1516,7 +1516,7 @@ void DownloadDocumentAnnualReportLLP() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority =129)
+//@Test(priority =129)
 
 void DeleteDocumentAnnualReportLLP() throws InterruptedException, IOException
 {
@@ -1627,7 +1627,7 @@ void MultipleFileUploadDocBranchDetailesLLP() throws InterruptedException, IOExc
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority = 139)
+@Test(priority =139)
 
 void InvalidMultipleFileUploadDocBranchDetailesLLP() throws InterruptedException, IOException
 {
@@ -1752,7 +1752,7 @@ void WithoutEnterBankDetailesLLP() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority = 150)
+//@Test(priority = 2)
 
 void UpdateBankDetailesLLP() throws InterruptedException, IOException
 {
@@ -1763,7 +1763,7 @@ void UpdateBankDetailesLLP() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority = 151)
+//@Test(priority = 3)
 
 void InvalidUpdateBankDetailesLLP() throws InterruptedException, IOException
 {
@@ -1774,7 +1774,7 @@ void InvalidUpdateBankDetailesLLP() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority = 152)
+@Test(priority = 149)
 
 void DeleteBankDetailesLLP() throws InterruptedException, IOException
 {
@@ -1785,7 +1785,7 @@ void DeleteBankDetailesLLP() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority = 153)
+@Test(priority = 150)
 
 void DeleteBankDetailes1LLP() throws InterruptedException, IOException
 {
@@ -1796,7 +1796,7 @@ void DeleteBankDetailes1LLP() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-@Test(priority = 154)
+/*@Test(priority = 154)
 
 void ValidDataEntityExcelUpload() throws InterruptedException, IOException
 {
@@ -2039,7 +2039,7 @@ void SearchFieldEntityTab() throws InterruptedException, IOException
 	extent.flush();
 }
 
-@Test(priority = 176)
+/*@Test(priority = 176)
 
 void ClickApplicabilty() throws InterruptedException, IOException
 {
