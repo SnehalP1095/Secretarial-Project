@@ -5,14 +5,13 @@
     <classes>
       <class name="CompanySecretoryTest.EntityTestCases">
         <methods>
-          <include name="AddDocumentAnnualReportLLP"/>
-          <include name="EditBranchDetailesLLP"/>
-          <include name="AddDocumentLicenseRegistrationLLP"/>
-          <include name="DownloadDocumentLLPDEED"/>
+          <include name="EnterTwoMandatoryFiledStatutoryAuditor"/>
+          <include name="AddStatutoryAuditor"/>
+          <include name="EnterInvalidDataResignationofAuditor"/>
+          <include name="ResignationofInternalAuditor"/>
           <include name="setBrowser"/>
           <include name="Close"/>
           <include name="Login"/>
-          <include name="DuplicateBankDetailesLLP"/>
         </methods>
       </class> <!-- CompanySecretoryTest.EntityTestCases -->
     </classes>
