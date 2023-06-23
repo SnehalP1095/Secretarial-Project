@@ -2093,7 +2093,7 @@ void CloseApplicability() throws InterruptedException, IOException
 	
 	extent.endTest(test);
 	extent.flush();
-}
+}*/
 
 @Test(priority = 181)
 
@@ -2508,7 +2508,7 @@ void DeleteNoIconShareHolding() throws InterruptedException, IOException
 @Test(priority = 220)
 void ClickShareCertificateBtn() throws InterruptedException, IOException
 {
-	test = extent.startTest("Share Certificate Button is clickabl or not ");
+	test = extent.startTest("Share Certificate Button is clickable or not ");
 	
 	EntityMasterMethod.ClickShareCertificateBtn(driver, test);
 	
@@ -2565,7 +2565,7 @@ void DownloadShareCertificateAfterSaving() throws InterruptedException, IOExcept
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 226)
+@Test(priority = 226)
 void Managementpersonnel() throws InterruptedException, IOException
 {
 	test = extent.startTest("Management personnel Option is Clickable or not ");
@@ -2575,7 +2575,7 @@ void Managementpersonnel() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 227)
+@Test(priority = 227)
 void ManagementpersonnelExportToPDF() throws InterruptedException, IOException
 {
 	test = extent.startTest("Export To Pdf File Management personnel Verification");
@@ -2585,7 +2585,7 @@ void ManagementpersonnelExportToPDF() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 228)
+@Test(priority = 228)
 void ClickCommitte() throws InterruptedException, IOException
 {
 	test = extent.startTest("Committees option is clickable or not");
@@ -2595,7 +2595,7 @@ void ClickCommitte() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 229)
+@Test(priority = 229)
 void ClickCloseBtnOfCommitte() throws InterruptedException, IOException
 {
 	test = extent.startTest("Close Button of Committees option is clickable or not");
@@ -2605,7 +2605,7 @@ void ClickCloseBtnOfCommitte() throws InterruptedException, IOException
 	extent.endTest(test);
 	extent.flush();
 }
-//@Test(priority = 230)
+@Test(priority = 230)
 void ClickCommitteeMatrix() throws InterruptedException, IOException
 {
 	test = extent.startTest("Committee Matrix option is clickable or not");
@@ -2614,8 +2614,8 @@ void ClickCommitteeMatrix() throws InterruptedException, IOException
 	
 	extent.endTest(test);
 	extent.flush();
-}*/
-@Test(priority = 231)
+}
+/*@Test(priority = 231)
 void ClickAuditor() throws InterruptedException, IOException
 {
 	test = extent.startTest("Auditor option is clickable or not");
