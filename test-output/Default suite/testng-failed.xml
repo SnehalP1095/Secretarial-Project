@@ -6,9 +6,9 @@
       <class name="CompanySecretoryTest.MyWorkspaceTestCases">
         <methods>
           <include name="Close"/>
-          <include name="ClickDraftResolutionandMinuteTabTab"/>
           <include name="setBrowser"/>
           <include name="Login"/>
+          <include name="EditBtn"/>
         </methods>
       </class> <!-- CompanySecretoryTest.MyWorkspaceTestCases -->
     </classes>
